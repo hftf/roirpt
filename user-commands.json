@@ -1,0 +1,22 @@
+{
+"#": "{*+}",
+"1K": "{*?}",
+"2K": "{*!}",
+"2K3W": "#NOOP",
+"#*": "{*}",
+"#-RB": "=wt_prev_page",
+"#-RBGS": "=wt_reload",
+"TK-LG": "{^^}",
+"TK-TS": "{^^}",
+"KPA*L": "{MODE:CAPS}",
+"KPA*D": "{*-|}",
+"PWHR-FRPB": "{PLOVER:ADD_TRANSLATION}",
+"PHROERB": "{PLOVER:FOCUS}",
+"PHRORTD": "{PLOVER:FOCUS}{#Super(Shift(K))}",
+"PHRERBGT": "{PLOVER:FOCUS}{#Super(Shift(L))}",
+"PHRUP": "{PLOVER:LOOKUP}",
+"HRO*ER": "{>}",
+"HRO*ERD": "{*>}",
+"HR-FR": "{PLOVER:LOOKUP}",
+"*UPD": "{*<}"
+}
