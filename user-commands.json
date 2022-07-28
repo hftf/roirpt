@@ -8,6 +8,7 @@
 "#-RBGS": "=wt_reload",
 "TK-LG": "{^^}",
 "TK-TS": "{^^}",
+"KPH-S": "{#Super_L(s)}",
 "KPA*L": "{MODE:CAPS}",
 "KPA*D": "{*-|}",
 "PWHR-FRPB": "{PLOVER:ADD_TRANSLATION}",
