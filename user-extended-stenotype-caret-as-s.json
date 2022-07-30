@@ -1,0 +1,11 @@
+{
+"^TPH*FPLTS": "{^)}",
+"^TPH-FPLT": "{:}",
+"^TPH-FPLTS": "{(^}",
+"^TPH-R": "{#Left}{^}",
+"^TPH-P": "{#Up}{^}",
+"^TPH-B": "{#Down}{^}",
+"^TPH-G": "{#Right}{^}",
+"^P-PT": "{;}",
+"^H-FT": "{#Control_L(Home)}{^}"
+}
