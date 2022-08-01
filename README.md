@@ -32,6 +32,7 @@ Sometimes the conceit is stretched to include
 any pre-initial vowel if convenient, even if stressed,
 such as `era: ^RA`, or if it would be annoying to write out.
 But words like `efficacy` are probably not in scope.
+(I'll move these into caret-stressed.json, okay)
 
 Sometimes the dictionary includes:
 
