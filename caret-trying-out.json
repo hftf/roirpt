@@ -1,5 +1,8 @@
 {
 "^TKPWR": "anger",
 "^TKPWREU": "angry",
-"^TKPWREUL": "angrily"
+"^TKPWREUL": "angrily",
+"^PWEBGT": "object",
+"^PWEBGS": "objection",
+"^PRA": "opera"
 }
