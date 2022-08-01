@@ -180,6 +180,90 @@ but I put them in this file because the intent is entirely
 to cover up annoying defaults that confuse me
 when ~~typing~~ ~~stroking~~ ~~outlining~~ writing longer words
 
+### `user-punctuation.json`
+
+“Sentence” means sentence-contextual (built-in feature that attaches punctuation to preceding word).
+
+I envision <samp>?</samp> <kbd>KW-PL</kbd> and <samp>!</samp> <kbd>TP-BG</kbd> as shape-based complements of each other:
+the shape of <kbd>KW-PL</kbd> ascends from left to right like a question’s intonation rising ↗︎, and
+the shape of <kbd>TP-BG</kbd> descends like the intonation of an exclamation falling ↘︎.
+
+Code | Command | Spacing | Steno | Shape | Explanation | Plover default
+-|-|-|-|-|-|-
+<samp>\{.}</samp>    | Period      | Sentence  | <kbd>TP-PL</kbd>     | <ins>⠈⠁</ins>⠀<ins>⠀⠉⠀</ins> | middle+ring, also **F**u**LL** sto**P**                                | yes
+<samp>\{,}</samp>    | Comma       | Sentence  | <kbd>KW-BG</kbd>     | <ins>⠐⠂</ins>⠀<ins>⠀⠒⠀</ins> | low mnemonic for descender                                             | yes
+<samp>\{?}</samp>    | Question    | Sentence  | <kbd>KW-PL</kbd>     | <ins>⠐⠂</ins>⠀<ins>⠀⠉⠀</ins> | shaped like rising intonation,<br>also quasi-p. **QU**estion **M**ark  | yes
+<samp>\{!}</samp>    | Exclamation | Sentence  | <kbd>TP-BG</kbd>     | <ins>⠈⠁</ins>⠀<ins>⠀⠒⠀</ins> | shaped like falling intonation,<br>also quasi-phonetic **B**an**G**    | yes
+<samp>\{^:^}</samp>  | Colon       | Unspaced  | <kbd>TH-FL</kbd>     | <ins>⠈⠈</ins>⠀<ins>⠈⠈⠀</ins> | dot pairs, on upper row like <samp>.</samp> | <kbd>KHR-PB</kbd> (**C**o**L**o**N**)
+<samp>\{:}</samp>    | Colon       | Sentence  | <kbd>^P-PT</kbd>     | <ins>⠁⠁</ins>⠀<ins>⠀⠁⠁</ins> | same but further out                          | <kbd>STPH-FPLT</kbd>
+<samp>\{^;^}</samp>  | Semicolon   | Unspaced  | <kbd>KR-RG</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠐⠐⠀</ins> | dot pairs, on lower row like <samp>,</samp> | <kbd>TH-FL</kbd>
+<samp>\{;}</samp>    | Semicolon   | Sentence  | <kbd>SW-BS</kbd>     | <ins>⠂⠂</ins>⠀<ins>⠀⠂⠂</ins> | same but further out                          | <kbd>STPH\*FPLT</kbd>, <kbd>SP-PT</kbd>
+<samp>\{^…}</samp>   | Ellipsis    | Before    | <kbd>SW*</kbd>       | <ins>⠂⠂</ins>⠂<ins>⠀⠀⠀</ins> | three dots on lower left row                  | <kbd>HR-PS</kbd> (e**L**li**PS**is)
+<samp>\{^\_^}</samp> | Underscore  | Unspaced  | <kbd>SKW-BGS</kbd>   | <ins>⠒⠂</ins>⠀<ins>⠀⠒⠂</ins> | low line, middle-ring-pinky                   | <kbd>RUPBD</kbd> (**UND**e**R**)
+<samp>\{^-^}</samp>  | Hyphen      | Unspaced  | <kbd>H-F</kbd>       | <ins>⠀⠈</ins>⠀<ins>⠁⠀⠀</ins> | tiny line across upper row                    | <kbd>H-PB</kbd> (**H**yphe**N**)
+<samp>\-</samp>      | Dash        | Spaced    | <kbd>PH-FP</kbd>     | <ins>⠀⠉</ins>⠀<ins>⠉⠀⠀</ins> | short line across upper row                   | <kbd>H*PB</kbd>
+<samp>–</samp>       | En dash     | Spaced    | <kbd>TPH-FPL</kbd>   | <ins>⠈⠉</ins>⠀<ins>⠉⠁⠀</ins> | longer line across upper row                  | <kbd>TPH-RB</kbd> (**N**da**SH**)
+<samp>—</samp>       | Em dash     | Spaced    | <kbd>^TPH-FPLT</kbd> | <ins>⠉⠉</ins>⠀<ins>⠉⠉⠀</ins> | longest line across upper row                 | <kbd>PH-RB</kbd> (**M**da**SH**)
+
+### `user-commands.json`
+
+#### Retroactives
+
+Left side of the board is mnemonic for “retroactive.”
+
+Code | Command | Steno | Pseudosteno | Shape | Explanation
+-|-|-|-|-|-
+<samp>\{\*+}</samp> | [Repeat Last Stroke](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-delete-space) | <kbd>#</kbd>    | `#`                        || wiki default |
+<samp>\{\*}</samp>  | [Toggle Asterisk](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-delete-space) | <kbd>#\*</kbd>  | `#*`                       || wiki default |
+<samp>\{\*?}</samp> | [Retro Add Space](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-add-space) | <kbd>1K</kbd>   | i.e. <kbd>#SK</kbd>   | <ins>⠒⠄</ins>⠀<ins>⠀⠀⠀</ins> | horizontal is mnemonic for add space
+<samp>\{\*!}</samp> | [Retro Delete Space](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-delete-space) | <kbd>2K</kbd>   | i.e. <kbd>#TK</kbd>   | <ins>⠘⠄</ins>⠀<ins>⠀⠀⠀</ins> | vertical is mnemonic for no gap
+<samp>#NOOP</samp> || <kbd>2K3W</kbd> | i.e. <kbd>#TKPW</kbd> | <ins>⠘⠇</ins>⠀<ins>⠀⠀⠀</ins> | used for notes-to-self
+
+#### Spacing control
+
+Need to add backspace
+
+Code | Command | Steno | Shape | Explanation | Plover default
+-|-|-|-|-|-
+<samp>\{^^}</samp> | [Suppress Next Space](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#suppress-next-space)  | <kbd>TK-TS</kbd> | <ins>⠘⠀</ins>⠀<ins>⠀⠀⠃</ins> | 2nd-furthest columns     | <kbd>TK-LS</kbd> (**D**e**L**ete **S**pace)
+<samp>\{^^}</samp> | Suppress Next Space | <kbd>TK-LG</kbd> | <ins>⠘⠀</ins>⠀<ins>⠀⠘⠀</ins> | both ring fingers | <kbd>TK-LS</kbd> (**D**e**L**ete **S**pace)
+
+#### Capitalization
+
+I'm going to change most of these into shape-based briefs
+
+Code | Command | Steno | Pseudosteno | Explanation | Plover default
+-|-|-|-|-|-
+<samp>\{\*-\|}</samp>     | Retro Capitalize | <kbd>KPA\*D</kbd>    | `KPA*D`  | + **-D** past tense    | yes
+<samp>\{>}</samp>         | Next Lower       | <kbd>HRO\*ER</kbd>   | `LO*ER`  | **LO**w**ER**case          | yes
+<samp>\{\*>}</samp>       | Retro Lower      | <kbd>HRO\*ERD</kbd>  | `LO*ERD` | + **-D** past tense    | yes
+<samp>\{<}</samp>         | Next All Caps    | <kbd>KPA\*L</kbd>    | `KPA*L`  | **C**a**P ALL**                | yes
+<samp>\{\*<}</samp>       | Retro All Caps   | <kbd>\*UPD</kbd>     | `*UPD`   | **UP**percase + **-D** | yes
+<samp>\{MODE:CAPS}</samp> | All Caps On      | <kbd>KA\*PS</kbd>    | `KA*PS`  | all **CAPS**           | yes
+
+#### OS cursor movement and shortcuts
+
+Code | Command | Steno | Pseudosteno | Explanation
+-|-|-|-|-
+<samp>\{#Control_L(a)}</samp> | <kbd>⌃A</kbd> (like <kbd>Home</kbd> on Mac) | <kbd>^H\*FT</kbd>    | `^H*FT`  | <kbd>\*</kbd> + <kbd>SH-FT</kbd> for <kbd>Home</kbd>, with <kbd>^</kbd> for top <kbd>S</kbd>
+<samp>\{#Control_L(e)}</samp> | <kbd>⌃E</kbd> (like <kbd>End</kbd> on Mac)  | <kbd>SR\*RS</kbd>    | `SR*RS`  | <kbd>\*</kbd> + <kbd>SR-RS</kbd> for <kbd>End</kbd>
+<samp>\{#Shift_L(Tab)}</samp> | <kbd>⇧⇥</kbd>               | <kbd>STA\*B</kbd>    | `STA*B`  | **S**hift + Tab
+<samp>\{#Super_L(f)}</samp>   | <kbd>⌘F</kbd>               | <kbd>KPH-F</kbd>     | `KPH-F`  |
+<samp>\{#Super_L(s)}</samp>   | <kbd>⌘S</kbd>               | <kbd>KPH-S</kbd>     | `KPH-S`  |
+
+#### Plover dictionary and GUI/plugin manipulation
+
+Code | Command | Steno | Pseudo/Shape | Explanation | Plover default
+-|-|-|-|-|-
+<samp>\{PLOVER:LOOKUP}</samp> | Lookup                        | <kbd>HR-FR</kbd>     | <ins>⠀⠘</ins>⠀<ins>⠃⠀⠀</ins>  | both index fingers | <kbd>PHR*UP</kbd>
+<samp>\{PLOVER:ADD_T…}</samp> | Add Translation               | <kbd>PWHR-FRPB</kbd> | <ins>⠀⠛</ins>⠀<ins>⠛⠀⠀</ins>  | both index+middle | <kbd>TKUPT</kbd>
+<samp>\{PLOVER:FOCUS}</samp>  | Show Plover                   | <kbd>PHROERB</kbd>   | `PLOESH` | **PL**over **SHOW** | <kbd>PHROFBGS</kbd>
+<samp>\{PLOVER:FOCUS}{#<br>Super(Shift(K))}</samp> | Open Word Tray                | <kbd>PHRORTD</kbd>   | `PLORDT` | **PL**over w**ORD T**ray
+<samp>\{PLOVER:FOCUS}{#<br>Super(Shift(L))}</samp> | Open Spectra Lexer            | <kbd>PHRERBGT</kbd>  | `PLERKT` | **PL**over sp**EKTR**a
+<samp>=wt_prev_page</samp>    | Word Tray Prev   | <kbd>#-RB</kbd>      | <ins>⠀⠄</ins>⠀<ins>⠐⠂⠀</ins>   | plugin-suggested
+<samp>=wt_next_page</samp>    | Word Tray Next   | <kbd>#-GS</kbd>      | <ins>⠀⠄</ins>⠀<ins>⠀⠐⠂</ins>   | plugin-suggested
+<samp>=wt_reload</samp>       | Word Tray Reload | <kbd>#-RBGS</kbd>    | <ins>⠀⠄</ins>⠀<ins>⠐⠒⠂</ins> | plugin-suggested
+
 ## License
 
 Code in `plugins/` and `main.json` is not my own.
