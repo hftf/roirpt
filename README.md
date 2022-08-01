@@ -67,7 +67,7 @@ based on an informal hierarchy of differently colored schwas:
 
 * Spelled with `a` etc. or pronounced with a low-mid vowel or schwa ("schwa") /ə æ ʌ/ etc.
 * Spelled with `e`, `i`, etc. or pronounced with a front vowel or i-colored schwa (["schwi"](https://en.wikipedia.org/wiki/Schwi)) /i ɪ ɨ ᵻ ɛ/ etc.
-* Spelled with `o`, `au`, etc. or pronounced with a back or rounded vowel or u-colored schwa (["schwu"](https://en.wikipedia.org/wiki/Schwu)) /ɵ ᵿ oʊ ɔ ɒ/ etc.
+* Spelled with `o`, `au`, etc. or pronounced with a back vowel or u-colored schwa (["schwu"](https://en.wikipedia.org/wiki/Schwu)) /ɵ ᵿ oʊ ɔ ɒ/ etc.
 
 So for example:
 
@@ -84,7 +84,7 @@ Another example:
 The farther the vowel is from mid central, the lower the priority:
 
 * **e**licit: `^HREUS/EUT (^LIS/IT)`
-* **i**llicit: `^HR^EUS/EUT (^L*IS/IT)`
+* **i**llicit: `^HR*EUS/EUT (^L*IS/IT)`
 
 But derivations of asterisked words can be unasterisked if there is no longer a conflict:
 
@@ -112,6 +112,8 @@ Though some entries are arguably independent words (`anon: ^TPHOPB (^NON)`, `adm
 
 Multi-word entries that would be considered part of a more memorization-heavy "phrasing" system.
 
+Half the entries are just short mandatories + `^` that give the word `a` appended on either before or after, such as `a bit: ^PWEUT (^BIT)` or `from a: ^TPR (^FR)`
+
 Highly attested phrasings that seem wholly uncontroversial, such as `akin to: ^KEUPBT (^KINT)` or `according to: ^KORGT`, are in the non-phrasing dictionaries instead.
 
 ### `caret-as-s.json`
@@ -129,6 +131,7 @@ I mean sure? but probably of little interest until [Chordial](https://chordial.a
 ### `user-main-overrides.json`
 
 Cause I really don't like these defaults. Also includes some prefixes, such as `zee: SAO*E (ZEE)` or `ob: OB (OB)`, but I put them in this file because the intent is entirely to cover up annoying defaults that confuse me
+when ~~typing~~ ~~stroking~~ ~~outlining~~ writing longer words
 
 ## License
 
@@ -151,3 +154,4 @@ KR-BGS WELG
 * Split user.json into phrasing, plurals/edge-cases, prefixes, glaring-omissions
 * Add one-liners, scripts, exploratory research (with documentation)
 * Dictionary generator/preprocessor to define e.g. `accustom` in terms of `^` + `{custom}`
+* If I ever do all that I'll name my ~~baby~~ theory plonkver
