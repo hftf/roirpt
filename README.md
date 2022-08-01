@@ -1,11 +1,13 @@
 # roirprt
 
+I basically just git initted in my plover dir and started committing WIPs
+
 ## Contents
 
 ### `caret-*.json`
 
 Introduces `^` to represent a pre-initial schwa.
-Requires the `plover-stenotype-extended` plugin.
+Requires the [`plover-stenotype-extended`](https://github.com/sammdot/plover-stenotype-extended) plugin.
 
 So you can see why this might be useful:
 
@@ -28,7 +30,7 @@ More:
 
 Sometimes the conceit is stretched to include
 any pre-initial vowel if convenient, even if stressed,
-such as `era: ^RA`, if it would be annoying to write out.
+such as `era: ^RA`, or if it would be annoying to write out.
 But words like `efficacy` are probably not in scope.
 
 Sometimes the dictionary includes:
@@ -39,11 +41,14 @@ such as `album: ^PWHRUPL (^BLUM)` or `abduct: ^TKPWUBGT (^DBUKT)`
 such as `elected: ^HREBGD (^LEKD)` for canonical `^HREBGTD (^LEKTD)` –
 as per the `main.json` entry `AOE/HREBGD (EE/LEKD)`
 * ~~misstrokes~~ actually just manual data entry errors at this point
-* generous brainfarty fallbacks
-such as `active: ^TWEUF` for canonical `^TW` (and core of `activ-` word family)
-* redundant redundancies that I'll never actually use but are there for completionism's sake, such as `upon: ^POPB (^PON)`
-* opinionated briefs, such as pretty much most of the dictionary (I had an example but it slipped my mind)
-* or orphans, such as `apple: ^PHR (^PL)` because before I got deep into this whole rabbit hole I tried defining it as `WAPL` although I guess that conflicts with `wam` so it was cute while it lasted
+* generous brainfarty fallbacks,
+such as `active: ^TWEUF` for canonical `^TW` (core of the `activ-` word family)
+* redundant redundancies that I'll never actually use but are there for completionism's sake,
+such as `upon: ^POPB (^PON)`
+* opinionated briefs,
+such as pretty much most of the dictionary (I had an example but it slipped my mind)
+* or orphans,
+such as `apple: ^PHR (^PL)` because before I got deep into this whole rabbit hole I tried defining it as `WAPL` although I guess that conflicts with `wam` so it was cute while it lasted
 
 #### Compound sounds
 
@@ -65,8 +70,8 @@ based on an informal hierarchy of differently colored schwas:
 
 So for example:
 
-* **a**ddition: `^TKEUGS (^DISHUN)`,
-* **e**dition: `^TK*EUGS (^D*ISHUN)`,
+* **a**ddition: `^TKEUGS (^DISHUN)`
+* **e**dition: `^TK*EUGS (^D*ISHUN)`
 * ~~**au**dition~~ would be next in line but alas the overworked `*` key only allows distinguishing one bit of conflict
 
 Another example:
@@ -80,15 +85,14 @@ The farther the vowel is from mid central, the lower the priority:
 * **e**licit: `^HREUS/EUT (^LIS/IT)`
 * **i**llicit: `^HR^EUS/EUT (^L*IS/IT)`
 
-But derivations of asterisked words can be unasterisked if there is no conflict:
+But derivations of asterisked words can be unasterisked if there is no longer a conflict:
 
 * **a**llusion: `^HRAOUGS (^LUUSHUN)`
 * **i**llusion: `^HRAO*UGS (^L*UUSHUN)`
-* **i**llusory: both `^HRAOUS/REU (^LUUS/RI)` and `^HRAO*US/REU (^L*UUS/RI)`
+* **i**llusory: both `^HRAOUS/REU (^LUUS/RI)` and `^HRAO*US/REU (^L*UUS/RI)` because \*allusory isn't a word
 
 The `a lot` / `allot` and `a lot of` / `aloft` conflicts are resolved by using `AU` for the latters.
-
-Per the above, `allotment: ^HRAUPLT (^LAUMT)` or `^HROPLT (^LOMT)`.
+Although per the above, `allotment` is both `^HRAUPLT (^LAUMT)` and `^HROPLT (^LOMT)`.
 
 Not yet consistent, might try to keep word families together.
 TODO figure out better `efficient`/`officiate` and `acceptable`/`accessible`
