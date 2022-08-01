@@ -41,7 +41,7 @@ as per the `main.json` entry <kbd>AOE/HREBGD</kbd> `(EE/LEKD)`
 * generous brainfarty fallbacks,
 such as <samp>active</samp> <kbd>^TWEUF</kbd>
 for canonical <kbd>^TW</kbd> (core of the <samp>activ-</samp> word family)
-* redundant redundancies that I'll never actually use but are there for completionism's sake,
+* redundant redundancies that I’ll never actually use but are there for completionism’s sake,
 such as <samp>upon</samp> <kbd>^POPB</kbd> `(^PON)`
 * opinionated briefs,
 such as pretty much most of the dictionary (I had an example but it slipped my mind)
@@ -56,7 +56,7 @@ Sometimes the conceit is stretched to include
 any pre-initial vowel if convenient, even if stressed,
 such as <samp>era</samp> <kbd>^RA</kbd>, or if it would be annoying to write out.
 But words like <samp>efficacy</samp> are probably not in scope.
-(I'll move these into caret-stressed.json, okay)
+(I’ll move these into caret-stressed.json, okay)
 
 #### Compound sounds
 
@@ -73,11 +73,11 @@ Tries to use <kbd>\*</kbd> to more or less resolve conflicts
 based on an informal hierarchy of differently colored schwas:
 
 * Spelled with <samp>a</samp> etc. or pronounced with a low-mid vowel
-or schwa ("schwa") /ə æ ʌ/ etc.
+or schwa (“schwa”) /ə æ ʌ/ etc.
 * Spelled with <samp>e</samp>, <samp>i</samp>, etc. or pronounced with a front vowel
-or i-colored schwa (["schwi"](https://en.wikipedia.org/wiki/Schwi)) /i ɪ ɨ ᵻ ɛ/ etc.
+or i-colored schwa ([“schwi”](https://en.wikipedia.org/wiki/Schwi)) /i ɪ ɨ ᵻ ɛ/ etc.
 * Spelled with <samp>o</samp>, <samp>au</samp>, etc. or pronounced with a back vowel
-or u-colored schwa (["schwu"](https://en.wikipedia.org/wiki/Schwu)) /ɵ ᵿ oʊ ɔ ɒ/ etc.
+or u-colored schwa ([“schwu”](https://en.wikipedia.org/wiki/Schwu)) /ɵ ᵿ oʊ ɔ ɒ/ etc.
 
 So for example:
 
@@ -107,7 +107,7 @@ if there is no longer a conflict:
 * <samp><b>i</b>llusion</samp> <kbd>^HRAO\*UGS</kbd> `(^L*UUSHUN)`
 * <samp><b>i</b>llusory</samp> both <kbd>^HRAOUS/REU</kbd> `(^LUUS/RI)`
 and <kbd>^HRAO\*US/REU</kbd> `(^L*UUS/RI)`
-because \*<samp>allusory</samp> isn't a word
+because \*<samp>allusory</samp> isn’t a word
 
 The <samp>a lot</samp>/<samp>allot</samp>
 and <samp>a lot of</samp>/<samp>aloft</samp> conflicts
@@ -143,7 +143,7 @@ For this reason, these entries are not literally prefixes of the form `{blah^}`.
 ### `*-phrasing.json`
 
 Multi-word entries that could be considered part of
-a more memorization-heavy "phrasing" system.
+a more memorization-heavy “phrasing” system.
 
 Half the entries are just short mandatories + <kbd>^</kbd>
 that give the word <samp>a</samp> appended on either before or after,
@@ -162,7 +162,7 @@ have been redefined with <kbd>^</kbd> in place of <kbd>S</kbd>
 
 ### `caret-trying-out.json`
 
-Testing ground for some guys I'm trying out, will see how it feels
+Testing ground for some guys I’m trying out, will see how it feels
 
 ### `user-*.json`
 
@@ -170,7 +170,7 @@ I mean sure? but probably of little interest until [Chordial](https://chordial.a
 
 ### `user-main-overrides.json`
 
-Cause I really don't like these defaults.
+Cause I really don’t like these defaults.
 Also includes some prefixes,
 such as <samp>zee</samp> <kbd>SAO\*E</kbd> `(ZEE)`
 or <samp>ob</samp> <kbd>OB</kbd> `(OB)`,
@@ -181,7 +181,7 @@ when ~~typing~~ ~~stroking~~ ~~outlining~~ writing longer words
 ## License
 
 Code in `plugins/` and `main.json` is not my own.
-It's just version controlled here to record my modifications
+It’s just version controlled here to record my modifications
 in order to prevent any updates from overwriting them.
 
 OERZ TKO WHAFRT TPUBG UPT
@@ -200,4 +200,4 @@ KR-BGS WELG
 * Add one-liners, scripts, exploratory research (with documentation)
 * Dictionary generator/preprocessor
 to define e.g. `accustom` in terms of <kbd>^</kbd> + `{custom}`
-* If I ever do all that I'll name my ~~baby~~ theory plonkver
+* If I ever do all that I’ll name my ~~baby~~ theory plonkver
