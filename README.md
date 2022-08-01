@@ -113,6 +113,22 @@ Multi-word entries that would be considered part of a more memorization-heavy "p
 
 Highly attested phrasings that seem wholly uncontroversial, such as `akin to: ^KEUPBT (^KINT)` or `according to: ^KORGT`, are in the non-phrasing dictionaries instead.
 
+### `caret-as-s.json`
+
+Definitions for shape-based outlines that relied on top S with `^` instead of `S`
+
+### `caret-trying-out.json`
+
+Testing ground for some guys I'm trying out, will see how it feels
+
+### `user-*.json`
+
+I mean sure? but probably of little interest until [Chordial](https://chordial.app/)
+
+### `user-main-overrides.json`
+
+Cause I really don't like these defaults. Also includes some prefixes, such as `zee: SAO*E (ZEE)` or `ob: OB (OB)`, but I put them in this file because the intent is entirely to cover up annoying defaults that confuse me
+
 ## License
 
 Code in `plugins/` and `main.json` is not my own, it's just
