@@ -9,24 +9,23 @@ I basically just git initted in my plover dir and started committing WIPs
 Introduces <kbd>^</kbd> to represent a pre-initial schwa.
 Requires the [`plover-stenotype-extended`](https://github.com/sammdot/plover-stenotype-extended) plugin.
 
-So you can see why this might be useful:
+A few groups of rhymes so you can see why this might be useful:
 
-* <samp>pend</samp> <kbd>PEPBD</kbd> `(PEND)`
-* <samp>spend</samp> <kbd>SPEPBD</kbd> `(SPEND)`
-* <samp>append</samp> <kbd>^PEPBD</kbd> `(^PEND)`
-* <samp>expend</samp> <kbd>KPEPBD</kbd> `(XEND)`
-* <samp>extend</samp> <kbd>^STEPBD</kbd> `(^STEND)`
-
-More:
-
-* <samp>sent</samp> <kbd>SEPBT</kbd> `(SENT)`
-* <samp>assent</samp> <kbd>^SEPBT</kbd> `(^SENT)`
-* <samp>accent</samp> <kbd>^KPEPBT</kbd> `(^XENT)`
-* <samp>stent</samp> <kbd>STEPBT</kbd> `(STENT)`
-* <samp>extent</samp> <kbd>^STEPBT</kbd> `(^STENT)`
-* <samp>competent</samp> <kbd>KPEPBT</kbd> `(KPENT)`
-* <samp>scent</samp> <kbd>SKEPBT</kbd> `(SKENT)` or <kbd>SKREPBT</kbd> `(SCENT)`
-* <samp>consent</samp> <kbd>SK\*EPBT</kbd> `(SK*ENT)`
+Group | Word | Steno | Pseudosteno | Plover default entries
+-|-|-|-|-
+-end | <samp>pend</samp> | <kbd>PEPBD</kbd> | `(PEND)` | <kbd>PEPBD</kbd>
+|| <samp>spend</samp> | <kbd>SPEPBD</kbd> | `(SPEND)` | <kbd>SPEPBD</kbd>
+|| <samp>append</samp> | <kbd>^PEPBD</kbd> | `(^PEND)` | <kbd>A(P)/PEPBD</kbd>
+|| <samp>expend</samp> | <kbd>KPEPBD</kbd> | `(XEND)` | <kbd>KPEPBD</kbd> or <kbd>EBGS/PEPBD</kbd>
+|| <samp>extend</samp> | <kbd>^STEPBD</kbd> | `(^STEND)` | <kbd>EBGS/(S)TEPBD</kbd>
+-ent | <samp>sent</samp> | <kbd>SEPBT</kbd> | `(SENT)` | <kbd>SEPBT</kbd>
+|| <samp>assent</samp> | <kbd>^SEPBT</kbd> | `(^SENT)` | <kbd>AS/SEPBT</kbd>
+|| <samp>accent</samp> | <kbd>^KPEPBT</kbd> | `(^XENT)` | <kbd>ABG/SENT</kbd> or <kbd>ABGS/EPBT</kbd> or <kbd>KP\*EPBT</kbd>
+|| <samp>stent</samp> | <kbd>STEPBT</kbd> | `(STENT)` | <kbd>STEPBT</kbd>
+|| <samp>extent</samp> | <kbd>^STEPBT</kbd> | `(^STENT)` | <kbd>EBGS/((S)T)EPBT</kbd>
+|| <samp>competent</samp> | <kbd>KPEPBT</kbd> | `(KPENT)` | <kbd>KPEPBT</kbd> or <kbd>KPE/TEPBT</kbd> or <kbd>KOFRP/TEPBT</kbd> etc.
+|| <samp>scent</samp> | <kbd>SKEPBT</kbd> or<br><kbd>SKREPBT</kbd> | `(SKENT)` or<br>`(SCENT)` | <kbd>SKEPBT</kbd> or<br><kbd>SKREPBT</kbd>
+|| <samp>consent</samp> | <kbd>SK\*EPBT</kbd> | `(SK*ENT)` | <kbd>SK\*EPBT</kbd> or <kbd>KAUPB/SEPBT</kbd> etc.
 
 Sometimes the dictionary includes:
 
@@ -57,6 +56,9 @@ any pre-initial vowel if convenient, even if stressed,
 such as <samp>era</samp> <kbd>^RA</kbd>, or if it would be annoying to write out.
 But words like <samp>efficacy</samp> are probably not in scope.
 (I’ll move these into caret-stressed.json, okay)
+
+Word families are kept together in the core part of the dictionary,
+even if one word happens to be stress-initial.
 
 #### Compound sounds
 
