@@ -2,6 +2,8 @@
 
 I basically just git initted in my plover dir and started committing WIPs
 
+This README is better viewed [in full width(https://github.com/hftf/roirpt/blob/master/README.md) (> 1100 pixels)
+
 ## Contents
 
 ### `caret-*.json`
@@ -107,7 +109,7 @@ if there is no longer a conflict:
 
 * <samp><b>a</b>llusion</samp> <kbd>^HRAOUGS</kbd> `(^LUUSHUN)`
 * <samp><b>i</b>llusion</samp> <kbd>^HRAO\*UGS</kbd> `(^L*UUSHUN)`
-* <samp><b>i</b>llusory</samp> both <kbd>^HRAOUS/REU</kbd> `(^LUUS/RI)`
+* <samp><b>i</b>llusory</samp>: both <kbd>^HRAOUS/REU</kbd> `(^LUUS/RI)`
 and <kbd>^HRAO\*US/REU</kbd> `(^L*UUS/RI)`
 because \*<samp>allusory</samp> isn’t a word
 
@@ -198,7 +200,7 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 <samp>\{:}</samp>    | Colon       | Sentence  | <kbd>^P-PT</kbd>     | <ins>⠁⠁</ins>⠀<ins>⠀⠁⠁</ins> | same but further out                          | <kbd>STPH-FPLT</kbd>
 <samp>\{^;^}</samp>  | Semicolon   | Unspaced  | <kbd>KR-RG</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠐⠐⠀</ins> | dot pairs, on lower row like <samp>,</samp> | <kbd>TH-FL</kbd>
 <samp>\{;}</samp>    | Semicolon   | Sentence  | <kbd>SW-BS</kbd>     | <ins>⠂⠂</ins>⠀<ins>⠀⠂⠂</ins> | same but further out                          | <kbd>STPH\*FPLT</kbd>, <kbd>SP-PT</kbd>
-<samp>\{^…}</samp>   | Ellipsis    | Before    | <kbd>SW*</kbd>       | <ins>⠂⠂</ins>⠂<ins>⠀⠀⠀</ins> | three dots on lower left row                  | <kbd>HR-PS</kbd> (e**L**li**PS**is)
+<samp>\{^…}</samp>   | Ellipsis    | After     | <kbd>SW*</kbd>       | <ins>⠂⠂</ins>⠂<ins>⠀⠀⠀</ins> | three dots on lower left row                  | <kbd>HR-PS</kbd> (e**L**li**PS**is)
 <samp>\{^\_^}</samp> | Underscore  | Unspaced  | <kbd>SKW-BGS</kbd>   | <ins>⠒⠂</ins>⠀<ins>⠀⠒⠂</ins> | low line, middle-ring-pinky                   | <kbd>RUPBD</kbd> (**UND**e**R**)
 <samp>\{^-^}</samp>  | Hyphen      | Unspaced  | <kbd>H-F</kbd>       | <ins>⠀⠈</ins>⠀<ins>⠁⠀⠀</ins> | tiny line across upper row                    | <kbd>H-PB</kbd> (**H**yphe**N**)
 <samp>\-</samp>      | Dash        | Spaced    | <kbd>PH-FP</kbd>     | <ins>⠀⠉</ins>⠀<ins>⠉⠀⠀</ins> | short line across upper row                   | <kbd>H*PB</kbd>
@@ -258,11 +260,13 @@ Code | Command | Steno | Pseudo/Shape | Explanation | Plover default
 <samp>\{PLOVER:LOOKUP}</samp> | Lookup                        | <kbd>HR-FR</kbd>     | <ins>⠀⠘</ins>⠀<ins>⠃⠀⠀</ins>  | both index fingers | <kbd>PHR*UP</kbd>
 <samp>\{PLOVER:ADD_T…}</samp> | Add Translation               | <kbd>PWHR-FRPB</kbd> | <ins>⠀⠛</ins>⠀<ins>⠛⠀⠀</ins>  | both index+middle | <kbd>TKUPT</kbd>
 <samp>\{PLOVER:FOCUS}</samp>  | Show Plover                   | <kbd>PHROERB</kbd>   | `PLOESH` | **PL**over **SHOW** | <kbd>PHROFBGS</kbd>
-<samp>\{PLOVER:FOCUS}{#<br>Super(Shift(K))}</samp> | Open Word Tray                | <kbd>PHRORTD</kbd>   | `PLORDT` | **PL**over w**ORD T**ray
+<samp>\{PLOVER:FOCUS}{#<br>Super(Shift(K))}</samp> | Open Word Tray†               | <kbd>PHRORTD</kbd>   | `PLORDT` | **PL**over w**ORD T**ray
 <samp>\{PLOVER:FOCUS}{#<br>Super(Shift(L))}</samp> | Open Spectra Lexer            | <kbd>PHRERBGT</kbd>  | `PLERKT` | **PL**over sp**EKTR**a
 <samp>=wt_prev_page</samp>    | Word Tray Prev   | <kbd>#-RB</kbd>      | <ins>⠀⠄</ins>⠀<ins>⠐⠂⠀</ins>   | plugin-suggested
 <samp>=wt_next_page</samp>    | Word Tray Next   | <kbd>#-GS</kbd>      | <ins>⠀⠄</ins>⠀<ins>⠀⠐⠂</ins>   | plugin-suggested
 <samp>=wt_reload</samp>       | Word Tray Reload | <kbd>#-RBGS</kbd>    | <ins>⠀⠄</ins>⠀<ins>⠐⠒⠂</ins> | plugin-suggested
+
+† To use, patch `word_tray_ui.py` by adding `SHORTCUT = "Ctrl+Shift+K"` in `class WordTrayUI`
 
 ## License
 
