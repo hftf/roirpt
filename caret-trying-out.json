@@ -2,7 +2,13 @@
 "^TKPWR": "anger",
 "^TKPWREU": "angry",
 "^TKPWREUL": "angrily",
+"^KPHRABGT": "exactly",
+"^KPALG": "exactly",
+"^KAOU/PAOEU": "occupy",
+"^KAOU/PAEULGS": "occupational",
+"^KAOU/PAEUGS": "occupation",
 "^PWEBGT": "object",
 "^PWEBGS": "objection",
+"^PHAEUL": "email",
 "^PRA": "opera"
 }
