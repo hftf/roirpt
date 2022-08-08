@@ -2,7 +2,7 @@
 
 I basically just git initted in my plover dir and started committing WIPs
 
-This README is better viewed [in full width(https://github.com/hftf/roirpt/blob/master/README.md) (> 1100 pixels)
+This README is better viewed [in full width](https://github.com/hftf/roirpt/blob/master/README.md) (> 1100 pixels)
 
 ## Contents
 
@@ -170,7 +170,7 @@ Testing ground for some guys I’m trying out, will see how it feels
 
 ### `user-*.json`
 
-I mean sure? but probably of little interest until [Chordial](https://chordial.app/)
+I mean sure? but probably of little interest until [Chordial](https://chordial.app/) exists
 
 ### `user-main-overrides.json`
 
@@ -204,8 +204,8 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 <samp>\{^\_^}</samp> | Underscore  | Unspaced  | <kbd>SKW-BGS</kbd>   | <ins>⠒⠂</ins>⠀<ins>⠀⠒⠂</ins> | low line, middle-ring-pinky                   | <kbd>RUPBD</kbd> (**UND**e**R**)
 <samp>\{^-^}</samp>  | Hyphen      | Unspaced  | <kbd>H-F</kbd>       | <ins>⠀⠈</ins>⠀<ins>⠁⠀⠀</ins> | tiny line across upper row                    | <kbd>H-PB</kbd> (**H**yphe**N**)
 <samp>\-</samp>      | Dash        | Spaced    | <kbd>PH-FP</kbd>     | <ins>⠀⠉</ins>⠀<ins>⠉⠀⠀</ins> | short line across upper row                   | <kbd>H*PB</kbd>
-<samp>–</samp>       | En dash     | Spaced    | <kbd>TPH-FPL</kbd>   | <ins>⠈⠉</ins>⠀<ins>⠉⠁⠀</ins> | longer line across upper row                  | <kbd>TPH-RB</kbd> (**N**da**SH**)
-<samp>—</samp>       | Em dash     | Spaced    | <kbd>^TPH-FPLT</kbd> | <ins>⠉⠉</ins>⠀<ins>⠉⠉⠀</ins> | longest line across upper row                 | <kbd>PH-RB</kbd> (**M**da**SH**)
+–                    | En dash     | Spaced    | <kbd>TPH-FPL</kbd>   | <ins>⠈⠉</ins>⠀<ins>⠉⠁⠀</ins> | longer line across upper row                  | <kbd>TPH-RB</kbd> (**N**da**SH**)
+—                    | Em dash     | Spaced    | <kbd>^TPH-FPLT</kbd> | <ins>⠉⠉</ins>⠀<ins>⠉⠉⠀</ins> | longest line across upper row                 | <kbd>PH-RB</kbd> (**M**da**SH**)
 
 ### `user-commands.json`
 
