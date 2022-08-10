@@ -1,14 +1,24 @@
 {
+"^SRAOEGS": "aviation",
 "^TKPWR": "anger",
 "^TKPWREU": "angry",
 "^TKPWREUL": "angrily",
+"^TKAEUGS": "accommodation",
+"^TKAEUT": "accommodate",
+"^TPHORBG": "anorak",
+"^TPHOLG": "analog",
+"^TPHEPL": "enemy",
 "^KPHRABGT": "exactly",
 "^KPALG": "exactly",
+"^KWUS": "equus",
 "^KAOU/PAOEU": "occupy",
 "^KAOU/PAEULGS": "occupational",
 "^KAOU/PAEUGS": "occupation",
+"^PWERGS": "aberration",
 "^PWEBGT": "object",
 "^PWEBGS": "objection",
 "^PHAEUL": "email",
-"^PRA": "opera"
+"^PRA": "opera",
+"^HREUPLGS": "elimination",
+"^HREUPLT": "eliminate"
 }
