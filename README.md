@@ -57,7 +57,7 @@ Sometimes the conceit is stretched to include
 any pre-initial vowel if convenient, even if stressed,
 such as <samp>era</samp> <kbd>^RA</kbd>, or if it would be annoying to write out.
 But words like <samp>efficacy</samp> are probably not in scope.
-(I’ll move these into caret-stressed.json, okay)
+(I’ll move these into `caret-stressed.json`, okay)
 
 Word families are kept together in the core part of the dictionary,
 even if one word happens to be stress-initial.
@@ -130,7 +130,7 @@ as initial `a` `e` or `o` instead.
 For example, `^DISHUN` → `aDISHUN`, `^D*ISHUN` → `eD*ISHUN` or whatever.
 I guess `^sT` for <samp>ext</samp> <kbd>^ST</kbd> can work too
 
-### `*-prefixes.json`
+### `*-prefix-word-parts.json`
 
 Contains non-word prefixes such as <samp>extens</samp> <kbd>^STENS</kbd>
 to make longer words from parts.
@@ -143,6 +143,7 @@ such as <samp>anon</samp> <kbd>^TPHOPB</kbd> `(^NON)`
 or <samp>admin</samp> <kbd>^TKPHEUPB</kbd> `(^DMIN)`,
 I put them here due to their intentional function of taking suffixes.
 For this reason, these entries are not literally prefixes of the form `{blah^}`.
+Those affixes (prefixes and suffixes) are in `*-affixes.json`.
 
 ### `*-phrasing.json`
 
