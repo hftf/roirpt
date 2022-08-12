@@ -186,6 +186,7 @@ when ~~typing~~ ~~stroking~~ ~~outlining~~ writing longer words
 ### `user-punctuation.json`
 
 “Sentence” means sentence-contextual (built-in feature that attaches punctuation to preceding word).
+Add <kbd>\*</kbd> to the first four (Period, Comma, Question, Exclamation) for unspaced versions.
 
 I envision <samp>?</samp> <kbd>KW-PL</kbd> and <samp>!</samp> <kbd>TP-BG</kbd> as shape-based complements of each other:
 the shape of <kbd>KW-PL</kbd> ascends from left to right like a question’s intonation rising ↗︎, and
