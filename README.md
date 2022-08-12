@@ -189,7 +189,8 @@ when ~~typing~~ ~~stroking~~ ~~outlining~~ writing longer words
 
 I envision <samp>?</samp> <kbd>KW-PL</kbd> and <samp>!</samp> <kbd>TP-BG</kbd> as shape-based complements of each other:
 the shape of <kbd>KW-PL</kbd> ascends from left to right like a question’s intonation rising ↗︎, and
-the shape of <kbd>TP-BG</kbd> descends like the intonation of an exclamation falling ↘︎.
+the shape of <kbd>TP-BG</kbd> descends like the inflection of an exclamation falling ↘︎.
+([See also](https://www.paulfioravanti.com/blog/plover-for-the-record/#ending-punctuation))
 
 Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 -|-|-|-|-|-|-
@@ -202,7 +203,7 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 <samp>\{^;^}</samp>  | Semicolon   | Unspaced  | <kbd>KR-RG</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠐⠐⠀</ins> | dot pairs, on lower row like <samp>,</samp> | <kbd>TH-FL</kbd>
 <samp>\{;}</samp>    | Semicolon   | Sentence  | <kbd>SW-BS</kbd>     | <ins>⠂⠂</ins>⠀<ins>⠀⠂⠂</ins> | same but further out                          | <kbd>STPH\*FPLT</kbd>, <kbd>SP-PT</kbd>
 <samp>\{^…}</samp>   | Ellipsis    | After     | <kbd>SW*</kbd>       | <ins>⠂⠂</ins>⠂<ins>⠀⠀⠀</ins> | three dots on lower left row                  | <kbd>HR-PS</kbd> (e**L**li**PS**is)
-<samp>\{^\_^}</samp> | Underscore  | Unspaced  | <kbd>SKW-BGS</kbd>   | <ins>⠒⠂</ins>⠀<ins>⠀⠒⠂</ins> | low line, middle-ring-pinky                   | <kbd>RUPBD</kbd> (**UND**e**R**)
+<samp>\{^\_^}</samp> | Underscore  | Unspaced  | <kbd>KWR-RBG</kbd>   | <ins>⠐⠒</ins>⠀<ins>⠐⠒⠀</ins> | low line, middle-ring-pinky                   | <kbd>RUPBD</kbd> (**UND**e**R**)
 <samp>\{^-^}</samp>  | Hyphen      | Unspaced  | <kbd>H-F</kbd>       | <ins>⠀⠈</ins>⠀<ins>⠁⠀⠀</ins> | tiny line across upper row                    | <kbd>H-PB</kbd> (**H**yphe**N**)
 <samp>\-</samp>      | Dash        | Spaced    | <kbd>PH-FP</kbd>     | <ins>⠀⠉</ins>⠀<ins>⠉⠀⠀</ins> | short line across upper row                   | <kbd>H*PB</kbd>
 –                    | En dash     | Spaced    | <kbd>TPH-FPL</kbd>   | <ins>⠈⠉</ins>⠀<ins>⠉⠁⠀</ins> | longer line across upper row                  | <kbd>TPH-RB</kbd> (**N**da**SH**)
