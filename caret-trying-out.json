@@ -22,5 +22,7 @@
 "^PRA": "opera",
 "^HREUPLGS": "elimination",
 "^HREUPLT": "eliminate",
+"^HREFRT": "elevator",
+"^HREFT": "elevate",
 "^HREBGT/RAL": "electoral"
 }
