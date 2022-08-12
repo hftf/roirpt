@@ -1,6 +1,14 @@
 {
+"^TW": "active",
+"^TW-T": "activity",
+"^TR-BGS": "attribution",
+"^TR-BT": "attribute",
+"^K-P": "accompany",
+"^K-PLT": "accompaniment",
+"^K-T": "account",
 "^HR-FRPBT": "alternative",
 "^HR-RPBGS": "alternation",
 "^HR-RPBT": "alternate",
-"^HR-PLD": "almond"
+"^HR-PLD": "almond",
+"^HR-LG": "illogical"
 }
