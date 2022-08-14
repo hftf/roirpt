@@ -1,5 +1,6 @@
 {
 "^S": "is a",
+"^STHO": "as though",
 "^ST*S": "as it's",
 "^ST-S": "as it is",
 "^SR": "have a",
@@ -9,6 +10,7 @@
 "^SAPB": "as an",
 "^SEBGD": "a second",
 "^SUFP": "as such",
+"^S-T": "as the",
 "^TKAEU": "a day",
 "^TP": "if a",
 "^TPH": "in a",
@@ -18,6 +20,7 @@
 "^TPR": "from a",
 "^TPAOU": "a few",
 "^TPAOUF": "a few of",
+"^TPAUL": "of all",
 "^TP-R": "for a",
 "^TW-L": "actively",
 "^THROT": "a lot to",
