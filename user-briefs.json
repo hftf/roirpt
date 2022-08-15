@@ -17,6 +17,7 @@
 "SREURBGS": "visualization",
 "TKPHREBGT": "deflect",
 "TKPHREBGS": "deflection",
+"TKPAULT": "default",
 "TKEFPBGS": "definition",
 "TPHRAEUPLGS": "inflammation",
 "TPHRAEUGS": "inflation",
@@ -30,6 +31,7 @@
 "PHULT/TPAEURS": "multifarious",
 "HREUPLGTS": "limitation",
 "HREUPLGS": "limitation",
+"HA*FRBS": "harvest",
 "RARLS": "regardless",
 "EUPL/PEFRBS": "impervious"
 }
