@@ -276,7 +276,7 @@ Code | Command | Steno | Pseudo/Shape | Explanation | Plover default
 
 ## License
 
-Code in `plugins/` and `main.json` is not my own.
+Code in `plugins/`, `third-party-dictionaries/`, and `main.json` is not my own.
 It’s just version controlled here to record my modifications
 in order to prevent any updates from overwriting them.
 
