@@ -28,6 +28,8 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 || <samp>competent</samp> | <kbd>KPEPBT</kbd> | `(KPENT)` | <kbd>KPEPBT</kbd> or <kbd>KPE/TEPBT</kbd> or <kbd>KOFRP/TEPBT</kbd> etc.
 || <samp>scent</samp> | <kbd>SKEPBT</kbd> or<br><kbd>SKREPBT</kbd> | `(SKENT)` or<br>`(SCENT)` | <kbd>SKEPBT</kbd> or<br><kbd>SKREPBT</kbd>
 || <samp>consent</samp> | <kbd>SK\*EPBT</kbd> | `(SK*ENT)` | <kbd>SK\*EPBT</kbd> or <kbd>KAUPB/SEPBT</kbd> etc.
+-ent | <samp>intent</samp> | <kbd>SPWEPBT</kbd> | `(INTENT)` | <kbd>SPWEPBT</kbd> or <kbd>EUPB/TEPBT</kbd>
+|| <samp>absent</samp> | <kbd>^SPWEPBT</kbd> | `(^SBENT)` | <kbd>AB/SEPBT</kbd>
 
 Sometimes the dictionary includes:
 
@@ -61,6 +63,7 @@ But words like <samp>efficacy</samp> are probably not in scope.
 
 Word families are kept together in the core part of the dictionary,
 even if one word happens to be stress-initial.
+For example, <samp>illustrate</samp> and <samp>illustrative</samp>.
 
 #### Compound sounds
 
