@@ -11,6 +11,7 @@
 "SR*RS": "{#Control_L(e)}",
 "TK-LG": "{^^}",
 "TK-TS": "{^^}",
+"TA*B": "{#Tab}{^~|^}",
 "KPA*L": "{<}",
 "KPA*D": "{*-|}",
 "KA*PS": "{MODE:CAPS}",
