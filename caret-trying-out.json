@@ -23,6 +23,7 @@
 "^KAOU/PAOEU": "occupy",
 "^KAOU/PAEULGS": "occupational",
 "^KAOU/PAEUGS": "occupation",
+"^KAOUP": "occupy",
 "^PWA*EU": "obey",
 "^PWERGS": "aberration",
 "^PWEBGT": "object",
