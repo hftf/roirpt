@@ -223,7 +223,7 @@ Code | Command | Steno | Pseudosteno | Shape | Explanation
 -|-|-|-|-|-
 <samp>\{\*+}</samp> | [Repeat Last Stroke](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-delete-space) | <kbd>#</kbd>    | `#`                        || wiki default |
 <samp>\{\*}</samp>  | [Toggle Asterisk](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-delete-space) | <kbd>#\*</kbd>  | `#*`                       || wiki default |
-<samp>\{\*?}</samp> | [Retro Add Space](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-add-space) | <kbd>1K</kbd>   | i.e. <kbd>#SK</kbd>   | <ins>⠒⠄</ins>⠀<ins>⠀⠀⠀</ins> | horizontal is mnemonic for add space
+<samp>\{\*?}</samp> | [Retro Add Space](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-add-space) | <kbd>#SK</kbd>   | i.e. <kbd>#SK</kbd>   | <ins>⠒⠄</ins>⠀<ins>⠀⠀⠀</ins> | horizontal is mnemonic for add space
 <samp>\{\*!}</samp> | [Retro Delete Space](https://github.com/openstenoproject/plover/wiki/Dictionary-Format#retroactively-delete-space) | <kbd>2K</kbd>   | i.e. <kbd>#TK</kbd>   | <ins>⠘⠄</ins>⠀<ins>⠀⠀⠀</ins> | vertical is mnemonic for no gap
 <samp>#NOOP</samp> || <kbd>2K3W</kbd> | i.e. <kbd>#TKPW</kbd> | <ins>⠘⠇</ins>⠀<ins>⠀⠀⠀</ins> | used for notes-to-self
 
