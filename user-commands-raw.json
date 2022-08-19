@@ -1,0 +1,5 @@
+{
+"R5*U": "{plover:solo_dict:+third-party-dictionaries/raw.py}{`^}",
+"RA*U": "{plover:solo_dict:+third-party-dictionaries/raw.py}",
+"RA*UP": "{plover:solo_dict:+third-party-dictionaries/raw-tape.py}"
+}
