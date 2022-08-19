@@ -1,4 +1,5 @@
 {
+"STAEUR/KAEUSZ": "staircases",
 "STAT/EUBGS": "statics",
 "SKWRAUPB/RES": "genres",
 "SKWREPB/RES": "genres",
@@ -60,6 +61,8 @@
 "PER/TPAOUPLS": "perfumes",
 "PERPBL/TEUS": "personalities",
 "HRAP/TOPS": "laptops",
+"HRO/KAELS": "locales",
+"HRO/KALS": "locales",
 "HAOUPL/TEUS": "humanities",
 "HAPBD/PWAGS": "handbags",
 "HOL/OES": "hollows",
