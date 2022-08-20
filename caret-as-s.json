@@ -3,10 +3,10 @@
 "^TPH*FPLTS": "{^)}",
 "^TPH-FPLT": "{:}",
 "^TPH-FPLTS": "{(^}",
-"^TPH-R": "{#Left}{^}",
-"^TPH-P": "{#Up}{^}",
-"^TPH-B": "{#Down}{^}",
-"^TPH-G": "{#Right}{^}",
+"^TPH-R": "{#Left}{^~|}",
+"^TPH-P": "{#Up}{^~|}",
+"^TPH-B": "{#Down}{^~|}",
+"^TPH-G": "{#Right}{^~|}",
 "^P-PT": "{;}",
-"^H-FT": "{#Control_L(Home)}{^}"
+"^H-FT": "{#Control_L(Home)}{^~|}"
 }
