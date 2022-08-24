@@ -61,9 +61,15 @@ such as <samp>era</samp> <kbd>^RA</kbd>, or if it would be annoying to write ou
 But words like <samp>efficacy</samp> are probably not in scope.
 (I’ll move these into `caret-stressed.json`, okay)
 
+Words without initial stress take precedence,
+so even the misstroke <samp>eleventh</samp> <kbd>^HREFPBT</kbd>
+precedes <samp>elephant</samp>.
+
 Word families are kept together in the core part of the dictionary,
 even if one word happens to be stress-initial.
 For example, <samp>illustrate</samp> and <samp>illustrative</samp>.
+Similarly, words with ambiguous initial stress are kept in core,
+such as <samp>apparatus</samp>.
 
 #### Compound sounds
 
