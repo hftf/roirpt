@@ -7,6 +7,8 @@
 "#-RB": "=wt_prev_page",
 "#-RBGS": "=wt_reload",
 "^H*FT": "{#Control_L(a)}",
+"STPH-RB": "{#Alt_L(Left)}{^~|}",
+"STPH-BG": "{#Alt_L(Right)}{^~|}",
 "STA*B": "{#Shift_L(Tab)}",
 "SR*RS": "{#Control_L(e)}",
 "TK-LG": "{^^}",
