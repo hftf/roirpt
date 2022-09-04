@@ -1,5 +1,6 @@
 {
 "^S": "is a",
+"^ST": "is it a",
 "^STP": "as if",
 "^STP-R": "as for",
 "^STP-T": "as if the",
@@ -52,6 +53,7 @@
 "^PHEUPB": "a minute",
 "^PAEUFR": "a pair of",
 "^W": "with a",
+"^WH": "when a",
 "^WAOEBG": "a week",
 "^H": "had a",
 "^HREUBLT": "a little bit",
@@ -59,6 +61,7 @@
 "^HAS": "has a",
 "^R": "are a",
 "^R-L": "a really",
+"^AT": "at a",
 "^AS": "as a",
 "^O": "to a",
 "^OR": "or a",

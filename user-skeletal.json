@@ -1,4 +1,6 @@
 {
+"STOEUR/TPHR-LG": "stereotypically",
+"STOEUR/TP-LG": "stereotypical",
 "SKWR-L": "justly",
 "SKHR-R": "circular",
 "SKHR-RL": "circularly",
@@ -37,6 +39,8 @@
 "PH-FS": "emphasis",
 "PH-FZ": "emphasize",
 "PH-B": "maybe",
+"PRO/TO/TPHR-LG": "prototypically",
+"PRO/TO/TP-LG": "prototypical",
 "PR-B": "problem",
 "P-RPBLT": "punishment",
 "HR-FRPBL": "alternatively",
