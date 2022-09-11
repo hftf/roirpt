@@ -68,6 +68,8 @@
 "KPHRAOUGS": "exclusion",
 "KPHROERGS": "exploration",
 "KPHRORGS": "exploration",
+"KPARPBLGT": "exaggerate",
+"KPARPBLGS": "exaggeration",
 "KHRAORPL": "classroom",
 "KHRAEUFR": "clarify",
 "KHRAFRPL": "classroom",
@@ -89,8 +91,10 @@
 "HO*EUP/THELG": "hypothetical",
 "RAOEFL": "reveal",
 "RARLS": "regardless",
+"OFBT": "obviate",
 "EUPB/SEUDZ": "insidious",
 "EUPL/PEFRBS": "impervious",
 "EP/TKPHOLG": "epidemiology",
+"EBGS/PROEPT": "expropriate",
 "URSZ": "yourselves"
 }

@@ -39,6 +39,7 @@
 "PHRA*S": "palace",
 "PHAEUB": "may be",
 "PHAPBL": "manual",
+"PHO*RT": "mort",
 "PHOEUD": "media",
 "PHORT/-D": "imported",
 "PHOLDZ": "models",
@@ -64,5 +65,6 @@
 "*ETS": "et cetera",
 "EFPBS": "essence",
 "ETS": "etc.",
+"UPBDZ": "underside",
 "-GS": "{^ing}{^s}"
 }

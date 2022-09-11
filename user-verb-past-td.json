@@ -2,11 +2,14 @@
 "SPOPBTD": "responded",
 "SROUPBTD": "surrounded",
 "SOUPBTD": "sounded",
+"TKPWROUPBTD": "grounded",
 "TKPWAOEUTD": "guided",
 "TPOUPBTD": "founded",
 "KPHAOUBGD": "communicated",
 "KWEUBGD": "convicted",
 "PROEUFTD": "provided",
+"ROUPBTD": "rounded",
 "ORTD": "ordered",
-"EPBTD": "ended"
+"EPBTD": "ended",
+"UPB/KP-PD": "unexpected"
 }
