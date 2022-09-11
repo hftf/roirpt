@@ -3,6 +3,7 @@
 "SR*E": "{^}'ve",
 "SRUPL": "{circum^}",
 "SAO*EUDZ": "{^-sized}",
+"TK*EU/KWRA": "{dia^}",
 "KPRA*": "{extra^}",
 "KWRA*EL": "{^ially}",
 "KWRAES": "{^y}{^'s}",
@@ -12,6 +13,7 @@
 "PET/KWRA": "{peta^}",
 "HR-LS": "{^lessly}",
 "HOEUP/THE": "{hypothe^}",
+"HOEPL/KWRO": "{homeo^}",
 "AO*UT": "{auto^}",
 "AOEUDZ": "{^ized}",
 "A*UP": "{^up}",
@@ -23,5 +25,6 @@
 "OEUS": "{iso^}",
 "*EUFBGT": "{^ictive}",
 "EUFBGT": "{^istic}",
-"ERD": "{^er}{^ed}"
+"ERD": "{^er}{^ed}",
+"EBGS/KWRO": "{exo^}"
 }
