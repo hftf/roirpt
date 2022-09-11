@@ -19,6 +19,7 @@
 "TKPHEUF": "administrative",
 "TPRAPBL": "frankly",
 "TPO*EULT": "filthy",
+"TPOERGD": "foreground",
 "TEPL": "temperature",
 "KWRAOUFL": "youthful",
 "KWAOEPD": "Wikipedia",
@@ -40,5 +41,6 @@
 "RAUFR": "reviewer",
 "ROFGS": "resolution",
 "REFPGS": "reception",
-"A*EURPL": "airplane"
+"A*EURPL": "airplane",
+"OFBLS": "oblivious"
 }
