@@ -11,6 +11,7 @@
 "S*EUFRP": "simp",
 "S*EUPL": "sim",
 "TKPHROEPL": "diplom",
+"TPHO/STALG": "nostalg",
 "TPAFL": "facil",
 "TPAT/EUG/-BL": "fatigable",
 "KPAPB": "compan",
@@ -30,5 +31,6 @@
 "A/KWAT": "aquat",
 "A/KAOUPL": "accum",
 "AUT/PHAT": "automat",
+"ABG/REU/PHOEPB": "acrimon",
 "EUPL/PREUS": "impris"
 }
