@@ -1,7 +1,9 @@
 {
 "^SEPT": "accept",
 "^TEPBS": "attendance",
+"^KRAOS": "across",
 "^PHERPBLT": "emergent",
 "^PAOERPBG": "appearing",
-"^HRAFT/TEUFT": "elasticity"
+"^HRAFT/TEUFT": "elasticity",
+"^RAOUPBD": "around"
 }
