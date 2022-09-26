@@ -1,4 +1,15 @@
 {
+"^TAOEPBTS": "18th century",
+"^HREFPBTS": "11th century",
+"STPAOEPBTS": "17th century",
+"STAOEPBTS": "16th century",
+"TPHAOEPBTS": "19th century",
+"TPRAOEPBTS": "14th century",
+"TPAOEPBTS": "15th century",
+"TW*EPBTS": "20th century",
+"TWEURS": "21st century",
+"TWEFLTS": "12th century",
+"THRAOEPBTS": "13th century",
 "KHRAOUFBG": "classical music",
 "KHRAOUFGS": "classical musician"
 }
