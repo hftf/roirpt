@@ -2,6 +2,7 @@
 "#S*": "{>}{&s}",
 "^STKPW*": "{>}{&z}",
 "^STKPW*P": "{&Z}",
+"^TPH*FPLT": "{;}",
 "^TPH*FPLTS": "{^)}",
 "^TPH-FPLT": "{:}",
 "^TPH-FPLTS": "{(^}",

@@ -4,6 +4,7 @@
 "^STP": "as if",
 "^STP-R": "as for",
 "^STP-T": "as if the",
+"^STH": "as this",
 "^STHO": "as though",
 "^STHE": "as they",
 "^STHEBZ": "as they say",
@@ -73,6 +74,7 @@
 "^PWEUFT": "a bit of",
 "^PWEUT": "a bit",
 "^PWUFRPB": "a bunch",
+"^PWUFP": "a bunch of",
 "^PHO*PBT": "a month",
 "^PHEUPB": "a minute",
 "^PAEUFR": "a pair of",
@@ -96,6 +98,7 @@
 "^OPB": "on a",
 "^*R": "or a",
 "^UR": "you're a",
+"^URP": "you were a",
 "^-F": "of a",
 "^-FS": "was a",
 "^-R": "are a"
