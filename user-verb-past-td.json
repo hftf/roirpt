@@ -11,6 +11,7 @@
 "TPOUPBTD": "founded",
 "TPORG/-D": "forgotten",
 "TPORGD": "forgotten",
+"KPHRAOUTD": "excluded",
 "KPHAOUBGD": "communicated",
 "KWEUBGD": "convicted",
 "KRUBGD": "constructed",
@@ -20,6 +21,7 @@
 "WOUPBTD": "wounded",
 "HAPBTD": "handed",
 "ROUPBTD": "rounded",
+"REUBGD": "restricted",
 "ORTD": "ordered",
 "EPBTD": "ended",
 "UPB/KP-PD": "unexpected"
