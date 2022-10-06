@@ -12,6 +12,7 @@
 "^ST*S": "as it's",
 "^ST-RP": "as it were",
 "^ST-S": "as it is",
+"^SPHRAPBD": "as planned",
 "^SPHUFP": "as much",
 "^SPOB": "as possible",
 "^SPOBL": "as possible",
@@ -28,6 +29,7 @@
 "^SA": "as a",
 "^SAOPBS": "as soon as",
 "^SAPB": "as an",
+"^SOUR": "as our",
 "^SE": "as he",
 "^SEU": "as I",
 "^SEUF": "as if",
@@ -65,6 +67,7 @@
 "^THR-S": "there's a",
 "^THA": "that a",
 "^THAPB": "than a",
+"^TH-S": "this is a",
 "^TA": "at a",
 "^TAOEUPL": "a time",
 "^TAEUBG": "take a",
@@ -107,5 +110,6 @@
 "^URP": "you were a",
 "^-F": "of a",
 "^-FS": "was a",
-"^-R": "are a"
+"^-R": "are a",
+"^-B": "be a"
 }
