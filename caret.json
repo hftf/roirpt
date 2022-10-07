@@ -623,6 +623,7 @@
 "^TOPB/PHEU": "autonomy",
 "^TOPB/PHUS": "autonomous",
 "^TOPL": "atom",
+"^TOPL/^TOPB": "automaton",
 "^TOPL/EUBG": "atomic",
 "^TOBG/SEU": "autocracy",
 "^TEUP/KAL": "atypical",
