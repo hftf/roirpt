@@ -15,21 +15,42 @@ A few groups of rhymes so you can see why this might be useful:
 
 Group | Word | Steno | Pseudosteno | Plover default entries
 -|-|-|-|-
--end | <samp>pend</samp> | <kbd>PEPBD</kbd> | `(PEND)` | <kbd>PEPBD</kbd>
-|| <samp>spend</samp> | <kbd>SPEPBD</kbd> | `(SPEND)` | <kbd>SPEPBD</kbd>
-|| <samp>append</samp> | <kbd>^PEPBD</kbd> | `(^PEND)` | <kbd>A(P)/PEPBD</kbd>
-|| <samp>expend</samp> | <kbd>KPEPBD</kbd> | `(XEND)` | <kbd>KPEPBD</kbd> or <kbd>EBGS/PEPBD</kbd>
-|| <samp>extend</samp> | <kbd>^STEPBD</kbd> | `(^STEND)` | <kbd>EBGS/(S)TEPBD</kbd>
--ent | <samp>sent</samp> | <kbd>SEPBT</kbd> | `(SENT)` | <kbd>SEPBT</kbd>
-|| <samp>assent</samp> | <kbd>^SEPBT</kbd> | `(^SENT)` | <kbd>AS/SEPBT</kbd>
-|| <samp>accent</samp> | <kbd>^KPEPBT</kbd> | `(^XENT)` | <kbd>ABG/SENT</kbd> or <kbd>ABGS/EPBT</kbd> or <kbd>KP\*EPBT</kbd>
-|| <samp>stent</samp> | <kbd>STEPBT</kbd> | `(STENT)` | <kbd>STEPBT</kbd>
-|| <samp>extent</samp> | <kbd>^STEPBT</kbd> | `(^STENT)` | <kbd>EBGS/((S)T)EPBT</kbd>
-|| <samp>competent</samp> | <kbd>KPEPBT</kbd> | `(KPENT)` | <kbd>KPEPBT</kbd> or <kbd>KPE/TEPBT</kbd> or <kbd>KOFRP/TEPBT</kbd> etc.
-|| <samp>scent</samp> | <kbd>SKEPBT</kbd> or<br><kbd>SKREPBT</kbd> | `(SKENT)` or<br>`(SCENT)` | <kbd>SKEPBT</kbd> or<br><kbd>SKREPBT</kbd>
-|| <samp>consent</samp> | <kbd>SK\*EPBT</kbd> | `(SK*ENT)` | <kbd>SK\*EPBT</kbd> or <kbd>KAUPB/SEPBT</kbd> etc.
--ent | <samp>intent</samp> | <kbd>SPWEPBT</kbd> | `(INTENT)` | <kbd>SPWEPBT</kbd> or <kbd>EUPB/TEPBT</kbd>
-|| <samp>absent</samp> | <kbd>^SPWEPBT</kbd> | `(^SBENT)` | <kbd>AB/SEPBT</kbd>
+-end | <samp>pend</samp>   | <kbd>PEPBD</kbd>    | `(PEND)`   | <kbd>PEPBD</kbd>
+|| <samp>spend</samp>      | <kbd>SPEPBD</kbd>   | `(SPEND)`  | <kbd>SPEPBD</kbd>
+|| <samp>append</samp>     | <kbd>^PEPBD</kbd>   | `(^PEND)`  | <kbd>A(P)/PEPBD</kbd>
+|| <samp>expend</samp>     | <kbd>KPEPBD</kbd>   | `(XEND)`   | <kbd>KPEPBD</kbd> or <kbd>EBGS/PEPBD</kbd>
+|| <samp>extend</samp>     | <kbd>^STEPBD</kbd>  | `(^STEND)` | <kbd>EBGS/(S)TEPBD</kbd>
+-ent | <samp>sent</samp>   | <kbd>SEPBT</kbd>    | `(SENT)`   | <kbd>SEPBT</kbd>
+|| <samp>assent</samp>     | <kbd>^SEPBT</kbd>   | `(^SENT)`  | <kbd>AS/SEPBT</kbd>
+|| <samp>ascent</samp>     | <kbd>^SKREPBT</kbd> | `(^SCENT)` | <kbd>AS/KREPBT</kbd>
+|| <samp>accent</samp>     | <kbd>^KPEPBT</kbd>  | `(^XENT)`  | <kbd>ABG/SENT</kbd> or <kbd>ABGS/EPBT</kbd> or <kbd>KP\*EPBT</kbd>
+|| <samp>stent</samp>      | <kbd>STEPBT</kbd>   | `(STENT)`  | <kbd>STEPBT</kbd>
+|| <samp>extent</samp>     | <kbd>^STEPBT</kbd>  | `(^STENT)` | <kbd>EBGS/((S)T)EPBT</kbd>
+|| <samp>competent</samp>  | <kbd>KPEPBT</kbd>   | `(KPENT)`  | <kbd>KPEPBT</kbd> or <kbd>KPE/TEPBT</kbd> or <kbd>KOFRP/TEPBT</kbd> etc.
+|| <samp>scent</samp>      | <kbd>SKEPBT</kbd> or<br><kbd>SKREPBT</kbd> | `(SKENT)` or<br>`(SCENT)` | <kbd>SKEPBT</kbd> or<br><kbd>SKREPBT</kbd>
+|| <samp>consent</samp>    | <kbd>SK\*EPBT</kbd> | `(SK*ENT)` | <kbd>SK\*EPBT</kbd> or <kbd>KAUPB/SEPBT</kbd> etc.
+-ent | <samp>intent</samp> | <kbd>SPWEPBT</kbd>  | `(INTENT)` | <kbd>SPWEPBT</kbd> or <kbd>EUPB/TEPBT</kbd>
+|| <samp>absent</samp>     | <kbd>^SPWEPBT</kbd> | `(^SBENT)` | <kbd>AB/SEPBT</kbd>
+
+### The <samp>ex-</samp>/<samp>comp-</samp> conflict, etc.
+
+These dictionaries do not claim to solve the <samp>ex-</samp>/<samp>comp-</samp> conflict systematically or completely,
+but represent the general direction I was going for.
+In the case of a conflict, usually the leftmost option or the more common word gets priority.
+
+none | with <kbd>S</kbd> | with <kbd>^</kbd> | with <kbd>^S</kbd>
+-|-|-|-
+<kbd>T </kbd> <samp>t-</samp> | <kbd>ST </kbd>  <samp>st-</samp>  | <kbd>^T </kbd>  <samp>att-</samp>  | <kbd>^ST </kbd>  <samp>est-</samp>¹ or <samp>ext-</samp>
+<kbd>P </kbd> <samp>p-</samp> | <kbd>SP </kbd>  <samp>sp-</samp>  | <kbd>^P </kbd>  <samp>app-</samp>  | <kbd>^SP </kbd>  <samp>esp-</samp>  or <samp>exp-</samp>
+<kbd>K </kbd> <samp>c-</samp> | <kbd>SK </kbd>  <samp>sc-</samp>  | <kbd>^K </kbd>  <samp>acc-</samp>  | <kbd>^SK </kbd>  <samp>esc-</samp>  or <samp>exc-</samp>
+<kbd>KP</kbd> <samp>comp-</samp> or <samp>ex-</samp> | <kbd>SKP</kbd> <samp>and-</samp> | <kbd>^KP</kbd> <samp>ex-</samp> or <samp>exC-</samp>² | <kbd>^SKP</kbd>           
+
+Note that this table is designed to be mnemonic, not comprehensive. For example:
+1. <kbd>^ST</kbd>: “<samp>est-</samp>” is shorthand for “<samp>ast-</samp>, <samp>aust-</samp>, <samp>est-</samp>, <samp>ist-</samp>, etc.”
+(as in <samp><b>ast</b>ute</samp>, <samp><b>aust</b>ere</samp>, <samp><b>est</b>ate</samp>, <samp><b>Ist</b>anbul</samp>)
+2. <kbd>^KP</kbd>: is <samp>ext-</samp> or <samp>exp-</samp> or <samp>exc-</samp> when used with <kbd>R</kbd> (as in <samp><b>ext</b>ra</samp> <kbd>^KPRA</kbd>, <samp><b>exp</b>ress</samp> <kbd>^KPRES</kbd>)
+
+### Caveats
 
 Sometimes the dictionary includes:
 
