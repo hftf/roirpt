@@ -38,7 +38,7 @@ These dictionaries do not claim to solve the <samp>ex-</samp>/<samp>comp-</samp>
 but represent the general direction I was going for.
 In the case of a conflict, usually the leftmost option or the more common word gets priority.
 
-none | with <kbd>S</kbd> | with <kbd>^</kbd> | with <kbd>^S</kbd>
+no prefix | prefixed with <kbd>S</kbd> | prefixed with <kbd>^</kbd> | prefixed with <kbd>^S</kbd>
 -|-|-|-
 <kbd>T </kbd> <samp>t-</samp> | <kbd>ST </kbd>  <samp>st-</samp>  | <kbd>^T </kbd>  <samp>att-</samp>  | <kbd>^ST </kbd>  <samp>est-</samp>¹ or <samp>ext-</samp>
 <kbd>P </kbd> <samp>p-</samp> | <kbd>SP </kbd>  <samp>sp-</samp>  | <kbd>^P </kbd>  <samp>app-</samp>  | <kbd>^SP </kbd>  <samp>esp-</samp>  or <samp>exp-</samp>
