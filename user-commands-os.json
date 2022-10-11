@@ -2,6 +2,7 @@
 "1W": "{#Control(1)}",
 "2W": "{#Control(2)}",
 "3W": "{#Control(3)}",
+"#W": "{#Super_L(Tab)}",
 "W4": "{#Control(4)}",
 "W5": "{#Control(5)}",
 "W0": "{#Control(0)}",
