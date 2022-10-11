@@ -60,6 +60,7 @@
 "PHEFPBLG/*ER": "messenger",
 "PRAOE/EPLT": "preempt",
 "P*ERPLT": "permanent",
+"PUBL/STEU": "publicity",
 "WHAOEUL/-FT": "whilst",
 "WAER/REU": "weary",
 "WAFPBT": "wasn't",
@@ -68,6 +69,7 @@
 "WUPBD/ROUS": "wondrous",
 "HROUPBLG": "lounge",
 "HROG/K-L": "logical",
+"HREUBG/WOR": "liquor",
 "HRED/TREU": "hereditary",
 "HRED/TAER": "hereditary",
 "HAOEURG": "hiring",
@@ -84,5 +86,6 @@
 "OB/SEFRBGS": "observation",
 "EUPB/SKWRAOUR": "injure",
 "EUPBD/REBGT": "indirect",
+"EPB/SRAOES": "envious",
 "ELS/WHAEUR": "elsewhere"
 }
