@@ -1472,6 +1472,8 @@
 "^REFT": "arrest",
 "^REBGT": "erect",
 "^REBGS": "erection",
+"^REL/SRAPBT": "irrelevant",
+"^REL/SRAPBS": "irrelevance",
 "^REG/TPHO": "oregano",
 "^RUPGS": "eruption",
 "^RUPT": "erupt"
