@@ -18,6 +18,7 @@
 "KPH-FPL": "{#Super_L(y)}",
 "KPH-FD": "{#Super_L(h)}",
 "KPH-L": "{#Super_L(l)}",
+"KPH-G": "{#Super_L(g)}",
 "KPH-T": "{#Super_L(t)}",
 "KPH-S": "{#Super_L(s)}",
 "KPH-Z": "{#Super_L(z)}"

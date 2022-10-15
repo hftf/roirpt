@@ -1,7 +1,9 @@
 {
 "STA*RLT": "startle",
+"SPHRA*RT": "splatter",
 "SPHO*RT": "smother",
 "SHA*RT": "shatter",
+"S*ERLT": "settler",
 "TPHAO*EURT": "neither",
 "TPH*ERT": "nether",
 "TPH*ERT/HRAPBDZ": "Netherlands",
@@ -9,6 +11,7 @@
 "THAO*ERT": "theater",
 "KHA*RT": "chatter",
 "K*URPBT": "curtain",
+"PWA*RPB": "banner",
 "PW*URT": "butter",
 "PW*URT/TPHUT": "butternut",
 "PH*ERT/POL/TAPB": "metropolitan",
