@@ -280,7 +280,7 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 
 For paired punctuation, such as (opening and closing) brackets and quotation marks.
 
-I much prefer outlines based on iconic symbol shapes to outlines based on symbol names.
+I prefer outlines based on iconic symbol shapes to outlines based on symbol names.
 Outlines for the opening/closing square brackets, curly braces, and angle brackets
 use exclusively the left/right key banks respectively.
 To avoid conflicts, the main outlines for opening/closing parentheses use both banks,
@@ -295,7 +295,7 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 -|-|-|-|-|-|-
 <samp>\{~\|(^}</samp>               | Paren open     | Before  | <kbd>KPAPG</kbd>     | <ins>⠐⠅</ins>⠀<ins>⠀⠑⠀</ins> | shaped like parenthesis,<br />left vowel for open   | <kbd>PREPB</kbd> (**P**a**REN**)
 <samp>\{^~\|)}</samp>               | Paren close    | After   | <kbd>KPUPG</kbd>     | <ins>⠐⠁</ins>⠀<ins>⠀⠕⠀</ins> | shaped like parenthesis,<br />right vowel for close | <kbd>PR*EPB</kbd>
-<samp>\{~\|()^}<br />\{#Left}</samp>| Paren both     | Before  | <kbd>KPAUPG</kbd>    | <ins>⠐⠅</ins>⠀<ins>⠀⠕⠀</ins> | shaped like parentheses,<br />cursor in between     | <kbd>PR*EPBS</kbd> (meant for code, not prose)</tbody>
+<samp>\{~\|()^}<br />\{#Left}</samp>| Paren both     | Before  | <kbd>KPAUPG</kbd>    | <ins>⠐⠅</ins>⠀<ins>⠀⠕⠀</ins> | shaped like parentheses,<br />cursor in between     | <kbd>PR*EPBS</kbd> (meant for code,<br />not prose)</tbody>
 <samp>\{[^}</samp>                  | Bracket open   | Before  | <kbd>TKPA</kbd>      | <ins>⠘⠅</ins>⠀<ins>⠀⠀⠀</ins> | shaped like square bracket           | <kbd>PWR-BGT</kbd> (**BR**ac**K**e**T**)
 <samp>\{^]}</samp>                  | Bracket close  | After   | <kbd>UPLG</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠝⠀</ins> | shaped like square bracket                          | <kbd>PWR*BGT</kbd>
 <samp>\{~\|[]^}<br />\{#Left}</samp>| Bracket both   | Before  | <kbd>TKPAUPLG</kbd>  | <ins>⠘⠅</ins>⠀<ins>⠀⠝⠀</ins> | shaped like square bracket                          | none</tbody>
@@ -303,8 +303,8 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 <samp>\{^]}</samp>                  | Brace close    | After   | <kbd>UPBGS</kbd>     | <ins>⠀⠀</ins>⠀<ins>⠀⠕⠂</ins> | right brace protruding out                          | <kbd>TPR*BGT</kbd>
 <samp><\{^}</samp>                  | Angle open     | Before  | <kbd>TKWA</kbd>      | <ins>⠘⠆</ins>⠀<ins>⠀⠀⠀</ins> | left  angle tilted 45° CCW ⤺                        | <kbd>PWRABG</kbd> (**BRACK**et)
 <samp>\{^}></samp>                  | Angle close    | After   | <kbd>UBLG</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠞⠀</ins> | right angle tilted 45° CW  ⤸                        | <kbd>PWRA*BG</kbd>
-<samp>\{\'^}</samp>                 | Quote open     | Before  | <kbd>KW-LT</kbd>     | <ins>⠐⠂</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KW-GS</kbd> for <samp>\{~\|\"^}</samp>,<br />top row mnemonic for <samp>\'</samp>;<br />also quasi-p. **QU**ote **L**ef**T**                | <kbd>SKW-T</kbd> (**S**ingle **QU**o**T**e)
-<samp>\{^\'}</samp>                 | Quote close    | After   | <kbd>KR-LT</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KR-GS</kbd> for <samp>\{^~\|\"}</samp>,<br />top row mnemonic for <samp>\'</samp>;<br />also quasi-p. **Q**uote **R**igh**T**                | <kbd>SKW*T</kbd>, <kbd>-PBT</kbd>
+<samp>\{\'^}</samp>                 | Quote open     | Before  | <kbd>KW-LT</kbd>     | <ins>⠐⠂</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KW-GS</kbd> for <samp>"</samp>  open,<br />top row mnemonic for <samp>\'</samp> form;<br />also quasi-p. **QU**ote **L**ef**T**                | <kbd>SKW-T</kbd> (**S**ingle **QU**o**T**e)
+<samp>\{^\'}</samp>                 | Quote close    | After   | <kbd>KR-LT</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KR-GS</kbd> for <samp>"</samp> close,<br />top row mnemonic for <samp>\'</samp> form;<br />also quasi-p. **Q**uote **R**igh**T**                | <kbd>SKW*T</kbd>, <kbd>-PBT</kbd>
 
 
 Some alternate versions:
