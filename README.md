@@ -92,7 +92,7 @@ For example, <samp>illustrate</samp> and <samp>illustrative</samp>.
 Similarly, words with ambiguous initial stress are kept in core,
 such as <samp>apparatus</samp>.
 
-#### Compound sounds
+#### Compound initial sounds
 
 In development (not really). Looking for permanent homes for certain starters (marked with ? for now):
 
@@ -107,19 +107,20 @@ NT | <samp>ant-</samp> <samp>ent-</samp> <samp>int-</samp> | <kbd>SPW</kbd>  | `
 ND | <samp>and-</samp> <samp>end-</samp> <samp>ind-</samp> | <kbd>SKP</kbd>  | `(AND)` | <samp>cond-</samp> | <kbd>K</kbd>    | `(K)`
 NK | <samp>anc-</samp> <samp>enc-</samp> <samp>inc-</samp><br /><samp>ank-</samp> <samp>enk-</samp> <samp>ink-</samp> | ? | | <samp>conc-</samp><br /><samp>conk-</samp> | <kbd>K</kbd> | `(K)`
 NG | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp> | ?                            |        | <samp>cong-</samp> | <kbd>K</kbd> | `(K)`</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + fricative**
-NF |                   <samp>enf-</samp> <samp>inf-</samp> | ?                            |        | <samp>comf-</samp><br /><samp>conf-</samp> | <kbd>TKP</kbd> or<br /><nobr><kbd>TKP*</kbd>†</nobr> | `(KF)` or<br /><nobr>`(KF*)`†</nobr>
+NF |                   <samp>enf-</samp> <samp>inf-</samp> | ?                            |        | <samp>comf-</samp><br /><samp>conf-</samp> | <kbd>TKP</kbd> or<br /><nobr><kbd>TKP*</kbd>¹</nobr> | `(KF)` or<br /><nobr>`(KF*)`¹</nobr>
 NV |                   <samp>env-</samp> <samp>inv-</samp> | <kbd>TPWH</kbd>              | `(NW)` | <samp>conv-</samp> | <kbd>KW</kbd> | `(KW)`
 NS | <samp>ans-</samp> <samp>ens-</samp> <samp>ins-</samp> | <kbd>STPH</kbd>              | `(SN)` | <samp>cons-</samp><br /><samp>conc-</samp> | <kbd>SK</kbd> | `(SK)`</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + fricative + stop**
 NST|                                     <samp>inst-</samp>| <kbd>STPH</kbd>    | `(SN)` | <samp>const-</samp> | ? |</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + affricate**
 NJ | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp><br /><samp>anj-</samp> <samp>enj-</samp> <samp>inj-</samp> | ? | | <samp>cong-</samp><br /><samp>conj-</samp> | ? | </td></tr></tbody><tbody><tr><td colspan="8">**Stop + fricative**
-BS | <samp>abs-</samp> <samp>obs-</samp>                   | <kbd>SPW</kbd> or<br /><kbd>^SPW</kbd>     | `(SB)` or<br />`(^SB)` | 
+BS | <samp>abs-</samp> <samp>obs-</samp>                   | <kbd>SPW</kbd> or<br /><kbd>^SPW</kbd>²     | `(SB)` or<br />`(^SB)`² | 
 DF |                   <samp>def-</samp> <samp>dif-</samp> | <kbd>TKP</kbd>                        | `(DF)` | 
 DV |                   <samp>dev-</samp> <samp>div-</samp> | <kbd>TKW</kbd>                        | `(DW)` | 
 DS |                   <samp>des-</samp> <samp>dis-</samp><br /><samp>dec-</samp><br /><samp>desc-</samp> <samp>disc-</samp><br /> | <kbd>STK</kbd> | `(DS)` | | | </td></tr></tbody><tbody><tr><td colspan="8">**Fricative + fricative**
 SF |                  <samp>suff-</samp> <samp>surf-</samp>| <kbd>STP</kbd>                        | `(SF)` | 
 SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>                         | `(SW)` | 
 
-† = when it conflicts with <samp>dep-</samp>
+1. when it conflicts with <samp>dep-</samp> <kbd>TKP</kbd> `(DP)`
+2. when it conflicts with <samp>int-</samp> <kbd>SPW</kbd> `(INT)`
 
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
 
