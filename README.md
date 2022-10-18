@@ -280,6 +280,12 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 
 For paired punctuation, such as (opening and closing) brackets and quotation marks.
 
+I much prefer outlines based on iconic symbol shapes to outlines based on symbol names.
+Outlines for the opening/closing square brackets, curly braces, and angle brackets
+use exclusively the left/right key banks respectively.
+To avoid conflicts, the main outlines for opening/closing parentheses use both banks,
+with vowels <kbd>A</kbd> and <kbd>U</kbd> meaning opening/closing respectively.
+
 For aesthetic reasons, the vowel keys in the diagrams below
 are positioned to line up with the <kbd>WR</kbd> and <kbd>RG</kbd> keys,
 although by default the Uni lines them up with <kbd>R\*₂</kbd> and <kbd>\*₄R</kbd>.
@@ -297,8 +303,8 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 <samp>\{^]}</samp>                  | Brace close    | After   | <kbd>UPBGS</kbd>     | <ins>⠀⠀</ins>⠀<ins>⠀⠕⠂</ins> | right brace protruding out                          | <kbd>TPR*BGT</kbd>
 <samp><\{^}</samp>                  | Angle open     | Before  | <kbd>TKWA</kbd>      | <ins>⠘⠆</ins>⠀<ins>⠀⠀⠀</ins> | left  angle tilted 45° CCW ⤺                        | <kbd>PWRABG</kbd> (**BRACK**et)
 <samp>\{^}></samp>                  | Angle close    | After   | <kbd>UBLG</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠞⠀</ins> | right angle tilted 45° CW  ⤸                        | <kbd>PWRA*BG</kbd>
-<samp>\{\'^}</samp>                 | Quote open     | Before  | <kbd>KW-LT</kbd>     | <ins>⠐⠂</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KW-GS</kbd>, top row                 | <kbd>SKW-T</kbd> (**S**ingle **QU**o**T**e)
-<samp>\{^\'}</samp>                 | Quote close    | After   | <kbd>KR-LT</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KR-GS</kbd>, top row                 | <kbd>SKW*T</kbd>, <kbd>-PBT</kbd>
+<samp>\{\'^}</samp>                 | Quote open     | Before  | <kbd>KW-LT</kbd>     | <ins>⠐⠂</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KW-GS</kbd> for <samp>\{~\|\"^}</samp>,<br />top row mnemonic for <samp>\'</samp>;<br />also quasi-p. **QU**ote **L**ef**T**                | <kbd>SKW-T</kbd> (**S**ingle **QU**o**T**e)
+<samp>\{^\'}</samp>                 | Quote close    | After   | <kbd>KR-LT</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KR-GS</kbd> for <samp>\{^~\|\"}</samp>,<br />top row mnemonic for <samp>\'</samp>;<br />also quasi-p. **Q**uote **R**igh**T**                | <kbd>SKW*T</kbd>, <kbd>-PBT</kbd>
 
 
 Some alternate versions:
@@ -308,15 +314,15 @@ Code | Command | Spacing | Steno | Shape | Explanation
 <samp>\{~\|(^} </samp>         | Paren open     | Before   | <kbd>STKPWA</kbd>    | <ins>⠚⠇</ins>⠀<ins>⠀⠀⠀</ins> | shaped like thick bracket
 <samp>\{^~\|)} </samp>         | Paren close    | After    | <kbd>UPBLGS</kbd>    | <ins>⠀⠀</ins>⠀<ins>⠀⠟⠂</ins> | shaped like thick bracket
 <samp><\{^}</samp>                  | Angle open     | Before   | <kbd>TPWA</kbd>      | <ins>⠈⠇</ins>⠀<ins>⠀⠀⠀</ins> | left  angle tilted 135° CW ⤸
-<samp>\{^}></samp>                  | Angle close    | After    | <kbd>UBLG</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠏⠀</ins> | right angle tilted 135° CCW ⤺
+<samp>\{^}></samp>                  | Angle close    | After    | <kbd>UPBL</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠏⠀</ins> | right angle tilted 135° CCW ⤺
 
 
 Add <kbd>\*</kbd> for unspaced versions.
 
 Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 -|-|-|-|-|-|-
-<samp>\{^}(\{^}</samp>         | Paren open     | Unspaced | <kbd>STKPWA\*</kbd>  | <ins>⠚⠇</ins>⠀<ins>⠂⠀⠀</ins> | shaped like thick bracket       | <kbd>P\*PB</kbd> (**P**are**N**)
-<samp>\{^})\{^}</samp>         | Paren close    | Unspaced | <kbd>\*UPBLGS</kbd>  | <ins>⠀⠀</ins>⠂<ins>⠀⠟⠂</ins> | shaped like thick bracket       | <kbd>P\*PBT</kbd> (**P**are**NT**hesis)
+<samp>\{^}(\{^}</samp>         | Paren open     | Unspaced | <kbd>STKPWA\*</kbd>  | <ins>⠚⠇</ins>⠀<ins>⠂⠀⠀</ins> | shaped like thicker paren      | <kbd>P\*PB</kbd> (**P**are**N**)
+<samp>\{^})\{^}</samp>         | Paren close    | Unspaced | <kbd>\*UPBLGS</kbd>  | <ins>⠀⠀</ins>⠂<ins>⠀⠟⠂</ins> | shaped like thicker paren      | <kbd>P\*PBT</kbd> (**P**are**NT**hesis)
 etc.
 
 ### `user-commands.json`
