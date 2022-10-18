@@ -96,9 +96,9 @@ such as <samp>apparatus</samp>.
 
 In development (not really). Looking for permanent homes for certain starters (marked with ? for now):
 
-Type | Starter | Steno | Pseudosteno | Starter | Steno | Pseudosteno
+Type | Starter | Steno | Pseudo | Starter | Steno | Pseudo
 -|-|-|-|-|-|-
-**Nasal + nasal**
+|||||| </tr><tr><td></td><td colspan="3" align="center">**no prefix**</td><td colspan="3" align="center">**with K-**</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + nasal**
 MM | <samp>amm-</samp> <samp>emm-</samp> <samp>imm-</samp> | <kbd>^PH</kbd>  | `(^M)`  | <samp>comm-</samp> | <kbd>KPH</kbd>  | `(KM)`
 NN | <samp>ann-</samp> <samp>enn-</samp> <samp>inn-</samp> | <kbd>^TPH</kbd> | `(^N)`  | <samp>conn-</samp> | <kbd>K</kbd>    | `(K)`</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + stop**
 MP | <samp>amp-</samp> <samp>emp-</samp> <samp>imp-</samp> | <kbd>KPW</kbd>  | `(IMP)` | <samp>comp-</samp> | <kbd>KP</kbd>   | `(KP)`
