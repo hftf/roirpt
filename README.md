@@ -128,7 +128,7 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 Starter | Steno | Pseudosteno | Example
 -|-|-|-
 <samp>activ</samp> | <kbd>^TW</kbd> | `(^TW)` | <samp>activate</samp> <kbd>^TWAEUT</kbd>
-<samp>autom</samp><br /><samp>autonom</samp> | <kbd>^TPWH</kbd> | `(^TWM)` | <samp>automate</samp> <kbd>^TPWHAEUT</kbd><br /><samp>autonomous</samp> <kbd>^TPWHOUS</kbd>
+<samp>autom</samp><br /><samp>autonom</samp> | <kbd>^TPWH</kbd> | `(^TWM)` | <samp>automate</samp> <kbd>^TPWHAEUT</kbd><br /><samp>autonomy</samp> <kbd>^TPWHEU</kbd>
 <samp>electr</samp> | <kbd>^TWR</kbd> | `(^TWR)` | <samp>electron</samp> <kbd>^TWROPB</kbd>
 
 #### Conflict theory
@@ -325,11 +325,13 @@ Code | Command | Steno | Pseudo/Shape | Explanation | Plover default
 <samp>\{PLOVER:FOCUS}</samp>  | Show Plover                   | <kbd>PHROERB</kbd>   | `PLOESH` | **PL**over **SHOW** | <kbd>PHROFBGS</kbd>
 <samp>\{PLOVER:FOCUS}{#<br>Super(Shift(K))}</samp> | Open Word Tray†               | <kbd>PHRORTD</kbd>   | `PLORDT` | **PL**over w**ORD T**ray
 <samp>\{PLOVER:FOCUS}{#<br>Super(Shift(L))}</samp> | Open Spectra Lexer            | <kbd>PHRERBGT</kbd>  | `PLERKT` | **PL**over sp**EKTR**a
+<samp>\{PLOVER:FOCUS}{#<br>Super(Shift(S))}</samp> | Open SVG Layout†              | <kbd>PHROFGS</kbd>   | `PLOSFG` | **PL**over **SVG**
 <samp>=wt_prev_page</samp>    | Word Tray Prev   | <kbd>#-RB</kbd>      | <ins>⠀⠄</ins>⠀<ins>⠐⠂⠀</ins>   | plugin-suggested
 <samp>=wt_next_page</samp>    | Word Tray Next   | <kbd>#-GS</kbd>      | <ins>⠀⠄</ins>⠀<ins>⠀⠐⠂</ins>   | plugin-suggested
 <samp>=wt_reload</samp>       | Word Tray Reload | <kbd>#-RBGS</kbd>    | <ins>⠀⠄</ins>⠀<ins>⠐⠒⠂</ins> | plugin-suggested
 
 † To use, patch `word_tray_ui.py` by adding `SHORTCUT = "Ctrl+Shift+K"` in `class WordTrayUI`
+and `SHORTCUT = "Ctrl+Shift+S"` in `layout_ui.py`
 
 ## License
 
