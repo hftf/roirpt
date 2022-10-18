@@ -98,24 +98,24 @@ In development (not really). Looking for permanent homes for certain starters (m
 
 Type | Starter | Steno | Pseudo | Starter | Steno | Pseudo
 -|-|-|-|-|-|-
-|||||| </tr><tr><td></td><td colspan="3" align="center">**no prefix**</td><td colspan="3" align="center">**with K-**</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + nasal**
+||||||| </tr><tr><td></td><td colspan="3" align="center">**no prefix**</td><td colspan="3" align="center">**with K-**</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + nasal**
 MM | <samp>amm-</samp> <samp>emm-</samp> <samp>imm-</samp> | <kbd>^PH</kbd>  | `(^M)`  | <samp>comm-</samp> | <kbd>KPH</kbd>  | `(KM)`
-NN | <samp>ann-</samp> <samp>enn-</samp> <samp>inn-</samp> | <kbd>^TPH</kbd> | `(^N)`  | <samp>conn-</samp> | <kbd>K</kbd>    | `(K)`</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + stop**
+NN | <samp>ann-</samp> <samp>enn-</samp> <samp>inn-</samp> | <kbd>^TPH</kbd> | `(^N)`  | <samp>conn-</samp> | <kbd>K</kbd>    | `(K)`</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + stop**
 MP | <samp>amp-</samp> <samp>emp-</samp> <samp>imp-</samp> | <kbd>KPW</kbd>  | `(IMP)` | <samp>comp-</samp> | <kbd>KP</kbd>   | `(KP)`
 MB | <samp>amb-</samp> <samp>emb-</samp> <samp>imb-</samp> | <kbd>KPW</kbd>  | `(IMP)` | <samp>comb-</samp> | <kbd>KPW</kbd>  | `(KB)`
 NT | <samp>ant-</samp> <samp>ent-</samp> <samp>int-</samp> | <kbd>SPW</kbd>  | `(INT)` | <samp>cont-</samp> | <kbd>K</kbd>    | `(K)`
 ND | <samp>and-</samp> <samp>end-</samp> <samp>ind-</samp> | <kbd>SKP</kbd>  | `(AND)` | <samp>cond-</samp> | <kbd>K</kbd>    | `(K)`
 NK | <samp>anc-</samp> <samp>enc-</samp> <samp>inc-</samp><br /><samp>ank-</samp> <samp>enk-</samp> <samp>ink-</samp> | ? | | <samp>conc-</samp><br /><samp>conk-</samp> | <kbd>K</kbd> | `(K)`
-NG | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp> | ?                            |        | <samp>cong-</samp> | <kbd>K</kbd> | `(K)`</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + fricative**
+NG | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp> | ?                            |        | <samp>cong-</samp> | <kbd>K</kbd> | `(K)`</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + fricative**
 NF |                   <samp>enf-</samp> <samp>inf-</samp> | ?                            |        | <samp>comf-</samp><br /><samp>conf-</samp> | <kbd>TKP</kbd> or<br /><nobr><kbd>TKP*</kbd>¹</nobr> | `(KF)` or<br /><nobr>`(KF*)`¹</nobr>
 NV |                   <samp>env-</samp> <samp>inv-</samp> | <kbd>TPWH</kbd>              | `(NW)` | <samp>conv-</samp> | <kbd>KW</kbd> | `(KW)`
-NS | <samp>ans-</samp> <samp>ens-</samp> <samp>ins-</samp> | <kbd>STPH</kbd>              | `(SN)` | <samp>cons-</samp><br /><samp>conc-</samp> | <kbd>SK</kbd> | `(SK)`</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + fricative + stop**
-NST|                                     <samp>inst-</samp>| <kbd>STPH</kbd>    | `(SN)` | <samp>const-</samp> | ? |</td></tr></tbody><tbody><tr><td colspan="8">**Nasal + affricate**
-NJ | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp><br /><samp>anj-</samp> <samp>enj-</samp> <samp>inj-</samp> | ? | | <samp>cong-</samp><br /><samp>conj-</samp> | ? | </td></tr></tbody><tbody><tr><td colspan="8">**Stop + fricative**
+NS | <samp>ans-</samp> <samp>ens-</samp> <samp>ins-</samp> | <kbd>STPH</kbd>              | `(SN)` | <samp>cons-</samp><br /><samp>conc-</samp> | <kbd>SK</kbd> | `(SK)`</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + fricative + stop**
+NST|                                     <samp>inst-</samp>| <kbd>STPH</kbd>    | `(SN)` | <samp>const-</samp> | ? |</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + affricate**
+NJ | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp><br /><samp>anj-</samp> <samp>enj-</samp> <samp>inj-</samp> | ? | | <samp>cong-</samp><br /><samp>conj-</samp> | ? | </td></tr></tbody><tbody><tr><td colspan="7">**Stop + fricative**
 BS | <samp>abs-</samp> <samp>obs-</samp>                   | <kbd>SPW</kbd> or<br /><kbd>^SPW</kbd>²     | `(SB)` or<br />`(^SB)`² | 
 DF |                   <samp>def-</samp> <samp>dif-</samp> | <kbd>TKP</kbd>                        | `(DF)` | 
 DV |                   <samp>dev-</samp> <samp>div-</samp> | <kbd>TKW</kbd>                        | `(DW)` | 
-DS |                   <samp>des-</samp> <samp>dis-</samp><br /><samp>dec-</samp><br /><samp>desc-</samp> <samp>disc-</samp><br /> | <kbd>STK</kbd> | `(DS)` | | | </td></tr></tbody><tbody><tr><td colspan="8">**Fricative + fricative**
+DS |                   <samp>des-</samp> <samp>dis-</samp><br /><samp>dec-</samp><br /><samp>desc-</samp> <samp>disc-</samp><br /> | <kbd>STK</kbd> | `(DS)` | | | </td></tr></tbody><tbody><tr><td colspan="7">**Fricative + fricative**
 SF |                  <samp>suff-</samp> <samp>surf-</samp>| <kbd>STP</kbd>                        | `(SF)` | 
 SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>                         | `(SW)` | 
 
