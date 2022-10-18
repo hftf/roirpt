@@ -311,8 +311,8 @@ Some alternate versions:
 
 Code | Command | Spacing | Steno | Shape | Explanation
 -|-|-|-|-|-
-<samp>\{~\|(^} </samp>         | Paren open     | Before   | <kbd>STKPWA</kbd>    | <ins>⠚⠇</ins>⠀<ins>⠀⠀⠀</ins> | shaped like thick bracket
-<samp>\{^~\|)} </samp>         | Paren close    | After    | <kbd>UPBLGS</kbd>    | <ins>⠀⠀</ins>⠀<ins>⠀⠟⠂</ins> | shaped like thick bracket
+<samp>\{~\|(^} </samp>         | Paren open     | Before   | <kbd>STKPWA</kbd>    | <ins>⠚⠇</ins>⠀<ins>⠀⠀⠀</ins> | shaped like thicker paren
+<samp>\{^~\|)} </samp>         | Paren close    | After    | <kbd>UPBLGS</kbd>    | <ins>⠀⠀</ins>⠀<ins>⠀⠟⠂</ins> | shaped like thicker paren
 <samp><\{^}</samp>                  | Angle open     | Before   | <kbd>TPWA</kbd>      | <ins>⠈⠇</ins>⠀<ins>⠀⠀⠀</ins> | left  angle tilted 135° CW ⤸
 <samp>\{^}></samp>                  | Angle close    | After    | <kbd>UPBL</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠏⠀</ins> | right angle tilted 135° CCW ⤺
 
