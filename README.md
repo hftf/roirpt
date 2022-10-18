@@ -109,7 +109,7 @@ NK | <samp>anc-</samp> <samp>enc-</samp> <samp>inc-</samp><br /><samp>ank-</samp
 NG | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp> | ?                            |        | <samp>cong-</samp> | <kbd>K</kbd> | `(K)`</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + fricative**
 NF |                   <samp>enf-</samp> <samp>inf-</samp> | ?                            |        | <samp>comf-</samp><br /><samp>conf-</samp> | <kbd>TKP</kbd> or<br /><nobr><kbd>TKP*</kbd>¹</nobr> | `(KF)` or<br /><nobr>`(KF*)`¹</nobr>
 NV |                   <samp>env-</samp> <samp>inv-</samp> | <kbd>TPWH</kbd>              | `(NW)` | <samp>conv-</samp> | <kbd>KW</kbd> | `(KW)`
-NS | <samp>ans-</samp> <samp>ens-</samp> <samp>ins-</samp> | <kbd>STPH</kbd>              | `(SN)` | <samp>cons-</samp><br /><samp>conc-</samp> | <kbd>SK</kbd> | `(SK)`</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + fricative + stop**
+NS | <samp>ans-</samp> <samp>ens-</samp> <samp>ins-</samp><br /><samp>anc-</samp> <samp>enc-</samp> <samp>inc-</samp> | <kbd>STPH</kbd>              | `(SN)` | <samp>cons-</samp><br /><samp>conc-</samp> | <kbd>SK</kbd> | `(SK)`</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + fricative + stop**
 NST|                                     <samp>inst-</samp>| <kbd>STPH</kbd>    | `(SN)` | <samp>const-</samp> | ? |</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + affricate**
 NJ | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp><br /><samp>anj-</samp> <samp>enj-</samp> <samp>inj-</samp> | ? | | <samp>cong-</samp><br /><samp>conj-</samp> | ? | </td></tr></tbody><tbody><tr><td colspan="7">**Stop + fricative**
 BS | <samp>abs-</samp> <samp>obs-</samp>                   | <kbd>SPW</kbd> or<br /><kbd>^SPW</kbd>²     | `(SB)` or<br />`(^SB)`² | 
@@ -122,6 +122,7 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 1. when it conflicts with <samp>dep-</samp> <kbd>TKP</kbd> `(DP)`
 2. when it conflicts with <samp>int-</samp> <kbd>SPW</kbd> `(INT)`
 
+<!-- shr- simp- sus- -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
 
 #### Word family starters
