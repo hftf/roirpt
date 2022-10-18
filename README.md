@@ -289,10 +289,10 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 -|-|-|-|-|-|-
 <samp>\{~\|(^}</samp>               | Paren open     | Before  | <kbd>KPAPG</kbd>     | <ins>⠐⠅</ins>⠀<ins>⠀⠑⠀</ins> | shaped like parenthesis,<br />left vowel for open   | <kbd>PREPB</kbd> (**P**a**REN**)
 <samp>\{^~\|)}</samp>               | Paren close    | After   | <kbd>KPUPG</kbd>     | <ins>⠐⠁</ins>⠀<ins>⠀⠕⠀</ins> | shaped like parenthesis,<br />right vowel for close | <kbd>PR*EPB</kbd>
-<samp>\{~\|()^}<br />\{#Left}</samp>| Paren both     | Before  | <kbd>KPAUPG</kbd>    | <ins>⠐⠅</ins>⠀<ins>⠀⠕⠀</ins> | shaped like parentheses,<br />cursor in between     | <kbd>PR*EPBS</kbd> (meant for code, not prose)
+<samp>\{~\|()^}<br />\{#Left}</samp>| Paren both     | Before  | <kbd>KPAUPG</kbd>    | <ins>⠐⠅</ins>⠀<ins>⠀⠕⠀</ins> | shaped like parentheses,<br />cursor in between     | <kbd>PR*EPBS</kbd> (meant for code, not prose)</tbody>
 <samp>\{[^}</samp>                  | Bracket open   | Before  | <kbd>TKPA</kbd>      | <ins>⠘⠅</ins>⠀<ins>⠀⠀⠀</ins> | shaped like square bracket           | <kbd>PWR-BGT</kbd> (**BR**ac**K**e**T**)
 <samp>\{^]}</samp>                  | Bracket close  | After   | <kbd>UPLG</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠝⠀</ins> | shaped like square bracket                          | <kbd>PWR*BGT</kbd>
-<samp>\{~\|[]^}<br />\{#Left}</samp>| Bracket both   | Before  | <kbd>TKPAUPLG</kbd>  | <ins>⠘⠅</ins>⠀<ins>⠀⠝⠀</ins> | shaped like square bracket                          | none
+<samp>\{~\|[]^}<br />\{#Left}</samp>| Bracket both   | Before  | <kbd>TKPAUPLG</kbd>  | <ins>⠘⠅</ins>⠀<ins>⠀⠝⠀</ins> | shaped like square bracket                          | none</tbody>
 <samp>\{[^}</samp>                  | Brace open     | Before  | <kbd>SKPWA</kbd>     | <ins>⠒⠅</ins>⠀<ins>⠀⠀⠀</ins> | left  brace protruding out                          | <kbd>TPR-BGT</kbd> (**FR**ench brac**K**e**T**)
 <samp>\{^]}</samp>                  | Brace close    | After   | <kbd>UPBGS</kbd>     | <ins>⠀⠀</ins>⠀<ins>⠀⠕⠂</ins> | right brace protruding out                          | <kbd>TPR*BGT</kbd>
 <samp><\{^}</samp>                  | Angle open     | Before  | <kbd>TKWA</kbd>      | <ins>⠘⠆</ins>⠀<ins>⠀⠀⠀</ins> | left  angle tilted 45° CCW ⤺                        | <kbd>PWRABG</kbd> (**BRACK**et)
