@@ -270,11 +270,54 @@ Code | Command | Spacing | Steno | Shape | Explanation | Plover default
 <samp>\{^;^}</samp>  | Semicolon   | Unspaced  | <kbd>KR-RG</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠐⠐⠀</ins> | dot pairs, on lower row like <samp>,</samp> | <kbd>TH-FL</kbd>
 <samp>\{;}</samp>    | Semicolon   | Sentence  | <kbd>SW-BS</kbd>     | <ins>⠂⠂</ins>⠀<ins>⠀⠂⠂</ins> | same but further out                          | <kbd>STPH\*FPLT</kbd>, <kbd>SP-PT</kbd>
 <samp>\{^…}</samp>   | Ellipsis    | After     | <kbd>SW*</kbd>       | <ins>⠂⠂</ins>⠂<ins>⠀⠀⠀</ins> | three dots on lower left row                  | <kbd>HR-PS</kbd> (e**L**li**PS**is)
-<samp>\{^\_^}</samp> | Underscore  | Unspaced  | <kbd>KWR-RBG</kbd>   | <ins>⠐⠒</ins>⠀<ins>⠐⠒⠀</ins> | low line, middle-ring-pinky                   | <kbd>RUPBD</kbd> (**UND**e**R**)
+<samp>\{^\_^}</samp> | Underscore  | Unspaced  | <kbd>KWR-RBG</kbd>   | <ins>⠐⠒</ins>⠀<ins>⠐⠒⠀</ins> | low line, index-middle-ring                   | <kbd>RUPBD</kbd> (**UND**e**R**)
 <samp>\{^-^}</samp>  | Hyphen      | Unspaced  | <kbd>H-F</kbd>       | <ins>⠀⠈</ins>⠀<ins>⠁⠀⠀</ins> | tiny line across upper row                    | <kbd>H-PB</kbd> (**H**yphe**N**)
 <samp>\-</samp>      | Dash        | Spaced    | <kbd>PH-FP</kbd>     | <ins>⠀⠉</ins>⠀<ins>⠉⠀⠀</ins> | short line across upper row                   | <kbd>H*PB</kbd>
 –                    | En dash     | Spaced    | <kbd>TPH-FPL</kbd>   | <ins>⠈⠉</ins>⠀<ins>⠉⠁⠀</ins> | longer line across upper row                  | <kbd>TPH-RB</kbd> (**N**da**SH**)
 —                    | Em dash     | Spaced    | <kbd>^TPH-FPLT</kbd> | <ins>⠉⠉</ins>⠀<ins>⠉⠉⠀</ins> | longest line across upper row                 | <kbd>PH-RB</kbd> (**M**da**SH**)
+
+### `user-punctuation-paired.json`
+
+For paired punctuation, such as (opening and closing) brackets and quotation marks.
+
+For aesthetic reasons, the vowel keys in the diagrams below
+are positioned to line up with the <kbd>WR</kbd> and <kbd>RG</kbd> keys,
+although by default the Uni lines them up with <kbd>R\*₂</kbd> and <kbd>\*₄R</kbd>.
+This layout decision does not apply to other sections of this document.
+
+Code | Command | Spacing | Steno | Shape | Explanation | Plover default
+-|-|-|-|-|-|-
+<samp>\{~\|(^}</samp>               | Paren open     | Before  | <kbd>KPAPG</kbd>     | <ins>⠐⠅</ins>⠀<ins>⠀⠑⠀</ins> | shaped like parenthesis,<br />left vowel for open   | <kbd>PREPB</kbd> (**P**a**REN**)
+<samp>\{^~\|)}</samp>               | Paren close    | After   | <kbd>KPUPG</kbd>     | <ins>⠐⠁</ins>⠀<ins>⠀⠕⠀</ins> | shaped like parenthesis,<br />right vowel for close | <kbd>PR*EPB</kbd>
+<samp>\{~\|()^}<br />\{#Left}</samp>| Paren both     | Before  | <kbd>KPAUPG</kbd>    | <ins>⠐⠅</ins>⠀<ins>⠀⠕⠀</ins> | shaped like parentheses,<br />cursor in between     | <kbd>PR*EPBS</kbd> (meant for code, not prose)
+<samp>\{[^}</samp>                  | Bracket open   | Before  | <kbd>TKPA</kbd>      | <ins>⠘⠅</ins>⠀<ins>⠀⠀⠀</ins> | shaped like square bracket           | <kbd>PWR-BGT</kbd> (**BR**ac**K**e**T**)
+<samp>\{^]}</samp>                  | Bracket close  | After   | <kbd>UPLG</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠝⠀</ins> | shaped like square bracket                          | <kbd>PWR*BGT</kbd>
+<samp>\{~\|[]^}<br />\{#Left}</samp>| Bracket both   | Before  | <kbd>TKPAUPLG</kbd>  | <ins>⠘⠅</ins>⠀<ins>⠀⠝⠀</ins> | shaped like square bracket                          | none
+<samp>\{[^}</samp>                  | Brace open     | Before  | <kbd>SKPWA</kbd>     | <ins>⠒⠅</ins>⠀<ins>⠀⠀⠀</ins> | left  brace protruding out                          | <kbd>TPR-BGT</kbd> (**FR**ench brac**K**e**T**)
+<samp>\{^]}</samp>                  | Brace close    | After   | <kbd>UPBGS</kbd>     | <ins>⠀⠀</ins>⠀<ins>⠀⠕⠂</ins> | right brace protruding out                          | <kbd>TPR*BGT</kbd>
+<samp><\{^}</samp>                  | Angle open     | Before  | <kbd>TKWA</kbd>      | <ins>⠘⠆</ins>⠀<ins>⠀⠀⠀</ins> | left  angle tilted 45° CCW ⤺                        | <kbd>PWRABG</kbd> (**BRACK**et)
+<samp>\{^}></samp>                  | Angle close    | After   | <kbd>UBLG</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠞⠀</ins> | right angle tilted 45° CW  ⤸                        | <kbd>PWRA*BG</kbd>
+<samp>\{\'^}</samp>                 | Quote open     | Before  | <kbd>KW-LT</kbd>     | <ins>⠐⠂</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KW-GS</kbd>, top row                 | <kbd>SKW-T</kbd> (**S**ingle **QU**o**T**e)
+<samp>\{^\'}</samp>                 | Quote close    | After   | <kbd>KR-LT</kbd>     | <ins>⠐⠐</ins>⠀<ins>⠀⠈⠁</ins> | analog of <kbd>KR-GS</kbd>, top row                 | <kbd>SKW*T</kbd>, <kbd>-PBT</kbd>
+
+
+Some alternate versions:
+
+Code | Command | Spacing | Steno | Shape | Explanation
+-|-|-|-|-|-
+<samp>\{~\|(^} </samp>         | Paren open     | Before   | <kbd>STKPWA</kbd>    | <ins>⠚⠇</ins>⠀<ins>⠀⠀⠀</ins> | shaped like thick bracket
+<samp>\{^~\|)} </samp>         | Paren close    | After    | <kbd>UPBLGS</kbd>    | <ins>⠀⠀</ins>⠀<ins>⠀⠟⠂</ins> | shaped like thick bracket
+<samp><\{^}</samp>                  | Angle open     | Before   | <kbd>TPWA</kbd>      | <ins>⠈⠇</ins>⠀<ins>⠀⠀⠀</ins> | left  angle tilted 135° CW ⤸
+<samp>\{^}></samp>                  | Angle close    | After    | <kbd>UBLG</kbd>      | <ins>⠀⠀</ins>⠀<ins>⠀⠏⠀</ins> | right angle tilted 135° CCW ⤺
+
+
+Add <kbd>\*</kbd> for unspaced versions.
+
+Code | Command | Spacing | Steno | Shape | Explanation | Plover default
+-|-|-|-|-|-|-
+<samp>\{^}(\{^}</samp>         | Paren open     | Unspaced | <kbd>STKPWA\*</kbd>  | <ins>⠚⠇</ins>⠀<ins>⠂⠀⠀</ins> | shaped like thick bracket       | <kbd>P\*PB</kbd> (**P**are**N**)
+<samp>\{^})\{^}</samp>         | Paren close    | Unspaced | <kbd>\*UPBLGS</kbd>  | <ins>⠀⠀</ins>⠂<ins>⠀⠟⠂</ins> | shaped like thick bracket       | <kbd>P\*PBT</kbd> (**P**are**NT**hesis)
+etc.
 
 ### `user-commands.json`
 
