@@ -94,7 +94,10 @@ such as <samp>apparatus</samp>.
 
 #### Compound initial sounds
 
-In development (not really). Looking for permanent homes for certain starters (marked with ? for now):
+In development (not really). Looking for permanent homes for certain starters (marked with ? for now).
+
+For certain other combinations (stop, fricative + stop, stop + fricative, stop + fricative + stop),
+see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-comp--conflict-etc).
 
 Type | Starter | Steno | Pseudo | Starter | Steno | Pseudo
 -|-|-|-|-|-|-
@@ -122,16 +125,17 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 1. when it conflicts with <samp>dep-</samp> <kbd>TKP</kbd> `(DP)`
 2. when it conflicts with <samp>int-</samp> <kbd>SPW</kbd> `(INT)`
 
-<!-- shr- simp- sus- -->
+<!-- shr- simp- sus- dist- disg- -->
+<!-- constr- SKR vs. const- ST? -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
 
 #### Word family starters
 
 Starter | Steno | Pseudosteno | Example
 -|-|-|-
-<samp>activ</samp> | <kbd>^TW</kbd> | `(^TW)` | <samp>activate</samp> <kbd>^TWAEUT</kbd>
+<samp>activ</samp> | <kbd>^TW</kbd> | `(^TW)` | <samp>activate</samp> <kbd>^TWAEUT</kbd><br /><samp>activity</samp> <kbd>^TWEUT</kbd>
 <samp>autom</samp><br /><samp>autonom</samp> | <kbd>^TPWH</kbd> | `(^TWM)` | <samp>automate</samp> <kbd>^TPWHAEUT</kbd><br /><samp>autonomy</samp> <kbd>^TPWHEU</kbd>
-<samp>electr</samp> | <kbd>^TWR</kbd> | `(^TWR)` | <samp>electron</samp> <kbd>^TWROPB</kbd>
+<samp>electr</samp> | <kbd>^TWR</kbd> | `(^TWR)` | <samp>electron</samp> <kbd>^TWROPB</kbd><br /><samp>electric</samp> <kbd>^TWREUBG</kbd>
 
 #### Conflict theory
 
