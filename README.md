@@ -32,7 +32,7 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 -ent | <samp>intent</samp> | <kbd>SPWEPBT</kbd>  | `(INTENT)` | <kbd>SPWEPBT</kbd> or <kbd>EUPB/TEPBT</kbd>
 || <samp>absent</samp>     | <kbd>^SPWEPBT</kbd> | `(^SBENT)` | <kbd>AB/SEPBT</kbd>
 
-### The <samp>ex-</samp>/<samp>comp-</samp> conflict, etc.
+#### The <samp>ex-</samp>/<samp>comp-</samp> conflict, etc.
 
 These dictionaries do not claim to solve the <samp>ex-</samp>/<samp>comp-</samp> conflict systematically or completely,
 but represent the general direction I was going for.
@@ -49,48 +49,6 @@ Note that this table is designed to be mnemonic, not comprehensive. For example:
 1. <kbd>^ST</kbd>: “<samp>est-</samp>” is shorthand for “<samp>ast-</samp>, <samp>aust-</samp>, <samp>est-</samp>, <samp>ist-</samp>, etc.”
 (as in <samp><b>ast</b>ute</samp>, <samp><b>aust</b>ere</samp>, <samp><b>est</b>ate</samp>, <samp><b>Ist</b>anbul</samp>)
 2. <kbd>^KP</kbd>: is <samp>ext-</samp> or <samp>exp-</samp> or <samp>exc-</samp> when used with <kbd>R</kbd> (as in <samp><b>ext</b>ra</samp> <kbd>^KPRA</kbd>, <samp><b>exp</b>ress</samp> <kbd>^KPRES</kbd>)
-
-### Caveats
-
-Sometimes the dictionary includes:
-
-* shifty inversions, 
-such as <samp>album</samp> <kbd>^PWHRUPL</kbd> `(^BLUM)`
-or <samp>abduct</samp> <kbd>^TKPWUBGT</kbd> `(^DBUKT)`
-* fingery conveniences,
-such as <samp>elected</samp> <kbd>^HREBGD</kbd> `(^LEKD)`
-for canonical <kbd>^HREBGTD</kbd> `(^LEKTD)` –
-as per the `main.json` entry <kbd>AOE/HREBGD</kbd> `(EE/LEKD)`
-* ~~misstrokes~~ actually just manual data entry errors at this point
-* generous brainfarty fallbacks,
-such as <samp>active</samp> <kbd>^TWEUF</kbd>
-for canonical <kbd>^TW</kbd> (core of the <samp>activ-</samp> word family)
-* redundant redundancies that I’ll never actually use but are there for completionism’s sake,
-such as <samp>upon</samp> <kbd>^POPB</kbd> `(^PON)`
-* opinionated briefs,
-such as pretty much most of the dictionary (I had an example but it slipped my mind)
-* or orphans,
-such as <samp>apple</samp> <kbd>^PHR</kbd> `(^PL)`
-because before I got deep into this whole rabbit hole I tried defining it as <kbd>WAPL</kbd>
-although I guess that conflicts with <samp>wam</samp> so it was cute while it lasted
-
-### Stressed pre-initials
-
-Sometimes the conceit is stretched to include
-any pre-initial vowel if convenient, even if stressed,
-such as <samp>era</samp> <kbd>^RA</kbd>, or if it would be annoying to write out.
-But words like <samp>efficacy</samp> are probably not in scope.
-(I’ll move these into `caret-stressed.json`, okay)
-
-Words without initial stress take precedence,
-so even the misstroke <samp>eleventh</samp> <kbd>^HREFPBT</kbd>
-precedes <samp>elephant</samp>.
-
-Word families are kept together in the core part of the dictionary,
-even if one word happens to be stress-initial.
-For example, <samp>illustrate</samp> and <samp>illustrative</samp>.
-Similarly, words with ambiguous initial stress are kept in core,
-such as <samp>apparatus</samp>.
 
 #### Compound initial sounds
 
@@ -128,6 +86,48 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 <!-- shr- simp- sus- dist- disg- -->
 <!-- constr- SKR vs. const- ST? -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
+
+#### Caveats
+
+Sometimes the dictionary includes:
+
+* shifty inversions, 
+such as <samp>album</samp> <kbd>^PWHRUPL</kbd> `(^BLUM)`
+or <samp>abduct</samp> <kbd>^TKPWUBGT</kbd> `(^DBUKT)`
+* fingery conveniences,
+such as <samp>elected</samp> <kbd>^HREBGD</kbd> `(^LEKD)`
+for canonical <kbd>^HREBGTD</kbd> `(^LEKTD)` –
+as per the `main.json` entry <kbd>AOE/HREBGD</kbd> `(EE/LEKD)`
+* ~~misstrokes~~ actually just manual data entry errors at this point
+* generous brainfarty fallbacks,
+such as <samp>active</samp> <kbd>^TWEUF</kbd>
+for canonical <kbd>^TW</kbd> (core of the <samp>activ-</samp> word family)
+* redundant redundancies that I’ll never actually use but are there for completionism’s sake,
+such as <samp>upon</samp> <kbd>^POPB</kbd> `(^PON)`
+* opinionated briefs,
+such as pretty much most of the dictionary (I had an example but it slipped my mind)
+* or orphans,
+such as <samp>apple</samp> <kbd>^PHR</kbd> `(^PL)`
+because before I got deep into this whole rabbit hole I tried defining it as <kbd>WAPL</kbd>
+although I guess that conflicts with <samp>wam</samp> so it was cute while it lasted
+
+#### Stressed pre-initials
+
+Sometimes the conceit is stretched to include
+any pre-initial vowel if convenient, even if stressed,
+such as <samp>era</samp> <kbd>^RA</kbd>, or if it would be annoying to write out.
+But words like <samp>efficacy</samp> are probably not in scope.
+(I’ll move these into `caret-stressed.json`, okay)
+
+Words without initial stress take precedence,
+so even the misstroke <samp>eleventh</samp> <kbd>^HREFPBT</kbd>
+precedes <samp>elephant</samp>.
+
+Word families are kept together in the core part of the dictionary,
+even if one word happens to be stress-initial.
+For example, <samp>illustrate</samp> and <samp>illustrative</samp>.
+Similarly, words with ambiguous initial stress are kept in core,
+such as <samp>apparatus</samp>.
 
 #### Word family starters
 
@@ -361,4 +361,4 @@ KR-BGS WELG
 * Add one-liners, scripts, exploratory research (with documentation)
 * Dictionary generator/preprocessor
 to define e.g. `accustom` in terms of <kbd>^</kbd> + `{custom}`
-* If I ever do all that I’ll name my ~~baby~~ theory plonkver
+* If I ever do all that I’ll name my ~~baby~~ theory <s>plonkver</s> thoeur (pronounced /θwɑːɹ/)
