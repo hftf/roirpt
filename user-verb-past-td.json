@@ -3,6 +3,7 @@
 "SKAOETD": "succeeded",
 "SPWEPBTD": "intended",
 "SPOPBTD": "responded",
+"SP*EPBTD": "suspended",
 "SROUPBTD": "surrounded",
 "SOUPBTD": "sounded",
 "TKPWRA*TD": "graduated",

@@ -1,6 +1,7 @@
 {
 "STKOG/TPEU": "discography",
 "STPHEUF/KAPBS": "significance",
+"STREPBG/-G": "strengthening",
 "STOEUPB/TPEU": "stenography",
 "SHREB/TEU": "celebrity",
 "SHREB/TEUS": "celebrities",
@@ -15,11 +16,13 @@
 "TKREUBGT": "district",
 "TKE/TAOERGS": "deterioration",
 "TKE/TAOERT": "deteriorate",
+"TKEUBGT/TPHAER": "dictionary",
 "TKEUG/TPAOEUD": "dignified",
 "TPHAOUFR": "maneuver",
 "TPHUPL/EUBG": "numeric",
 "TPABG/TEU": "faculty",
 "TPABG/TEUS": "faculties",
+"TPO*PBG": "phonic",
 "TPOPL/HREU": "phenomenally",
 "TP*EULT/-PBS": "filthiness",
 "THAOUFPL": "enthusiasm",
@@ -93,5 +96,6 @@
 "EUPB/STPHAOER": "insincere",
 "EUPBS/SAOER": "insincere",
 "EPL/PWHREPL/EUBG": "emblematic",
+"EBG/TKOR": "Ecuador",
 "ED/PWURG": "Edinburgh"
 }
