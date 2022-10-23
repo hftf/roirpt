@@ -83,6 +83,7 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 1. when it conflicts with <samp>dep-</samp> <kbd>TKP</kbd> `(DP)`
 2. when it conflicts with <samp>int-</samp> <kbd>SPW</kbd> `(INT)`
 
+<!-- consequence cons- vs. sequence -->
 <!-- shr- simp- sus- dist- disg- -->
 <!-- constr- SKR vs. const- ST? -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
@@ -285,6 +286,8 @@ Outlines for the opening/closing square brackets, curly braces, and angle bracke
 use exclusively the left/right key banks respectively.
 To avoid conflicts, the main outlines for opening/closing parentheses use both banks,
 with vowels <kbd>A</kbd> and <kbd>U</kbd> meaning opening/closing respectively.
+When I want to type symbols, I don’t want my hands to feel like they’re typing real words,
+and vice versa.
 
 For aesthetic reasons, the vowel keys in the diagrams below
 are positioned to line up with the <kbd>WR</kbd> and <kbd>RG</kbd> keys,
