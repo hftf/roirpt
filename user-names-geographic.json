@@ -1,4 +1,5 @@
 {
+"^STOEPB/KWRAPB": "Estonian",
 "STKPWR*EB": "Zagreb",
 "STRAEUPBL": "Australian",
 "STRAEUL": "Australia",
@@ -15,6 +16,7 @@
 "SPHAEUR/KWRAPB": "Sumerian",
 "SPARB": "Spanish",
 "SWAO*EPBD": "Sweden",
+"SWAOERB": "Swedish",
 "SHRO/SRAOEPB/KWRA": "Slovenia",
 "SRAOE/SHAOE": "Vichy",
 "SRAOET": "Viet",
@@ -134,6 +136,7 @@
 "AOUZ/PWEBG/STAPB": "Uzbekistan",
 "AUR/TKPWOPB": "Oregon",
 "AUR/HRAPBD/OE": "Orlando",
+"ARPBLG/TAOEPB": "Argentine",
 "AB/KHAZ": "Abkhaz",
 "OE/HAOEU/OE": "Ohio",
 "OEGS/KWRA": "Oceania",
