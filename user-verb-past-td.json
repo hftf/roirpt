@@ -9,6 +9,7 @@
 "TKPWRA*TD": "graduated",
 "TKPWROUPBTD": "grounded",
 "TKPWAOEUTD": "guided",
+"TKHRAOTD": "downloaded",
 "TKAEUBGD": "educated",
 "TPWHAEUTD": "invaded",
 "TPOUPBTD": "founded",
@@ -17,6 +18,7 @@
 "KPHRAOUTD": "excluded",
 "KPHAOUBGD": "communicated",
 "KWEUBGD": "convicted",
+"KROUTD": "crowded",
 "KRUBGD": "constructed",
 "KUBGD": "conducted",
 "PWHREUGD": "obligated",
@@ -28,6 +30,7 @@
 "HAPBTD": "handed",
 "ROUPBTD": "rounded",
 "REUBGD": "restricted",
+"ATD": "added",
 "ORTD": "ordered",
 "EPBTD": "ended",
 "UPB/KP-PD": "unexpected"
