@@ -1,5 +1,6 @@
 {
 "STKPWREUT": "integrit",
+"STKAFRBG": "disambig",
 "STKEUG": "desig",
 "STPHURPBLG": "insurge",
 "STPEUFT": "sophist",
@@ -19,6 +20,7 @@
 "TPAFL": "facil",
 "TPAT/EUG/-BL": "fatigable",
 "TUPL": "tum",
+"KPHREUBG": "explic",
 "KPAPB": "compan",
 "KWORBG": "cowork",
 "KHRAOEPBLG": "colleg",
@@ -42,5 +44,6 @@
 "AUT/PHAT": "automat",
 "ABG/REU/PHOEPB": "acrimon",
 "EUPBD/SPAOUT": "indispute",
+"EUPL/PHORT": "immort",
 "EUPL/PREUS": "impris"
 }
