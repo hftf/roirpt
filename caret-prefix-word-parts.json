@@ -8,6 +8,7 @@
 "^TKPWRAPBD": "aggrand",
 "^TKPHEUPB": "admin",
 "^TPHAOEUL": "annihil",
+"^TPHARBG": "anarch",
 "^TPHOPB": "anon",
 "^THEPBT": "authent",
 "^TREUT": "attrit",
@@ -15,9 +16,11 @@
 "^KAOUPL": "accum",
 "^KO*PL": "accomp",
 "^KOFRP": "accomp",
+"^KOPB": "acon",
 "^POBG/HREUPT": "apocalypt",
 "^HREUPL": "elim",
 "^HRERPBLG": "allerg",
 "^HREBG": "elec",
+"^HRUBGT": "eluct",
 "^REUFT": "arist"
 }

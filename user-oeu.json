@@ -5,10 +5,12 @@
 "SER/PHOEUPB": "ceremony",
 "TKPWROEURS": "grocery",
 "TKOEUPBT": "donate",
+"TPHROEUF": "fluffy",
 "TPOEUZ": "fuzzy",
 "TROEUF": "trophy",
 "KHOEUB": "chubby",
 "PWAL/KOEUPB": "balcony",
+"PWOEUR": "bury",
 "PHOEUFP": "mochi",
 "PHOEULD": "melody",
 "PO*EUPB": "pony",
@@ -19,5 +21,6 @@
 "HARPL/OEUPB": "harmony",
 "HO*EULT": "healthy",
 "HOEUPBLG": "hydrogen",
-"HOEUB": "hobby"
+"HOEUB": "hobby",
+"ROEUFT": "rusty"
 }
