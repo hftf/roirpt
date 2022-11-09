@@ -1,6 +1,9 @@
 {
+"^STRO": "astro",
+"^STRO/TPHOPL": "astronom",
 "^STEPBS": "extens",
 "^SKWREPBD": "agend",
+"^SPWEPBT/PHAOEUD": "absentmind",
 "^SRAL": "eval",
 "^SAS": "assass",
 "^SEUPL": "assim",
@@ -18,6 +21,7 @@
 "^KOFRP": "accomp",
 "^KOPB": "acon",
 "^POBG/HREUPT": "apocalypt",
+"^PEL": "appel",
 "^HREUPL": "elim",
 "^HRERPBLG": "allerg",
 "^HREBG": "elec",

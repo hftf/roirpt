@@ -6,6 +6,7 @@
 "STPHURPBLG": "insurge",
 "STPEUFT": "sophist",
 "SKEUTZ/KWRO": "schizo",
+"SWA*RT": "swarth",
 "SHRAEUFR": "slaver",
 "SRAE": "veigh",
 "SRO/KAB": "vocab",
@@ -18,6 +19,7 @@
 "SUFRPT": "sumpt",
 "TKPHROEPL": "diplom",
 "TKPHROPL": "diplom",
+"TPHAOURPL": "numer",
 "TPHO/STALG": "nostalg",
 "TPAFL": "facil",
 "TPAT/EUG/-BL": "fatigable",
@@ -35,6 +37,7 @@
 "PED/TKPWOPBLG": "pedagog",
 "WR*EUPBG": "wrink",
 "WEUD": "wid",
+"HRO/KAOUT": "locute",
 "HREPL": "lem",
 "HAOEU/TKRA": "hydra",
 "HORZ": "horizon",
@@ -48,5 +51,6 @@
 "ABG/REU/PHOEPB": "acrimon",
 "EUPBD/SPAOUT": "indispute",
 "EUPL/PHORT": "immort",
-"EUPL/PREUS": "impris"
+"EUPL/PREUS": "impris",
+"UPBD/TER": "undeter"
 }
