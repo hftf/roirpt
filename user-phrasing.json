@@ -31,6 +31,7 @@
 "SKPAOEFP": "and each",
 "SKPAULT": "and all the",
 "SKPAF": "and after",
+"SKPATS": "and that's",
 "SKPO": "and to",
 "SKPOER": "and other",
 "SKPOUR": "and our",
@@ -80,6 +81,7 @@
 "SOEUFS": "so I was",
 "SOUBG": "so you can",
 "SOPLD": "someday",
+"SEUPBTS": "since the",
 "SUFPT": "such that",
 "TKPWHROER": "any other",
 "TKPWHAB": "gonna be",
@@ -146,8 +148,10 @@
 "TPAOEUPBTD": "find it",
 "TPAURL": "for all",
 "TPAURLT": "for all the",
+"TPOFPBD": "fond of",
 "TPOLT": "follow the",
 "TP*UR": "if you are",
+"TP*URPBLT": "if you are not",
 "TP*S": "if it's",
 "TPEUFRP": "for which",
 "TPEUBGD": "if I could",
@@ -365,5 +369,6 @@
 "-RPB": "are an",
 "-RPBLT": "are not",
 "-RPBT": "aren't",
+"-BGT": "being the",
 "-BGD": "could"
 }
