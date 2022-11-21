@@ -2,6 +2,7 @@
 "^TAOEPBTS": "18th century",
 "^HREFPBTS": "11th century",
 "STPAOEPBTS": "17th century",
+"STREUL/REFLGS": "Industrial Revolution",
 "STAOEPBTS": "16th century",
 "STAEUFRT": "state of the art",
 "SWAOEPT": "sweet potato",
@@ -13,6 +14,8 @@
 "TWEURS": "21st century",
 "TWEFLTS": "12th century",
 "THRAOEPBTS": "13th century",
+"THEURD/WORL": "Third World",
 "KHRAOUFBG": "classical music",
-"KHRAOUFGS": "classical musician"
+"KHRAOUFGS": "classical musician",
+"KOEBG/KOEL": "Coca-Cola"
 }
