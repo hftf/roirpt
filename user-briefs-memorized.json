@@ -38,6 +38,7 @@
 "THREURT": "transliterate",
 "THUPBL": "thumbnail",
 "TRAEURBG": "trademark",
+"T*ELG": "technical",
 "TEPL": "temperature",
 "KPHRAR": "exemplar",
 "KWRAOUFL": "youthful",
@@ -83,5 +84,6 @@
 "AOUFPBGS": "unification",
 "AOURPL": "username",
 "A*EURPL": "airplane",
-"OFBLS": "oblivious"
+"OFBLS": "oblivious",
+"*EFLD": "evidently"
 }
