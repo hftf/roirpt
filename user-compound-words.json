@@ -62,6 +62,7 @@
 "KOEUP/PAS/TA": "copypasta",
 "KOUPBT/TKO*UPB": "countdown",
 "KOBG/KWRAOEU": "cockeye",
+"KOBG/KWRAOEUD": "cockeyed",
 "PWHRAOD/HOUPBD": "bloodhound",
 "PWHROBG/KWOET": "blockquote",
 "PWROD/KAFT": "broadcast",
@@ -98,6 +99,7 @@
 "WAF/TPORPL": "waveform",
 "WAF/TPORPLS": "waveforms",
 "WORL/WAOEUD": "worldwide",
+"WEUL/POUR": "willpower",
 "WEB/PHAFRT": "webmaster",
 "WEB/PAEUPBLG": "webpage",
 "WEB/HROG": "weblog",
@@ -121,5 +123,6 @@
 "REUPBG/TOEPBS": "ringtones",
 "AOEFL/TKOER": "evildoer",
 "AOURS/TPHAEUPL": "username",
+"OF/HRAO*D": "offload",
 "OPB/WARD": "onward"
 }
