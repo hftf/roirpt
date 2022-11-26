@@ -1,6 +1,8 @@
 {
+"^STOUPBTD": "astounded",
 "STKRABGD": "distracted",
 "STKREPBTD": "descended",
+"STKARTD": "discarded",
 "SKAOETD": "succeeded",
 "SPWEPBTD": "intended",
 "SPOPBTD": "responded",
@@ -24,6 +26,7 @@
 "KWEUBGD": "convicted",
 "KROUTD": "crowded",
 "KRUBGD": "constructed",
+"KAUPB/KOBGD": "concocted",
 "KAS/KAEUTD": "cascaded",
 "KUBGD": "conducted",
 "PWHRAOEUPBTD": "blinded",

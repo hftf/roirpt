@@ -136,6 +136,7 @@
 "^WAOEBG": "a week",
 "^WOUT": "without a",
 "^WEUS": "which is a",
+"^W-R": "where a",
 "^H": "had a",
 "^HROEFR": "all over",
 "^HREUBLT": "a little bit",
@@ -159,6 +160,7 @@
 "^UR": "you're a",
 "^URP": "you were a",
 "^-F": "of a",
+"^-FPB": "even a",
 "^-FS": "was a",
 "^-R": "are a",
 "^-B": "be a"
