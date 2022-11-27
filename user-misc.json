@@ -1,10 +1,15 @@
 {
 "KWR5": "ya",
+"STRAS/SE": "strasse",
+"STA*TD": "stadt",
 "SKPH-F": "{^-and-^}",
+"SAOUBG/SAEU/TKE/SKAPB/TKAL": "succès de scandale",
 "SUL/PHUR": "sulphur",
 "TPHA*EU": "née",
 "TPA/SAD": "façade",
+"TPAPB/TKE/SKWRELG": "fin de siècle",
 "TH*UZ": "{&,000}",
+"TH*P": "{&TH}",
 "TRAOEU/TPHA": "tryna",
 "KAOU/TAOUR/KWRAEU": "couturier",
 "KUPBG/H-F/TPU": "kung-fu",
@@ -14,5 +19,6 @@
 "WORBG/SKWRA/TKAEU": "workaday",
 "HREPL/PHE": "lemme",
 "HOEUL/SPEURT": "Holy Spirit",
+"*UPBD": "und",
 "EUPS/TPABGT": "ipso facto"
 }
