@@ -1,10 +1,12 @@
 {
 "^STOUPBTD": "astounded",
+"^SPWRABGD": "abstracted",
 "^PHRAUTD": "applauded",
 "STKRABGD": "distracted",
 "STKREPBTD": "descended",
 "STKARTD": "discarded",
 "SKAOETD": "succeeded",
+"SPWRABGD": "interacted",
 "SPWEPBTD": "intended",
 "SPOPBTD": "responded",
 "SP*EPBTD": "suspended",
@@ -22,6 +24,7 @@
 "TPORG/-D": "forgotten",
 "TPORGD": "forgotten",
 "TEPBTD": "tended",
+"KPWROEURTD": "embroidered",
 "KPHRAOUTD": "excluded",
 "KPHAOUBGD": "communicated",
 "KPAPBTD": "expanded",
@@ -47,6 +50,7 @@
 "RE/TKABGD": "redacted",
 "REUBGD": "restricted",
 "ATD": "added",
+"OFBD": "obviated",
 "ORTD": "ordered",
 "EPBTD": "ended",
 "UPB/KP-PD": "unexpected"
