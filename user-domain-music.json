@@ -1,4 +1,5 @@
 {
+"^SAOEU": "assai",
 "^SOELD": "Isolde",
 "^HR*EFPBT/SEUFPL/TPHEU": "Eleventh Symphony",
 "SKRAOEB/*EUPB": "Scriabin",
@@ -26,6 +27,11 @@
 "TWEFLT/SEUFPL/TPHEU": "Twelfth Symphony",
 "THEURD/SEUFPL/TPHEU": "Third Symphony",
 "THUS/SPAEUBG/SA*EUR/THAOUS/TRA": "Thus Spake Zarathustra",
+"TO/TPHAL/TEU": "tonality",
+"TO/TPHALT": "tonality",
+"TOE/TPHALT": "tonality",
+"TOEPBLT": "tonality",
+"TOPBLT": "tonality",
 "T*EPBT/SEUFPL/TPHEU": "Tenth Symphony",
 "KWAEUFR": "quaver",
 "KHRAEURPBT": "clarinet",

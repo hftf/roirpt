@@ -75,6 +75,7 @@
 "SPHRUS": "surplus",
 "SPHAEUG": "mistaking",
 "SPRAOUT": "pursuit",
+"SPAOERPBT/KWRAL": "experiential",
 "SPEF/EUFT": "specificity",
 "SPEBLGS": "speculation",
 "SPELGT": "speculate",
@@ -226,6 +227,7 @@
 "KPHREUFLT": "explicitly",
 "KPHAOUBGS": "communication",
 "KPHAEULGS": "exhalation",
+"KPAOERPBT/KWRAL": "experiential",
 "KPAOUBL": "computable",
 "KPARPBLGT": "exaggerate",
 "KPARPBLGS": "exaggeration",
@@ -387,5 +389,6 @@
 "ERPBT": "errant",
 "EP/TKPHOLG": "epidemiology",
 "EBGS/PROEPT": "expropriate",
+"EBGS/PAOERPBT/KWRAL": "experiential",
 "URSZ": "yourselves"
 }

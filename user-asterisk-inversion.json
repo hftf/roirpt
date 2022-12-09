@@ -1,6 +1,7 @@
 {
 "STA*RLT": "startle",
 "SK*EULT": "skittle",
+"SK*ULT": "scuttle",
 "SPHRA*RT": "splatter",
 "SPHO*RT": "smother",
 "SHA*RT": "shatter",
@@ -14,6 +15,7 @@
 "TP*URL": "fuller",
 "THAO*ERT": "theater",
 "TO*LG": "toggle",
+"T*EURPBD": "tinder",
 "KWRO*ELD": "yodel",
 "KHRA*RT": "clatter",
 "KHA*RT": "chatter",
@@ -29,6 +31,7 @@
 "WR*EULG": "wriggle",
 "WA*RPBD": "wander",
 "WA*LG": "waggle",
+"WA*LD": "waddle",
 "W*EURT": "wither",
 "HRAO*EUPBT": "lighten",
 "RO*PBT": "rotten",
