@@ -1,6 +1,7 @@
 {
 "^STRO": "astro",
 "^STRO/TPHOPL": "astronom",
+"^ST*EPBS": "ostens",
 "^STEPBS": "extens",
 "^SKWREPBD": "agend",
 "^SPWEPBT/PHAOEUD": "absentmind",
