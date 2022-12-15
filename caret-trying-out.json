@@ -1,4 +1,5 @@
 {
+"^SKPWOPBD": "abscond",
 "^SPWHRAOULT": "absolutely",
 "^SPWHRAOUT": "absolute",
 "^SPWRABGT": "abstract",
@@ -52,6 +53,7 @@
 "^TWRO": "{electro^}",
 "^TWRO*PBLG": "electronically",
 "^TWRO*PBG": "electronic",
+"^TWROED": "electrode",
 "^TWROPB": "electron",
 "^TWROPBLG": "electronically",
 "^TWROPBG": "electronic",

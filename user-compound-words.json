@@ -114,6 +114,7 @@
 "WROPBD/HED/-D": "wrongheaded",
 "WREUFT/WAFP": "wristwatch",
 "WAOEUD/SKRAOEPB": "widescreen",
+"WAEUFT/KOET": "waistcoat",
 "WAEFT/HRAPBD": "wasteland",
 "WAUR/HROGD": "waterlogged",
 "WAUL/PAEURP": "wallpaper",
@@ -132,6 +133,7 @@
 "HRAPBD/HRA*EUD": "landlady",
 "HROFG/KAOEUPBD/-PBS": "lovingkindness",
 "HRET/TKO*UPB": "letdown",
+"HAOUPL/KAOEUPBD": "humankind",
 "HAEUR/TKREFR": "hairdresser",
 "HARD/WORBG/-G": "hardworking",
 "HOERS/POUR": "horsepower",
@@ -145,10 +147,12 @@
 "HED/PHA*FRT": "headmaster",
 "HED/WEUPBD": "headwind",
 "HUPB/SUBG/-L": "honeysuckle",
+"RAOUL/PWAOBG": "rulebook",
 "REUPBG/TOEPB": "ringtone",
 "REUPBG/TOEPBS": "ringtones",
 "AOEFL/TKOER": "evildoer",
 "AOURS/TPHAEUPL": "username",
 "OF/HRAO*D": "offload",
-"OPB/WARD": "onward"
+"OPB/WARD": "onward",
+"OD/PWAUL": "oddball"
 }

@@ -3,6 +3,7 @@
 "STRAS/SE": "strasse",
 "STA*TD": "stadt",
 "SKPH-F": "{^-and-^}",
+"SRAOE/TA": "vita",
 "SAOUBG/SAEU/TKE/SKAPB/TKAL": "succès de scandale",
 "SUL/PHUR": "sulphur",
 "TPHA*EU": "née",
@@ -20,6 +21,7 @@
 "WORBG/SKWRA/TKAEU": "workaday",
 "HREPL/PHE": "lemme",
 "HOEUL/SPEURT": "Holy Spirit",
+"*EL": "{^l}",
 "*UPBD": "und",
 "EUPS/TPABGT": "ipso facto"
 }
