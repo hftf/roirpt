@@ -1,5 +1,8 @@
 {
 "KWR5": "ya",
+"^-R": "{^r}",
+"^-L": "{^l}",
+"^-T": "{^t}",
 "STRAS/SE": "strasse",
 "STA*TD": "stadt",
 "SKPH-F": "{^-and-^}",
@@ -21,7 +24,8 @@
 "WORBG/SKWRA/TKAEU": "workaday",
 "HREPL/PHE": "lemme",
 "HOEUL/SPEURT": "Holy Spirit",
-"*EL": "{^l}",
+"*EL": "{^el}",
 "*UPBD": "und",
+"*Z": "{^z}",
 "EUPS/TPABGT": "ipso facto"
 }

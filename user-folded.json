@@ -29,6 +29,7 @@
 "SPOFR": "supportive",
 "SPOFRT": "supportive",
 "SWEUFRT": "swifter",
+"SWERLT": "swelter",
 "SHRAOERP": "sleeper",
 "SHRAURT": "slaughter",
 "SHR*EURT": "slither",
@@ -56,6 +57,7 @@
 "TKHREURBLT": "deliberately",
 "TKHREURBLS": "deliciously",
 "TKHREULGS": "deliciously",
+"TKRAOERPL": "dreamer",
 "TKRAFBGT": "drastic",
 "TKREUFRT": "drifter",
 "TKRERBGT": "director",
@@ -113,6 +115,7 @@
 "KAURPL": "calmer",
 "KAUPB/SKWRERBGT": "conjecture",
 "KAUPBLS": "consciously",
+"KARB/RAEURT": "carburetor",
 "KAPBLD": "candle",
 "KOEFLT": "coastal",
 "KOURLT": "courtly",
@@ -172,5 +175,6 @@
 "EUPB/TPEUPBLT": "infinitely",
 "EUPL/TAEURT": "imitator",
 "EUG/TPHORPBLT": "ignorantly",
-"EPL/PWROEURD": "embroider"
+"EPL/PWROEURD": "embroider",
+"EL/SRAEURT": "elevator"
 }
