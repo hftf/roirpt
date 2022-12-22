@@ -48,5 +48,7 @@
 "*ERPB": "{^ern}",
 "EUFBGT": "{^istic}",
 "ERD": "{^er}{^ed}",
+"EPBD/KWRO": "{endo^}",
+"EBGS/TRO": "{extro^}",
 "EBGS/KWRO": "{exo^}"
 }
