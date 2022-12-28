@@ -6,6 +6,7 @@
 "STKRABGD": "distracted",
 "STKREPBTD": "descended",
 "STKARTD": "discarded",
+"STRUBGD": "instructed",
 "SKAOETD": "succeeded",
 "SPWRABGD": "interacted",
 "SPWEPBTD": "intended",
@@ -17,6 +18,7 @@
 "TKPWRA*TD": "graduated",
 "TKPWROUPBTD": "grounded",
 "TKPWAOEUTD": "guided",
+"TKPOUPBTD": "confounded",
 "TKHRAOTD": "downloaded",
 "TKRETD": "dreaded",
 "TKAEUBGD": "educated",
@@ -54,6 +56,7 @@
 "ATD": "added",
 "OFBD": "obviated",
 "ORTD": "ordered",
+"EUPB/TPHREBGD": "inflected",
 "EPBTD": "ended",
 "UPB/KP-PD": "unexpected"
 }
