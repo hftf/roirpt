@@ -17,6 +17,7 @@
 "KWRA*EL": "{^ially}",
 "KWRAES": "{^y}{^'s}",
 "KWR*ET": "{^ieth}",
+"KWREPBT": "{^ient}",
 "KWRU": "{eu^}",
 "KWEUPB/KWA": "{quinqua^}",
 "KHRO*ER": "{chloro^}",
@@ -54,5 +55,6 @@
 "ERD": "{^er}{^ed}",
 "EPBD/KWRO": "{endo^}",
 "EBGS/TRO": "{extro^}",
-"EBGS/KWRO": "{exo^}"
+"EBGS/KWRO": "{exo^}",
+"UPL/KAEUT": "{^uplicate}"
 }
