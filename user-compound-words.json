@@ -6,6 +6,7 @@
 "SKRAOEPB/SAEUFR": "screensaver",
 "SKRAOEPB/SAFR": "screensaver",
 "SKRAOEPB/SAFRS": "screensavers",
+"SKAOL/TAOEFRP": "schoolteacher",
 "SKEFP/PWAOBG": "sketchbook",
 "SPAOEU/WAEUR": "spyware",
 "SWEUPL/WAER": "swimwear",
@@ -195,5 +196,6 @@
 "OPB/WARD": "onward",
 "OBGS/TAEUL": "oxtail",
 "OD/PWAUL": "oddball",
+"*EUPBG/STAPBD": "inkstand",
 "ELD/*ER/PWER/KWREU": "elderberry"
 }
