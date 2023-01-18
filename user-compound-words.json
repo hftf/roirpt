@@ -9,6 +9,7 @@
 "SKAOL/TAOEFRP": "schoolteacher",
 "SKEFP/PWAOBG": "sketchbook",
 "SPAOEU/WAEUR": "spyware",
+"SPOEUL/SPORT": "spoilsport",
 "SWEUPL/WAER": "swimwear",
 "SHAOU/PHAEURBG": "shoemaker",
 "SHAOU/HRAEUS": "shoelace",
@@ -72,6 +73,7 @@
 "TAOL/PWOBGS": "toolbox",
 "TAFBG/PHAFRT": "taskmaster",
 "TOEU/SHO*P": "toyshop",
+"TOUPBS/PEPL": "townspeople",
 "TUG/PWOET": "tugboat",
 "KWRART/PWABG": "quarterback",
 "KWEUBG/SAPBD": "quicksand",
@@ -83,6 +85,7 @@
 "KHEBG/HREUFT": "checklist",
 "KHEBG/HR-FT": "checklist",
 "KHES/PWAORD": "chessboard",
+"KRAB/AP/-L": "crabapple",
 "KROS/KREU": "cross-country",
 "KROS/WORD": "crossword",
 "KREUPT/^TPHALS": "cryptanalysis",
@@ -137,6 +140,7 @@
 "PAFR/PWEU": "passerby",
 "PAFRS/PWEU": "passersby",
 "PAPBT/KWREU/HOES": "pantyhose",
+"POP/KWREU/KOBG": "poppycock",
 "P*ERP/KORPB": "peppercorn",
 "P*ERP/PHEUPBT": "peppermint",
 "PEUG/HETD": "pigheaded",
@@ -201,5 +205,6 @@
 "OBGS/TAEUL": "oxtail",
 "OD/PWAUL": "oddball",
 "*EUPBG/STAPBD": "inkstand",
+"*ERT/*EPB/WAEUR": "earthenware",
 "ELD/*ER/PWER/KWREU": "elderberry"
 }
