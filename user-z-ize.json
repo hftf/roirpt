@@ -1,4 +1,5 @@
 {
+"^KWALZ": "equalize",
 "^PHAOUPBGSZ": "immunization",
 "^PHAOUPBZ": "immunize",
 "STKAEUBLZ": "destabilize",
@@ -26,9 +27,11 @@
 "KUFPLZ": "customize",
 "PWURLGZ": "burglarize",
 "PHRAEURPBLGZ": "plagiarize",
+"PHRAURZ": "popularize",
 "PHOEURPLZ": "memorize",
 "PHOERPBZ": "modernize",
 "PRAOEURTZ": "prioritize",
+"PAOEPBLZ": "penalize",
 "PUL/SRERZ": "pulverize",
 "HROELGSZ": "localization",
 "HROELZ": "localize"
