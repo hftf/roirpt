@@ -51,6 +51,7 @@
 "^TPHOPLS": "anonymous",
 "^TPHOLG": "analog",
 "^TPHOGTS": "annotation",
+"^TPHEUBG": "atomic",
 "^TPHEPL": "enemy",
 "^TPHES": "unnecessary",
 "^TPAEUBG": "AFAIK",
