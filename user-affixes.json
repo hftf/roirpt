@@ -50,6 +50,7 @@
 "AEUPB": "{^ane}",
 "AEULGS": "{^ational}",
 "AEUTD": "{^ated}",
+"AEFRPB": "{arch^}",
 "APL/PW*EU": "{ambi^}",
 "O*RL": "{^oral}",
 "OEURL": "{^orial}",
@@ -63,5 +64,6 @@
 "EPBD/KWRO": "{endo^}",
 "EBGS/TRO": "{extro^}",
 "EBGS/KWRO": "{exo^}",
-"UPL/KAEUT": "{^uplicate}"
+"UPL/KAEUT": "{^uplicate}",
+"-LT": "{^let}"
 }
