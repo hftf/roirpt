@@ -1,6 +1,7 @@
 {
 "24/-7": "24/7",
 "KWR5": "ya",
+"^*BG": "{^c}",
 "^-R": "{^r}",
 "^-PL": "{^m}",
 "^-L": "{^l}",
@@ -21,6 +22,7 @@
 "TH*UZ": "{&,000}",
 "TH*P": "{&TH}",
 "TRAOEU/TPHA": "tryna",
+"KPHUPS": "comes up",
 "KAOU/TAOUR/KWRAEU": "couturier",
 "KUPBG/H-F/TPU": "kung-fu",
 "PW*FPG": "{#BackSpace}{^in'}",
@@ -35,5 +37,6 @@
 "*EL": "{^el}",
 "*UPBD": "und",
 "*Z": "{^z}",
-"EUPS/TPABGT": "ipso facto"
+"EUPS/TPABGT": "ipso facto",
+"ERPL/TKPWERD": "ermahgerd"
 }
