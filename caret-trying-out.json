@@ -15,6 +15,7 @@
 "^SHA": "Asia",
 "^SRAOEGS": "aviation",
 "^SRAEUFS": "evasive",
+"^SEUFRBL": "assembly",
 "^TKPWHRAPBD": "England",
 "^TKPWR": "anger",
 "^TKPWREU": "angry",
@@ -128,6 +129,7 @@
 "^HREGS": "elegance",
 "^RAE": "area",
 "^RAEUPBLGT": "arrangement",
+"^RO*PBG": "ironic",
 "^REG": "irregular",
 "^REG/HRAEURT": "irregularity",
 "^REG/HRAERT": "irregularity"
