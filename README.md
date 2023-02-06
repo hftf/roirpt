@@ -8,18 +8,8 @@ This README is better viewed [in full width](https://github.com/hftf/roirpt/blob
 
 ### `caret-*.json`
 
-Introduces <kbd>^</kbd> to represent a pre-initial schwa.
+Introduces <kbd>^</kbd> to represent a pre-initial schwa.\*
 Requires the [`plover-stenotype-extended`](https://github.com/sammdot/plover-stenotype-extended) plugin.
-
-<small>
-Note: This is not a new idea; people have implemented similar ideas before in different ways.
-I chose `^` since it looks like both a small superscript `A`
-and also the IPA symbol ʌ, which is used to represent a (usually stressed) schwa in English.
-I like using a punctuation character (rather than e.g. `a` or `e`)
-because I like the ability to easily grep for steno strokes as strings of only uppercase letters or symbols,
-and because in general-purpose search engines I can search for strokes and it will return results that ignore the symbol
-(although that could eventually be a footgun).
-</small>
 
 A few groups of rhymes so you can see why this might be useful:
 
@@ -41,6 +31,15 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 || <samp>consent</samp>    | <kbd>SK\*EPBT</kbd> | `(SK*ENT)` | <kbd>SK\*EPBT</kbd> or <kbd>KAUPB/SEPBT</kbd> etc.
 -ent | <samp>intent</samp> | <kbd>SPWEPBT</kbd>  | `(INTENT)` | <kbd>SPWEPBT</kbd> or <kbd>EUPB/TEPBT</kbd>
 || <samp>absent</samp>     | <kbd>^SPWEPBT</kbd> | `(^SBENT)` | <kbd>AB/SEPBT</kbd>
+
+\* 
+Note: This is not a new idea; people have implemented similar ideas before in different ways.
+I chose `^` since it looks like both a small superscript `A`
+and also the IPA symbol ʌ, which is used to represent a (usually stressed) schwa in English.
+I like using a punctuation character (rather than e.g. `a` or `e`)
+because I like the ability to easily grep for steno strokes as strings of only uppercase letters or symbols,
+and because in general-purpose search engines I can search for strokes and it will return results that ignore the symbol
+(although that could eventually be a footgun).
 
 #### The <samp>ex-</samp>/<samp>comp-</samp> conflict, etc.
 
