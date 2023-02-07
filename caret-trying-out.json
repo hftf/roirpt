@@ -132,6 +132,8 @@
 "^RAE": "area",
 "^RAEUPBLGT": "arrangement",
 "^RO*PBG": "ironic",
+"^REUGT": "irrigate",
+"^REUGS": "irrigation",
 "^REG": "irregular",
 "^REG/HRAEURT": "irregularity",
 "^REG/HRAERT": "irregularity"
