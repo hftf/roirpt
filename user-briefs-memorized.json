@@ -78,6 +78,7 @@
 "KUFLT": "cultivate",
 "PWRAEUP": "breakup",
 "PWAORBG": "bookmark",
+"PWA*ERT": "battery",
 "PHRA*EULS": "playlist",
 "PHRAEUGD": "playground",
 "PHRAUR": "popular",
@@ -104,6 +105,7 @@
 "PRAEL": "principally",
 "PRO/TP*EURBS": "proficiency",
 "PRUB": "republic",
+"POS/TOEUR": "posterior",
 "WHRAOER": "volunteer",
 "WHROEP": "envelope",
 "WRERS": "reverse",
@@ -128,6 +130,7 @@
 "AOUFPBGS": "unification",
 "AOURPL": "username",
 "A*EURPL": "airplane",
+"APB/TOEUR": "anterior",
 "OFBLS": "oblivious",
 "*EFLD": "evidently"
 }

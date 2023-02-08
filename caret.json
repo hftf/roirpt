@@ -841,6 +841,7 @@
 "^TOPL": "atom",
 "^TOPL/^TOPB": "automaton",
 "^TOPL/EUBG": "atomic",
+"^TOPLG": "atomic",
 "^TOBG/SEU": "autocracy",
 "^TOL": "atoll",
 "^T*EUBG": "attic",
