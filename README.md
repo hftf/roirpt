@@ -33,7 +33,8 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 || <samp>absent</samp>     | <kbd>^SPWEPBT</kbd> | `(^SBENT)` | <kbd>AB/SEPBT</kbd>
 
 \* 
-Note: This is not a new idea; people have implemented similar ideas before in different ways.
+Note: This is not a new idea; people have implemented similar ideas before in different ways
+(see [phenrsteno](https://github.com/chambln/plover-phenrsteno) for where I got the inspiration).
 I chose `^` since it looks like both a small superscript `A`
 and also the IPA symbol ʌ, which is used to represent a (usually stressed) schwa in English.
 I like using a punctuation character (rather than e.g. `a` or `e`)
