@@ -4,6 +4,7 @@
 "SKWREUPL/TPHOE": "{gymno^}",
 "SKAO*EU": "{^sky}",
 "SKOPBG": "{^scopic}",
+"SPH*EUF": "{^smith}",
 "SHOUS": "{^ceous}",
 "SR*E": "{^}'ve",
 "SRUPL": "{circum^}",
@@ -38,10 +39,12 @@
 "PRO/TO*": "{proto^}",
 "PRO*": "{pro-^}",
 "PRO*EUT": "{proto^}",
+"PROEUT": "{proto^}",
 "PEPB/TA": "{penta^}",
 "PEPBT/KWRA": "{penta^}",
 "PET/KWRA": "{peta^}",
 "WOULS": "{^uously}",
+"HRA/REUPBG/KWRO": "{laryngo^}",
 "HR-LS": "{^lessly}",
 "HAEUG/KWRO": "{hagio^}",
 "HOEUP/THE": "{hypothe^}",
@@ -72,6 +75,7 @@
 "EPBD/KWRO": "{endo^}",
 "EBGS/TRO": "{extro^}",
 "EBGS/KWRO": "{exo^}",
+"UP/*L": "{^uple}",
 "UPL/KAEUT": "{^uplicate}",
 "-LT": "{^let}"
 }

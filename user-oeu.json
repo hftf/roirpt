@@ -6,6 +6,7 @@
 "SHROEUP": "sloppy",
 "SROEUL": "valley",
 "SO*EUFRB": "zombie",
+"SO*EURT": "zeroth",
 "SEUPL/TPOEUPB": "symphony",
 "SER/PHOEUPB": "ceremony",
 "TKPWROEUFP": "grouchy",
@@ -20,6 +21,7 @@
 "TO*EUPL": "tempo",
 "TOEUFRP": "tempo",
 "TOEURPB": "tinier",
+"KPOEUPB": "companion",
 "KWOEURBG": "quirky",
 "KHOEUB": "chubby",
 "KROEUFRPB": "crunchy",
@@ -44,5 +46,6 @@
 "ROEUFT": "rusty",
 "ROEURT": "retro",
 "ROEUZ": "rosy",
-"AL/PHOEUT": "almighty"
+"AL/PHOEUT": "almighty",
+"UL/TOEUR": "ulterior"
 }
