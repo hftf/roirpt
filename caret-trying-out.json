@@ -3,6 +3,7 @@
 "^STPHEUBG": "ethnic",
 "^SKPWAOUR": "obscure",
 "^SKPWOPBD": "abscond",
+"^SKPHO": "Eskimo",
 "^SPWHRAOULT": "absolutely",
 "^SPWHRAOUT": "absolute",
 "^SPWRABGT": "abstract",
@@ -138,5 +139,6 @@
 "^REUGS": "irrigation",
 "^REG": "irregular",
 "^REG/HRAEURT": "irregularity",
-"^REG/HRAERT": "irregularity"
+"^REG/HRAERT": "irregularity",
+"^RUG": "Uruguay"
 }
