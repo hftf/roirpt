@@ -1,8 +1,10 @@
 {
 "SHRAB/TPAEUBGS": "syllabification",
 "SRED/EUBG": "Vedic",
+"TKEF/TPHAG/REU": "Devanagari",
 "TPHAOES/EUS": "tmesis",
 "TREU/HREUPBG/WAL": "trilingual",
+"KHOPL/SKAOE": "Chomsky",
 "KOEU/TPHAEU": "koine",
 "KOERPBL": "coronal",
 "KOP/HRA": "copula",
