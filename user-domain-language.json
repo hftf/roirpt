@@ -1,7 +1,11 @@
 {
 "SHRAB/TPAEUBGS": "syllabification",
 "SRED/EUBG": "Vedic",
+"TPHAOES/EUS": "tmesis",
 "TREU/HREUPBG/WAL": "trilingual",
+"KOEU/TPHAEU": "koine",
+"KOERPBL": "coronal",
+"KOP/HRA": "copula",
 "PHRAT/TKOEUFP": "Plattdeutsch",
 "HROEBG/TEUF": "locative",
 "RAO*EUPL": "rime",
