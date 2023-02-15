@@ -26,6 +26,7 @@
 "SKWRER/SHREPL": "Jerusalem",
 "SKAFP/WAPB": "Saskatchewan",
 "SKAG/RABG": "Skagerrak",
+"SPWAEUR/KWROE": "Ontario",
 "SPHAEUR/KWRA": "Sumeria",
 "SPHAEUR/KWRAPB": "Sumerian",
 "SPARB": "Spanish",
@@ -356,9 +357,12 @@
 "OE/HAOEU/OE": "Ohio",
 "OEGS/KWRA": "Oceania",
 "OEGS/KWRA*": "Oceania",
+"OR/HRAPB/TKOE": "Orlando",
+"OR/HRAPBD/KWRO": "Orlando",
 "OR/HRAPBD/O*E": "Orlando",
 "EUS/RAEL/KWREU": "Israeli",
 "EPB/TKPWHRAPBD": "England",
+"EBG/WA/TKOER": "Ecuador",
 "UL/STER": "Ulster",
 "UZ/PWEBG": "Uzbek"
 }
