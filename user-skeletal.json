@@ -1,4 +1,5 @@
 {
+"STK-PB": "discontinue",
 "STHR-PLT": "settlement",
 "STOEUR/TPHR-LG": "stereotypically",
 "STOEUR/TP-LG": "stereotypical",
@@ -44,6 +45,7 @@
 "PH-F/SAOEZ": "emphases",
 "PH-F/TEUBLG": "emphatically",
 "PH-F/TEUBG": "emphatic",
+"PH-FBG": "emphatic",
 "PH-FS": "emphasis",
 "PH-FSZ": "emphasizes",
 "PH-FZ": "emphasize",
