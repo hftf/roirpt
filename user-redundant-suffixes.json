@@ -1,6 +1,7 @@
 {
 "^REG/HRAR": "irregular",
 "STKORG/SA*EUGS": "disorganization",
+"STPHEPBS/KWRAL": "sentential",
 "STAT/TAOUR": "stature",
 "STURD": "sturdy",
 "SKWRAPBG/OE": "Django",
