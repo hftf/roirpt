@@ -1,6 +1,7 @@
 {
 "STPHOE/TPALG": "snow falling",
 "SPEUBG/SKP/SPAPB": "spick and span",
+"SA*UP/TUD": "USA Today",
 "TKO*PBG/KWREU/KOPBG": "Donkey Kong",
 "TPHRA*/KAOES": "Florida Keys",
 "TPHRURD/HRAOE": "fleur de lis",
@@ -9,6 +10,9 @@
 "TPHOEURBG/TAOEUPLS": "New York Times",
 "TPHU/EPB/TKPWHRAPBD": "New England",
 "TPAPB/TOPL/-FT/OP/RA": "Phantom of the Opera",
+"TWO/TKPHEPBLGS": "two-dimensional",
+"THRAOE/TKPHEPBLGS": "three-dimensional",
+"TOUR/TKE/TPRAPBS": "Tour de France",
 "KARPB/TKPWEU/HAUL": "Carnegie Hall",
 "HOEUL/ROEFRPB/KPWROR": "Holy Roman Emperor",
 "HOEUL/ROEFRPB/KPWAOEUR": "Holy Roman Empire",
@@ -20,5 +24,6 @@
 "RAPS/TKEU/TPH/PWHRU": "Rhapsody in Blue",
 "AEU/SPAEUS/OD/SEU": "A Space Odyssey",
 "OPBT/HRAPL": "on the lam",
-"EL/PHER/TPUD": "Elmer Fudd"
+"EL/PHER/TPUD": "Elmer Fudd",
+"-T/TPHU/KWRORBG/TAOEUPLS": "The New York Times"
 }

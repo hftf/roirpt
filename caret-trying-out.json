@@ -142,6 +142,7 @@
 "^RAE": "area",
 "^RAEUPBLGT": "arrangement",
 "^RO*PBG": "ironic",
+"^REUPBLGT": "originate",
 "^REUGT": "irrigate",
 "^REUGS": "irrigation",
 "^REG": "irregular",
