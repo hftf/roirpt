@@ -1,7 +1,9 @@
 {
+"SO*RPB": "Southern",
 "TPWHOEFT": "northwest",
 "TPWHERPB": "northwestern",
 "TPHAOERPB": "northeastern",
+"TPHO*ERPB": "Northern",
 "TPHOEFT": "northeast",
 "AOEFT/*ER/HREU": "easterly"
 }
