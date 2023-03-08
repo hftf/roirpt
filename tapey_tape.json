@@ -1,5 +1,5 @@
 {
-	"line_format": "%b |%S| %4d %D %s",
+	"line_format": "%b%S|%4d %D %s",
 	"dictionary_names": {
 		"caret-abbreviations.json":                  "^abr",
 		"caret-affixes.json":                        "^afx",
