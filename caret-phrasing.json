@@ -94,6 +94,7 @@
 "^TKOUPB": "down a",
 "^TK-G": "doing a",
 "^TP": "if a",
+"^TPWOUT": "at about",
 "^TPWEFT": "at best",
 "^TPH": "in a",
 "^TPHAO": "into a",
@@ -219,5 +220,6 @@
 "^-FS": "was a",
 "^-R": "are a",
 "^-RP": "were a",
-"^-B": "be a"
+"^-B": "be a",
+"^-BG": "being a"
 }
