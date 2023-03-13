@@ -78,7 +78,7 @@ NT | <samp>ant-</samp> <samp>ent-</samp> <samp>int-</samp> | <kbd>SPW</kbd>  | `
 ND | <samp>and-</samp> <samp>end-</samp> <samp>ind-</samp> | <kbd>SKP</kbd>  | `(AND)` | <samp>cond-</samp> | <kbd>K</kbd>    | `(K)`
 NK | <samp>anc-</samp> <samp>enc-</samp> <samp>inc-</samp><br /><samp>ank-</samp> <samp>enk-</samp> <samp>ink-</samp> | ? | | <samp>conc-</samp><br /><samp>conk-</samp> | <kbd>K</kbd> | `(K)`
 NG | <samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp> | ?                            |        | <samp>cong-</samp> | <kbd>K</kbd> | `(K)`</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + fricative**
-NF | <samp>    </samp> <samp>enf-</samp> <samp>inf-</samp> | ?                            |        | <samp>comf-</samp><br /><samp>conf-</samp> | <kbd>TKP</kbd> or<br /><nobr><kbd>TKP*</kbd>¹</nobr> | `(KF)` or<br /><nobr>`(KF*)`¹</nobr>
+NF | <samp>    </samp> <samp>enf-</samp> <samp>inf-</samp> | <kbd>TPW</kbd>               | `(INF)` | <samp>comf-</samp><br /><samp>conf-</samp> | <kbd>TKP</kbd> or<br /><nobr><kbd>TKP*</kbd>¹</nobr> | `(KF)` or<br /><nobr>`(KF*)`¹</nobr>
 NV | <samp>    </samp> <samp>env-</samp> <samp>inv-</samp> | <kbd>TPWH</kbd>              | `(NW)` | <samp>conv-</samp> | <kbd>KW</kbd> | `(KW)`
 NS | <samp>ans-</samp> <samp>ens-</samp> <samp>ins-</samp><br /><samp>anc-</samp> <samp>enc-</samp> <samp>inc-</samp> | <kbd>STPH</kbd>              | `(SN)` | <samp>cons-</samp><br /><samp>conc-</samp> | <kbd>SK</kbd> | `(SK)`</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + fricative + stop**
 NST| <samp>    </samp><samp>    </samp> <samp>inst-</samp>| <kbd>STPH</kbd>    | `(SN)` | <samp>const-</samp> | ? |</td></tr></tbody><tbody><tr><td colspan="7">**Nasal + affricate**
