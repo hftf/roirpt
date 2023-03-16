@@ -11,6 +11,7 @@
 "W-8": "{#Control(8)}",
 "W-9": "{#Control(9)}",
 "SKPH-P": "{#Shift_L(Super_L(p))}",
+"SHR-R": "{#Shift_L(return)}{^}n{^}{#Backspace}{-|}",
 "KPHA*B": "{#Super_L(tab)}",
 "KPHU": "{#Super_L(u)}",
 "KPH-F": "{#Super_L(f)}",

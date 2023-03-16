@@ -71,6 +71,7 @@
 "^TPHOGTS": "annotation",
 "^TPHEUBG": "atomic",
 "^TPHEPL": "enemy",
+"^TPAOUPBT": "opportunity",
 "^TPAEUBG": "AFAIK",
 "^TPORT": "effort",
 "^TWHREULG": "electrically",
