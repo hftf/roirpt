@@ -1,5 +1,7 @@
 {
+"^P*EUFBG/PAL": "Episcopal",
 "^P*ER": "Upper",
+"^PEUFBG/PA*L": "Episcopal",
 "S*UPB": "Sun",
 "TPH*ERPBT": "Internet",
 "TPAO*EPBGS": "Phoenix",
@@ -13,7 +15,9 @@
 "PWR*EUPBLG": "Bridge",
 "PHO*EUPBT": "Mountain",
 "PR*EUPBS/ES": "Princess",
+"PR*ES": "Press",
 "PA*ERT": "Party",
+"PA*URPLT": "Parliament",
 "H*EL": "Hell",
 "RAO*ELGS": "Regional",
 "A*RL": "Article"

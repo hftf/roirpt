@@ -77,12 +77,14 @@
 "THRERBL": "terribly",
 "KPHRERBL": "commercially",
 "KPHREPLGS": "exceptionally",
+"KWHREFRPBL": "conventionally",
 "KWRERT": "converter",
 "KHRAOURBL": "crucially",
 "KHRAUPL": "calmly",
 "KHRARPBLG": "charger",
 "KHRARBL": "casually",
 "KHREULG": "critically",
+"KHRURLT": "cultural",
 "KHR-FRBL": "comfortably",
 "KHR-FRBLT": "comfortably",
 "KRAORD": "coordinator",
@@ -132,5 +134,6 @@
 "HRALGS": "additionally",
 "HRORPBL": "originally",
 "HRUPLT": "ultimately",
-"HRULT": "ultimately"
+"HRULT": "ultimately",
+"ORPB/PHREPBLT": "ornamentally"
 }
