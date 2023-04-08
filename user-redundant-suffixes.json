@@ -87,6 +87,7 @@
 "PROFPBD/TEU": "profundity",
 "PREUPT/AEUGS": "precipitation",
 "PREZ/TKEPBS": "presidency",
+"PREZ/TKEPBS/KWREU": "presidency",
 "PARD/OPB": "pardon",
 "PORBLT/TEU": "portability",
 "P*PL/TP-PL": "p.m.",
