@@ -54,6 +54,8 @@
 "TPABG/TEU": "faculty",
 "TPABG/TEUS": "faculties",
 "TPO*PBG": "phonic",
+"TPO*PBS": "phenomena",
+"TPO*PL": "phenomena",
 "TPOPL": "phenomenon",
 "TPOPL/TPHA": "phenomena",
 "TPOPL/TPHOLG": "phenomenology",
