@@ -17,6 +17,7 @@
 "KWRO*EPB": "IDK",
 "KRO*R": "OCR",
 "KR*D/H-F/ROPL": "CD-ROM",
+"PWAO*ES": "BC",
 "PW*BS": "BBC",
 "PH/PH": "pH",
 "PH/PHEG": "MPEG",
@@ -36,8 +37,10 @@
 "AO*EURBG": "IIRC",
 "AOEURL": "IRL",
 "AOEPB/KWRABG": "ENIAC",
+"A*EUPD": "AD",
 "O*EP": "Op.",
 "O*PLG": "OMG",
+"*ERP": "ER",
 "*US/*US/*US": "United States of America",
 "*US/*US/*US/*US": "USA",
 "*US/-F/A*": "United States of America"

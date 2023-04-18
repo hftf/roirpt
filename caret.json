@@ -1143,6 +1143,7 @@
 "^KPERT": "expert",
 "^KPEPB/TREUFT": "eccentricity",
 "^KPEPB/TREUBG": "eccentric",
+"^KPEPB/TREUS/TEU": "eccentricity",
 "^KPEPBT": "accent",
 "^KPEPBT/WAEUGT": "accentuating",
 "^KPEPBT/WAEUT": "accentuate",
