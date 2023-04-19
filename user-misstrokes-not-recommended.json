@@ -134,6 +134,7 @@
 "PWEF/EURBL": "beneficial",
 "PHRAPBT/AER": "planetary",
 "PHREUBG/RELGSZ": "public relations",
+"PHREPBLT": "mentally",
 "PHAOEUBG/TPOEPB": "microphone",
 "PHAOUFLG": "musical",
 "PHAOUS/KWRUPL": "museum",
@@ -238,6 +239,7 @@
 "EPB/SRAOES": "envious",
 "EPB/KUFRB/*ER": "encumber",
 "EPL/PHEU": "Emmy",
+"EPLT/REU": "elementary",
 "ELS/WHAEUR": "elsewhere",
 "UPLT/KWRUPL": "ultimatum"
 }
