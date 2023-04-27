@@ -84,7 +84,7 @@ NS | <samp>ans-</samp> <samp>ens-</samp> <samp>ins-</samp><br /><samp>anc-</samp
 NJ | <samp>    </samp> <samp>enj-</samp> <samp>inj-</samp><br /><samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp>³ | <kbd>^SKWHR</kbd> | `(INJ)` | <samp>conj-</samp><br /><samp>cong-</samp>³ | ? | </td></tr></tbody><tbody><tr><td colspan="7">**Nasal + fricative + stop**
 NST| <samp>    </samp><samp>    </samp> <samp>inst-</samp>| <kbd>STPH</kbd>    | `(SN)` | <samp>const-</samp> | ? | </td></tr></tbody><tbody><tr><td colspan="7">**Stop + fricative**
 BS | <samp>abs-</samp> <samp>obs-</samp>                   | <kbd>SPW</kbd> or<br /><kbd>^SPW</kbd>²     | `(SB)` or<br />`(^SB)`² | 
-DF |                   <samp>def-</samp> <samp>dif-</samp> | <kbd>TKP</kbd>                        | `(DF)` | 
+DF |                   <samp>def-</samp> <samp>dif-</samp> | <kbd>TKP</kbd> or<br /><kbd>TKW</kbd>¹ | `(DF)` or<br />`(DW)`¹ | 
 DV |                   <samp>dev-</samp> <samp>div-</samp> | <kbd>TKW</kbd>                        | `(DW)` | 
 DS |                   <samp>des-</samp> <samp>dis-</samp><br /><samp>dec-</samp>³<br /><samp>desc-</samp> <samp>disc-</samp>³ | <kbd>STK</kbd> | `(DS)` | | | </td></tr></tbody><tbody><tr><td colspan="7">**Fricative + fricative**
 SF |                  <samp>suff-</samp> <samp>surf-</samp>| <kbd>STP</kbd>                        | `(SF)` | 
