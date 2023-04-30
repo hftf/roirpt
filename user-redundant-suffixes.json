@@ -1,4 +1,5 @@
 {
+"^TKWEFRPB/RER": "adventurer",
 "^REG/HRAR": "irregular",
 "STKWAFL/KAEUGS": "disqualification",
 "STKORG/SA*EUGS": "disorganization",
@@ -64,6 +65,7 @@
 "KP*EPL/HRAR": "exemplar",
 "KP-PT/APBS/SEU": "expectancy",
 "KWHREUB/RUPL": "equilibrium",
+"KWRAOU/TPHAPLS": "unanimous",
 "KWR-D/AEUGS": "ideation",
 "KWAFL/KAEUGS": "qualification",
 "KAEUR/KWREUPBG": "carrying",
@@ -124,6 +126,7 @@
 "A/KWAEURPL": "aquarium",
 "A/PART/-PLT": "apartment",
 "AOEUFD/KAEUGS": "identification",
+"AOU/TPHAPLS": "unanimous",
 "A*UPLT/TAEUGS": "augmentation",
 "A*PL/TP-PL": "a.m.",
 "AUPLT/TAEUGS": "augmentation",
