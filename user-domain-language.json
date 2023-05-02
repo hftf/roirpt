@@ -1,4 +1,6 @@
 {
+"^STPWRAOUPBT": "obstruent",
+"^SPWRAOUPBT": "obstruent",
 "^TKW-P": "AdvP",
 "STPHA*BGS": "syntax",
 "STPHABGT/KHREU": "syntactically",
