@@ -769,6 +769,8 @@
 "^TPHOPL/HREU": "anomaly",
 "^TPHOPL/HRUS": "anomalous",
 "^TPHOBG/WOUS": "innocuous",
+"^TPHOBG/HRAEUGS": "inoculation",
+"^TPHOBG/HRAEUT": "inoculate",
 "^TPHOBGS/KWRA": "anoxia",
 "^TPHOBGS/EUBG": "anoxic",
 "^TPH*UPBS/KWRAEUGS": "enunciation",
