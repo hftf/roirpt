@@ -58,6 +58,7 @@
 "SPOFRT": "supportive",
 "SPOPB/TAEUPBLS": "spontaneously",
 "SPEFLGT": "speculative",
+"SWAOERP": "sweeper",
 "SWAOELT": "sweetly",
 "SWEUFRT": "swifter",
 "SWEUFLT": "swiftly",
@@ -96,6 +97,7 @@
 "TKPWRAF/TAEULGS": "gravitational",
 "TKPWRAS/HORP": "grasshopper",
 "TKPWRO*PBLG": "organically",
+"TKPWROURL": "growler",
 "TKPWOEFLT": "ghostly",
 "TKPHEPBLGS": "dimensional",
 "TKPAOUFLG": "confusingly",
@@ -137,6 +139,7 @@
 "TPHAOEULT": "nightly",
 "TPHAOELT": "neatly",
 "TPHAOUPBT": "Newton",
+"TPHAEURPB": "maintainer",
 "TPHAF/TKPWAEURT": "navigator",
 "TPHAFRGT": "navigator",
 "TPHOEURPBLG": "enjoyer",
@@ -340,6 +343,7 @@
 "R-FPLT": "respectively",
 "R-FPT": "respective",
 "R-LD": "readily",
+"A*PBG/TKOELT": "anecdotal",
 "AEUR/STOLT": "Aristotle",
 "AURTD": "auditor",
 "ARB/TRAEURT": "arbitrator",
@@ -363,5 +367,6 @@
 "EUG/TPHORPBLT": "ignorantly",
 "EPL/PWROEURD": "embroider",
 "EL/SRAEURT": "elevator",
+"UPB/SAOEULT": "unsightly",
 "UPB/TKOULTD": "undoubtedly"
 }
