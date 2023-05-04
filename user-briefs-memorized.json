@@ -145,6 +145,7 @@
 "PHRAUR": "popular",
 "PHRAURT": "popularity",
 "PHRAUPLT": "platinum",
+"PHRAUTD": "plaudit",
 "PHREURPBG": "malinger",
 "PHREFLT": "malevolent",
 "PHREFLS": "malevolence",
@@ -217,11 +218,13 @@
 "RES/TKAEPBS": "residency",
 "AOUFPB": "unify",
 "AOUFPBGS": "unification",
+"AOUFBGS": "unification",
 "AOURPL": "username",
 "A*EURPL": "airplane",
 "AEUFRLD": "airfield",
 "APB/TOEUR": "anterior",
 "OFBLS": "oblivious",
 "ORPB": "origin",
-"*EFLD": "evidently"
+"*EFLD": "evidently",
+"EUPB/S*EUGS": "insignificance"
 }

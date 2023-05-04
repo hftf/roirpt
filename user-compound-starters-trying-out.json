@@ -185,6 +185,7 @@
 "^TKPWAO*EUR": "enquire",
 "^TKPWAOEUR": "inquire",
 "^TKPWEU/SEUGS": "inquisition",
+"^TKPWEUFRT": "inquisitor",
 "^TKPWEUFGS": "inquisition",
 "^TKPWEUFT": "inquisite",
 "^TKPWEUGS": "inquisition",

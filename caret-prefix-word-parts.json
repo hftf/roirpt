@@ -32,6 +32,7 @@
 "^KOFRP": "accomp",
 "^KOPB": "acon",
 "^PWHREUG": "oblig",
+"^PO*T": "apoth",
 "^POBG/HREUPT": "apocalypt",
 "^PEL": "appel",
 "^HRAOUPL": "illum",
