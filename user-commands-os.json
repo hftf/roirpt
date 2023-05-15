@@ -10,6 +10,7 @@
 "W-7": "{#Control(7)}",
 "W-8": "{#Control(8)}",
 "W-9": "{#Control(9)}",
+"STPH*P": "{#Shift_L(Space)}",
 "SKPH-P": "{#Shift_L(Super_L(p))}",
 "SHR-R": "{#Shift_L(return)}{^}n{^}{#Backspace}{-|}",
 "KPHA*B": "{#Super_L(tab)}",

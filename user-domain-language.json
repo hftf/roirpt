@@ -23,6 +23,8 @@
 "TKEF/TPHAG/REU": "Devanagari",
 "TPHAOES/EUS": "tmesis",
 "TPRAEUFL": "phrasal",
+"TPOEPB/TABGT/EUBG": "phonotactic",
+"TPEUL/HR-LG": "philological",
 "TREU/HREUPBG/WAL": "trilingual",
 "KPRAP/SEUGS": "extraposition",
 "KWREUPBZ": "yinz",
@@ -48,5 +50,6 @@
 "RAO*EUPL": "rime",
 "RERT/TPHEUPL": "retronym",
 "AFL/KWROERL": "alveolar",
+"AR/TEUBG/HRA/TOER": "articulatory",
 "OPT/PHALT": "optimality"
 }

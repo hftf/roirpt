@@ -744,6 +744,7 @@
 "^TPHALGZ": "analogize",
 "^TPHALT": "analytic",
 "^TPHALT/KAL": "analytical",
+"^TPHALT/K-L": "analytical",
 "^TPHALT/A*L": "analytical",
 "^TPHALT/EUBGS": "analytics",
 "^TPHALS": "analysis",
