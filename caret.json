@@ -1098,6 +1098,7 @@
 "^KPRELS": "expressly",
 "^KPREGS": "expression",
 "^KPRES": "express",
+"^KPAO*ETD": "exceeded",
 "^KPAO*ED": "exceed",
 "^KPAOEUR": "expire",
 "^KPAOEUPLT": "excitement",
