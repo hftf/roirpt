@@ -411,6 +411,8 @@
 "^TKPORP": "incorp",
 "^TKPORP/RAOEL": "incorporeal",
 "^TKPORP/RAOELT": "incorporeality",
+"^TKPORP/OEURL": "incorporeal",
+"^TKPORP/OERL": "incorporeal",
 "^TKPORPBLG": "anchorage",
 "^TKPORPBLG/-BL": "incorrigible",
 "^TKPORPBLG/-BLT": "incorrigibility",
