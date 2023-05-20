@@ -1,4 +1,5 @@
 {
+"STAFL/KOBG/US": "staphylococcus",
 "SKWRE/SKWRAOU/TPHUPL": "jejunum",
 "SROESZ": "cirrhosis",
 "SREU/SREUP/ROUS": "viviparous",
@@ -58,6 +59,7 @@
 "HAOEURD/KPAOEUD": "hydroxide",
 "HAOEURD/KPEUL": "hydroxyl",
 "HEPT/AEUPB": "heptane",
+"RA/KAOEUT/EUBG": "rachitic",
 "RA/KAOEUTS": "rachitis",
 "RAOU/PWEUD/KWRUPL": "rubidium",
 "ROET/TPER": "rotifer",
