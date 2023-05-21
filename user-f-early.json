@@ -1,4 +1,6 @@
 {
+"^PHAOUFR": "amuser",
+"^PHAOUFS": "amuses",
 "STKPWREFG": "digressing",
 "STKPWREFS": "digresses",
 "STKPWREFD": "digressed",
@@ -14,6 +16,7 @@
 "SPAFG": "surpassing",
 "SPAFS": "surpasses",
 "SPAFD": "surpassed",
+"SROEUFG": "voicing",
 "SUR/PAFG": "surpassing",
 "TKPWROEFG": "grossing",
 "TKPWAEUFS": "gazes",
