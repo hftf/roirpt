@@ -105,6 +105,8 @@
 "^SUBGS": "as you can see",
 "^SUL": "as you'll",
 "^S-F": "as of",
+"^S-PBLT": "is not a",
+"^S-PBT": "isn't a",
 "^S-BG": "as being",
 "^S-T": "as the",
 "^T": "it a",

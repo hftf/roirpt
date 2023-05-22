@@ -1527,6 +1527,7 @@
 "^PWRAOEFT": "abbreviate",
 "^PWRAOFP": "approach",
 "^PWRAOD": "abroad",
+"^PWRA*EUGS": "aberration",
 "^PWRAEU/SEUF": "abrasive",
 "^PWRAEUFS": "abrasive",
 "^PWRAEUGS": "abrasion",
