@@ -121,6 +121,8 @@
 "TEPL": "temperature",
 "KPHRAR": "exemplar",
 "KPHAEUT": "communicate",
+"KPAEUGS": "compensation",
+"KPAEUT": "compensate",
 "KWHREURB": "equilibrium",
 "KWRAOUFL": "youthful",
 "KWAOEPD": "Wikipedia",
