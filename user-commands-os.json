@@ -13,6 +13,7 @@
 "STPH*P": "{#Shift_L(space)}",
 "SKPHA*": "{#Shift_L(Super_L(a))}",
 "SKPH-P": "{#Shift_L(Super_L(p))}",
+"SKPH-PB": "{#Shift_L(Super_L(n))}",
 "SHR-R": "{#Shift_L(return)}{^}n{^}{#Backspace}{-|}",
 "KPHA*B": "{#Super_L(tab)}",
 "KPHU": "{#Super_L(u)}",
