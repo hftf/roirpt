@@ -27,6 +27,7 @@
 "TPHOEFT": "northeast",
 "TPHORPB": "northern",
 "WERPB": "western",
+"AOEFRT/HREU": "easterly",
 "AOEFT/*ER/HREU": "easterly",
 "AOERPB": "eastern"
 }
