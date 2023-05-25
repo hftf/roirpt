@@ -77,6 +77,8 @@
 "^STEFPBLS": "extensively",
 "^STEFPBS": "extensive",
 "^STERPB": "astern",
+"^STERPL/TPHAEUGS": "extermination",
+"^STERPL/TPHAEUT": "exterminate",
 "^STERPLGS": "extermination",
 "^STERPLT": "exterminate",
 "^STEPBGS": "extension",
@@ -1091,6 +1093,7 @@
 "^KPRAEUGS": "expiration",
 "^KPRAF/SAEUGS": "extravasation",
 "^KPRAF/SAEUT": "extravasate",
+"^KPRAF/TKPWAPB/SA*": "extravaganza",
 "^KPRAFLGT": "extravagantly",
 "^KPRAFGT": "extravagant",
 "^KPRAFGS": "extravagance",
@@ -1220,6 +1223,8 @@
 "^KPEFBLT": "accessibility",
 "^KPEFL": "excessively",
 "^KPEFG": "accessing",
+"^KPERPL/TPHAEUGS": "extermination",
+"^KPERPL/TPHAEUT": "exterminate",
 "^KPERPLT": "experiment",
 "^KPERPT": "excerpt",
 "^KPERGS": "exertion",
@@ -2019,6 +2024,7 @@
 "^HRAOES/KWRUPL": "Elysium",
 "^HRAOU/SEUF": "allusive",
 "^HRAOUF": "aloof",
+"^HRAOUF/KWRAL": "alluvial",
 "^HRAOUF/KWRUPL": "alluvium",
 "^HRAOUR": "allure",
 "^HRAOUPL/TPHA/TEUF": "illuminative",
@@ -2367,5 +2373,6 @@
 "^REL/SRAPBS": "irrelevance",
 "^REG/TPHO": "oregano",
 "^RUPGS": "eruption",
-"^RUPT": "erupt"
+"^RUPT": "erupt",
+"^RUBGT": "eruct"
 }
