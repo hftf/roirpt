@@ -1,5 +1,6 @@
 {
 "^STOEPB/KWRAPB": "Estonian",
+"^PWRAOU/SO*E": "Abruzzo",
 "^PHOEU": "Amoy",
 "^RAG/TPHAOEZ": "Aragonese",
 "STKPWRO*ES": "Zagros",
@@ -47,6 +48,7 @@
 "SHRA/SROPB/EUBG": "Slavonic",
 "SHRAOEF/PORT": "Shreveport",
 "SHRAOES/KWRA": "Silesia",
+"SHRA*D/SROS/TOBG": "Vladivostok",
 "SHRO/SRAOEPB": "Slovene",
 "SHRO/SRAOEPB/KWRA": "Slovenia",
 "SHRO/SRABG": "Slovak",
@@ -529,6 +531,7 @@
 "ER/TRAOEPB": "Eritrean",
 "EPB/TKPWHRAPBD": "England",
 "EBG/WA/TKOER": "Ecuador",
+"UR/TKU": "Urdu",
 "UL/STER": "Ulster",
 "UZ/PWEBG": "Uzbek"
 }
