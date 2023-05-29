@@ -14,6 +14,7 @@
 "TKPWHRAOE/OE/PHA": "glioma",
 "TKAOEU/PHROEUD": "diploid",
 "TKAOEUL/TOER": "dilatory",
+"TK*EU/AEU/SO*E": "diazo",
 "TPHAOEU/TRAOEUD": "nitride",
 "TPHAOEU/TROPBLG/TPHOUS": "nitrogenous",
 "TPHAOUR/STHAOEPB/KWRA": "neurasthenia",
@@ -88,5 +89,6 @@
 "AS/TALD/HAOEUD": "acetaldehyde",
 "O*RT/KHRAEUS": "orthoclase",
 "*ET/EUL": "ethyl",
-"EUT/RAOE/KWRUPL": "yttrium"
+"EUT/RAOE/KWRUPL": "yttrium",
+"EPBD/KWRO/TKERPL": "endoderm"
 }
