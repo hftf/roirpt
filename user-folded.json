@@ -142,6 +142,7 @@
 "TKAPBGS": "dancing",
 "TKOURPLT": "documentary",
 "TKORLD": "disorderly",
+"TKOLGD": "doggedly",
 "TKE/TPHOPL/TPHAEURT": "denominator",
 "TKEFRPBD": "defender",
 "TKERBGT": "detector",
@@ -173,6 +174,7 @@
 "TPOER/RURPB": "forerunner",
 "TPOFRPBLT": "fortunately",
 "TPORLD": "folder",
+"TP*EURLS": "firstly",
 "TPEURBLT": "efficiently",
 "TPEUPBLT": "finitely",
 "TPEUBLGS": "fictional",
@@ -269,6 +271,7 @@
 "PWAORPL": "boomer",
 "PWA*EURPBG": "banker",
 "PWA*RPBG": "banker",
+"PWOURPBS": "bouncer",
 "PWEUGD": "bidding",
 "PWEPB/TPARBGT": "benefactor",
 "PWUFLT": "bustle",
@@ -325,6 +328,7 @@
 "PER/KUFS": "percussive",
 "PERPBGS": "pensioner",
 "PERBG/HRAEURT": "percolator",
+"PURPBGT": "puncture",
 "WHRAOURLGS": "evolutionarily",
 "WHRAOURGS": "evolutionary",
 "WH*EULT": "whittle",
@@ -410,5 +414,6 @@
 "EPL/PWROEURD": "embroider",
 "EL/SRAEURT": "elevator",
 "UPB/SAOEULT": "unsightly",
-"UPB/TKOULTD": "undoubtedly"
+"UPB/TKOULTD": "undoubtedly",
+"UPBGT/WOULS": "unctuously"
 }
