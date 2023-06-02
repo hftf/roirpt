@@ -27,6 +27,7 @@
 "^TPHOE/TAEUT": "annotate",
 "^TPHOEGTS": "annotation",
 "^TPHOET/AEUT": "annotate",
+"^TPHOET/AEUTD": "annotated",
 "^TPHOGTS": "annotation",
 "^TPHER/SRAEUGS": "enervation",
 "^TPHER/SRAEUT": "enervate",
