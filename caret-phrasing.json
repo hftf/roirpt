@@ -158,6 +158,7 @@
 "^THR-LS": "there is a",
 "^THR-S": "there's a",
 "^THA": "that a",
+"^THA*TS": "that's a",
 "^THAFS": "that was a",
 "^THAPB": "than a",
 "^THATS": "that's a",
