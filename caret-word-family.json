@@ -39,6 +39,8 @@
 "^TWREULG": "electrical",
 "^TWREUGS": "electrician",
 "^TWRUPL": "electrum",
+"^TWA*EUGS": "actuation",
+"^TWA*EUT": "actuate",
 "^TWAEURT": "activator",
 "^TWAEUGS": "activation",
 "^TWAEUT": "activate",
