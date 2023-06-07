@@ -32,5 +32,6 @@
 "HRO*ER": "{>}",
 "HRO*ERD": "{*>}",
 "HR-FR": "{PLOVER:LOOKUP}",
+"RAO*EFT": "{MODE:RESET}",
 "*UPD": "{*<}"
 }
