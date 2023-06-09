@@ -623,6 +623,7 @@
 "TPHAOURPLS": "numerous",
 "TPHAOURLGS": "nutritional",
 "TPHAOULGS": "nucleus",
+"TPHAOUTD": "nudity",
 "TPHAEUFRL": "namely",
 "TPHAURBT": "nauseate",
 "TPHAFRPL": "natural",
@@ -1168,6 +1169,7 @@
 "PHAOUGTS": "mutation",
 "PHA*LD": "madly",
 "PHAEUFRT": "motivator",
+"PHAEUFPB/REU": "masonry",
 "PHAEUFLGS": "motivational",
 "PHAEUFGS": "motivation",
 "PHAEUFT": "motivate",
@@ -1434,6 +1436,7 @@
 "HAOEUFPB/PWERG": "Heisenberg",
 "HAOEUFPBGS": "hyphenation",
 "HAOEUFPBT": "hyphenate",
+"HAOEURBG/EUBG": "hierarchic",
 "HAOEURLD": "highlander",
 "HAOEUP/THRELG": "hypothetically",
 "HAOEUP/THELG": "hypothetical",
@@ -1490,6 +1493,7 @@
 "RAOUFPBLG": "refuge",
 "RAOUFBG": "rescue",
 "RAOUFT": "refute",
+"RAOULT": "roulette",
 "RAOFLT": "Roosevelt",
 "RAOPLT": "roommate",
 "RA*EUPLD": "Raymond",
@@ -1655,5 +1659,6 @@
 "EBGS/PROEPGS": "expropriation",
 "EBGS/PROEPT": "expropriate",
 "EBGS/PAOERPBT/KWRAL": "experiential",
-"URSZ": "yourselves"
+"URSZ": "yourselves",
+"UPBD/-LG": "underling"
 }
