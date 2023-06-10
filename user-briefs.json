@@ -845,6 +845,8 @@
 "KPRAPLGS": "extrapolation",
 "KPRAPLT": "extrapolate",
 "KPROPLS": "compromise",
+"KPREUBG/PWHREU": "extricably",
+"KPREUBG/-BL": "extricable",
 "KPREFR": "compressor",
 "KPREFPBS": "comprehensive",
 "KPREPLT": "extremity",
@@ -1571,6 +1573,7 @@
 "HERZ": "herself",
 "HEL/KORPT": "helicopter",
 "HUPB": "honey",
+"RAOEUFLT": "rightful",
 "RAOEFRPB": "research",
 "RAOEFL": "reveal",
 "RAOEPBLGT": "regent",
@@ -1771,6 +1774,7 @@
 "OB/SKAOURPBT": "obscurant",
 "OB/TPUFBGT": "obfuscate",
 "OB/TPUFBGS": "obfuscation",
+"OL/TKPWAERBG": "oligarchy",
 "OL/TPARBGT/KWREU": "olfactory",
 "*EPBG/WEUR": "enquiry",
 "EURPDZ": "Euripides",
@@ -1842,5 +1846,6 @@
 "UPB/RAEL/EUFBG": "unrealistic",
 "UPBD/-LG": "underling",
 "UPDZ/TKOUPB": "upside-down",
-"UG/HR*EUFT": "ugliest"
+"UG/HR*EUFT": "ugliest",
+"-RBL": "shall"
 }
