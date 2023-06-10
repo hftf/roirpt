@@ -75,6 +75,7 @@
 "^TPHOLG": "analog",
 "^TPHEUBG": "atomic",
 "^TPHEPL": "enemy",
+"^TPRO/TKEUS/KWRABG": "aphrodisiac",
 "^TPAOUPBT": "opportunity",
 "^TPAEUBG": "AFAIK",
 "^TPORT": "effort",
