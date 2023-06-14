@@ -26,6 +26,7 @@
 "SRARB": "vanish",
 "SRERPB/KHRAR": "vernacular",
 "SRERB/TEUPL": "verbatim",
+"SAEBGT/SREUFPL": "subjectivism",
 "SAUB/SEFRBS": "subservience",
 "SARD/TPHEUBG": "sardonic",
 "SOFL/SEU": "solvency",
@@ -296,6 +297,7 @@
 "EUR/SEUFT/PWHREU": "irresistibly",
 "EUPB/STPHAOER": "insincere",
 "EUPB/SOFL/SEU": "insolvency",
+"EUPB/TKEPL/TPAEUBGS": "indemnification",
 "EUPB/TKEPLT": "indemnity",
 "EUPB/TERPL/-BL": "interminable",
 "EUPBS/SAOER": "insincere",
@@ -304,5 +306,6 @@
 "EPL/PWHREPL/EUBG": "emblematic",
 "EBG/TKOR": "Ecuador",
 "EBGS/PEGS": "expedition",
-"ED/PWURG": "Edinburgh"
+"ED/PWURG": "Edinburgh",
+"URB/SA*EUGS": "urbanization"
 }
