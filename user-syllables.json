@@ -39,8 +39,10 @@
 "TKEUT": "dit",
 "TPHA*F": "nav",
 "TPHEUD": "nid",
+"TPUT": "fut",
 "TWAOE": "twee",
 "THORP": "thorp",
+"TREP": "trep",
 "TRUPB": "trun",
 "TARPB": "tarn",
 "TAS": "tass",
@@ -77,5 +79,6 @@
 "WHEURB": "whish",
 "WA*RBG": "wark",
 "HRUT": "lut",
-"HOS": "hoss"
+"HOS": "hoss",
+"REUT": "rit"
 }

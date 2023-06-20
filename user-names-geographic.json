@@ -488,9 +488,11 @@
 "WRAUPB/TKAPB": "Rwandan",
 "WA/HRAEUBG/KWRA": "Wallachia",
 "WA/HRAEUBG/KWRAPB": "Wallachian",
+"WA/HAB/KWREU": "Wahhabi",
 "WAOEUGT": "Wight",
 "WAOFRT": "Worcester",
 "WAL/HRAOPB": "Walloon",
+"WAL/HRAEUBG/KWRA": "Wallachia",
 "WOE/HROF": "Wolof",
 "WOFRT/*ER": "Worcester",
 "WEL/-RB": "Welsh",
@@ -633,6 +635,7 @@
 "EBG/WA/TKOER": "Ecuador",
 "UFRB/REU/KWRA": "Umbria",
 "UR/TKU": "Urdu",
+"URG/WAEUPB": "Uruguayan",
 "UL/STER": "Ulster",
 "UZ/PWEBG": "Uzbek"
 }
