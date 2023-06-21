@@ -44,6 +44,8 @@
 "TPHAOURLTZ": "neutralize",
 "TPHARBLGSZ": "nationalization",
 "TPHARBLZ": "nationalize",
+"TPHOFRPBLGSZ": "nominalization",
+"TPHOFRPBLZ": "nominalize",
 "TPHOLGSZ": "normalization",
 "TPHOLZ": "normalize",
 "TPHEURBLZ": "initialize",
