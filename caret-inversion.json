@@ -1,5 +1,6 @@
 {
 "^STPWRAOUS": "abstruse",
+"^STPWRUFBGT": "obstructive",
 "^STPWRUBGT": "obstruct",
 "^STPWRUBGS": "obstruction",
 "^STPAEUGS": "anticipation",
@@ -18,6 +19,7 @@
 "^SPWRABGS": "abstraction",
 "^SPWRALG": "abstractly",
 "^SPWRORB": "absorber",
+"^SPWRUFBGT": "obstructive",
 "^SPWRUBGT": "obstruct",
 "^SPWRUBGS": "obstruction",
 "^SPWAOEPB": "obscene",
@@ -31,6 +33,7 @@
 "^SPWORPGS": "absorption",
 "^SPWORPT/EUF": "absorptive",
 "^SPWORB": "absorb",
+"^SPWORBLG": "absorbingly",
 "^SPWORBT": "absorbent",
 "^SPW*EUPBT": "absinthe",
 "^SPW*ES": "abscess",

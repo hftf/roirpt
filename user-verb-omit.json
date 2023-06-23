@@ -1,4 +1,5 @@
 {
+"^TPEGT": "affecting",
 "^TAG": "attacking",
 "^KPAGT": "exacting",
 "STPWRAGT": "subtracting",
@@ -8,6 +9,7 @@
 "SHREGT": "selecting",
 "SHOG": "shocking",
 "TKPHREGT": "deflecting",
+"TKEGT": "detecting",
 "TPAEUG": "faking",
 "TPOUBGD": "focused",
 "TWAOEG": "tweaking",

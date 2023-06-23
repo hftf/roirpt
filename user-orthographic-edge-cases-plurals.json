@@ -17,6 +17,7 @@
 "SKWREPB/ET/EUBGS": "genetics",
 "SKWRET/SOPBS": "jettisons",
 "SKAOUT/EUFS": "executives",
+"SKAPB/TKALS": "scandals",
 "SPWORD/TPHATS": "subordinates",
 "SPWER/PRAOEUSZ": "enterprises",
 "SHREB/RAEUGSZ": "celebrations",
@@ -157,6 +158,7 @@
 "KAP/SAOEUSZ": "capsizes",
 "KAPT/HREUFTS": "capitalists",
 "KAB/*EUPBS": "cabins",
+"KAT/KOEPLS": "catacombs",
 "KOEUP/RAOEUTS": "copyrights",
 "KOEBG/TPHUTS": "coconuts",
 "KOUPBT/TEUS": "counties",
@@ -266,6 +268,7 @@
 "HREUPBG/RERS": "lingerers",
 "HREUPL/SAOEPBS": "limousines",
 "HREUL/KWREUS": "lilies",
+"HRUFRB/*ER/SKWRABGS": "lumberjacks",
 "HRUD/AOEUTS": "Luddites",
 "HR-FT/SEFRBS": "listservs",
 "HAOEUP/THET/K-LS": "hypotheticals",
@@ -308,6 +311,7 @@
 "AOEUD/HRERS": "idlers",
 "AOEBG/S-PLS": "ecosystems",
 "AOUF/PHEUFPLS": "euphemisms",
+"AOD/-LS": "oodles",
 "A*URT/TEUS": "authorities",
 "A*F/TARS": "avatars",
 "AEU/TKPWAOUS": "agues",
@@ -333,6 +337,7 @@
 "OEF/REUS": "ovaries",
 "OR/K-LS": "oracles",
 "ORG/A*PBS": "organs",
+"OP/TAOUPB/TEUS": "opportunities",
 "OP/TEUBGS": "optics",
 "OP/RAEUTS": "operates",
 "OD/TEUS": "oddities",
@@ -345,5 +350,6 @@
 "EPL/RATS": "emirates",
 "EBG/OES": "echoes",
 "EBGS/TA/SEUS": "ecstasies",
-"ELD/*ERS": "elders"
+"ELD/*ERS": "elders",
+"ED/KWREUS": "eddies"
 }
