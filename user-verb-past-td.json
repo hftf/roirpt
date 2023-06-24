@@ -140,5 +140,6 @@
 "EPBTD": "ended",
 "ELTD": "edited",
 "UPB/KP-PD": "unexpected",
-"UPB/AEUTD": "unaided"
+"UPB/AEUTD": "unaided",
+"UPGTD": "upgraded"
 }
