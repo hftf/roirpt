@@ -23,6 +23,7 @@
 "^TWR": "electr",
 "^TWRAL": "electrical",
 "^TWRO": "{electro^}",
+"^TWRO/TPRAOES/EUS": "electrophoresis",
 "^TWRO/KAOUGS": "electrocution",
 "^TWRO/HRAOEUT": "electrolyte",
 "^TWRO*PBLG": "electronically",

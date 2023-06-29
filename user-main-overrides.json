@@ -492,6 +492,7 @@
 "OB": "ob",
 "*EFRD": "everyday",
 "*ETS": "et cetera",
+"*BGS": "{^x}",
 "EURBGD": "irked",
 "EUPB/SEPBT": "innocent",
 "EUPB/EBGS": "{inex^}",
