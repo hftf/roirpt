@@ -622,6 +622,7 @@
 "TPWHALT": "invalidate",
 "TPWHALD": "invalid",
 "TPWHO/KAEUGS": "invocation",
+"TPWHO*EBGS": "invocation",
 "TPWHOEU": "envoy",
 "TPWHOEUFG": "invoicing",
 "TPWHOEUFD": "invoiced",
