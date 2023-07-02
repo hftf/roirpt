@@ -119,6 +119,7 @@
 "^S-PBLT": "is not a",
 "^S-PBT": "isn't a",
 "^S-BG": "as being",
+"^S-BGT": "as being the",
 "^S-T": "as the",
 "^T": "it a",
 "^TK": "did a",
