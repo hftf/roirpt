@@ -1,10 +1,14 @@
 {
 "STWARGT": "starting with",
+"STWARTS": "starts with",
 "STROG": "having to",
+"STAORGT": "starting to",
 "SPOEFTD": "supposed to",
 "TKPWAPBT": "began to",
 "TKPWOEUPBT": "begin to",
-"TKPWEUPBT": "begin the",
+"TKPWEUPBT": "begin to",
+"TKPWEUPBTS": "begins to",
+"TKPWUPBT": "begun to",
 "TKPOPBG": "depending on",
 "TKPOPBGT": "depending on the",
 "TKPOPBGD": "depending on",
@@ -13,6 +17,9 @@
 "TKPOPBD": "depended on",
 "TWAOPBGT": "wanting to",
 "TWAOPBTS": "wants to",
+"THAUBT": "thought about",
+"THEUFD": "thought of",
+"THEUBTD": "thought about",
 "TROEUGT": "trying to",
 "TROEUTS": "tries to",
 "TROEUTD": "tried to",
@@ -38,5 +45,6 @@
 "PHAEUBGTS": "makes the",
 "WAOPBGT": "wanting to",
 "WAOPBTD": "wanted to",
+"HRAOBGTS": "looks at",
 "HOUTS": "how's the"
 }
