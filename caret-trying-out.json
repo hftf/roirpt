@@ -135,6 +135,8 @@
 "^PWOF/TKPWROUPBD": "aboveground",
 "^PWEUBG/TOUS": "ubiquitous",
 "^PWEUBG/TEU": "ubiquity",
+"^PWEUBGT": "ubiquity",
+"^PWEUBGTS": "ubiquitous",
 "^PWERGS": "aberration",
 "^PWEBGT": "object",
 "^PWEBGS": "objection",
