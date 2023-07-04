@@ -78,6 +78,7 @@
 "^TPHOPLS": "anonymous",
 "^TPHOLG": "analog",
 "^TPHEUBG": "atomic",
+"^TPHERPBLG": "energy",
 "^TPHEPL": "enemy",
 "^TPRO/TKEUS/KWRABG": "aphrodisiac",
 "^TPAOUPBT": "opportunity",
