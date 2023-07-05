@@ -9,6 +9,7 @@
 "^THRA*PBG": "Atlantic",
 "^THEUFPL": "at this time of",
 "^TAPBL": "Italian",
+"^KPHREUF": "exemplify",
 "^KAPBT": "accountant",
 "^PWHREURGS": "obliteration",
 "^PWHREURT": "obliterate",
@@ -18,5 +19,6 @@
 "^HRUFRGS": "illustration",
 "^HOE": "Ohio",
 "^RA*BG": "Arabic",
-"^RUG": "Uruguay"
+"^RUG": "Uruguay",
+"SAUD/^RAEUB": "Saudi Arabia"
 }
