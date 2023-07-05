@@ -1,4 +1,7 @@
 {
+"^STROFRL": "astronomical",
+"^STROFBGS": "astrophysics",
+"^STROFLG": "astrophysical",
 "^TPHOFRL": "anomaly",
 "^TPHUPBGS": "enunciation",
 "^TPR*ERPB": "African-American",
@@ -11,6 +14,7 @@
 "^PWHREURT": "obliterate",
 "^PHAEULDZ": "email address",
 "^HR*EUFBT": "Elizabeth",
+"^HREFRLT": "elemental",
 "^HRUFRGS": "illustration",
 "^HOE": "Ohio",
 "^RA*BG": "Arabic",

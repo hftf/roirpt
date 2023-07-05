@@ -119,6 +119,8 @@
 "SPWRO/PWAPBG": "interrobang",
 "SPWRO/PHEUGS": "intromission",
 "SPWROEP": "entropy",
+"SPWROEP/EUBG": "entropic",
+"SPWROEPG": "entropic",
 "SPWROUFG": "introducing",
 "SPWROUFS": "introduces",
 "SPWROUFD": "introduced",
