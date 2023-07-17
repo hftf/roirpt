@@ -2357,6 +2357,7 @@
 "^HREFBGT": "elective",
 "^HRER/SKWREUBG": "allergic",
 "^HRERPBLG/EUBG": "allergic",
+"^HRERPLT": "elementary",
 "^HRERBL": "electrical",
 "^HRERBG": "allergic",
 "^HRERBGT": "{electro^}",

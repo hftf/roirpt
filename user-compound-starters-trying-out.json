@@ -191,6 +191,7 @@
 "^SKWHR-R": "injury",
 "^TKPWAO*EUR": "enquire",
 "^TKPWAOEUR": "inquire",
+"^TKPWAFL": "unqualify",
 "^TKPWALT": "inequality",
 "^TKPWEU/SEUGS": "inquisition",
 "^TKPWEUFRT": "inquisitor",
