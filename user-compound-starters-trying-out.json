@@ -395,6 +395,8 @@
 "^TKPAPS": "encaps",
 "^TKPAPS/HRAEUGS": "encapsulation",
 "^TKPAPS/HRAEUT": "encapsulate",
+"^TKPABL": "incompatible",
+"^TKPABLT": "incompatibility",
 "^TKPABGT": "in contact",
 "^TKPALG/-BL": "incalculable",
 "^TKPALG/-BLT": "incalculability",
