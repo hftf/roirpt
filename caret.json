@@ -213,6 +213,7 @@
 "^SPOUFD": "espoused",
 "^SPOUS": "espouse",
 "^SPORT": "export",
+"^SPOGS": "exposition",
 "^SP*ERBL": "especial",
 "^SPEURBS": "auspicious",
 "^SPEURGS": "aspiration",
@@ -975,6 +976,7 @@
 "^TWAOUGS": "actuation",
 "^TWAOUT": "actuate",
 "^TWAEUL": "actually",
+"^TWAEL": "actually",
 "^TWAL": "actual",
 "^TWALT": "actuality",
 "^TWEPBGS": "attenuation",
@@ -1269,6 +1271,8 @@
 "^KPAS/PRAEUGS": "exasperation",
 "^KPAS/PRAEUT": "exasperate",
 "^KPOEUR": "exterior",
+"^KPOEFG": "exposing",
+"^KPOEFS": "exposes",
 "^KPOEFD": "exposed",
 "^KPOERB": "exposure",
 "^KPOERS": "exposure",
@@ -2585,5 +2589,6 @@
 "^REG/TPHO": "oregano",
 "^RUPGS": "eruption",
 "^RUPT": "erupt",
-"^RUBGT": "eruct"
+"^RUBGT": "eruct",
+"P": "Muggles"
 }
