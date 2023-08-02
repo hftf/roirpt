@@ -61,5 +61,6 @@
 "AOU/TPOPB/EUBG": "euphonic",
 "AFL/KWROERL": "alveolar",
 "AR/TEUBG/HRA/TOER": "articulatory",
-"OPT/PHALT": "optimality"
+"OPT/PHALT": "optimality",
+"ET/PHOPB": "etymon"
 }
