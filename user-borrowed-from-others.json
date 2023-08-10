@@ -145,6 +145,8 @@
 "ROUPBT": "recount",
 "REFRBT": "reverberate",
 "AOERT": "eater",
+"AOEPLGS": "emission",
+"AOEPLT": "emit",
 "AOUFRPLT": "uniformity",
 "AU/TEUFBG": "autistic",
 "AFRBGS": "ambition",
@@ -153,6 +155,7 @@
 "AD/SKWREBG/TEUFL": "adjectival",
 "O*UFT": "outfit",
 "OEFRD": "overhead",
+"OEPLGS": "omission",
 "EFLT": "evaluate",
 "-RZ": "{^'re}"
 }

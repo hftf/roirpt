@@ -19,6 +19,7 @@
 "^THEPBGT": "authenticate",
 "^THEPBGS": "authentication",
 "^THEPBGD": "authenticated",
+"^TA*L": "et al.",
 "^TAPBL": "Italian",
 "^KPHREUF": "exemplify",
 "^KPREUFPL": "expressionism",

@@ -153,6 +153,8 @@
 "STKAFBGT": "disaffect",
 "STKARPBLG": "discharge",
 "STKARPL": "disarm",
+"STKARPL/*PLT": "disarmament",
+"STKARPLT": "disarmament",
 "STKARD": "discard",
 "STKAL/TPHAEUGS": "desalination",
 "STKAT/STPAOEU": "dissatisfy",
