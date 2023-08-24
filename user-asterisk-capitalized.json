@@ -10,6 +10,8 @@
 "TKPHRA*BGT": "Democratic",
 "TKPHRA*GT": "Democratic",
 "TKPHRA*T": "Democrat",
+"TKPA*RPLT": "Department",
+"TKR*EUBGT": "District",
 "TPH*ERPBT": "Internet",
 "TPAO*EPBGS": "Phoenix",
 "THAO*E": "Thee",
@@ -38,5 +40,6 @@
 "H*EFPB": "Heaven",
 "H*EL": "Hell",
 "RAO*ELGS": "Regional",
+"RAO*EGS": "Region",
 "A*RL": "Article"
 }
