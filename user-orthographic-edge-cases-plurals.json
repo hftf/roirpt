@@ -64,6 +64,7 @@
 "SEUG/TAOURS": "signatures",
 "SEUT/S*EPBS": "citizens",
 "SEUT/*EUPBS": "sit-ins",
+"SEUTSZ": "citizens",
 "SEPBT/TPHELS": "sentinels",
 "SEBG/TAERS": "secretaries",
 "SEL/TPEUS": "selfies",
@@ -283,6 +284,7 @@
 "POR/TRAEUTS": "portraits",
 "PORT/RAEUTS": "portraits",
 "POL/TPHAEURTS": "pollinators",
+"PEUBG/POBGTS": "pickpockets",
 "PEUBGS/ELS": "pixels",
 "PEULG/REUPLS": "pilgrims",
 "PEUG/HR*ETS": "piglets",
@@ -404,5 +406,6 @@
 "EBG/OES": "echoes",
 "EBGS/TA/SEUS": "ecstasies",
 "ELD/*ERS": "elders",
+"EG/PHRAPBTS": "eggplants",
 "ED/KWREUS": "eddies"
 }
