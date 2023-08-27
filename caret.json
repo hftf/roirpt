@@ -1434,6 +1434,7 @@
 "^KPES/REUS": "accessories",
 "^KPES/EUF": "excessive",
 "^KPES/EUFL": "excessively",
+"^KPURB": "exurb",
 "^KPURGT": "expurgate",
 "^KPURGS": "excursion",
 "^KPUPBG": "expunge",
