@@ -17,6 +17,7 @@
 "STPH-LG": "{#Control_L(e)}",
 "STA*B": "{#Shift_L(Tab)}",
 "SR*RS": "{#Control_L(e)}",
+"TK*L": "{#Delete}",
 "TK-LG": "{^^}",
 "TK-TS": "{^^}",
 "TA*B": "{#Tab}{^~|^}",
