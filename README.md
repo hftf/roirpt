@@ -1,5 +1,7 @@
 # roirpt
 
+(pronounced /ʁwaʁp/)
+
 I basically just git initted in my plover dir and started committing WIPs
 
 This README is better viewed [in full width](https://github.com/hftf/roirpt/blob/master/README.md) (> 1100 pixels)
