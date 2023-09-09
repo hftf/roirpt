@@ -33,6 +33,7 @@
 "SURD": "surd",
 "TKPWRAOEB": "grebe",
 "TKPWROT": "grot",
+"TKPWREUBL": "gribble",
 "TKPWAR": "gar",
 "TKPWORPL": "gorm",
 "TKPWEURB": "gish",
@@ -55,6 +56,7 @@
 "TARPB": "tarn",
 "TAS": "tass",
 "T*UF": "tuff",
+"TEFRPB": "tench",
 "KWRAUP": "yawp",
 "KWR*U": "Yu",
 "KWERPB": "quern",
@@ -92,7 +94,9 @@
 "WH*ELG": "whelk",
 "WHEURB": "whish",
 "WA*RBG": "wark",
+"HRAUPBD": "laund",
 "HRUT": "lut",
 "HOS": "hoss",
+"ROPBD": "rond",
 "REUT": "rit"
 }
