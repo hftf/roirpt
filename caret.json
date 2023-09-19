@@ -8,6 +8,7 @@
 "^STKEPBT": "accident",
 "^STPWHREURB": "establish",
 "^STPWHREUPLT": "establishment",
+"^STPWRABGT": "abstract",
 "^STPAOER": "atmosphere",
 "^STPAOERBG": "atmospheric",
 "^STPEUBGS/KWRA": "asphyxia",
@@ -422,6 +423,7 @@
 "^SREPBLT": "eventuality",
 "^SREPBG": "avenge",
 "^SREPBT": "event",
+"^SREBGS": "evection",
 "^SRULGS": "avulsion",
 "^SAO*EBG/KWREL": "Ezekiel",
 "^SAO*UR": "azure",
@@ -2824,6 +2826,7 @@
 "^REL/SRAPBT": "irrelevant",
 "^REL/SRAPBS": "irrelevance",
 "^REG/TPHO": "oregano",
+"^REG/TPHOE": "oregano",
 "^RUPGS": "eruption",
 "^RUPT": "erupt",
 "^RUBGT": "eruct"
