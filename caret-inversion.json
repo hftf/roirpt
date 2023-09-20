@@ -1,5 +1,6 @@
 {
 "^STPWRAOUS": "abstruse",
+"^STPWRABGT": "abstract",
 "^STPWRUFBGT": "obstructive",
 "^STPWRUBGT": "obstruct",
 "^STPWRUBGS": "obstruction",
@@ -44,6 +45,7 @@
 "^SPWEFRPBS": "observance",
 "^SPWEFRB": "observe",
 "^SPWEFRB/TOER": "observatory",
+"^SPWEFRBL": "observable",
 "^SPWEFRBGS": "observation",
 "^SPWEFRBT": "observant",
 "^SPWEFS": "obsessive",
