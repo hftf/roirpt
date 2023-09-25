@@ -84,11 +84,17 @@ def increment_collision_counter(dict, key, collision_count):
     dict[key] = dict.get(key, 0) + collision_count
 
 
+starter_collisions = {}
+ender_collisions = {}
+simple_starter_collisions = {}
+
+count = 0
+
 dict_filenames = sorted(glob.glob("*.json"))
 for dict_filename in dict_filenames:
     with open(dict_filename) as dict_json:
         dict_data = json.load(dict_json)
-        print("Loaded dict %s with %d entries" % (dict_filename, len(dict_data)))
+        print("\033[47mLoaded dict %s with %d entries\033[0m" % (dict_filename, len(dict_data)))
 
         defined_strokes = {}
         simple_defined_strokes = {}
@@ -129,12 +135,6 @@ for dict_filename in dict_filenames:
 
             dict[strokes] = dict_data[strokes]
 
-        starter_collisions = {}
-        ender_collisions = {}
-        simple_starter_collisions = {}
-
-        count = 0
-
         # Full form
         for starter in jeff_phrasing.STARTERS:
             enders = jeff_phrasing.STARTERS[starter][2]
@@ -144,7 +144,12 @@ for dict_filename in dict_filenames:
                 key = starter + "-" + ender
                 if key in defined_strokes:
                     collision_count = len(defined_strokes[key])
-                    print('Match on %s' % key)
+                    e = jeff_phrasing.ENDERS[ender][1]
+                    print('Match on %s (%s +%s)' %
+                        (key,
+                        jeff_phrasing.STARTERS[starter][0],
+                        e[None] if isinstance(e, dict) and None in e else e))
+                    
                     print(defined_strokes[key])
                     print('')
                     increment_collision_counter(
@@ -159,7 +164,12 @@ for dict_filename in dict_filenames:
                 key = starter + "-" + ender
                 if key in simple_defined_strokes:
                     collision_count = len(simple_defined_strokes[key])
-                    print('Alt match on %s' % key)
+                    e = jeff_phrasing.ENDERS[ender][1]
+                    print('Alt match on %s (%s +%s)' %
+                        (key,
+                        jeff_phrasing.SIMPLE_STARTERS[starter][0],
+                        e[None] if isinstance(e, dict) and None in e else e))
+
                     print(simple_defined_strokes[key])
                     print('')
                     increment_collision_counter(
@@ -168,19 +178,20 @@ for dict_filename in dict_filenames:
                         ender_collisions, ender, collision_count)
                     count = count + collision_count
 
-        if len(starter_collisions):
-            print('Collisions caused by starters')
-            for k in starter_collisions:
-                print(' %s: %d' % (k, starter_collisions[k]))
+if len(starter_collisions):
+    print('Collisions caused by starters')
+    for k in starter_collisions:
+        print(' %s: %d' % (k, starter_collisions[k]))
 
-        if len(simple_starter_collisions):
-            print('Collisions caused by simple-starters')
-            for k in simple_starter_collisions:
-                print(' %s: %d' % (k, simple_starter_collisions[k]))
-        
-        if len(ender_collisions):
-            print('Collisions caused by enders')
-            for k in ender_collisions:
-                print(' %s: %d' % (k, ender_collisions[k]))
+if len(simple_starter_collisions):
+    print('Collisions caused by simple-starters')
+    for k in simple_starter_collisions:
+        print(' %s: %d' % (k, simple_starter_collisions[k]))
 
-        print('Total collisions: %d\n' % count)
+if len(ender_collisions):
+    print('Collisions caused by enders')
+    for k in ender_collisions:
+        print(' %s: %d' % (k, ender_collisions[k]))
+
+if count:
+    print('Total collisions: %d\n' % count)
