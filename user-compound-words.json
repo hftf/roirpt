@@ -64,6 +64,7 @@
 "SROLT/PHAOERT": "voltmeter",
 "SAO*/KAOERP": "zookeeper",
 "SAOEUD/SHOE": "sideshow",
+"SAOEUD/TPHO*ET": "sidenote",
 "SAOEUD/TRABG": "sidetrack",
 "SAOEUD/PWURPBS": "sideburns",
 "SAOES/TPAOEUR": "ceasefire",
@@ -516,6 +517,7 @@
 "OBGS/TAEUL": "oxtail",
 "OD/PWAUL": "oddball",
 "*EUPBG/STAPBD": "inkstand",
+"*EUPBG/HORPB": "inkhorn",
 "*ERT/*EPB/WAEUR": "earthenware",
 "EPBD/TKPWA*EUPL": "endgame",
 "ELD/*ER/PWER/KWREU": "elderberry"
