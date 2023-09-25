@@ -12,40 +12,40 @@ PARTS_MATCHER = re.compile(
 # These are strokes that are okay to remove, typically because they are mis-stroke entries
 # spellchecker: disable
 AUDITED_STROKES = {
-    "SWR": True,          # 'Somewhere' -- Use 'SW-R' instead
-    "SWR-S": True,        # 'Somewheres' -- use 'SW-RS' instead
-    "KPWRAEUT": True,     # 'Grate'   -- '`TKPWRAEUT`
-    "KPWROUR": True,      # 'Your'    -- 'KWROUR'
-    "KWHR": True,         # 'Why'     -- 'KWR'
-    "KWHRAOERL": True,    # 'Clearly' -- 'KHRAOERL'
-    "KWHRE": True,        # 'Yes'     -- 'KWRE'
-    "TWHA": True,         # 'That'    -- 'THA'
-    "KWHRAOER": True,     # 'Year'    -- 'KWRAOER'
-    "SKWHRAR": True,      # 'Scholar' -- 'SKHRAR'
-    "TWRAGS": True,       # 'Tradition' -- 'TRAGS'
-    "KPWHAOUPBT": True,   # 'Community' -- 'KPHAOUPBT'
-    "KPWHEUPBGS": True,   # 'Combination' -- 'KPWEUPBGS'
-    "SWR-PBT": True,      # 'Haven't' -- 'SR-PBT'
-    "TWRAOEUD": True,     # 'Divide' -- 'TKWAOEUD'
+    "SWR": True,          # 'somewhere' -- Use 'SW-R' instead
+    "SWR-S": True,        # 'somewheres' -- use 'SW-RS' instead
+    "KPWRAEUT": True,     # 'grate'   -- '`TKPWRAEUT`
+    "KPWROUR": True,      # 'your'    -- 'KWROUR'
+    "KWHR": True,         # 'why'     -- 'KWR'
+    "KWHRAOERL": True,    # 'clearly' -- 'KHRAOERL'
+    "KWHRE": True,        # 'yes'     -- 'KWRE'
+    "TWHA": True,         # 'that'    -- 'THA'
+    "KWHRAOER": True,     # 'year'    -- 'KWRAOER'
+    "SKWHRAR": True,      # 'scholar' -- 'SKHRAR'
+    "TWRAGS": True,       # 'tradition' -- 'TRAGS'
+    "KPWHAOUPBT": True,   # 'community' -- 'KPHAOUPBT'
+    "KPWHEUPBGS": True,   # 'combination' -- 'KPWEUPBGS'
+    "SWR-PBT": True,      # 'haven't' -- 'SR-PBT'
+    "TWRAOEUD": True,     # 'divide' -- 'TKWAOEUD'
     "SKWHRAEUB": True,    # 'Jane' -- 'SKWRAEUB'
-    "KWHREBGT": True,     # 'Collect' -- 'KHREBGT'
-    "KPWRAOELD": True,    # 'Yield' -- 'KWRAOELD'
-    "STKPWHRAEU": True,   # 'Display' -- 'STKPHRAUE'
-    "TWRAFR": True,       # 'Transfer' -- 'TRAFR'
-    "TWHEPL": True,       # 'Them' -- 'THEPL'
-    "SKWHREPL": True,     # 'Generally' -- 'SKWHREPBL'
-    "KPWHRAEUPB": True,   # 'Complain' -- "KPHRAEUPB"
-    "KPWHRAEUPBG": True,  # 'Complaining' -- "KPHRAEUPBG"
-    "STPHRAEUPB": True,   # 'Explain' -- "SPHRAUEPB"
-    "STPHRAOUGS": True,   # 'Institution' -- "STPHAOUGS"
-    "STPHRAOER": True,    # 'Sphere' -- "STPAOER"
-    "STPAEUS": True,      # 'Space' -- "SPAEUS"
-    "STPAEURL": True,     # 'Fairly' -- "TPAEURL"
-    "STHAEUR": True,      # 'Their' -- "THAEUR"
-    "STKPWHRURBGS": True, # 'Jurisdiction' -- "SKWRURBGS"
+    "KWHREBGT": True,     # 'collect' -- 'KHREBGT'
+    "KPWRAOELD": True,    # 'yield' -- 'KWRAOELD'
+    "STKPWHRAEU": True,   # 'display' -- 'STKPHRAUE'
+    "TWRAFR": True,       # 'transfer' -- 'TRAFR'
+    "TWHEPL": True,       # 'them' -- 'THEPL'
+    "SKWHREPL": True,     # 'generally' -- 'SKWHREPBL'
+    "KPWHRAEUPB": True,   # 'complain' -- "KPHRAEUPB"
+    "KPWHRAEUPBG": True,  # 'complaining' -- "KPHRAEUPBG"
+    "STPHRAEUPB": True,   # 'explain' -- "SPHRAUEPB"
+    "STPHRAOUGS": True,   # 'institution' -- "STPHAOUGS"
+    "STPHRAOER": True,    # 'sphere' -- "STPAOER"
+    "STPAEUS": True,      # 'space' -- "SPAEUS"
+    "STPAEURL": True,     # 'fairly' -- "TPAEURL"
+    "STHAEUR": True,      # 'their' -- "THAEUR"
+    "STKPWHRURBGS": True, # 'jurisdiction' -- "SKWRURBGS"
 
     # Things that seem better alternates already exist
-    "STKPWHR-FPLT": True,  # "!" -- expect TP-BG, or other form to be used.
+    "STKPWHR-FPLT": True,  # "{!}" -- expect TP-BG, or other form to be used.
     "SWHEPB": True,        # "when is" -- "WH-S" seems easier
     "SKPET": True,         # "and the" -- probably a typo entry for "SKP-T"
 
