@@ -80,8 +80,8 @@ AUDITED_STROKES = {
 # spellchecker: enable
 
 
-def increment_collision_counter(dict, key, collision_count):
-    dict[key] = dict.get(key, 0) + collision_count
+def increment_collision_counter(d, key, collision_count):
+    d[key] = d.get(key, 0) + collision_count
 
 
 starter_collisions = {}
@@ -116,24 +116,24 @@ for dict_filename in dict_filenames:
             # Tally full form
             starter, v1, star, v2, f, ending = match.groups()
             key = starter + "-" + ending
-            dict = defined_strokes.get(key)
-            if not dict:
-                dict = {}
-                defined_strokes[key] = dict
+            d = defined_strokes.get(key)
+            if not d:
+                d = {}
+                defined_strokes[key] = d
 
-            dict[strokes] = dict_data[strokes]
+            d[strokes] = dict_data[strokes]
 
             # Tally simple form.
             if (star + v2) not in jeff_phrasing.SIMPLE_PRONOUNS:
                 continue
 
             key = starter + v1 + '-' + ending
-            dict = simple_defined_strokes.get(key)
-            if not dict:
-                dict = {}
-                simple_defined_strokes[key] = dict
+            d = simple_defined_strokes.get(key)
+            if not d:
+                d = {}
+                simple_defined_strokes[key] = d
 
-            dict[strokes] = dict_data[strokes]
+            d[strokes] = dict_data[strokes]
 
         # Full form
         for starter in jeff_phrasing.STARTERS:
