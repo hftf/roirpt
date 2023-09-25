@@ -6,3 +6,4 @@ plover.log
 strokes.log*
 clippy.txt
 tapey_tape.txt
+*.pyc
