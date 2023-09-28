@@ -3,6 +3,161 @@ from collections import OrderedDict
 from jeff_phrasing import TO_BE
 import pprint
 
+verb_form_data = {
+	# Auxiliary verbs
+	# These do not combine naturally with middle/structures.
+	'':           '',
+	'Can':        'could',
+	'Will':       'would',
+	'Shall':      'should',
+	'May':        'might',
+	'Must':       'must',
+	# Adverbs
+	'Just':       'just',
+	'Really':     'really',
+
+	'ask':        None,
+	'be':         {'en': 'been', 'ed': 'were', 'ed13': 'was', 's': 'are', 's1': 'am', 's3': 'is'},
+	'become':     {'en': 'become', 'ed': 'became'},
+	'believe':    None,
+	'call':       None,
+	'care':       None,
+	'change':     None,
+	'come':       {'en': 'come', 'ed': 'came'},
+	'consider':   None,
+	'do':         {'en': 'done', 'ed': 'did'},
+	'expect':     None,
+	'feel':       'felt',
+	'find':       'found',
+	'forget':     {'en': 'forgotten', 'ed': 'forgot'},
+	'get':        {'en': 'gotten', 'ed': 'got'}, # he had gotten; he had got to
+	'give':       {'en': 'given', 'ed': 'gave'},
+	'go':         {'en': 'gone', 'ed': 'went'},
+	'have':       {'en': 'had', 'ed': 'had', 's': 'has'},
+	'happen':     None,
+	'hear':       'heard',
+	'hope':       None,
+	'imagine':    None,
+	'keep':       'kept',
+	'know':       {'en': 'known', 'ed': 'knew'},
+	'learn':      None,
+	'leave':      'left',
+	'let':        'let',
+	'like':       None,
+	'live':       None,
+	'look':       None,
+	'love':       None,
+	'make':       'made',
+	'mean':       'meant',
+	'mind':       None,
+	'move':       None,
+	'need':       None,
+	'put':        'put',
+	'read':       'read',
+	'recall':     None,
+	'realize':    None,
+	'remember':   None,
+	'remain':     None,
+	'run':        {'en': 'run',  'ed': 'ran'},
+	'say':        'said',
+	'see':        {'en': 'seen', 'ed': 'saw'},
+	'set':        'set',
+	'seem':       None,
+	'show':       'shown',
+	'take':       {'en': 'taken', 'ed': 'took'},
+	'tell':       'told',
+	'think':      'thought',
+	'try':        None,
+	'understand': 'understood',
+	# 'use':      , None,
+	'use':        None,
+	'Used to':    'used to',
+	'want':       None,
+	'wish':       None,
+	'work':       None,
+}
+
+# design constraints:
+# verbs with T in present ender paired with another verb that doesn't have an extra word
+# verbs with Z in present ender cannot have extra word (only due to finger gymnastics)
+verbs = {
+	# Auxiliary verbs
+	# These do not combine naturally with middle/structures.
+	'':           ('',       None  ),
+	'Can':        ('BGS',    None  ),
+	'May':        ('PL',     'be'  ),
+	'Must':       ('PBLGS',  'be'  ), # no past tense: taken by just
+	'Shall':      ('RBL',    None  ),
+	'Will':       ('RBGS',   None  ),
+	# Adverbs
+	'Just':       ('PBLGSZ', None  ),
+	'Really':     ('RLG',    None  ),
+
+	'ask':        ('RB',     None  ),
+	'be':         ('B',      'a'   ),
+	'become':     ('RPBG',   'a'   ),
+	'believe':    ('BL',     'that'),
+	'call':       ('RBLG',   None  ),
+	'care':       ('RZ',     None  ),
+	'change':     ('PBGZ',   None  ),
+	'come':       ('BG',     'to'  ),
+	'consider':   ('RBGZ',   None  ),
+	'do':         ('RP',     'it'  ),
+	'expect':     ('PGS',    'that'),
+	'feel':       ('LT',     'like'),
+	'find':       ('PBLG',   'that'),
+	'forget':     ('RG',     'to'  ),
+	'get':        ('GS',     'to'  ), # he had gotten; he had got to
+	'give':       ('GZ',     None  ),
+	'go':         ('G',      'to'  ),
+	'have':       ('T',      'to'  ),
+	'happen':     ('PZ',     None  ),
+	'hear':       ('PG',     'that'),
+	'hope':       ('RPS',    'to'  ),
+	'imagine':    ('PLG',    'that'),
+	'keep':       ('PBGS',   None  ),
+	'know':       ('PB',     'that'),
+	'learn':      ('RPBS',   'to'  ),
+	'leave':      ('LGZ',    None  ),
+	'let':        ('LS',     None  ),
+	'like':       ('BLG',    'to'  ),
+	'live':       ('LZ',     None  ),
+	'look':       ('L',      None  ),
+	'love':       ('LG',     'to'  ),
+	'make':       ('RPBL',   'a'   ),
+	'mean':       ('PBL',    'to'  ),
+	'mind':       ('PBLS',   None  ),
+	'move':       ('PLZ',    None  ),
+	'need':       ('RPG',    'to'  ),
+	'put':        ('PS',     'it'  ),
+	'read':       ('RS',     None  ),
+	'recall':     ('RL',     None  ),
+	'realize':    ('RLS',    'that'),
+	'remember':   ('RPL',    'that'),
+	'remain':     ('RPLS',   None  ),
+	'run':        ('R',      None  ),
+	'say':        ('BS',     'that'),
+	'see':        ('S',      None  ),
+	'set':        ('BLS',    None  ),
+	'seem':       ('PLS',    'to'  ),
+	'show':       ('RBZ',    None  ),
+	'take':       ('RBT',    None  ),
+	'tell':       ('RLT',    None  ),
+	'think':      ('PBG',    'that'),
+	'try':        ('RT',     'to'  ),
+	'understand': ('RPB',    'the' ),
+#	'use':        ('Z',      'to'  ),
+	'use':        ('Z',      None  ),
+	'Used to':    ('TZ',     None  ),
+	'want':       ('P',      'to'  ),
+	'wish':       ('RBS',    'to'  ),
+	'work':       ('RBG',    'on'  ),
+	# 'talk':     ('BLGT',   None  , None        ), # conflicts with like to
+
+	# help
+}
+
+
 def inflect(verb, suffix, exceptions=None):
 	if type(exceptions) == str:
 		exceptions = {'en': exceptions, 'ed': exceptions}
@@ -24,85 +179,6 @@ def inflect(verb, suffix, exceptions=None):
 
 	return ' ' + verb + suffix
 
-# design constraints:
-# verbs with T in present ender paired with another verb that doesn't have an extra word
-# verbs with Z in present ender cannot have extra word (only due to finger gymnastics)
-verbs = {
-	# Auxiliary verbs
-	# These do not combine naturally with middle/structures.
-	'':           ('',       None  , ''          ),
-	'Can':        ('BGS',    None  , 'could'     ),
-	'May':        ('PL',     'be'  , 'might'     ),
-	'Must':       ('PBLGS',  'be'  , 'must'      ), # no past tense: taken by just
-	'Shall':      ('RBL',    None  , 'should'    ),
-	'Will':       ('RBGS',   None  , 'would'     ),
-	# Adverbs
-	'Just':       ('PBLGSZ', None  , 'just'      ),
-	'Really':     ('RLG',    None  , 'really'    ),
-
-	'ask':        ('RB',     None  , None        ),
-	'be':         ('B',      'a'   , {'en': 'been', 'ed': 'was/were', 's': 'is/are'}),
-	'become':     ('RPBG',   'a'   , {'en': 'become', 'ed': 'became'}),
-	'believe':    ('BL',     'that', None        ),
-	'call':       ('RBLG',   None  , None        ),
-	'care':       ('RZ',     None  , None        ),
-	'change':     ('PBGZ',   None  , None        ),
-	'come':       ('BG',     'to'  , {'en': 'come', 'ed': 'came'}),
-	'consider':   ('RBGZ',   None  , None        ),
-	'do':         ('RP',     'it'  , {'en': 'done', 'ed': 'did'}),
-	'expect':     ('PGS',    'that', None        ),
-	'feel':       ('LT',     'like', 'felt'      ),
-	'find':       ('PBLG',   'that', 'found'     ),
-	'forget':     ('RG',     'to'  , {'en': 'forgotten', 'ed': 'forgot'}),
-	'get':        ('GS',     'to'  , {'en': 'gotten', 'ed': 'got'}), # he had gotten; he had got to
-	'give':       ('GZ',     None  , {'en': 'given', 'ed': 'gave'}),
-	'go':         ('G',      'to'  , {'en': 'gone', 'ed': 'went'}),
-	'have':       ('T',      'to'  , {'en': 'had', 'ed': 'had', 's': 'has'}),
-	'happen':     ('PZ',     None  , None        ),
-	'hear':       ('PG',     'that', 'heard'     ),
-	'hope':       ('RPS',    'to'  , None        ),
-	'imagine':    ('PLG',    'that', None        ),
-	'keep':       ('PBGS',   None  , 'kept'      ),
-	'know':       ('PB',     'that', {'en': 'known', 'ed': 'knew'}),
-	'learn':      ('RPBS',   'to'  , None        ),
-	'leave':      ('LGZ',    None  , 'left'      ),
-	'let':        ('LS',     None  , 'let'       ),
-	'like':       ('BLG',    'to'  , None        ),
-	'live':       ('LZ',     None  , None        ),
-	'look':       ('L',      None  , None        ),
-	'love':       ('LG',     'to'  , None        ),
-	'make':       ('RPBL',   'a'   , 'made'      ),
-	'mean':       ('PBL',    'to'  , 'meant'     ),
-	'mind':       ('PBLS',   None  , None        ),
-	'move':       ('PLZ',    None  , None        ),
-	'need':       ('RPG',    'to'  , None        ),
-	'put':        ('PS',     'it'  , 'put'       ),
-	'read':       ('RS',     None  , 'read'      ),
-	'recall':     ('RL',     None  , None        ),
-	'realize':    ('RLS',    'that', None        ),
-	'remember':   ('RPL',    'that', None        ),
-	'remain':     ('RPLS',   None  , None        ),
-	'run':        ('R',      None  , {'en': 'run',  'ed': 'ran'}),
-	'say':        ('BS',     'that', 'said'      ),
-	'see':        ('S',      None  , {'en': 'seen', 'ed': 'saw'}),
-	'set':        ('BLS',    None  , 'set'       ),
-	'seem':       ('PLS',    'to'  , None        ),
-	'show':       ('RBZ',    None  , {'en': 'shown', 'ed': 'showed'}),
-	'take':       ('RBT',    None  , {'en': 'taken', 'ed': 'took'}),
-	'tell':       ('RLT',    None  , 'told'      ),
-	'think':      ('PBG',    'that', 'thought'   ),
-	'try':        ('RT',     'to'  , None        ),
-	'understand': ('RPB',    'the' , 'understood'),
-	# 'use':        ('Z',      'to'  , None        ),
-	'use':        ('Z',      None  , None        ),
-	'Used to':    ('TZ',     None  , 'used to'   ),
-	'want':       ('P',      'to'  , None        ),
-	'wish':       ('RBS',    'to'  , None        ),
-	'work':       ('RBG',    'on'  , None        ),
-	# 'talk':     ('BLGT',   None  , None        ), # conflicts with like to
-
-	# help
-}
 
 # generate verb forms
 verb_forms = {} # OrderedDict()
