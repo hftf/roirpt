@@ -3,23 +3,11 @@ from collections import OrderedDict
 from jeff_phrasing import TO_BE
 import pprint
 
-verb_form_data = {
-	# Auxiliary verbs with 2 forms
-	'Can':        'could',
-	'Will':       'would',
-	'Shall':      'should',
-	'May':        'might',
-	# Auxiliary verbs with 1 form
-	'Must':       None, # have to?
-	'Used to':    None,
-	# Adverbs / words with 1 form
-	'Just':       None,
-	'Really':     None,
-	'':           '',
-	# Irregular verbs with 6+ forms
+irregular_verb_data = {
+	# Irregular verbs with 5+ forms (unpredictable -s forms, predictable -ing form)
 	'be':         {'en': 'been', 'ed': 'were', 'ed13': 'was', 's': 'are', 's1': 'am', 's3': 'is'},
 	'have':       {'en': 'had',  'ed': 'had',                 's': 'has'                        },
-	# Irregular verbs with 5 forms (2 different past forms)
+	# Irregular verbs with 5 forms (2 different past forms and predictable -s, -ing forms)
 	'become':     {'en': 'become',    'ed': 'became'},
 	'come':       {'en': 'come',      'ed': 'came'  },
 	'do':         {'en': 'done',      'ed': 'did'   },
@@ -32,69 +20,87 @@ verb_form_data = {
 	'see':        {'en': 'seen',      'ed': 'saw'   },
 	'take':       {'en': 'taken',     'ed': 'took'  },
 	# Irregular verbs with 4 forms (same past and past participle form)
-	'feel':       'felt',
-	'find':       'found',
-	'hear':       'heard',
-	'keep':       'kept',
-	'leave':      'left',
-	'let':        'let',
-	'make':       'made',
-	'mean':       'meant',
-	'put':        'put',
-	'read':       'read',
-	'say':        'said',
-	'set':        'set',
-	'show':       'shown',
-	'tell':       'told',
-	'think':      'thought',
-	'understand': 'understood',
+	'feel':       {'en': 'felt'       },
+	'find':       {'en': 'found'      },
+	'hear':       {'en': 'heard'      },
+	'keep':       {'en': 'kept'       },
+	'leave':      {'en': 'left'       },
+	'let':        {'en': 'let'        },
+	'make':       {'en': 'made'       },
+	'mean':       {'en': 'meant'      },
+	'put':        {'en': 'put'        },
+	'read':       {'en': 'read'       },
+	'say':        {'en': 'said'       },
+	'set':        {'en': 'set'        },
+	'show':       {'en': 'shown'      },
+	'tell':       {'en': 'told'       },
+	'think':      {'en': 'thought'    },
+	'understand': {'en': 'understood' },
+	# Auxiliary verbs with 2 forms
+	'can':        'could',
+	'will':       'would',
+	'shall':      'should',
+	'may':        'might',
+	# Auxiliary verbs with 1 form
+	'must':       False, # have to?
+	'used to':    False,
+	# Adverbs / words with 1 form
+	'just':       False,
+	'really':     False,
+	'':           False,
 }
 
+# For regular verb, exceptions is None
 def inflect(verb, suffix, exceptions=None):
+	# Irregular verb with 1 form
+	if exceptions is False:
+		return verb
+	# Irregular verb with 2 forms
 	if type(exceptions) == str:
-		exceptions = {'en': exceptions, 'ed': exceptions}
+		return exceptions if suffix == 'ed' else verb
+	# Irregular verb with 4 forms
+	if exceptions and 'en' in exceptions and 'ed' not in exceptions:
+		exceptions['ed'] = exceptions['en']
+	# Irregular verb: use exception if exists
 	if exceptions and suffix in exceptions:
 		return exceptions[suffix]
 
+	# Build remaining forms
 	if not suffix:
 		return verb
 	if suffix == 'en':
 		suffix = 'ed'
-	# double final consonant. exceptions: consider, remember, happen
-	if suffix[0] in 'ei'  and re.search(r'[^aeiou](?!e[nr])[aeiou][bcdfgklmnrptvz]$', verb):
+	# Double final consonant. Exceptions: consider, remember, happen
+	if suffix[0] in 'ei' and re.search(r'[^aeiou](?!e[nr])[aeiou][bcdfgklmnrptvz]$', verb):
 		verb += verb[-1]
-	if suffix[0] in 'ei'  and re.search(r'(?<!^)[^e]e$',  verb):
+	# take -ing -> taking 
+	if suffix[0] in 'ei' and re.search(r'(?<!^)[^e]e$',  verb):
 		verb = verb[:-1]
-	if suffix[0] in 'eis' and re.search(r'[^aeiou]y$',    verb):
+	# try  -s   -> tries
+	if suffix[0] in 'es' and re.search(r'[^aeiou]y$',    verb):
 		verb = verb[:-1] + 'i' + 'e'[:suffix[0] in 's']
-	if suffix[0] in 's'   and re.search(r'[osx]$|[cs]h$', verb):
+	# wish -s   -> wishes
+	if suffix[0] in 's'  and re.search(r'[osx]$|[cs]h$', verb):
 		verb += 'e'
 
 	return verb + suffix
 
 # generate verb forms
 verb_forms = OrderedDict()
-for verb, exceptions in verb_form_data.items():
-	# auxiliaries
-	if not verb or verb[0] != verb[0].lower():
-		present_forms = verb.lower()
-		if verb:
-			present_forms = ' ' + present_forms
-		if extra_word:
-			m = present_forms + ' ' + extra_word
-	else:
-		present_forms = {
-				None:                 inflect(verb, ""   , exceptions),
-				"3ps":                inflect(verb, "s"  , exceptions),
-				"present-participle": inflect(verb, "ing", exceptions),
-				"past-participle":    inflect(verb, "en" , exceptions),
-			}
-		if extra_word:
-			m = {k: v + ' ' + extra_word for k, v in present_forms.items()}
+for verb, exceptions in irregular_verb_data.items():
+	present_forms = {
+		None:                 inflect(verb, ""   , exceptions),
+		"3ps":                inflect(verb, "s"  , exceptions),
+		"present-participle": inflect(verb, "ing", exceptions),
+		"past-participle":    inflect(verb, "en" , exceptions),
+	}
+		# if extra_word:
+			# m = {k: v + ' ' + extra_word for k, v in present_forms.items()}
+	print(verb, exceptions, present_forms)
+	continue
 
-
-	if present_ender in verb_forms:
-		print( present_ender)
+	# if present_ender in verb_forms:
+	# 	print( present_ender)
 	verb_forms[present_ender] = ("present", 
 		(present_forms))
 	if extra_word:
