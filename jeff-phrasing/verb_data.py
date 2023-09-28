@@ -50,7 +50,7 @@ irregular_verb_data = {
 	'':           False,
 }
 
-# For regular verb, exceptions is None
+# For regular verb, exceptions is None or {}
 def inflect(verb, suffix, exceptions=None):
 	# Irregular verb with 1 form
 	if exceptions is False:
@@ -85,119 +85,20 @@ def inflect(verb, suffix, exceptions=None):
 
 	return verb + suffix
 
-# generate verb forms
-verb_forms = {} #OrderedDict()
-for verb, exceptions in irregular_verb_data.items():
-	if type(exceptions) in [str, bool]:
-		present_forms = verb
-		past_forms    = verb
-	else:
-		present_forms = {
-			None:                 inflect(verb, ''   , exceptions),
-			'3ps':                inflect(verb, 's'  , exceptions),
-			'present-participle': inflect(verb, 'ing', exceptions),
-			'past-participle':    inflect(verb, 'en' , exceptions),
-		}
-		if 's1' in exceptions:
-			present_forms.update({
-				None:  exceptions['s'],
-				'1ps': exceptions['s1'],
-				'3ps': exceptions['s3'],
-			})
-		past_forms = {
-			None:                 inflect(verb, 'ed' , exceptions),
-			'root':               inflect(verb, ''   , exceptions),
-			'present-participle': inflect(verb, 'ing', exceptions),
-			'past-participle':    inflect(verb, 'en' , exceptions),
-		}
-		if 'ed13' in exceptions:
-			past_forms.update({
-				'3ps': exceptions['ed13'],
-			})
-
-	verb_forms[verb] = [('present', present_forms), ('past', past_forms)]
-
-	continue
-
-		# if extra_word:
-			# m = {k: v + ' ' + extra_word for k, v in present_forms.items()}
-
-	# if present_ender in verb_forms:
-	# 	print( present_ender)
-	verb_forms[present_ender] = ("present", 
-		(present_forms))
-	if extra_word:
-		if 'T' in present_ender:
-			x = re.sub("D?Z?$", r"S\g<0>", present_ender, 1)
-		else:
-			x = re.sub("S?D?Z?$", r"T\g<0>", present_ender, 1)
-		if x in verb_forms:
-			print( x)
-		verb_forms[x] = ("present",
-			m)
-
-
-	# R -> RD; Z -> DZ
-	past_enders = [re.sub("Z?$", r"D\g<0>", present_ender, 1)]
-	# SD -> DS, SZ
-	# SZ -> SDZ, TSDZ
-	if "S" in present_ender:
-		if "Z" in present_ender:
-			# past_enders.append(re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1))
-			past_enders[0] = re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1)
-		else:
-			past_enders[0] = present_ender + "Z"
-	for past_ender in past_enders:
-		if not verb or verb[0] != verb[0].lower():
-			past_forms = exceptions
-			if exceptions:
-				past_forms = ' ' + past_forms
-			if extra_word:
-				m = past_forms + ' ' + extra_word
-		else:
-			past_forms = {
-				None:                 inflect(verb, "ed" , exceptions),
-				"root":               inflect(verb, ""   , exceptions),
-				# "3ps":                inflect(verb, "s"  , exceptions),
-				"present-participle": inflect(verb, "ing", exceptions),
-				"past-participle":    inflect(verb, "en" , exceptions),
-			}
-			if extra_word:
-				m = {k: v + ' ' + extra_word for k, v in past_forms.items()}
-
-		if past_ender in verb_forms:
-			print( past_ender)
-		verb_forms[past_ender] = ("past", 
-			(past_forms))
-		if extra_word:
-			if 'T' in past_ender or 'S' in past_ender:
-				x = re.sub("T?D?S?Z?$", r"TSDZ", past_ender, 1)
-			else:
-				x = re.sub("S?D?Z?$", r"T\g<0>", past_ender, 1)
-
-			if x in verb_forms:
-				print( x)
-			verb_forms[x] = ("past",
-				m)
-
-pprint.pprint(verb_forms, width=180)
-
-
 # design constraints:
 # verbs with T in present ender paired with another verb that doesn't have an extra word
 # verbs with Z in present ender cannot have extra word (only due to finger gymnastics)
-verbs = {
+verb_ender_data = {
 	# Auxiliary verbs
-	# These do not combine naturally with middle/structures.
 	'':           ('',       None  ),
-	'Can':        ('BGS',    None  ),
-	'May':        ('PL',     'be'  ),
-	'Must':       ('PBLGS',  'be'  ), # no past tense: taken by just
-	'Shall':      ('RBL',    None  ),
-	'Will':       ('RBGS',   None  ),
-	# Adverbs
-	'Just':       ('PBLGSZ', None  ),
-	'Really':     ('RLG',    None  ),
+	'can':        ('BGS',    None  ),
+	'may':        ('PL',     'be'  ),
+	'must':       ('PBLGS',  'be'  ), # no past tense: taken by just
+	'shall':      ('RBL',    None  ),
+	'will':       ('RBGS',   None  ),
+	# adverbs
+	'just':       ('PBLGSZ', None  ),
+	'really':     ('RLG',    None  ),
 
 	'ask':        ('RB',     None  ),
 	'be':         ('B',      'a'   ),
@@ -254,7 +155,7 @@ verbs = {
 	'understand': ('RPB',    'the' ),
 #	'use':        ('Z',      'to'  ),
 	'use':        ('Z',      None  ),
-	'Used to':    ('TZ',     None  ),
+	'used to':    ('TZ',     None  ),
 	'want':       ('P',      'to'  ),
 	'wish':       ('RBS',    'to'  ),
 	'work':       ('RBG',    'on'  ),
@@ -262,3 +163,113 @@ verbs = {
 
 	# help
 }
+
+# generate verb forms
+verb_forms = {} #OrderedDict()
+for verb in verb_ender_data.keys():
+	if verb in irregular_verb_data:
+		exceptions = irregular_verb_data[verb] 
+	else:
+		exceptions = {}
+	if type(exceptions) in [str, bool]:
+		present_forms = verb
+		past_forms    = verb
+	else:
+		present_forms = {
+			None:                 inflect(verb, ''   , exceptions),
+			'3ps':                inflect(verb, 's'  , exceptions),
+			'present-participle': inflect(verb, 'ing', exceptions),
+			'past-participle':    inflect(verb, 'en' , exceptions),
+		}
+		if 's1' in exceptions:
+			present_forms.update({
+				None:  exceptions['s'],
+				'1ps': exceptions['s1'],
+				'3ps': exceptions['s3'],
+			})
+		past_forms = {
+			None:                 inflect(verb, 'ed' , exceptions),
+			'root':               inflect(verb, ''   , exceptions),
+			'present-participle': inflect(verb, 'ing', exceptions),
+			'past-participle':    inflect(verb, 'en' , exceptions),
+		}
+		if 'ed13' in exceptions:
+			past_forms.update({
+				'3ps': exceptions['ed13'],
+			})
+
+	verb_forms[verb] = [present_forms, past_forms]
+
+def add_key(stroke, key):
+	if key in stroke:
+		print(f'{key} already in {stroke}')
+		return stroke
+	candidate = stroke + key
+	if sum(k in candidate for k in 'TSDZ') == 3:
+		print(f'{candidate} not ergonomic')
+		candidate += '∫'
+	return candidate
+
+verb_enders = {}
+for verb, (verb_ender, extra_word) in verb_ender_data.items():
+	present_ender            = verb_ender
+	past_ender               = add_key(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D')
+	present_ender_extra_word = add_key(present_ender, 'S' if 'T' in present_ender else 'T')
+	past_ender_extra_word    = add_key(past_ender,    'S' if 'T' in present_ender else 'T')
+
+	present_verb_data = verb_forms[verb][0]
+	past_verb_data    = verb_forms[verb][1]
+	queue = [
+		(present_ender,            present_verb_data),
+		(past_ender,               past_verb_data),
+	]
+	if extra_word:
+		if type(present_verb_data) == str:
+			present_verb_data_extra_word = present_verb_data + extra_word
+			past_verb_data_extra_word    = past_verb_data    + extra_word
+		else:
+			present_verb_data_extra_word = {k: v + ' ' + extra_word for k, v in present_verb_data.items()}
+			past_verb_data_extra_word    = {k: v + ' ' + extra_word for k, v in past_verb_data.items()}
+
+		queue += [
+			(present_ender_extra_word, present_verb_data_extra_word),
+			(past_ender_extra_word,    past_verb_data_extra_word),
+		]
+
+	for (ender, verb_data) in queue:
+		if ender in verb_forms:
+			print(f'{verb}, {ender} already in verb_enders')
+		verb_enders[ender] = verb_data
+
+	continue
+
+	if extra_word:
+		if 'T' in present_ender:
+			x = re.sub("D?Z?$", r"S\g<0>", present_ender, 1)
+		else:
+			x = re.sub("S?D?Z?$", r"T\g<0>", present_ender, 1)
+
+		verb_forms[x] = ("present",
+			m)
+
+
+	# R -> RD; Z -> DZ
+	past_enders = [re.sub("Z?$", r"D\g<0>", present_ender, 1)]
+	# SD -> DS, SZ
+	# SZ -> SDZ, TSDZ
+	if "S" in present_ender:
+		if "Z" in present_ender:
+			# past_enders.append(re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1))
+			past_enders[0] = re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1)
+		else:
+			past_enders[0] = present_ender + "Z"
+	for past_ender in past_enders:
+		if extra_word:
+			if 'T' in past_ender or 'S' in past_ender:
+				x = re.sub("T?D?S?Z?$", r"TSDZ", past_ender, 1)
+			else:
+				x = re.sub("S?D?Z?$", r"T\g<0>", past_ender, 1)
+
+pprint.pprint(verb_enders, width=180)
+
+
