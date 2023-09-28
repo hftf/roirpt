@@ -173,7 +173,7 @@ for verb in verb_ender_data.keys():
 		exceptions = {}
 	if type(exceptions) in [str, bool]:
 		present_forms = verb
-		past_forms    = verb
+		past_forms    = inflect(verb, 'ed', exceptions)
 	else:
 		present_forms = {
 			None:                 inflect(verb, ''   , exceptions),
@@ -200,29 +200,29 @@ for verb in verb_ender_data.keys():
 
 	verb_forms[verb] = [present_forms, past_forms]
 
-def add_key(stroke, key):
+def press(stroke, key):
 	if key in stroke:
 		print(f'{key} already in {stroke}')
 		return stroke
 	# candidate = stroke + key
 	candidate = re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)
 	if sum(k in candidate for k in 'TSDZ') == 3:
-		print(f'{candidate} not ergonomic')
+		# print(f'{candidate} not ergonomic')
 		candidate = re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)
 	return candidate
 
-verb_enders = {}
+verb_enders = OrderedDict() #{}
 for verb, (verb_ender, extra_word) in verb_ender_data.items():
 	present_ender            = verb_ender
-	past_ender               = add_key(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D')
-	present_ender_extra_word = add_key(present_ender, 'S' if 'T' in present_ender else 'T')
-	past_ender_extra_word    = add_key(past_ender,    'S' if 'T' in present_ender else 'T')
+	past_ender               = press(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D')
+	present_ender_extra_word = press(present_ender, 'S' if 'T' in present_ender else 'T')
+	past_ender_extra_word    = press(past_ender,    'S' if 'T' in present_ender else 'T')
 
 	present_verb_data = verb_forms[verb][0]
 	past_verb_data    = verb_forms[verb][1]
 	queue = [
-		(present_ender,            present_verb_data),
-		(past_ender,               past_verb_data),
+		('present', present_ender,            present_verb_data),
+		('past',    past_ender,               past_verb_data),
 	]
 	if extra_word:
 		if type(present_verb_data) == str:
@@ -233,44 +233,13 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 			past_verb_data_extra_word    = {k: v + ' ' + extra_word for k, v in past_verb_data.items()}
 
 		queue += [
-			(present_ender_extra_word, present_verb_data_extra_word),
-			(past_ender_extra_word,    past_verb_data_extra_word),
+			('present', present_ender_extra_word, present_verb_data_extra_word),
+			('past',    past_ender_extra_word,    past_verb_data_extra_word),
 		]
 
-	for (ender, verb_data) in queue:
-		if ender in verb_forms:
-			print(f'{verb}, {ender} already in verb_enders')
-		verb_enders[ender] = verb_data
-
-	continue
-
-	if extra_word:
-		if 'T' in present_ender:
-			x = re.sub("D?Z?$", r"S\g<0>", present_ender, 1)
-		else:
-			x = re.sub("S?D?Z?$", r"T\g<0>", present_ender, 1)
-
-		verb_forms[x] = ("present",
-			m)
-
-
-	# R -> RD; Z -> DZ
-	past_enders = [re.sub("Z?$", r"D\g<0>", present_ender, 1)]
-	# SD -> DS, SZ
-	# SZ -> SDZ, TSDZ
-	if "S" in present_ender:
-		if "Z" in present_ender:
-			# past_enders.append(re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1))
-			past_enders[0] = re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1)
-		else:
-			past_enders[0] = present_ender + "Z"
-	for past_ender in past_enders:
-		if extra_word:
-			if 'T' in past_ender or 'S' in past_ender:
-				x = re.sub("T?D?S?Z?$", r"TSDZ", past_ender, 1)
-			else:
-				x = re.sub("S?D?Z?$", r"T\g<0>", past_ender, 1)
+	for (tense, ender, verb_data) in queue:
+		if ender in verb_enders:
+			print(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}')
+		verb_enders[ender] = (tense, verb_data)
 
 pprint.pprint(verb_enders, width=180)
-
-
