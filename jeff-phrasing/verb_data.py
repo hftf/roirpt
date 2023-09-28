@@ -4,49 +4,155 @@ from jeff_phrasing import TO_BE
 import pprint
 
 verb_form_data = {
-	# Auxiliary verbs
-	# These do not combine naturally with middle/structures.
-	'':           '',
+	# Auxiliary verbs with 2 forms
 	'Can':        'could',
 	'Will':       'would',
 	'Shall':      'should',
 	'May':        'might',
-	'Must':       'must',
-	# Adverbs
-	'Just':       'just',
-	'Really':     'really',
-	# Irregular verbs
+	# Auxiliary verbs with 1 form
+	'Must':       None, # have to?
+	'Used to':    None,
+	# Adverbs / words with 1 form
+	'Just':       None,
+	'Really':     None,
+	'':           '',
+	# Irregular verbs with 6+ forms
 	'be':         {'en': 'been', 'ed': 'were', 'ed13': 'was', 's': 'are', 's1': 'am', 's3': 'is'},
-	'become':     {'en': 'become', 'ed': 'became'},
-	'come':       {'en': 'come', 'ed': 'came'},
-	'do':         {'en': 'done', 'ed': 'did'},
+	'have':       {'en': 'had',  'ed': 'had',                 's': 'has'                        },
+	# Irregular verbs with 5 forms (2 different past forms)
+	'become':     {'en': 'become',    'ed': 'became'},
+	'come':       {'en': 'come',      'ed': 'came'  },
+	'do':         {'en': 'done',      'ed': 'did'   },
+	'forget':     {'en': 'forgotten', 'ed': 'forgot'},
+	'get':        {'en': 'gotten',    'ed': 'got'   }, # he had gotten vs. he had got to (must)
+	'give':       {'en': 'given',     'ed': 'gave'  },
+	'go':         {'en': 'gone',      'ed': 'went'  },
+	'know':       {'en': 'known',     'ed': 'knew'  },
+	'run':        {'en': 'run',       'ed': 'ran'   },
+	'see':        {'en': 'seen',      'ed': 'saw'   },
+	'take':       {'en': 'taken',     'ed': 'took'  },
+	# Irregular verbs with 4 forms (same past and past participle form)
 	'feel':       'felt',
 	'find':       'found',
-	'forget':     {'en': 'forgotten', 'ed': 'forgot'},
-	'get':        {'en': 'gotten', 'ed': 'got'}, # he had gotten; he had got to
-	'give':       {'en': 'given', 'ed': 'gave'},
-	'go':         {'en': 'gone', 'ed': 'went'},
-	'have':       {'en': 'had', 'ed': 'had', 's': 'has'},
 	'hear':       'heard',
 	'keep':       'kept',
-	'know':       {'en': 'known', 'ed': 'knew'},
 	'leave':      'left',
 	'let':        'let',
 	'make':       'made',
 	'mean':       'meant',
 	'put':        'put',
 	'read':       'read',
-	'run':        {'en': 'run',  'ed': 'ran'},
 	'say':        'said',
-	'see':        {'en': 'seen', 'ed': 'saw'},
 	'set':        'set',
 	'show':       'shown',
-	'take':       {'en': 'taken', 'ed': 'took'},
 	'tell':       'told',
 	'think':      'thought',
 	'understand': 'understood',
-	'Used to':    'used to',
 }
+
+def inflect(verb, suffix, exceptions=None):
+	if type(exceptions) == str:
+		exceptions = {'en': exceptions, 'ed': exceptions}
+	if exceptions and suffix in exceptions:
+		return exceptions[suffix]
+
+	if not suffix:
+		return verb
+	if suffix == 'en':
+		suffix = 'ed'
+	# double final consonant. exceptions: consider, remember, happen
+	if suffix[0] in 'ei'  and re.search(r'[^aeiou](?!e[nr])[aeiou][bcdfgklmnrptvz]$', verb):
+		verb += verb[-1]
+	if suffix[0] in 'ei'  and re.search(r'(?<!^)[^e]e$',  verb):
+		verb = verb[:-1]
+	if suffix[0] in 'eis' and re.search(r'[^aeiou]y$',    verb):
+		verb = verb[:-1] + 'i' + 'e'[:suffix[0] in 's']
+	if suffix[0] in 's'   and re.search(r'[osx]$|[cs]h$', verb):
+		verb += 'e'
+
+	return verb + suffix
+
+# generate verb forms
+verb_forms = OrderedDict()
+for verb, exceptions in verb_form_data.items():
+	# auxiliaries
+	if not verb or verb[0] != verb[0].lower():
+		present_forms = verb.lower()
+		if verb:
+			present_forms = ' ' + present_forms
+		if extra_word:
+			m = present_forms + ' ' + extra_word
+	else:
+		present_forms = {
+				None:                 inflect(verb, ""   , exceptions),
+				"3ps":                inflect(verb, "s"  , exceptions),
+				"present-participle": inflect(verb, "ing", exceptions),
+				"past-participle":    inflect(verb, "en" , exceptions),
+			}
+		if extra_word:
+			m = {k: v + ' ' + extra_word for k, v in present_forms.items()}
+
+
+	if present_ender in verb_forms:
+		print( present_ender)
+	verb_forms[present_ender] = ("present", 
+		(present_forms))
+	if extra_word:
+		if 'T' in present_ender:
+			x = re.sub("D?Z?$", r"S\g<0>", present_ender, 1)
+		else:
+			x = re.sub("S?D?Z?$", r"T\g<0>", present_ender, 1)
+		if x in verb_forms:
+			print( x)
+		verb_forms[x] = ("present",
+			m)
+
+
+	# R -> RD; Z -> DZ
+	past_enders = [re.sub("Z?$", r"D\g<0>", present_ender, 1)]
+	# SD -> DS, SZ
+	# SZ -> SDZ, TSDZ
+	if "S" in present_ender:
+		if "Z" in present_ender:
+			# past_enders.append(re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1))
+			past_enders[0] = re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1)
+		else:
+			past_enders[0] = present_ender + "Z"
+	for past_ender in past_enders:
+		if not verb or verb[0] != verb[0].lower():
+			past_forms = exceptions
+			if exceptions:
+				past_forms = ' ' + past_forms
+			if extra_word:
+				m = past_forms + ' ' + extra_word
+		else:
+			past_forms = {
+				None:                 inflect(verb, "ed" , exceptions),
+				"root":               inflect(verb, ""   , exceptions),
+				# "3ps":                inflect(verb, "s"  , exceptions),
+				"present-participle": inflect(verb, "ing", exceptions),
+				"past-participle":    inflect(verb, "en" , exceptions),
+			}
+			if extra_word:
+				m = {k: v + ' ' + extra_word for k, v in past_forms.items()}
+
+		if past_ender in verb_forms:
+			print( past_ender)
+		verb_forms[past_ender] = ("past", 
+			(past_forms))
+		if extra_word:
+			if 'T' in past_ender or 'S' in past_ender:
+				x = re.sub("T?D?S?Z?$", r"TSDZ", past_ender, 1)
+			else:
+				x = re.sub("S?D?Z?$", r"T\g<0>", past_ender, 1)
+
+			if x in verb_forms:
+				print( x)
+			verb_forms[x] = ("past",
+				m)
+
+pprint.pprint(verb_forms, width=180)
+
 
 # design constraints:
 # verbs with T in present ender paired with another verb that doesn't have an extra word
@@ -127,105 +233,3 @@ verbs = {
 
 	# help
 }
-
-
-def inflect(verb, suffix, exceptions=None):
-	if type(exceptions) == str:
-		exceptions = {'en': exceptions, 'ed': exceptions}
-	if exceptions and suffix in exceptions:
-		return ' ' + exceptions[suffix]
-
-	if suffix == 'en':
-		suffix = 'ed'
-	# double final consonant
-	# except: consider, remember, happen
-	if suffix and suffix[0] in 'aeiou' and re.search('([bcdfghjklmnprstvwxyz]|qu)(?!e[rn])[aeiou][bcdfgklmnprtvz]$', verb):
-		verb += verb[-1]
-	if suffix and suffix[0] in 'aeiou' and re.search('(?<!^)[^e]e$', verb):
-		verb = verb[:-1]
-	if suffix and suffix[0] in 'aeous' and re.search('[^aeiou]y$', verb):
-		verb = verb[:-1] + 'i' + 'e'[:suffix[0] in 's']
-	if suffix and suffix[0] in 's'     and re.search('([osx]|sh|ch)$', verb):
-		verb += 'e'
-
-	return ' ' + verb + suffix
-
-
-# generate verb forms
-verb_forms = {} # OrderedDict()
-for verb, (present_ender, extra_word, exceptions) in verbs.items():
-	# auxiliaries
-	if not verb or verb[0] != verb[0].lower():
-		present_forms = verb.lower()
-		if verb:
-			present_forms = ' ' + present_forms
-		if extra_word:
-			m = present_forms + ' ' + extra_word
-	else:
-		present_forms = {
-				None:                 inflect(verb, ""   , exceptions),
-				"3ps":                inflect(verb, "s"  , exceptions),
-				"present-participle": inflect(verb, "ing", exceptions),
-				"past-participle":    inflect(verb, "en" , exceptions),
-			}
-		if extra_word:
-			m = {k: v + ' ' + extra_word for k, v in present_forms.items()}
-	if present_ender in verb_forms:
-		print( present_ender)
-	verb_forms[present_ender] = ("present", 
-		(present_forms))
-	if extra_word:
-		if 'T' in present_ender:
-			x = re.sub("D?Z?$", r"S\g<0>", present_ender, 1)
-		else:
-			x = re.sub("S?D?Z?$", r"T\g<0>", present_ender, 1)
-		if x in verb_forms:
-			print( x)
-		verb_forms[x] = ("present",
-			m)
-
-
-	# R -> RD; Z -> DZ
-	past_enders = [re.sub("Z?$", r"D\g<0>", present_ender, 1)]
-	# SD -> DS, SZ
-	# SZ -> SDZ, TSDZ
-	if "S" in present_ender:
-		if "Z" in present_ender:
-			# past_enders.append(re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1))
-			past_enders[0] = re.sub("(?<!T)SZ$", r"TSDZ", present_ender, 1)
-		else:
-			past_enders[0] = present_ender + "Z"
-	for past_ender in past_enders:
-		if not verb or verb[0] != verb[0].lower():
-			past_forms = exceptions
-			if exceptions:
-				past_forms = ' ' + past_forms
-			if extra_word:
-				m = past_forms + ' ' + extra_word
-		else:
-			past_forms = {
-				None:                 inflect(verb, "ed" , exceptions),
-				"root":               inflect(verb, ""   , exceptions),
-				# "3ps":                inflect(verb, "s"  , exceptions),
-				"present-participle": inflect(verb, "ing", exceptions),
-				"past-participle":    inflect(verb, "en" , exceptions),
-			}
-			if extra_word:
-				m = {k: v + ' ' + extra_word for k, v in past_forms.items()}
-
-		if past_ender in verb_forms:
-			print( past_ender)
-		verb_forms[past_ender] = ("past", 
-			(past_forms))
-		if extra_word:
-			if 'T' in past_ender or 'S' in past_ender:
-				x = re.sub("T?D?S?Z?$", r"TSDZ", past_ender, 1)
-			else:
-				x = re.sub("S?D?Z?$", r"T\g<0>", past_ender, 1)
-
-			if x in verb_forms:
-				print( x)
-			verb_forms[x] = ("past",
-				m)
-
-pprint.pprint(verb_forms, width=180)
