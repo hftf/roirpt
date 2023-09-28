@@ -7,7 +7,7 @@ irregular_verb_data = {
 	# Irregular verbs with 5+ forms (unpredictable -s forms, predictable -ing form)
 	'be':         {'en': 'been', 'ed': 'were', 'ed13': 'was', 's': 'are', 's1': 'am', 's3': 'is'},
 	'have':       {'en': 'had',  'ed': 'had',                 's': 'has'                        },
-	# Irregular verbs with 5 forms (2 different past forms and predictable -s, -ing forms)
+	# Irregular verbs with 5 forms (2 different irregular past forms; predictable -s, -ing forms)
 	'become':     {'en': 'become',    'ed': 'became'},
 	'come':       {'en': 'come',      'ed': 'came'  },
 	'do':         {'en': 'done',      'ed': 'did'   },
@@ -19,7 +19,7 @@ irregular_verb_data = {
 	'run':        {'en': 'run',       'ed': 'ran'   },
 	'see':        {'en': 'seen',      'ed': 'saw'   },
 	'take':       {'en': 'taken',     'ed': 'took'  },
-	# Irregular verbs with 4 forms (same past and past participle form)
+	# Irregular verbs with 4 forms (same irregular past and past participle form)
 	'feel':       {'en': 'felt'       },
 	'find':       {'en': 'found'      },
 	'hear':       {'en': 'heard'      },
@@ -86,18 +86,41 @@ def inflect(verb, suffix, exceptions=None):
 	return verb + suffix
 
 # generate verb forms
-verb_forms = OrderedDict()
+verb_forms = {} #OrderedDict()
 for verb, exceptions in irregular_verb_data.items():
-	present_forms = {
-		None:                 inflect(verb, ""   , exceptions),
-		"3ps":                inflect(verb, "s"  , exceptions),
-		"present-participle": inflect(verb, "ing", exceptions),
-		"past-participle":    inflect(verb, "en" , exceptions),
-	}
+	if type(exceptions) in [str, bool]:
+		present_forms = verb
+		past_forms    = verb
+	else:
+		present_forms = {
+			None:                 inflect(verb, ''   , exceptions),
+			'3ps':                inflect(verb, 's'  , exceptions),
+			'present-participle': inflect(verb, 'ing', exceptions),
+			'past-participle':    inflect(verb, 'en' , exceptions),
+		}
+		if 's1' in exceptions:
+			present_forms.update({
+				None:  exceptions['s'],
+				'1ps': exceptions['s1'],
+				'3ps': exceptions['s3'],
+			})
+		past_forms = {
+			None:                 inflect(verb, 'ed' , exceptions),
+			'root':               inflect(verb, ''   , exceptions),
+			'present-participle': inflect(verb, 'ing', exceptions),
+			'past-participle':    inflect(verb, 'en' , exceptions),
+		}
+		if 'ed13' in exceptions:
+			past_forms.update({
+				'3ps': exceptions['ed13'],
+			})
+
+	verb_forms[verb] = [('present', present_forms), ('past', past_forms)]
+
+	continue
+
 		# if extra_word:
 			# m = {k: v + ' ' + extra_word for k, v in present_forms.items()}
-	print(verb, exceptions, present_forms)
-	continue
 
 	# if present_ender in verb_forms:
 	# 	print( present_ender)
