@@ -204,10 +204,11 @@ def add_key(stroke, key):
 	if key in stroke:
 		print(f'{key} already in {stroke}')
 		return stroke
-	candidate = stroke + key
+	# candidate = stroke + key
+	candidate = re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)
 	if sum(k in candidate for k in 'TSDZ') == 3:
 		print(f'{candidate} not ergonomic')
-		candidate += '∫'
+		candidate = re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)
 	return candidate
 
 verb_enders = {}
@@ -225,8 +226,8 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 	]
 	if extra_word:
 		if type(present_verb_data) == str:
-			present_verb_data_extra_word = present_verb_data + extra_word
-			past_verb_data_extra_word    = past_verb_data    + extra_word
+			present_verb_data_extra_word = present_verb_data + ' ' + extra_word
+			past_verb_data_extra_word    = past_verb_data    + ' ' + extra_word
 		else:
 			present_verb_data_extra_word = {k: v + ' ' + extra_word for k, v in present_verb_data.items()}
 			past_verb_data_extra_word    = {k: v + ' ' + extra_word for k, v in past_verb_data.items()}
