@@ -13,12 +13,13 @@ irregular_verb_data = {
 	'come':       {'en': 'come',      'ed': 'came'  },
 	'do':         {'en': 'done',      'ed': 'did'   },
 	'forget':     {'en': 'forgotten', 'ed': 'forgot'},
-	'get':        {'en': 'gotten',    'ed': 'got'   }, # he had gotten vs. he had got to (must)
+	'get':        {'en': 'got',       'ed': 'got'   }, # he had gotten vs. he had got to (must)
 	'give':       {'en': 'given',     'ed': 'gave'  },
 	'go':         {'en': 'gone',      'ed': 'went'  },
 	'know':       {'en': 'known',     'ed': 'knew'  },
 	'run':        {'en': 'run',       'ed': 'ran'   },
 	'see':        {'en': 'seen',      'ed': 'saw'   },
+	'show':       {'en': 'shown',     'ed': 'showed'},
 	'take':       {'en': 'taken',     'ed': 'took'  },
 	# Irregular verbs with 4 forms (same irregular past and past participle form)
 	'feel':       {'en': 'felt'       },
@@ -33,7 +34,6 @@ irregular_verb_data = {
 	'read':       {'en': 'read'       },
 	'say':        {'en': 'said'       },
 	'set':        {'en': 'set'        },
-	'show':       {'en': 'shown'      },
 	'tell':       {'en': 'told'       },
 	'think':      {'en': 'thought'    },
 	'understand': {'en': 'understood' },
@@ -184,9 +184,10 @@ for verb in verb_ender_data.keys():
 		}
 		if 's1' in exceptions:
 			present_forms.update({
-				None:  exceptions['s'],
-				'1ps': exceptions['s1'],
-				'3ps': exceptions['s3'],
+				None:   exceptions['s'],
+				'1ps':  exceptions['s1'],
+				'3ps':  exceptions['s3'],
+				'root': verb,
 			})
 		past_forms = {
 			None:                 inflect(verb, 'ed' , exceptions),
@@ -196,6 +197,7 @@ for verb in verb_ender_data.keys():
 		}
 		if 'ed13' in exceptions:
 			past_forms.update({
+				'1ps': exceptions['ed13'],
 				'3ps': exceptions['ed13'],
 			})
 
