@@ -208,11 +208,12 @@ def press(stroke, key):
 		sys.stderr.write(f'{key} already in {stroke}\n')
 		return [stroke]
 	# candidate = stroke + key
-	candidate = [re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)]
-	if sum(k in candidate for k in 'TSDZ') == 3 and not candidate == 'TDZ':
+	candidate = re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)
+	if sum(k in candidate for k in 'TSDZ') == 3 \
+		and not candidate == 'TDZ': # exception to avoid 'used to' 'had to' conflict
 		# print(f'{candidate} not ergonomic')
-		candidate += re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)
-	return candidate
+		return [candidate, re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)]
+	return [candidate]
 def prespace(data):
 	if type(data) == str:
 		return ' '[:bool(data)] + data
@@ -236,7 +237,7 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 	])
 	if extra_word:
 		present_ender_extra_word =   press(present_ender, 'S' if 'T' in present_ender else 'T')
-		past_enders_extra_word = fu([press(past_ender,    'S' if 'T' in present_ender else 'T') for past_ender in past_enders])
+		past_enders_extra_word = fu([press(past_ender,    'S' if 'T' in past_ender else 'T') for past_ender in past_enders])
 
 	present_verb_data, past_verb_data = map(prespace, verb_forms[verb])
 	queue = [
