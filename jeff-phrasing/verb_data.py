@@ -1,6 +1,6 @@
 import re
 from collections import OrderedDict
-from jeff_phrasing import TO_BE
+from jeff_phrasing import TO_BE, ENDERS
 import pprint
 import sys
 
@@ -209,17 +209,18 @@ def press(stroke, key):
 		return stroke
 	# candidate = stroke + key
 	candidate = re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)
-	if sum(k in candidate for k in 'TSDZ') == 3:
+	if sum(k in candidate for k in 'TSDZ') == 3 and not candidate == 'TDZ':
 		# print(f'{candidate} not ergonomic')
 		candidate = re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)
 	return candidate
 
-verb_enders = OrderedDict() #{}
+verb_enders = {}# OrderedDict() #{}
 for verb, (verb_ender, extra_word) in verb_ender_data.items():
 	present_ender            = verb_ender
 	past_ender               = press(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D')
-	present_ender_extra_word = press(present_ender, 'S' if 'T' in present_ender else 'T')
-	past_ender_extra_word    = press(past_ender,    'S' if 'T' in present_ender else 'T')
+	if extra_word:
+		present_ender_extra_word = press(present_ender, 'S' if 'T' in present_ender else 'T')
+		past_ender_extra_word    = press(past_ender,    'S' if 'T' in present_ender else 'T')
 
 	present_verb_data = verb_forms[verb][0]
 	past_verb_data    = verb_forms[verb][1]
@@ -251,4 +252,5 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 			sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
 		verb_enders[ender] = (tense, verb_data)
 
+# pprint.pprint(ENDERS, width=180)
 pprint.pprint(verb_enders, width=180)
