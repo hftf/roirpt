@@ -101,6 +101,19 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 <!-- constr- SKR vs. const- ST? -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
 
+#### More complex compound starters?
+
+Recently thinking about adding a few more starters, inspired by [wooningeire](https://github.com/wooningeire/plover-dicts.pub/tree/pub). Most seem rare though (not counting productive prefixes like in-). My dictionary already contains some ad-hoc solutions (like <kbd>SPWO\*LG</kbd> anthology) that try to get away with dropping consonants (<kbd>^THAOUFT</kbd> enthusiast), which I mostly dislike.
+
+Type | Starter | Steno | Explanation | Example
+-|-|-|-|-
+MF   | <samp>amph-  emph-</samp>   | <kbd>KPWH</kbd><br /><kbd>TPW</kbd>  | <kbd>KPW</kbd>  + <kbd>H</kbd> | amphibious, emphatic
+NTH  | <samp>anth-  enth-</samp>   | <kbd>SPWH</kbd>  | <kbd>SPW</kbd>  + <kbd>H</kbd> | anthem, anthology, anthropology, enthrone
+NKP  | <samp>incap- incomp-</samp> | <kbd>^TKP</kbd>  | <kbd>^TKP</kbd> (<kbd>P</kbd> reused) | incapable, incapacitate, incompatible, incompliant
+NKSP | <samp>inconsp-</samp>       | <kbd>^STKP</kbd> | <kbd>^TKP</kbd> + <kbd>S</kbd> | inconspicuous
+NKV  | <samp>inconv-</samp>        | <kbd>^TKPW</kbd> | <kbd>^TKP</kbd> + <kbd>W</kbd> | inconvenient
+NCH  | <samp>ench- incoh-</samp>   | <kbd>^TKPH</kbd> | <kbd>^TKP</kbd> + <kbd>H</kbd> | enchant, incoherent
+
 #### Caveats
 
 Sometimes the dictionary includes:
