@@ -1,8 +1,9 @@
 import re
 from collections import OrderedDict
-from jeff_phrasing import TO_BE, ENDERS
 import pprint
 import sys
+
+# Part I: Verb forms
 
 irregular_verb_data = {
 	# Irregular verbs with 5+ forms (unpredictable -s forms, predictable -ing form)
@@ -86,9 +87,11 @@ def inflect(verb, suffix, exceptions=None):
 
 	return verb + suffix
 
-# design constraints:
-# verbs with T in present ender paired with another verb that doesn't have an extra word
-# verbs with Z in present ender cannot have extra word (only due to finger gymnastics)
+# Part 2: Ender data
+
+# Theory design guidelines:
+# 1. verbs with T in present ender should pair with another verb that doesn't have an extra word
+# 2. verbs with Z in present ender should not have extra word (only due to finger gymnastics)
 verb_ender_data = {
 	# Auxiliary verbs
 	'':           ('',       None  ),
@@ -203,6 +206,9 @@ for verb in verb_ender_data.keys():
 
 	verb_forms[verb] = [present_forms, past_forms]
 
+# adds key to stroke
+# if result has 3 of 4 pinky keys, then returns both it and version with all 4 (TSDZ)
+# TODO: doesn't handle unergonomic diagonals with 2 pinky keys (TZ, SD)
 def press(stroke, key):
 	if key in stroke:
 		sys.stderr.write(f'{key} already in {stroke}\n')
@@ -211,20 +217,21 @@ def press(stroke, key):
 	candidate = re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)
 	if sum(k in candidate for k in 'TSDZ') == 3 \
 		and not candidate == 'TDZ': # exception to avoid 'used to' 'had to' conflict
-		# print(f'{candidate} not ergonomic')
 		return [candidate, re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)]
 	return [candidate]
+# adds space before every form
 def prespace(data):
 	if type(data) == str:
 		return ' '[:bool(data)] + data
 	else:
 		return {k: ' ' + v for k, v in data.items()}
+# adds space and word after every form
 def postword(data, extra_word):
 	if type(data) == str:
 		return data + ' ' + extra_word
 	else:
 		return {k: v + ' ' + extra_word for k, v in data.items()}
-# flat and unique
+# flattens sublists, then gets unique items
 def fu(lists):
 	return list(set([i for l in lists for i in l]))
 
@@ -259,5 +266,5 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 				sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
 			verb_enders[ender] = (tense, verb_data)
 
-# pprint.pprint(ENDERS, width=180)
-pprint.pprint(verb_enders, width=180)
+# now verb_enders can be imported in jeff_phrasing.py as drop-in replacement for ENDERS
+# pprint.pprint(verb_enders, width=180)
