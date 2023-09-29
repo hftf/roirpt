@@ -2,6 +2,7 @@ import re
 from collections import OrderedDict
 from jeff_phrasing import TO_BE
 import pprint
+import sys
 
 irregular_verb_data = {
 	# Irregular verbs with 5+ forms (unpredictable -s forms, predictable -ing form)
@@ -202,7 +203,7 @@ for verb in verb_ender_data.keys():
 
 def press(stroke, key):
 	if key in stroke:
-		print(f'{key} already in {stroke}')
+		sys.stderr.write(f'{key} already in {stroke}\n')
 		return stroke
 	# candidate = stroke + key
 	candidate = re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)
@@ -220,6 +221,12 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 
 	present_verb_data = verb_forms[verb][0]
 	past_verb_data    = verb_forms[verb][1]
+	if type(present_verb_data) == str:
+		present_verb_data = ' '[:bool(present_verb_data)] + present_verb_data
+		past_verb_data    = ' '[:bool(present_verb_data)] + past_verb_data
+	else:
+		present_verb_data = {k: ' ' + v for k, v in present_verb_data.items()}
+		past_verb_data    = {k: ' ' + v for k, v in past_verb_data.items()}
 	queue = [
 		('present', present_ender,            present_verb_data),
 		('past',    past_ender,               past_verb_data),
@@ -239,7 +246,7 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 
 	for (tense, ender, verb_data) in queue:
 		if ender in verb_enders:
-			print(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}')
+			sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
 		verb_enders[ender] = (tense, verb_data)
 
 pprint.pprint(verb_enders, width=180)
