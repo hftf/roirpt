@@ -206,12 +206,12 @@ for verb in verb_ender_data.keys():
 def press(stroke, key):
 	if key in stroke:
 		sys.stderr.write(f'{key} already in {stroke}\n')
-		return stroke
+		return [stroke]
 	# candidate = stroke + key
-	candidate = re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)
+	candidate = [re.sub(re.sub(rf'.*{key}.', '', 'T?S?D?Z?$'), rf'{key}\g<0>', stroke, 1)]
 	if sum(k in candidate for k in 'TSDZ') == 3 and not candidate == 'TDZ':
 		# print(f'{candidate} not ergonomic')
-		candidate = re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)
+		candidate += re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)
 	return candidate
 def prespace(data):
 	if type(data) == str:
@@ -223,32 +223,40 @@ def postword(data, extra_word):
 		return data + ' ' + extra_word
 	else:
 		return {k: v + ' ' + extra_word for k, v in data.items()}
+# flat and unique
+def fu(lists):
+	return list(set([i for l in lists for i in l]))
 
 verb_enders = {}# OrderedDict() #{}
 for verb, (verb_ender, extra_word) in verb_ender_data.items():
 	present_ender = verb_ender
-	past_ender    = press(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D')
+	past_enders   = fu([
+		press(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D'),
+		press(present_ender, 'D'),
+	])
 	if extra_word:
-		present_ender_extra_word = press(present_ender, 'S' if 'T' in present_ender else 'T')
-		past_ender_extra_word    = press(past_ender,    'S' if 'T' in present_ender else 'T')
+		present_ender_extra_word =   press(present_ender, 'S' if 'T' in present_ender else 'T')
+		past_enders_extra_word = fu([press(past_ender,    'S' if 'T' in present_ender else 'T') for past_ender in past_enders])
 
 	present_verb_data, past_verb_data = map(prespace, verb_forms[verb])
 	queue = [
 		('present', present_ender,            present_verb_data),
-		('past',    past_ender,               past_verb_data),
+		('past',    past_enders,              past_verb_data),
 	]
 	if extra_word:
 		present_verb_data_extra_word = postword(present_verb_data, extra_word)
 		past_verb_data_extra_word    = postword(past_verb_data,    extra_word)
 		queue += [
 			('present', present_ender_extra_word, present_verb_data_extra_word),
-			('past',    past_ender_extra_word,    past_verb_data_extra_word),
+			('past',    past_enders_extra_word,   past_verb_data_extra_word),
 		]
 
-	for (tense, ender, verb_data) in queue:
-		if ender in verb_enders:
-			sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
-		verb_enders[ender] = (tense, verb_data)
+	for (tense, enders, verb_data) in queue:
+		for ender in enders if type(enders) is list else [enders]:
+			sys.stderr.write(f'{verb:10} {ender:10} {tense}\n')
+			if ender in verb_enders:
+				sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
+			verb_enders[ender] = (tense, verb_data)
 
 # pprint.pprint(ENDERS, width=180)
 pprint.pprint(verb_enders, width=180)
