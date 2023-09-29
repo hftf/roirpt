@@ -4,9 +4,16 @@
 
 import re
 
-# Following two lines of jank needed because Plover doesn't know how to import
-import os, sys, appdirs
-sys.path.append(os.path.join(appdirs.user_data_dir('plover', 'plover'), 'jeff_phrasing'))
+# Following ten lines of jank needed because Plover doesn't know how to import
+try:
+	import plover
+	plover_dir = plover.oslayer.config.CONFIG_DIR
+except:
+	import appdirs
+	plover_dir = appdirs.user_data_dir('plover', 'plover')
+import os, sys
+jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
+sys.path.append(jeff_dir)
 from verb_data import verb_enders as ENDERS
 
 LONGEST_KEY = 1
