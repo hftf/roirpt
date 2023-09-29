@@ -94,11 +94,11 @@ verb_ender_data = {
 	'':           ('',       None  ),
 	'can':        ('BGS',    None  ),
 	'may':        ('PL',     'be'  ),
-	'must':       ('PBLGS',  'be'  ), # no past tense: taken by just
+	'must':       ('PBLGS',  'be'  ), # no past tense: taken by 'just'
 	'shall':      ('RBL',    None  ),
 	'will':       ('RBGS',   None  ),
 	# adverbs
-	'just':       ('PBLGSZ', None  ),
+	'just':       ('PBLGSZ', None  ), # list after 'must' to override
 	'really':     ('RLG',    None  ),
 
 	'ask':        ('RB',     None  ),
