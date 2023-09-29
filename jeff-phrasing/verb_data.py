@@ -213,35 +213,33 @@ def press(stroke, key):
 		# print(f'{candidate} not ergonomic')
 		candidate = re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)
 	return candidate
+def prespace(data):
+	if type(data) == str:
+		return ' '[:bool(data)] + data
+	else:
+		return {k: ' ' + v for k, v in data.items()}
+def postword(data, extra_word):
+	if type(data) == str:
+		return data + ' ' + extra_word
+	else:
+		return {k: v + ' ' + extra_word for k, v in data.items()}
 
 verb_enders = {}# OrderedDict() #{}
 for verb, (verb_ender, extra_word) in verb_ender_data.items():
-	present_ender            = verb_ender
-	past_ender               = press(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D')
+	present_ender = verb_ender
+	past_ender    = press(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D')
 	if extra_word:
 		present_ender_extra_word = press(present_ender, 'S' if 'T' in present_ender else 'T')
 		past_ender_extra_word    = press(past_ender,    'S' if 'T' in present_ender else 'T')
 
-	present_verb_data = verb_forms[verb][0]
-	past_verb_data    = verb_forms[verb][1]
-	if type(present_verb_data) == str:
-		present_verb_data = ' '[:bool(present_verb_data)] + present_verb_data
-		past_verb_data    = ' '[:bool(present_verb_data)] + past_verb_data
-	else:
-		present_verb_data = {k: ' ' + v for k, v in present_verb_data.items()}
-		past_verb_data    = {k: ' ' + v for k, v in past_verb_data.items()}
+	present_verb_data, past_verb_data = map(prespace, verb_forms[verb])
 	queue = [
 		('present', present_ender,            present_verb_data),
 		('past',    past_ender,               past_verb_data),
 	]
 	if extra_word:
-		if type(present_verb_data) == str:
-			present_verb_data_extra_word = present_verb_data + ' ' + extra_word
-			past_verb_data_extra_word    = past_verb_data    + ' ' + extra_word
-		else:
-			present_verb_data_extra_word = {k: v + ' ' + extra_word for k, v in present_verb_data.items()}
-			past_verb_data_extra_word    = {k: v + ' ' + extra_word for k, v in past_verb_data.items()}
-
+		present_verb_data_extra_word = postword(present_verb_data, extra_word)
+		past_verb_data_extra_word    = postword(past_verb_data,    extra_word)
 		queue += [
 			('present', present_ender_extra_word, present_verb_data_extra_word),
 			('past',    past_ender_extra_word,    past_verb_data_extra_word),
