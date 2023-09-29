@@ -4,6 +4,11 @@
 
 import re
 
+# Following two lines of jank needed because Plover doesn't know how to import
+import os, sys, appdirs
+sys.path.append(os.path.join(appdirs.user_data_dir('plover', 'plover'), 'jeff_phrasing'))
+from verb_data import verb_enders as ENDERS
+
 LONGEST_KEY = 1
 
 PARTS_MATCHER = re.compile(
@@ -213,7 +218,7 @@ STRUCTURES = {
 	"UF": ("!* just", True, None),
 } 
 
-ENDERS = {
+ENDERS_OLD = {
 	"": ("present", ""),
 	"D": ("past", ""),
 
