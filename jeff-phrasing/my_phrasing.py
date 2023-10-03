@@ -16,7 +16,7 @@ MODALS = {
 	'AO': 'will',
 	'O':  'shall',
 }
-NEGATIVE_CONTRACTIONS = {'will': 'wo', 'can': 'ca', 'shall': 'sha'}
+NEGATIVE_CONTRACTION_BASES = {'will': 'wo', 'can': 'ca', 'shall': 'sha'}
 CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
@@ -87,19 +87,15 @@ def obj_to_phrase(obj):
 		obj['subject'] = 'to'
 		obj['question'] = obj['negation']
 	if obj['modal']:
-		phrase.append(obj['modal'])
-		selects.append('infinitive')
+		phrase.append(obj['modal']), selects.append('infinitive')
 	elif obj['question'] or obj['negation']:
 		if not obj['aspect_have'] and not obj['aspect_be'] and finite:
 			if obj['verb'] != 'be' or not obj['verb']: # do-support
-				phrase.append('do')
-				selects.append('infinitive')
+				phrase.append('do'), selects.append('infinitive')
 	if obj['aspect_have']:
-		phrase.append('have')
-		selects.append('en')
+		phrase.append('have'),       selects.append('en')
 	if obj['aspect_be']:
-		phrase.append('be')
-		selects.append('ing')
+		phrase.append('be'),         selects.append('ing')
 	if obj['verb']:
 		phrase.append(obj['verb'])
 
@@ -117,8 +113,8 @@ def obj_to_phrase(obj):
 
 	if obj['negation']:
 		if obj['contraction'] and finite and phrase[0] != 'am':
-			if phrase[0] in NEGATIVE_CONTRACTIONS:
-				phrase[0] = NEGATIVE_CONTRACTIONS[phrase[0]]
+			if phrase[0] in NEGATIVE_CONTRACTION_BASES:
+				phrase[0] = NEGATIVE_CONTRACTION_BASES[phrase[0]]
 			phrase[0] += "n't"
 		elif phrase[0] == 'can':
 			phrase[0] += 'not'
