@@ -283,6 +283,7 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 			if ender in verb_enders:
 				sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
 			verb_enders[ender] = (tense, verb_data, verb, extra_word)
+			verb_enders[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word}
 
 # now verb_enders can be imported in jeff_phrasing.py as drop-in replacement for ENDERS
 # pprint.pprint(verb_enders, width=180)

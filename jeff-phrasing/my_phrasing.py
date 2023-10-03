@@ -12,7 +12,7 @@ STROKE_PARTS = re.compile(r'''\#?
 	re.X)
 
 MODALS = {'': None, 'A': 'can', 'AO': 'will', 'O': 'shall'}
-NEGATIVE_CONTRACTION_BASES = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
+NEGATIVE_CONTRACTIONS = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
 CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
@@ -23,10 +23,9 @@ def stroke_to_obj(stroke):
 	data = {}
 	# SIMPLE STARTER
 	simple_starter = starter + modal
+	simple_pronoun = negation + aspect
 	if simple_starter in noun_data.SIMPLE_STARTERS:
 		data['cosubordinator'] = noun_data.SIMPLE_STARTERS[simple_starter]
-		
-		simple_pronoun = negation + aspect
 		if simple_pronoun in noun_data.SIMPLE_PRONOUNS:
 			data.update(noun_data.noun_data[noun_data.SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
@@ -42,10 +41,7 @@ def stroke_to_obj(stroke):
 		raise KeyError(f'Starter {starter} not found')
 
 	if ender in verb_data.verb_enders:
-		vd = verb_data.verb_enders[ender]
-		data['tense']      = vd[0]
-		data['verb']       = vd[2]
-		data['extra_word'] = vd[3]
+		data.update(verb_data.verb_enders[ender])
 	else:
 		raise KeyError(f'Ender {ender} not found')
 
@@ -87,8 +83,8 @@ def obj_to_phrase(obj):
 
 	if negation:
 		if contract and finite and phrase[0] != 'am':
-			if phrase[0] in NEGATIVE_CONTRACTION_BASES:
-				phrase[0] = NEGATIVE_CONTRACTION_BASES[phrase[0]]
+			if phrase[0] in NEGATIVE_CONTRACTIONS:
+				phrase[0] = NEGATIVE_CONTRACTIONS[phrase[0]]
 			phrase[0] += "n't"
 		elif phrase[0] == 'can':
 			phrase[0] += 'not'
