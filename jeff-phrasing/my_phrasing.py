@@ -52,7 +52,7 @@ def stroke_to_obj(stroke):
 		# data['tense']       = 'D' in ender
 
 	else:
-		raise KeyError('Starter not found')
+		raise KeyError(f'Starter {starter} not found')
 
 	if ender in verb_data.verb_enders:
 		vd = verb_data.verb_enders[ender]
@@ -60,7 +60,7 @@ def stroke_to_obj(stroke):
 		data['verb']       = vd[2]
 		data['extra_word'] = vd[3]
 	else:
-		raise KeyError('Ender not found')
+		raise KeyError(f'Ender {ender} not found')
 
 	print(data)
 	return data

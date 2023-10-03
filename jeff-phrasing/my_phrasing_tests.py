@@ -43,6 +43,9 @@ tests = {
 	'^KPWRARLTD':  'could you tell',
 	'^STWR-RPL':   'to remember',
 	'^STWR*RPL':   'not to remember',
+	'TWHA*':       'they can not',
+	'TWH-RPD':     'they did',
+	'SKWHR*D':     'she did not',
 }
 
 for test, expected in tests.items():
