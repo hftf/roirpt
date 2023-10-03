@@ -24,27 +24,20 @@ def stroke_to_obj(stroke):
 	# SIMPLE STARTER
 	simple_starter = starter + modal
 	if simple_starter in noun_data.SIMPLE_STARTERS:
-		cosubordinator = noun_data.SIMPLE_STARTERS[simple_starter]
-		data.update({'cosubordinator': cosubordinator})
+		data['cosubordinator'] = noun_data.SIMPLE_STARTERS[simple_starter]
 		
 		simple_pronoun = negation + aspect
 		if simple_pronoun in noun_data.SIMPLE_PRONOUNS:
-			subject = noun_data.SIMPLE_PRONOUNS[simple_pronoun]
-			data.update(noun_data.noun_data[subject])
-
+			data.update(noun_data.noun_data[noun_data.SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
 	elif starter in noun_data.STARTERS:
-		subject = noun_data.STARTERS[starter]
-		data.update(noun_data.noun_data[subject])
-
+		data.update(noun_data.noun_data[noun_data.STARTERS[starter]])
 		data['have']     = 'E' in aspect
 		data['be']       = 'U' in aspect
 		data['modal']    = MODALS[modal]
 		data['question'] = question == '^'
 		data['negation'] = negation == '*'
 		data['contract'] = contract == '+'
-		# data['tense']    = 'D' in ender
-
 	else:
 		raise KeyError(f'Starter {starter} not found')
 

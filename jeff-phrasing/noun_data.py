@@ -34,6 +34,7 @@ STARTERS = {
 	'STWR':    '2',
 }
 
+# TODO rename 'simple'
 SIMPLE_STARTERS = {
 	# subordinators / complementizers
 	'STHA':  'that',
