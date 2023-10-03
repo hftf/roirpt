@@ -80,30 +80,33 @@ def pick_lookup(vs, ks, d):
 			return k
 
 def obj_to_phrase(obj):
+	subject, person, number, tense, modal, aspect_have, aspect_be, verb, question, negation, contraction, cosubordinator, extra_word = (obj.get(key, '') for key in \
+	'subject, person, number, tense, modal, aspect_have, aspect_be, verb, question, negation, contraction, cosubordinator, extra_word'.split(', '))
+
 	phrase = []
-	finite = not (obj['subject'] == '' and obj['question'])
+	finite = not (subject == '' and question)
 	selects = ['finite'] if finite else ['infinitive']
 	if not finite:
-		obj['subject'] = 'to'
-		obj['question'] = obj['negation']
-	if obj['modal']:
-		phrase.append(obj['modal']), selects.append('infinitive')
-	elif obj['question'] or obj['negation']:
-		if not obj['aspect_have'] and not obj['aspect_be'] and finite:
-			if obj['verb'] != 'be' or not obj['verb']: # do-support
+		subject = 'to'
+		question = negation
+	if modal:
+		phrase.append(modal), selects.append('infinitive')
+	elif question or negation:
+		if not aspect_have and not aspect_be and finite:
+			if verb != 'be' or not verb: # do-support
 				phrase.append('do'), selects.append('infinitive')
-	if obj['aspect_have']:
+	if aspect_have:
 		phrase.append('have'),       selects.append('en')
-	if obj['aspect_be']:
+	if aspect_be:
 		phrase.append('be'),         selects.append('ing')
-	if obj['verb']:
-		phrase.append(obj['verb'])
+	if verb:
+		phrase.append(verb)
 
 	for i, verb in enumerate(phrase):
 		select = selects[i]
 		if select == 'finite':
-			select = obj['person'] + 'p' + obj['number'][0]
-			tense = 0 + (obj['tense'] == 'past')
+			select = person + 'p' + number[0]
+			tense = 0 + (tense == 'past')
 		else:
 			tense = 0
 		forms = verb_data.verb_forms[verb][tense]
@@ -111,8 +114,8 @@ def obj_to_phrase(obj):
 			select = None
 		phrase[i] = forms[select]
 
-	if obj['negation']:
-		if obj['contraction'] and finite and phrase[0] != 'am':
+	if negation:
+		if contraction and finite and phrase[0] != 'am':
 			if phrase[0] in NEGATIVE_CONTRACTION_BASES:
 				phrase[0] = NEGATIVE_CONTRACTION_BASES[phrase[0]]
 			phrase[0] += "n't"
@@ -122,18 +125,18 @@ def obj_to_phrase(obj):
 			phrase.insert(1 if finite else 0, 'not')
 
 	# inversion
-	if obj['subject']:
-		phrase.insert(1 if obj['question'] else 0, obj['subject'])
+	if subject:
+		phrase.insert(1 if question else 0, subject)
 
-		if obj['contraction'] and not obj['question']:
+		if contraction and not question:
 			if phrase[1] in CONTRACTIONS:
 				phrase[0] = phrase[0] + CONTRACTIONS[phrase.pop(1)]
 
-	if obj['cosubordinator']:
-		phrase.insert(0, obj['cosubordinator'])
+	if cosubordinator:
+		phrase.insert(0, cosubordinator)
 
-	if obj['extra_word']:
-		phrase.append(obj['extra_word'])
+	if extra_word:
+		phrase.append(extra_word)
 
 	return ' '.join(phrase)
 
