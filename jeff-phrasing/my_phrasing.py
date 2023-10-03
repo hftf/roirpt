@@ -130,6 +130,25 @@ def obj_to_phrase(obj):
 	if obj['subject']:
 		phrase.insert(1 if obj['question'] else 0, obj['subject'])
 
+		if obj['contraction'] and not obj['question']:
+			match phrase[1]:
+				case 'am':
+					phrase[1] = "'m"
+				case 'are':
+					phrase[1] = "'re"
+				case 'is' | 'has':
+					phrase[1] = "'s"
+				case 'will':
+					phrase[1] = "'ll"
+				case 'would' | 'had':
+					phrase[1] = "'d"
+				case 'have':
+					phrase[1] = "'ve"
+
+			if phrase[1][0] == "'":
+				phrase[0] = phrase[0] + phrase.pop(1)
+
+
 	if obj['cosubordinator']:
 		phrase.insert(0, obj['cosubordinator'])
 
