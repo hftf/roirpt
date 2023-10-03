@@ -1,4 +1,4 @@
-import noun_data, verb_data, jeff_phrasing
+import noun_data, verb_data
 import re
 
 STROKE_PARTS = re.compile(r'''\#?
@@ -16,8 +16,6 @@ NEGATIVE_CONTRACTION_BASES = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
 CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
-jeff_phrasing.SIMPLE_PRONOUNS[''] = ('', None, None)
-
 def stroke_to_obj(stroke):
 	stroke = STROKE_PARTS.match(stroke)
 	question, contract, starter, modal, negation, aspect, ender = stroke.groups()
@@ -25,13 +23,13 @@ def stroke_to_obj(stroke):
 	data = {}
 	# SIMPLE STARTER
 	simple_starter = starter + modal
-	if simple_starter in jeff_phrasing.SIMPLE_STARTERS:
-		cosubordinator = jeff_phrasing.SIMPLE_STARTERS[simple_starter][0].strip()
+	if simple_starter in noun_data.SIMPLE_STARTERS:
+		cosubordinator = noun_data.SIMPLE_STARTERS[simple_starter]
 		data.update({'cosubordinator': cosubordinator})
 		
 		simple_pronoun = negation + aspect
-		if simple_pronoun in jeff_phrasing.SIMPLE_PRONOUNS:
-			subject = jeff_phrasing.SIMPLE_PRONOUNS[simple_pronoun][0]
+		if simple_pronoun in noun_data.SIMPLE_PRONOUNS:
+			subject = noun_data.SIMPLE_PRONOUNS[simple_pronoun]
 			data.update(noun_data.noun_data[subject])
 
 		data['have']     = False

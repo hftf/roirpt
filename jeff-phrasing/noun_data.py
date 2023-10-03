@@ -33,3 +33,31 @@ STARTERS = {
 	'STKPWHR': '',
 	'STWR':    '2',
 }
+
+SIMPLE_STARTERS = {
+	# subordinators / complementizers
+	'STHA':  'that',
+	'STPA':  'if',
+	'SWH':   'when',
+	'SWHA':  'what',
+	'SWHR':  'where',
+	'SWHO':  'who',
+	'STKWH': 'why',
+	# STWHR  whether ?
+
+	# coordinators
+	'SPWH':  'but',
+	'SKP':   'and',
+	# SKPR   or ?
+}
+
+SIMPLE_PRONOUNS = {
+	'E':   'he',
+	'*E':  'she',
+	'U':   'you',
+	'*U':  'they',
+	'EU':  'I',
+	'*EU': 'we',
+	'*':   'it',
+	'':    '',
+}
