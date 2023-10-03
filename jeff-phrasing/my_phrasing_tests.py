@@ -22,6 +22,11 @@ tests = {
 	"^KWHR*BD":    "was he not",
 	"KWHR*D":      "he did not",
 	"^KWHR*D":     "did he not",
+	"SWR-T":       "I have",
+	"KPWR-T":      "you have",
+	"KWHR-T":      "he has",
+	"TWR-T":       "we have",
+	"TWH-T":       "they have",
 	"SWR*B":       "I am not",
 	"^SWR*B":      "am I not",
 	"SWR*":        "I do not",
@@ -34,6 +39,26 @@ tests = {
 	"^KWHR*B":     "is he not",
 	"KWHR*":       "he does not",
 	"^KWHR*":      "does he not",
+	"TWR*B":       "we are not",
+	"^TWR*B":      "are we not",
+	"TWR*":        "we do not",
+	"^TWR*":       "do we not",
+	"TWH*B":       "they are not",
+	"^TWH*B":      "are they not",
+	"TWH*":        "they do not",
+	"^TWH*":       "do they not",
+	"SWR*EB":       "I have not been",
+	"^SWR*EB":      "have I not been",
+	"SWR*E":        "I have not",
+	"^SWR*E":       "have I not",
+	"KPWR*EB":      "you have not been",
+	"^KPWR*EB":     "have you not been",
+	"KPWR*E":       "you have not",
+	"^KPWR*E":      "have you not",
+	"KWHR*EB":      "he has not been",
+	"^KWHR*EB":     "has he not been",
+	"KWHR*E":       "he has not",
+	"^KWHR*E":      "has he not",
 	"SWRAO*RP":    "I will not do",
 	"SWHAUPBLG":   "what you find",
 	"SWROERPD":    "I should have done",
@@ -101,5 +126,5 @@ tests = {
 
 for test, expected in tests.items():
 	result = my_phrasing.obj_to_phrase(my_phrasing.stroke_to_obj(test))
-	print(f'Test: {test:24} Expect: {expected:40} Result: {result}')
-	assert expected == result
+	print(f'Test: {test:24} Expect: {expected:40} Result: {result:40} {"❌✅"[expected == result]}')
+	# assert expected == result

@@ -176,53 +176,31 @@ for verb in verb_ender_data.keys():
 	else:
 		exceptions = {}
 	if type(exceptions) in [str, bool]:
-		present_forms = verb
-		past_forms    = inflect(verb, 'ed', exceptions)
-
-		present_forms = {
-			None: verb,
-			'ed': inflect(verb, 'ed', exceptions),
-		}
-		past_forms = {
-			None: inflect(verb, 'ed', exceptions),
+		forms = {
+			'': verb,
 			'ed': inflect(verb, 'ed', exceptions),
 		}
 
 	else:
-		present_forms = {
-			None:                 inflect(verb, ''   , exceptions),
-			'3ps':                inflect(verb, 's'  , exceptions),
-			'present-participle': inflect(verb, 'ing', exceptions),
-			'past-participle':    inflect(verb, 'en' , exceptions),
-			'ing':                inflect(verb, 'ing', exceptions),
-			'en':                 inflect(verb, 'en' , exceptions),
-			'ed':                 inflect(verb, 'ed' , exceptions),
-			'infinitive':         verb,
+		forms = {
+			'3':   inflect(verb, 's'  , exceptions),
+			'ing': inflect(verb, 'ing', exceptions),
+			'en':  inflect(verb, 'en' , exceptions),
+			'ed':  inflect(verb, 'ed' , exceptions),
+			'':    verb,
 		}
 		if 's1' in exceptions:
-			present_forms.update({
-				None:   exceptions['s'],
-				'1ps':  exceptions['s1'],
-				'3ps':  exceptions['s3'],
-				'root': verb,
-			})
-		past_forms = {
-			None:                 inflect(verb, 'ed' , exceptions),
-			'ed':                 inflect(verb, 'ed' , exceptions),
-			'root':               inflect(verb, ''   , exceptions),
-			'present-participle': inflect(verb, 'ing', exceptions),
-			'past-participle':    inflect(verb, 'en' , exceptions),
-			'ing':                inflect(verb, 'ing', exceptions),
-			'en':                 inflect(verb, 'en' , exceptions),
-			'infinitive':         verb,
-		}
-		if 'ed13' in exceptions:
-			past_forms.update({
-				'1ps': exceptions['ed13'],
-				'3ps': exceptions['ed13'],
+			forms.update({
+				'1p':  exceptions['s'],
+				'2p':  exceptions['s'],
+				'3p':  exceptions['s'],
+				'1':   exceptions['s1'],
+				'3':   exceptions['s3'],
+				'ed1': exceptions['ed13'],
+				'ed3': exceptions['ed13'],
 			})
 
-	verb_forms[verb] = [present_forms, past_forms]
+	verb_forms[verb] = forms
 
 # adds key to stroke
 # if result has 3 of 4 pinky keys, then returns both it and version with all 4 (TSDZ)
@@ -237,18 +215,6 @@ def press(stroke, key):
 		and not candidate == 'TDZ': # exception to avoid 'used to' 'had to' conflict
 		return [candidate, re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)]
 	return [candidate]
-# adds space before every form
-def prespace(data):
-	if type(data) == str:
-		return ' '[:bool(data)] + data
-	else:
-		return {k: ' '[:v is not ''] + v for k, v in data.items()}
-# adds space and word after every form
-def postword(data, extra_word):
-	if type(data) == str:
-		return data + ' ' + extra_word
-	else:
-		return {k: v + ' ' + extra_word for k, v in data.items()}
 # flattens sublists, then gets unique items
 def fu(lists):
 	return list(set([i for l in lists for i in l]))
@@ -264,25 +230,21 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 		present_ender_extra_word =   press(present_ender, 'S' if 'T' in present_ender else 'T')
 		past_enders_extra_word = fu([press(past_ender,    'S' if 'T' in past_ender else 'T') for past_ender in past_enders])
 
-	present_verb_data, past_verb_data = map(prespace, verb_forms[verb])
 	queue = [
-		('present', present_ender,            None, present_verb_data),
-		('past',    past_enders,              None, past_verb_data),
+			('',   present_ender,            None),
+			('ed', past_enders,              None),
 	]
 	if extra_word:
-		present_verb_data_extra_word = postword(present_verb_data, extra_word)
-		past_verb_data_extra_word    = postword(past_verb_data,    extra_word)
 		queue += [
-			('present', present_ender_extra_word, extra_word, present_verb_data_extra_word),
-			('past',    past_enders_extra_word,   extra_word, past_verb_data_extra_word),
+			('',   present_ender_extra_word, extra_word),
+			('ed', past_enders_extra_word,   extra_word),
 		]
 
-	for (tense, enders, extra_word, verb_data) in queue:
+	for (tense, enders, extra_word) in queue:
 		for ender in enders if type(enders) is list else [enders]:
 			# sys.stderr.write(f'{verb:10} {ender:10} {tense}\n')
 			if ender in verb_enders:
 				sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
-			verb_enders[ender] = (tense, verb_data, verb, extra_word)
 			verb_enders[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word}
 
 # now verb_enders can be imported in jeff_phrasing.py as drop-in replacement for ENDERS

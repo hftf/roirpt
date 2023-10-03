@@ -54,14 +54,14 @@ def obj_to_phrase(obj):
 
 	phrase = []
 	finite = not (subject == '' and question)
-	selects = ['finite' if finite else 'infinitive']
+	selects = [tense + person + 'p'[:number is 'plural'] if finite else '']
 	if not finite:
 		subject = 'to'
 		question = negation
 	if modal:
-		phrase.append(modal),  selects.append('infinitive')
+		phrase.append(modal),  selects.append('')
 	elif (question or negation) and not (have or be) and finite and (verb not in ['be', None]):
-		phrase.append('do'),   selects.append('infinitive') # do-support
+		phrase.append('do'),   selects.append('') # do-support
 	if have:
 		phrase.append('have'), selects.append('en')
 	if be:
@@ -71,14 +71,9 @@ def obj_to_phrase(obj):
 
 	for i, verb in enumerate(phrase):
 		select = selects[i]
-		if select == 'finite':
-			select = person + 'p' + number[0]
-			tense = tense == 'past'
-		else:
-			tense = 0
-		forms = verb_data.verb_forms[verb][tense]
-		if select not in forms:
-			select = None
+		forms = verb_data.verb_forms[verb]
+		if not select in forms:
+			select = select.rstrip('123p')
 		phrase[i] = forms[select]
 
 	if negation:
