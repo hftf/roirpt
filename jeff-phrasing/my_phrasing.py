@@ -16,6 +16,10 @@ MODALS = {
 	'AO': 'will',
 	'O':  'shall',
 }
+NEGATIVE_CONTRACTIONS = {'will': 'wo', 'can': 'ca', 'shall': 'sha'}
+CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
+	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
+
 jeff_phrasing.SIMPLE_PRONOUNS[''] = ('', None, None)
 
 def stroke_to_obj(stroke):
@@ -77,14 +81,11 @@ def pick_lookup(vs, ks, d):
 
 def obj_to_phrase(obj):
 	phrase = []
-	if obj['subject'] == '' and obj['question']: # infinitive is special case
-		finite = False
-		selects = ['infinitive']
+	finite = not (obj['subject'] == '' and obj['question'])
+	selects = ['finite'] if finite else ['infinitive']
+	if not finite:
 		obj['subject'] = 'to'
 		obj['question'] = obj['negation']
-	else:
-		finite = True
-		selects = ['finite']
 	if obj['modal']:
 		phrase.append(obj['modal'])
 		selects.append('infinitive')
@@ -102,26 +103,22 @@ def obj_to_phrase(obj):
 	if obj['verb']:
 		phrase.append(obj['verb'])
 
-	for i, mav_base in enumerate(phrase):
+	for i, verb in enumerate(phrase):
 		select = selects[i]
 		if select == 'finite':
 			select = obj['person'] + 'p' + obj['number'][0]
 			tense = 0 + (obj['tense'] == 'past')
 		else:
 			tense = 0
-		forms = verb_data.verb_forms[mav_base][tense]
+		forms = verb_data.verb_forms[verb][tense]
 		if select not in forms:
 			select = None
 		phrase[i] = forms[select]
 
 	if obj['negation']:
 		if obj['contraction'] and finite and phrase[0] != 'am':
-			if phrase[0] == 'will':
-				phrase[0] = 'wo'
-			elif phrase[0] == 'can':
-				phrase[0] = 'ca'
-			elif phrase[0] == 'shall':
-				phrase[0] = 'sha'
+			if phrase[0] in NEGATIVE_CONTRACTIONS:
+				phrase[0] = NEGATIVE_CONTRACTIONS[phrase[0]]
 			phrase[0] += "n't"
 		elif phrase[0] == 'can':
 			phrase[0] += 'not'
@@ -133,23 +130,8 @@ def obj_to_phrase(obj):
 		phrase.insert(1 if obj['question'] else 0, obj['subject'])
 
 		if obj['contraction'] and not obj['question']:
-			match phrase[1]:
-				case 'am':
-					phrase[1] = "'m"
-				case 'are':
-					phrase[1] = "'re"
-				case 'is' | 'has':
-					phrase[1] = "'s"
-				case 'will':
-					phrase[1] = "'ll"
-				case 'would' | 'had':
-					phrase[1] = "'d"
-				case 'have':
-					phrase[1] = "'ve"
-
-			if phrase[1][0] == "'":
-				phrase[0] = phrase[0] + phrase.pop(1)
-
+			if phrase[1] in CONTRACTIONS:
+				phrase[0] = phrase[0] + CONTRACTIONS[phrase.pop(1)]
 
 	if obj['cosubordinator']:
 		phrase.insert(0, obj['cosubordinator'])
