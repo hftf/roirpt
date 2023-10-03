@@ -1,13 +1,14 @@
 import noun_data, verb_data, jeff_phrasing
 import re
 
-STROKE_PARTS = re.compile(r'''
-	(?P<question> \^?)
-	(?P<starter>  S?T?K?P?W?H?R?)
-	(?P<modal>    A?O?)-?
-	(?P<negation> \*?)
-	(?P<aspect>   E?U?)
-	(?P<ender>    F?R?P?B?L?G?T?S?D?Z?)''',
+STROKE_PARTS = re.compile(r'''\#?
+	(?P<question>    \^?)
+	(?P<contraction> \+?)
+	(?P<starter>     S?T?K?P?W?H?R?)
+	(?P<modal>       A?O?)-?
+	(?P<negation>    \*?)
+	(?P<aspect>      E?U?)
+	(?P<ender>       F?R?P?B?L?G?T?S?D?Z?)''',
 	re.X)
 
 MODALS = {
@@ -18,7 +19,7 @@ MODALS = {
 
 def stroke_to_obj(stroke):
 	stroke = STROKE_PARTS.match(stroke)
-	question, starter, modal, negation, aspect, ender = stroke.groups()
+	question, contraction, starter, modal, negation, aspect, ender = stroke.groups()
 
 	data = {}
 	# SIMPLE STARTER
@@ -37,6 +38,7 @@ def stroke_to_obj(stroke):
 		data['modal']       = None
 		data['question']    = None
 		data['negation']    = None
+		data['contraction'] = None
 
 	# NORMAL STARTER
 	elif starter in noun_data.STARTERS:
@@ -49,6 +51,7 @@ def stroke_to_obj(stroke):
 		data['modal']       = MODALS[modal] if modal else None
 		data['question']    = question == '^'
 		data['negation']    = negation == '*'
+		data['contraction'] = contraction == '+'
 		# data['tense']       = 'D' in ender
 
 	else:
@@ -112,7 +115,16 @@ def obj_to_phrase(obj):
 		phrase[i] = forms[select]
 
 	if obj['negation']:
-		phrase.insert(1 if finite else 0, 'not') # TODO: fix cannot
+		if obj['contraction'] and finite and phrase[0] != 'am':
+			if phrase[0] == 'will':
+				phrase[0] = 'wo'
+			elif phrase[0] == 'can':
+				phrase[0] = 'ca'
+			phrase[0] += 'n\'t'
+		elif phrase[0] == 'can':
+			phrase[0] += 'not'
+		else:
+			phrase.insert(1 if finite else 0, 'not') # TODO: fix cannot
 
 	# inversion
 	if obj['subject']:
