@@ -1,19 +1,19 @@
 noun_data = {
-	'I':      {'number': 'singular', 'person': '1'},
-	'he':     {'number': 'singular', 'person': '3'},
-	'she':    {'number': 'singular', 'person': '3'},
-	'it':     {'number': 'singular', 'person': '3'},
+	'I':      {'subject': 'I',     'number': 'singular', 'person': '1'},
+	'he':     {'subject': 'he',    'number': 'singular', 'person': '3'},
+	'she':    {'subject': 'she',   'number': 'singular', 'person': '3'},
+	'it':     {'subject': 'it',    'number': 'singular', 'person': '3'},
 
-	'we':     {'number': 'plural',   'person': '1'},
-	'you':    {'number': 'plural',   'person': '2'},
-	'they':   {'number': 'plural',   'person': '3'},
+	'we':     {'subject': 'we',    'number': 'plural',   'person': '1'},
+	'you':    {'subject': 'you',   'number': 'plural',   'person': '2'},
+	'they':   {'subject': 'they',  'number': 'plural',   'person': '3'},
 
-	'this':   {'number': 'singular', 'person': '3'},
-	'that':   {'number': 'singular', 'person': '3'},
-	'there':  {'number': 'singular', 'person': '3'},
-	'there2': {'number': 'plural',   'person': '3'},
-	'':       {'number': 'singular', 'person': '3'},
-	'2':      {'number': 'plural',   'person': '3'},
+	'this':   {'subject': 'this',  'number': 'singular', 'person': '3'},
+	'that':   {'subject': 'that',  'number': 'singular', 'person': '3'},
+	'there':  {'subject': 'there', 'number': 'singular', 'person': '3'},
+	'there2': {'subject': 'there', 'number': 'plural',   'person': '3'},
+	'':       {'subject': '',      'number': 'singular', 'person': '3'},
+	'2':      {'subject': '',      'number': 'plural',   'person': '3'},
 }
 
 STARTERS = {

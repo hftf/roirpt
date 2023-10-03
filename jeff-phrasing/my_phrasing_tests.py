@@ -38,6 +38,11 @@ tests = {
 	'SWHAUPBLG':   'what you find',
 	'SWROERPD':    'I should have done',
 	'SWRO*ERPD':   'I should not have done',
+	'SKPEUBGSZ':   'and I could',
+	'TWRA*G':      'we can not go',
+	'^KPWRARLTD':  'could you tell',
+	'^STWR-RPL':   'to remember',
+	'^STWR*RPL':   'not to remember',
 }
 
 for test, expected in tests.items():

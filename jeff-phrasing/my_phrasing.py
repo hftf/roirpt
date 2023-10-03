@@ -73,20 +73,22 @@ def pick_lookup(vs, ks, d):
 			return k
 
 def obj_to_phrase(obj):
-	# ['cosubordinator',
-	# 'subject', 'modal', 'auxiliary', 'adverb', 'negation', 'verb', 'participle',
-	# 'extra_word']
 	phrase = []
 
-	subject = pick_lookup(obj, ['number', 'person'], noun_data.noun_data)
-
 	mavs = [] # queue of modals, auxiliaries, verbs
-	selects = ['finite']
+	if obj['subject'] == '' and obj['question']:
+		finite = False
+		selects = ['infinitive']
+		obj['subject'] = 'to'
+		obj['question'] = obj['negation']
+	else:
+		finite = True
+		selects = ['finite']
 	if obj['modal']:
 		mavs.append(obj['modal'])
 		selects.append('infinitive')
 	elif obj['question'] or obj['negation']:
-		if not obj['aspect_have'] and not obj['aspect_be']:
+		if not obj['aspect_have'] and not obj['aspect_be'] and finite:
 			if obj['verb'] != 'be' or not obj['verb']: # do-support
 				mavs.append('do')
 	if obj['aspect_have']:
@@ -114,10 +116,10 @@ def obj_to_phrase(obj):
 		phrase.append(mav)
 
 	if obj['negation']:
-		phrase.insert(1, 'not')
+		phrase.insert(1 if finite else 0, 'not') # TODO: fix cannot
 
 	# inversion
-	phrase.insert(1 if obj['question'] else 0, subject)
+	phrase.insert(1 if obj['question'] else 0, obj['subject'])
 
 	if obj['cosubordinator']:
 		phrase.insert(0, obj['cosubordinator'])
