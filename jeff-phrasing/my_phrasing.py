@@ -8,15 +8,16 @@ STROKE_PARTS = re.compile(r'''\#?
 	(?P<modal>       A?O?)-?
 	(?P<negation>    \*?)
 	(?P<aspect>      E?U?)
-	(?P<ender>       F?R?P?B?L?G?T?S?D?Z?)''',
+	(?P<ender>       F?R?P?B?L?G?T?S?D?Z?)''', # note: D is tense
 	re.X)
 
 MODALS = {
+	'':   None,
 	'A':  'can',
 	'AO': 'will',
 	'O':  'shall',
 }
-NEGATIVE_CONTRACTION_BASES = {'will': 'wo', 'can': 'ca', 'shall': 'sha'}
+NEGATIVE_CONTRACTION_BASES = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
 CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
@@ -41,9 +42,9 @@ def stroke_to_obj(stroke):
 		data['have']        = False
 		data['be']          = False
 		data['modal']       = None
-		data['question']    = None
-		data['negation']    = None
-		data['contraction'] = None
+		data['question']    = False
+		data['negation']    = False
+		data['contraction'] = False
 
 	# NORMAL STARTER
 	elif starter in noun_data.STARTERS:
@@ -53,7 +54,7 @@ def stroke_to_obj(stroke):
 		data['cosubordinator'] = None
 		data['have']        = 'E' in aspect
 		data['be']          = 'U' in aspect
-		data['modal']       = MODALS[modal] if modal else None
+		data['modal']       = MODALS[modal]
 		data['question']    = question == '^'
 		data['negation']    = negation == '*'
 		data['contraction'] = contraction == '+'
@@ -85,7 +86,7 @@ def obj_to_phrase(obj):
 
 	phrase = []
 	finite = not (subject == '' and question)
-	selects = ['finite'] if finite else ['infinitive']
+	selects = ['finite' if finite else 'infinitive']
 	if not finite:
 		subject = 'to'
 		question = negation
@@ -104,7 +105,7 @@ def obj_to_phrase(obj):
 		select = selects[i]
 		if select == 'finite':
 			select = person + 'p' + number[0]
-			tense = 0 + (tense == 'past')
+			tense = tense == 'past'
 		else:
 			tense = 0
 		forms = verb_data.verb_forms[verb][tense]
@@ -120,11 +121,11 @@ def obj_to_phrase(obj):
 		elif phrase[0] == 'can':
 			phrase[0] += 'not'
 		else:
-			phrase.insert(1 if finite else 0, 'not')
+			phrase.insert(finite, 'not')
 
 	# inversion
 	if subject:
-		phrase.insert(1 if question else 0, subject)
+		phrase.insert(question, subject)
 
 		if contraction and not question:
 			if phrase[1] in CONTRACTIONS:
