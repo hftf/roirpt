@@ -30,6 +30,7 @@
 "PHRORTD": "{PLOVER:FOCUS}{#Super(Shift(K))}",
 "PHRERBGT": "{PLOVER:FOCUS}{#Super(Shift(L))}",
 "PHRUP": "{PLOVER:LOOKUP}",
+"PHOEPBLG": "{:emoji}",
 "HRO*ER": "{>}",
 "HRO*ERD": "{*>}",
 "HR-FR": "{PLOVER:LOOKUP}",
