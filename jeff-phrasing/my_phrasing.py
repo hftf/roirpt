@@ -32,19 +32,11 @@ def stroke_to_obj(stroke):
 			subject = noun_data.SIMPLE_PRONOUNS[simple_pronoun]
 			data.update(noun_data.noun_data[subject])
 
-		data['have']     = False
-		data['be']       = False
-		data['modal']    = None
-		data['question'] = False
-		data['negation'] = False
-		data['contract'] = False
-
 	# NORMAL STARTER
 	elif starter in noun_data.STARTERS:
 		subject = noun_data.STARTERS[starter]
 		data.update(noun_data.noun_data[subject])
 
-		data['cosubordinator'] = None
 		data['have']     = 'E' in aspect
 		data['be']       = 'U' in aspect
 		data['modal']    = MODALS[modal]
@@ -68,7 +60,7 @@ def stroke_to_obj(stroke):
 
 
 def obj_to_phrase(obj):
-	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word = (obj[k] for k in
+	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word = (obj.get(k, False) for k in
 	'subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word'.split(', '))
 
 	phrase = []
