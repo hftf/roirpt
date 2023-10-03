@@ -16,6 +16,7 @@ MODALS = {
 	'AO': 'will',
 	'O':  'shall',
 }
+jeff_phrasing.SIMPLE_PRONOUNS[''] = ('', None, None)
 
 def stroke_to_obj(stroke):
 	stroke = STROKE_PARTS.match(stroke)
@@ -65,7 +66,6 @@ def stroke_to_obj(stroke):
 	else:
 		raise KeyError(f'Ender {ender} not found')
 
-	print(data)
 	return data
 
 
@@ -120,11 +120,13 @@ def obj_to_phrase(obj):
 				phrase[0] = 'wo'
 			elif phrase[0] == 'can':
 				phrase[0] = 'ca'
-			phrase[0] += 'n\'t'
+			elif phrase[0] == 'shall':
+				phrase[0] = 'sha'
+			phrase[0] += "n't"
 		elif phrase[0] == 'can':
 			phrase[0] += 'not'
 		else:
-			phrase.insert(1 if finite else 0, 'not') # TODO: fix cannot
+			phrase.insert(1 if finite else 0, 'not')
 
 	# inversion
 	if obj['subject']:
