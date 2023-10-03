@@ -38,8 +38,8 @@ def stroke_to_obj(stroke):
 			subject = jeff_phrasing.SIMPLE_PRONOUNS[simple_pronoun][0]
 			data.update(noun_data.noun_data[subject])
 
-		data['aspect_have'] = False
-		data['aspect_be']   = False
+		data['have']        = False
+		data['be']          = False
 		data['modal']       = None
 		data['question']    = None
 		data['negation']    = None
@@ -51,8 +51,8 @@ def stroke_to_obj(stroke):
 		data.update(noun_data.noun_data[subject])
 
 		data['cosubordinator'] = None
-		data['aspect_have'] = 'E' in aspect
-		data['aspect_be']   = 'U' in aspect
+		data['have']        = 'E' in aspect
+		data['be']          = 'U' in aspect
 		data['modal']       = MODALS[modal] if modal else None
 		data['question']    = question == '^'
 		data['negation']    = negation == '*'
@@ -80,8 +80,8 @@ def pick_lookup(vs, ks, d):
 			return k
 
 def obj_to_phrase(obj):
-	subject, person, number, tense, modal, aspect_have, aspect_be, verb, question, negation, contraction, cosubordinator, extra_word = (obj.get(key, '') for key in \
-	'subject, person, number, tense, modal, aspect_have, aspect_be, verb, question, negation, contraction, cosubordinator, extra_word'.split(', '))
+	subject, person, number, tense, modal, have, be, verb, question, negation, contraction, cosubordinator, extra_word = (obj[k] for k in
+	'subject, person, number, tense, modal, have, be, verb, question, negation, contraction, cosubordinator, extra_word'.split(', '))
 
 	phrase = []
 	finite = not (subject == '' and question)
@@ -90,15 +90,13 @@ def obj_to_phrase(obj):
 		subject = 'to'
 		question = negation
 	if modal:
-		phrase.append(modal), selects.append('infinitive')
-	elif question or negation:
-		if not aspect_have and not aspect_be and finite:
-			if verb != 'be' or not verb: # do-support
-				phrase.append('do'), selects.append('infinitive')
-	if aspect_have:
-		phrase.append('have'),       selects.append('en')
-	if aspect_be:
-		phrase.append('be'),         selects.append('ing')
+		phrase.append(modal),  selects.append('infinitive')
+	elif (question or negation) and not (have or be) and finite and (verb not in ['be', None]):
+		phrase.append('do'),   selects.append('infinitive') # do-support
+	if have:
+		phrase.append('have'), selects.append('en')
+	if be:
+		phrase.append('be'),   selects.append('ing')
 	if verb:
 		phrase.append(verb)
 
@@ -157,9 +155,9 @@ test_obj_1 = {
 	# T  present, past
 	'tense': 'past',
 	# H  True = have (perfect), False = imperfect
-	'aspect_have': True,
+	'have': True,
 	# B  True = be (progressive/continuous), False = simple
-	'aspect_be': True,
+	'be': True,
 	# M  None, will, can, shall, may, must, need to
 	'modal':    'can',
 	# ±  polarity: False = positive (affirmative), True = negative
