@@ -242,7 +242,7 @@ def prespace(data):
 	if type(data) == str:
 		return ' '[:bool(data)] + data
 	else:
-		return {k: ' ' + v for k, v in data.items()}
+		return {k: ' '[:v is not ''] + v for k, v in data.items()}
 # adds space and word after every form
 def postword(data, extra_word):
 	if type(data) == str:
