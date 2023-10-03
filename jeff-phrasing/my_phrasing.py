@@ -74,9 +74,7 @@ def pick_lookup(vs, ks, d):
 
 def obj_to_phrase(obj):
 	phrase = []
-
-	mavs = [] # queue of modals, auxiliaries, verbs
-	if obj['subject'] == '' and obj['question']:
+	if obj['subject'] == '' and obj['question']: # infinitive is special case
 		finite = False
 		selects = ['infinitive']
 		obj['subject'] = 'to'
@@ -85,25 +83,24 @@ def obj_to_phrase(obj):
 		finite = True
 		selects = ['finite']
 	if obj['modal']:
-		mavs.append(obj['modal'])
+		phrase.append(obj['modal'])
 		selects.append('infinitive')
 	elif obj['question'] or obj['negation']:
 		if not obj['aspect_have'] and not obj['aspect_be'] and finite:
 			if obj['verb'] != 'be' or not obj['verb']: # do-support
-				mavs.append('do')
+				phrase.append('do')
+				selects.append('infinitive')
 	if obj['aspect_have']:
-		mavs.append('have')
+		phrase.append('have')
 		selects.append('en')
 	if obj['aspect_be']:
-		mavs.append('be')
+		phrase.append('be')
 		selects.append('ing')
 	if obj['verb']:
-		mavs.append(obj['verb'])
+		phrase.append(obj['verb'])
 
-	while mavs:
-		mav_base = mavs.pop(0)
-		select = selects.pop(0) if selects else None
-		print('\033[36m', mav_base, select, verb_data.verb_forms[mav_base], '\033[0m')
+	for i, mav_base in enumerate(phrase):
+		select = selects[i]
 		if select == 'finite':
 			select = obj['person'] + 'p' + obj['number'][0]
 			tense = 0 + (obj['tense'] == 'past')
@@ -112,14 +109,14 @@ def obj_to_phrase(obj):
 		forms = verb_data.verb_forms[mav_base][tense]
 		if select not in forms:
 			select = None
-		mav = forms[select]
-		phrase.append(mav)
+		phrase[i] = forms[select]
 
 	if obj['negation']:
 		phrase.insert(1 if finite else 0, 'not') # TODO: fix cannot
 
 	# inversion
-	phrase.insert(1 if obj['question'] else 0, obj['subject'])
+	if obj['subject']:
+		phrase.insert(1 if obj['question'] else 0, obj['subject'])
 
 	if obj['cosubordinator']:
 		phrase.insert(0, obj['cosubordinator'])
