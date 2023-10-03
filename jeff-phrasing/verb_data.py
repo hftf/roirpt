@@ -178,12 +178,26 @@ for verb in verb_ender_data.keys():
 	if type(exceptions) in [str, bool]:
 		present_forms = verb
 		past_forms    = inflect(verb, 'ed', exceptions)
+
+		present_forms = {
+			None: verb,
+			'ed': inflect(verb, 'ed', exceptions),
+		}
+		past_forms = {
+			None: inflect(verb, 'ed', exceptions),
+			'ed': inflect(verb, 'ed', exceptions),
+		}
+
 	else:
 		present_forms = {
 			None:                 inflect(verb, ''   , exceptions),
 			'3ps':                inflect(verb, 's'  , exceptions),
 			'present-participle': inflect(verb, 'ing', exceptions),
 			'past-participle':    inflect(verb, 'en' , exceptions),
+			'ing':                inflect(verb, 'ing', exceptions),
+			'en':                 inflect(verb, 'en' , exceptions),
+			'ed':                 inflect(verb, 'ed' , exceptions),
+			'infinitive':         verb,
 		}
 		if 's1' in exceptions:
 			present_forms.update({
@@ -194,9 +208,13 @@ for verb in verb_ender_data.keys():
 			})
 		past_forms = {
 			None:                 inflect(verb, 'ed' , exceptions),
+			'ed':                 inflect(verb, 'ed' , exceptions),
 			'root':               inflect(verb, ''   , exceptions),
 			'present-participle': inflect(verb, 'ing', exceptions),
 			'past-participle':    inflect(verb, 'en' , exceptions),
+			'ing':                inflect(verb, 'ing', exceptions),
+			'en':                 inflect(verb, 'en' , exceptions),
+			'infinitive':         verb,
 		}
 		if 'ed13' in exceptions:
 			past_forms.update({
@@ -248,23 +266,23 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 
 	present_verb_data, past_verb_data = map(prespace, verb_forms[verb])
 	queue = [
-		('present', present_ender,            present_verb_data),
-		('past',    past_enders,              past_verb_data),
+		('present', present_ender,            None, present_verb_data),
+		('past',    past_enders,              None, past_verb_data),
 	]
 	if extra_word:
 		present_verb_data_extra_word = postword(present_verb_data, extra_word)
 		past_verb_data_extra_word    = postword(past_verb_data,    extra_word)
 		queue += [
-			('present', present_ender_extra_word, present_verb_data_extra_word),
-			('past',    past_enders_extra_word,   past_verb_data_extra_word),
+			('present', present_ender_extra_word, extra_word, present_verb_data_extra_word),
+			('past',    past_enders_extra_word,   extra_word, past_verb_data_extra_word),
 		]
 
-	for (tense, enders, verb_data) in queue:
+	for (tense, enders, extra_word, verb_data) in queue:
 		for ender in enders if type(enders) is list else [enders]:
-			sys.stderr.write(f'{verb:10} {ender:10} {tense}\n')
+			# sys.stderr.write(f'{verb:10} {ender:10} {tense}\n')
 			if ender in verb_enders:
 				sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
-			verb_enders[ender] = (tense, verb_data)
+			verb_enders[ender] = (tense, verb_data, verb, extra_word)
 
 # now verb_enders can be imported in jeff_phrasing.py as drop-in replacement for ENDERS
 # pprint.pprint(verb_enders, width=180)
