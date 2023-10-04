@@ -1,14 +1,15 @@
-import noun_data, verb_data
+from noun_data import noun_data, STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
+from verb_data import verb_enders, verb_forms
 import re
 
-STROKE_PARTS = re.compile(r'''\#?
+STROKE_PARTS = re.compile(r'''^\#?
 	(?P<question> \^?)
 	(?P<contract> \+?)
 	(?P<starter>  S?T?K?P?W?H?R?)
 	(?P<modal>    A?O?)-?
 	(?P<negation> \*?)
 	(?P<aspect>   E?U?)
-	(?P<ender>    F?R?P?B?L?G?T?S?D?Z?)''', # note: D is tense
+	(?P<ender>    F?R?P?B?L?G?T?S?D?Z?)$''', # note: D is tense
 	re.X)
 
 MODALS = {'': None, 'A': 'can', 'AO': 'will', 'O': 'shall'}
@@ -17,34 +18,40 @@ CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
 def stroke_to_obj(stroke):
-	stroke = STROKE_PARTS.match(stroke)
-	question, contract, starter, modal, negation, aspect, ender = stroke.groups()
+	stroke_parts = STROKE_PARTS.match(stroke)
+	if not stroke_parts:
+		raise KeyError(f'Stroke "{stroke}" does not match STROKE_PARTS regex')
 
-	data = {}
+	question, contract, starter, modal, negation, aspect, ender = stroke_parts.groups()
+
 	# SIMPLE STARTER
 	simple_starter = starter + modal
 	simple_pronoun = negation + aspect
-	if simple_starter in noun_data.SIMPLE_STARTERS:
-		data['cosubordinator'] = noun_data.SIMPLE_STARTERS[simple_starter]
-		if simple_pronoun in noun_data.SIMPLE_PRONOUNS:
-			data.update(noun_data.noun_data[noun_data.SIMPLE_PRONOUNS[simple_pronoun]])
+
+	valid_normal = starter in STARTERS
+	valid_simple = simple_starter in SIMPLE_STARTERS and simple_pronoun in SIMPLE_PRONOUNS
+	if not (valid_normal or valid_simple):
+		raise KeyError(f'Starter "{starter}" not found')
+	valid_ender  = ender in verb_enders
+	if not valid_ender:
+		raise KeyError(f'Ender "{ender}" not found')
+
+	data = {}
+	if valid_simple:
+		data['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
+		if simple_pronoun in SIMPLE_PRONOUNS:
+			data.update(noun_data[SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
-	elif starter in noun_data.STARTERS:
-		data.update(noun_data.noun_data[noun_data.STARTERS[starter]])
+	elif valid_normal:
+		data.update(noun_data[STARTERS[starter]])
 		data['have']     = 'E' in aspect
 		data['be']       = 'U' in aspect
 		data['modal']    = MODALS[modal]
 		data['question'] = question == '^'
 		data['negation'] = negation == '*'
 		data['contract'] = contract == '+'
-	else:
-		raise KeyError(f'Starter {starter} not found')
 
-	if ender in verb_data.verb_enders:
-		data.update(verb_data.verb_enders[ender])
-	else:
-		raise KeyError(f'Ender {ender} not found')
-
+	data.update(verb_enders[ender])
 	return data
 
 
@@ -54,7 +61,7 @@ def obj_to_phrase(obj):
 
 	phrase = []
 	finite = not (subject == '' and question)
-	selects = [tense + person + 'p'[:number is 'plural'] if finite else '']
+	selects = [tense + person + 'p'[:number == 'plural'] if finite else '']
 	if not finite:
 		subject = 'to'
 		question = negation
@@ -71,7 +78,7 @@ def obj_to_phrase(obj):
 
 	for i, verb in enumerate(phrase):
 		select = selects[i]
-		forms = verb_data.verb_forms[verb]
+		forms = verb_forms[verb]
 		if not select in forms:
 			select = select.rstrip('123p')
 		phrase[i] = forms[select]
