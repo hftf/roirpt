@@ -231,7 +231,7 @@ def press(stroke, key):
 def fu(lists):
 	return list(set([i for l in lists for i in l]))
 
-verb_enders = {}# OrderedDict() #{}
+ENDERS = {}
 for verb, (verb_ender, extra_word) in verb_ender_data.items():
 	if verb_ender is None:
 		continue
@@ -257,9 +257,9 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 	for (tense, enders, extra_word) in queue:
 		for ender in enders if type(enders) is list else [enders]:
 			# sys.stderr.write(f'{verb:10} {ender:10} {tense}\n')
-			if ender in verb_enders:
-				sys.stderr.write(f'{verb}, {ender} already in verb_enders as {verb_enders[ender]}\n')
-			verb_enders[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word}
+			if ender in ENDERS:
+				sys.stderr.write(f'{verb}, {ender} already in ENDERS as {ENDERS[ender]}\n')
+			ENDERS[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word}
 
-# now verb_enders can be imported in jeff_phrasing.py as drop-in replacement for ENDERS
-# pprint.pprint(verb_enders, width=180)
+# pprint.pprint(verb_forms, width=180)
+# pprint.pprint(ENDERS, width=180)

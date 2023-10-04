@@ -2,10 +2,10 @@ import json
 import re
 import glob
 
-import jeff_phrasing
+import my_phrasing as phrasing
 
 PARTS_MATCHER = re.compile(
-	r'(S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?)(R?P?B?L?G?T?S?D?Z?)'
+	r'\#?\^?\+?(S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?R?P?B?L?G?T?S?D?Z?)'
 )
 
 # These are strokes that are okay to remove, typically because they are mis-stroke entries
@@ -102,7 +102,7 @@ for dict_filename in dict_filenames:
 			if strokes in AUDITED_STROKES:
 				continue
 
-			if strokes in jeff_phrasing.NON_PHRASE_STROKES:
+			if strokes in phrasing.NON_PHRASE_STROKES:
 				continue
 
 			if '/' in strokes:
@@ -113,8 +113,8 @@ for dict_filename in dict_filenames:
 				continue
 
 			# Tally full form
-			starter, v1, star, v2, f, ending = match.groups()
-			key = starter + "-" + ending
+			starter, v1, star, v2, ending = match.groups()
+			key = starter + "…" + ending
 			d = defined_strokes.get(key)
 			if not d:
 				d = {}
@@ -123,10 +123,10 @@ for dict_filename in dict_filenames:
 			d[strokes] = dict_data[strokes]
 
 			# Tally simple form.
-			if (star + v2) not in jeff_phrasing.SIMPLE_PRONOUNS:
+			if (star + v2) not in phrasing.SIMPLE_PRONOUNS:
 				continue
 
-			key = starter + v1 + '-' + ending
+			key = starter + v1 + '…' + ending
 			d = simple_defined_strokes.get(key)
 			if not d:
 				d = {}
@@ -135,21 +135,20 @@ for dict_filename in dict_filenames:
 			d[strokes] = dict_data[strokes]
 
 		# Full form
-		for starter in jeff_phrasing.STARTERS:
-			enders = jeff_phrasing.STARTERS[starter][2]
-			if enders == None:
-				enders = jeff_phrasing.ENDERS
+		for starter in phrasing.STARTERS:
+			# enders = phrasing.STARTERS[starter][2]
+			# if enders == None:
+			# 	enders = phrasing.ENDERS
+			enders = phrasing.ENDERS
 			for ender in enders:
-				key = starter + "-" + ender
+				key = starter + "…" + ender
 				if key in defined_strokes:
 					collision_count = len(defined_strokes[key])
-					e = jeff_phrasing.ENDERS[ender][1]
-					print('Match on %s (%s +%s)' %
-						(key,
-						jeff_phrasing.STARTERS[starter][0],
-						e[None] if isinstance(e, dict) and None in e else e))
+					e = phrasing.ENDERS[ender]['verb']
+					print(f"\033[1m{key:18} {phrasing.STARTERS[starter]:10} {phrasing.ENDERS[ender]['verb']:10}\033[0m")
 					
-					print(defined_strokes[key])
+					for conflict, translation in defined_strokes[key].items():
+						print(f"{conflict:18} {phrasing.lookup((conflict,)):30} {translation}")
 					print('')
 					increment_collision_counter(
 						starter_collisions, starter, collision_count)
@@ -158,18 +157,17 @@ for dict_filename in dict_filenames:
 					count = count + collision_count
 
 		# Simple form
-		for starter in jeff_phrasing.SIMPLE_STARTERS:
-			for ender in jeff_phrasing.ENDERS:
-				key = starter + "-" + ender
+		for starter in phrasing.SIMPLE_STARTERS:
+			for ender in phrasing.ENDERS:
+				key = starter + "…" + ender
 				if key in simple_defined_strokes:
 					collision_count = len(simple_defined_strokes[key])
-					e = jeff_phrasing.ENDERS[ender][1]
-					print('Alt match on %s (%s +%s)' %
-						(key,
-						jeff_phrasing.SIMPLE_STARTERS[starter][0],
-						e[None] if isinstance(e, dict) and None in e else e))
+					e = phrasing.ENDERS[ender]['verb']
+					key_ = f'\033[32m{starter}\033[30m…{ender}'
+					print(f"\033[1m{key_:28} {phrasing.SIMPLE_STARTERS[starter]:10} {phrasing.ENDERS[ender]['verb']:10}\033[0m")
 
-					print(simple_defined_strokes[key])
+					for conflict, translation in simple_defined_strokes[key].items():
+						print(f"{conflict:18} {phrasing.lookup((conflict,)):30} {translation}")
 					print('')
 					increment_collision_counter(
 						simple_starter_collisions, starter, collision_count)
@@ -179,17 +177,17 @@ for dict_filename in dict_filenames:
 
 if len(starter_collisions):
 	print('Collisions caused by starters')
-	for k in starter_collisions:
+	for k in sorted(starter_collisions):
 		print(' %s: %d' % (k, starter_collisions[k]))
 
 if len(simple_starter_collisions):
 	print('Collisions caused by simple-starters')
-	for k in simple_starter_collisions:
+	for k in sorted(simple_starter_collisions):
 		print(' %s: %d' % (k, simple_starter_collisions[k]))
 
 if len(ender_collisions):
 	print('Collisions caused by enders')
-	for k in ender_collisions:
+	for k in sorted(ender_collisions):
 		print(' %s: %d' % (k, ender_collisions[k]))
 
 if count:

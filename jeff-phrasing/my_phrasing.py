@@ -9,8 +9,9 @@ import os, sys
 jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
-from noun_data import noun_data, STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
-from verb_data import verb_enders, verb_forms
+from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
+from verb_data import verb_forms, ENDERS
+from jeff_phrasing import NON_PHRASE_STROKES
 import re
 
 LONGEST_KEY = 2
@@ -45,7 +46,7 @@ def stroke_to_obj(stroke):
 	valid_simple = simple_starter in SIMPLE_STARTERS and simple_pronoun in SIMPLE_PRONOUNS
 	if not (valid_normal or valid_simple):
 		raise KeyError(f'Starter "{starter}" not found')
-	valid_ender  = ender in verb_enders
+	valid_ender  = ender in ENDERS
 	if not valid_ender:
 		raise KeyError(f'Ender "{ender}" not found')
 
@@ -64,7 +65,7 @@ def stroke_to_obj(stroke):
 		data['negation'] = negation == '*'
 		data['contract'] = contract == '+'
 
-	data.update(verb_enders[ender])
+	data.update(ENDERS[ender])
 	return data
 
 
@@ -94,15 +95,18 @@ def obj_to_phrase(obj):
 		forms = verb_forms[verb]
 		if not select in forms:
 			select = select.rstrip('123p')
+		if not select in forms:
+			# likely an illegal inflection of a modal ('to may', 'we maying')
+			select = ''
+			# raise KeyError(f'Cannot form inflection "{select}" of verb "{verb}"')
 		phrase[i] = forms[select]
-		# need to ban modals here ('to may')
 
 	if negation:
 		if contract and finite and phrase[0] != 'am':
 			if phrase[0] in NEGATIVE_CONTRACTIONS:
 				phrase[0] = NEGATIVE_CONTRACTIONS[phrase[0]]
 			phrase[0] += "n't"
-		elif phrase[0] == 'can':
+		elif phrase and phrase[0] == 'can':
 			phrase[0] += 'not'
 		else:
 			phrase.insert(finite, 'not')
