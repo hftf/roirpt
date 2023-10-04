@@ -92,80 +92,92 @@ def inflect(verb, suffix, exceptions=None):
 # Theory design guidelines:
 # 1. verbs with T in present ender should pair with another verb that doesn't have an extra word
 # 2. verbs with Z in present ender should not have extra word (only due to finger gymnastics)
+# but maybe use S for extra word?
 verb_ender_data = {
-	# Auxiliary verbs
 	'':           ('',       None  ),
-	'can':        ('BGS',    None  ),
+	# Auxiliary verbs
+	# 'can':        ('BGS',    None  ),
 	'may':        ('PL',     'be'  ),
 	'must':       ('PBLGS',  'be'  ), # no past tense: taken by 'just'
-	'shall':      ('RBL',    None  ),
-	'will':       ('RBGS',   None  ),
+	# 'shall':      ('RBL',    None  ),
+	# 'will':       ('RBGS',   None  ),
 	# adverbs
 	'just':       ('PBLGSZ', None  ), # list after 'must' to override
 	'really':     ('RLG',    None  ),
 
-	'ask':        ('RB',     None  ),
+	# common
 	'be':         ('B',      'a'   ),
-	'become':     ('RPBG',   'a'   ),
-	'believe':    ('BL',     'that'),
-	'call':       ('RBLG',   None  ),
-	'care':       ('RZ',     None  ),
-	'change':     ('PBGZ',   None  ),
-	'come':       ('BG',     'to'  ),
-	'consider':   ('RBGZ',   None  ),
+	'have':       ('T',      'to'  ), # TODO remap F
 	'do':         ('RP',     'it'  ),
-	'expect':     ('PGS',    'that'),
-	'feel':       ('LT',     'like'),
-	'find':       ('PBLG',   'that'),
-	'forget':     ('RG',     'to'  ),
-	'get':        ('GS',     'to'  ), # he had gotten; he had got to
-	'give':       ('GZ',     None  ),
 	'go':         ('G',      'to'  ),
-	'have':       ('T',      'to'  ),
-	'happen':     ('PZ',     None  ),
-	'hear':       ('PG',     'that'),
-	'hope':       ('RPS',    'to'  ),
-	'imagine':    ('PLG',    'that'),
-	'keep':       ('PBGS',   None  ),
-	'know':       ('PB',     'that'),
-	'learn':      ('RPBS',   'to'  ),
-	'leave':      ('LGZ',    None  ),
-	'let':        ('LS',     None  ),
-	'like':       ('BLG',    'to'  ),
-	'live':       ('LZ',     None  ),
-	'look':       ('L',      None  ),
-	'love':       ('LG',     'to'  ),
-	'make':       ('RPBL',   'a'   ),
-	'mean':       ('PBL',    'to'  ),
-	'mind':       ('PBLS',   None  ),
-	'move':       ('PLZ',    None  ),
-	'need':       ('RPG',    'to'  ),
-	'put':        ('PS',     'it'  ),
-	'read':       ('RS',     None  ),
-	'recall':     ('RL',     None  ),
-	'realize':    ('RLS',    'that'),
-	'remember':   ('RPL',    'that'),
-	'remain':     ('RPLS',   None  ),
-	'run':        ('R',      None  ),
+	'get':        ('GS',     'to'  ), # he had gotten; he had got to
 	'say':        ('BS',     'that'),
-	'see':        ('S',      None  ),
-	'set':        ('BLS',    None  ),
-	'seem':       ('PLS',    'to'  ),
-	'show':       ('RBZ',    None  ),
-	'take':       ('RBT',    None  ),
-	'tell':       ('RLT',    None  ),
-	'think':      ('PBG',    'that'),
-	'try':        ('RT',     'to'  ),
-	'understand': ('RPB',    'the' ),
-#	'use':        ('Z',      'to'  ),
 	'use':        ('Z',      None  ),
-	'used to':    ('TZ',     None  ),
+	'used to':    ('TZ',     None  ), # special case, but really acts as use + to (=T)
+	# desire
 	'want':       ('P',      'to'  ),
 	'wish':       ('RBS',    'to'  ),
-	'work':       ('RBG',    'on'  ),
-	# 'talk':     ('BLGT',   None  , None        ), # conflicts with like to
+	'need':       ('RPG',    'to'  ), # TODO remap
 
-	# help
+	# mind, cognition
+	'know':       ('PB',     'that'),
+	'think':      ('PBG',    'that'),
+	'remember':   ('RPL',    'that'),
+	'understand': ('RPB',    'the' ),
+	'believe':    ('BL',     'that'),
+	'imagine':    ('PLG',    'that'),
+	'forget':     ('FRG',    'to'  ), # was RG
+	'mean':       ('FR',     'to'  ), # was PBL
+	'learn':      ('RPBL',   'to'  ), # was RPBS
+	'seem':       ('PLS',    'to'  ), # TODO remap FPL?
+	'expect':     ('PGS',    'that'),
+	'realize':    ('RLS',    'that'), # TODO remap RLZ
+	'mind':       ('FRPB',   None  ), # was PBLS
+
+	'hope':       ('RPS',    'to'  ),
+	'like':       ('LG',     'to'  ), # was BLG
+	'love':       ('LGZ',    'to'  ), # was LG
+	'care':       ('RG',     None  ), # was RZ
+
+	'become':     ('BGS',    'a'   ), # was RPBG
+	'change':     ('FPG',    None  ), # was PBGZ
+	'consider':   ('RBGZ',   None  ),
+	'find':       ('FPB',    'that'), # was PBLG
+	'happen':     ('PZ',     'to'  ), # TRYING 'to'
+	'try':        ('RT',     'to'  ),
+	'make':       ('PBLG',   'a'   ), # was RPBL
+	'work':       ('RBG',    'on'  ),
+
+	'put':        ('PS',     'it'  ), # TODO remap PT?
+	'set':        ('BLS',    None  ), # TODO remap FT?
+	'let':        ('LS',     None  ), # TODO remap LT?
+	'give':       ('GZ',     None  ),
+	'take':       ('RBT',    None  ),
+	'keep':       ('PBGS',   None  ),
+
+	# action, communication
+	'come':       ('BG',     'to'  ),
+	'live':       ('LZ',     None  ),
+	'move':       ('PLZ',    None  ),
+	'leave':      ('FLZ',    None  ), # was LGZ
+	'remain':     ('RPLS',   None  ),
+	'call':       ('RBLG',   None  ),
+	'recall':     ('RL',     None  ),
+	'read':       ('RS',     None  ),
+	'run':        ('R',      None  ),
+	'show':       ('RBZ',    None  ), # TODO remap RB
+	'ask':        ('RB',     None  ), # TODO remap FBG
+	'tell':       ('LT',     None  ), # was RLT
+	# 'talk':     ('BLGT',   None  ), # conflicts with like to. maybe FLG?
+	# sensory, perception
+	'feel':       ('FL',     'like'), # was LT
+	'hear':       ('PG',     'that'),
+	'see':        ('S',      None  ),
+	'look':       ('L',      None  ),
+
+#	'use':        ('Z',      'to'  ),
+
+	'help':       ('PLGS',   None  ), # TODO remap FP?
 }
 
 # generate verb forms
