@@ -1,4 +1,5 @@
 {
+"^STRO*FBGS": "astrophysicist",
 "^STROFRL": "astronomical",
 "^STROFBGS": "astrophysics",
 "^STROFLG": "astrophysical",
@@ -6,6 +7,7 @@
 "^STAOEUPL": "as time",
 "^STEPBGT": "extenuating",
 "^SPWOEUR": "anterior",
+"^SHOEL": "asshole",
 "^SRAPBG/K-L": "evangelical",
 "^SUPLT": "as you might",
 "^TKWEUFR": "advisory",
@@ -42,6 +44,7 @@
 "^PEUFPL": "episcopal",
 "^WAO": "Iowa",
 "^HR*EUFBT": "Elizabeth",
+"^HR*EGS": "allegation",
 "^HREFRLT": "elemental",
 "^HRUFRGS": "illustration",
 "^HOE": "Ohio",
