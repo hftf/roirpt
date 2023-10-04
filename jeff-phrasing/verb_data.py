@@ -96,11 +96,11 @@ def inflect(verb, suffix, exceptions=None):
 verb_ender_data = {
 	'':           ('',       None  ),
 	# Auxiliary verbs
-	# 'can':        ('BGS',    None  ),
+	'can':        (None,     None  ), # was 'BGS'
+	'shall':      (None,     None  ), # was 'RBL'
+	'will':       (None,     None  ), # was 'RBGS'
 	'may':        ('PL',     'be'  ),
 	'must':       ('PBLGS',  'be'  ), # no past tense: taken by 'just'
-	# 'shall':      ('RBL',    None  ),
-	# 'will':       ('RBGS',   None  ),
 	# adverbs
 	'just':       ('PBLGSZ', None  ), # list after 'must' to override
 	'really':     ('RLG',    None  ),
@@ -233,6 +233,8 @@ def fu(lists):
 
 verb_enders = {}# OrderedDict() #{}
 for verb, (verb_ender, extra_word) in verb_ender_data.items():
+	if verb_ender is None:
+		continue
 	present_ender = verb_ender
 	past_enders   = fu([
 		press(present_ender, 'Z' if 'S' in present_ender and 'Z' not in present_ender else 'D'),
