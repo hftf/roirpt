@@ -10,8 +10,8 @@ tests = {
 	"KPWR*B":      "you are not",
 	"^KPWR*B":     "are you not",
 	"^KPWRERP":    "have you done",
-	"^KPWRAOBLGD": "would you like",
-	"KPWRAOUBLGD": "you would be liking",
+	"^KPWRAOLGD":  "would you like",
+	"KPWRAOULGD":  "you would be liking",
 	"SWR*BD":      "I was not",
 	"^SWR*BD":     "was I not",
 	"SWR*D":       "I did not",
@@ -62,12 +62,13 @@ tests = {
 	"KWHR*E":      "he has not",
 	"^KWHR*E":     "has he not",
 	"SWRAO*RP":    "I will not do",
-	"SWHAUPBLG":   "what you find",
+	"SWHAUFPB":    "what you find",
 	"SWROERPD":    "I should have done",
 	"SWRO*ERPD":   "I should not have done",
-	"SKPEUBGSZ":   "and I could",
+	# "SKPEUBGSZ":   "and I could",
+	"SKPEUBGSZ":   "and I became",
 	"TWRA*G":      "we cannot go",
-	"^KPWRARLTD":  "could you tell",
+	"^KPWRALTD":  "could you tell",
 	"^STWR-RPL":   "to remember",
 	"^STWR*RPL":   "not to remember",
 	"TWHA*":       "they cannot",
@@ -78,8 +79,8 @@ tests = {
 	"+KPWR*B":      "you aren't",
 	"^+KPWR*B":     "aren't you",
 	"^+KPWRERP":    "have you done",
-	"^+KPWRAOBLGD": "would you like",
-	"+KPWRAOUBLGD": "you'd be liking",
+	"^+KPWRAOLGD":  "would you like",
+	"+KPWRAOULGD":  "you'd be liking",
 	"+SWR*BD":      "I wasn't",
 	"^+SWR*BD":     "wasn't I",
 	"+SWR*D":       "I didn't",
@@ -105,12 +106,13 @@ tests = {
 	"+KWHR*":       "he doesn't",
 	"^+KWHR*":      "doesn't he",
 	"+SWRAO*RP":    "I won't do",
-	"+SWHAUPBLG":   "what you find",
+	"+SWHAUFPB":    "what you find",
 	"+SWROERPD":    "I should have done",
 	"+SWRO*ERPD":   "I shouldn't have done",
-	"+SKPEUBGSZ":   "and I could",
+	# "+SKPEUBGSZ":   "and I could",
+	"+SKPEUBGSZ":   "and I became",
 	"+TWRA*G":      "we can't go",
-	"^+KPWRARLTD":  "could you tell",
+	"^+KPWRALTD":   "could you tell",
 	"^+STWR-RPL":   "to remember",
 	"^+STWR*RPL":   "not to remember",
 	"+TWHA*":       "they can't",
@@ -121,10 +123,12 @@ tests = {
 	"^SWRA":        "can I",
 	"+KWHR*PTD":    "he didn't want to",
 	"+STWR*BLD":    "didn't believe",
-	"SWHA*PBLD":    "what it meant",
+	"SWHA*FRD":     "what it meant",
 	"^TWHEG":       "have they gone",
 	"KPWR*ES":      "you have not seen", # conflicts with 'empress'
 	"KPWR*ES/+":    "you have not seen",
+	"+TWRAO*GSZ":   "we wouldn't get",
+	"KWHR-PTZ":     "he happens to",
 }
 
 for test, expected in tests.items():
@@ -134,6 +138,8 @@ for test, expected in tests.items():
 	except Exception as e:
 		result = None
 		error = f' ({e})'
+		if expected != result:
+			raise e
 	emoji = "❌✅"[expected == result]
 	print(f'Test: {test:24} Expect: {str(expected):40} Result: {str(result) + error:40} {emoji}')
 	# assert expected == result
