@@ -7,6 +7,11 @@ import my_phrasing as phrasing
 PARTS_MATCHER = re.compile(
 	r'(\#?\^?\+?)(S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?R?P?B?L?G?T?S?D?Z?)'
 )
+ALPHABET = '/#^1+ST2KP3WH4RA5O0-*euf6rp7bl8gt9sdz'
+def sortkey(key):
+	return [ALPHABET.index(c) for c in re.sub('[-*].*$', lambda m: m[0].lower(), key)]
+def sort(l):
+	return sorted(l, key=sortkey)
 
 # These are strokes that are okay to remove, typically because they are mis-stroke entries
 # spellchecker: disable
@@ -153,7 +158,7 @@ for dict_filename in dict_filenames:
 					increment_collision_counter(
 						starter_collisions, starter, collision_count)
 					increment_collision_counter(
-						ender_collisions, ender, collision_count)
+						ender_collisions, '-' + ender, collision_count)
 					count = count + collision_count
 
 		# Simple form
@@ -172,22 +177,22 @@ for dict_filename in dict_filenames:
 					increment_collision_counter(
 						simple_starter_collisions, starter, collision_count)
 					increment_collision_counter(
-						ender_collisions, ender, collision_count)
+						ender_collisions, '-' + ender, collision_count)
 					count = count + collision_count
 
 if len(starter_collisions):
 	print('Collisions caused by starters')
-	for k in sorted(starter_collisions):
+	for k in sort(starter_collisions):
 		print(' %s: %d' % (k, starter_collisions[k]))
 
 if len(simple_starter_collisions):
 	print('Collisions caused by simple-starters')
-	for k in sorted(simple_starter_collisions):
+	for k in sort(simple_starter_collisions):
 		print(' %s: %d' % (k, simple_starter_collisions[k]))
 
 if len(ender_collisions):
 	print('Collisions caused by enders')
-	for k in sorted(ender_collisions):
+	for k in sort(ender_collisions):
 		print(' %s: %d' % (k, ender_collisions[k]))
 
 if count:
