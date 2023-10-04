@@ -132,6 +132,7 @@ tests = {
 	"^TWR-PL":      "may we",
 	"STPAT":        None, # *if have
 	"^STPAEUGS":    None, # *if do I have
+	"^SWRA*PB":     "can I not know", # *cannot I know
 }
 
 for test, expected in tests.items():

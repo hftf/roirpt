@@ -106,7 +106,7 @@ def obj_to_phrase(obj):
 		if not select in forms:
 			# likely an illegal inflection of a modal ('to may', 'we maying')
 			select = ''
-			# raise KeyError(f'Cannot form inflection "{select}" of verb "{verb}"')
+			# raise KeyError(f'No inflection "{select}" of (defective) verb "{verb}"')
 		phrase[i] = forms[select]
 
 	if negation:
@@ -114,7 +114,7 @@ def obj_to_phrase(obj):
 			if phrase[0] in NEGATIVE_CONTRACTIONS:
 				phrase[0] = NEGATIVE_CONTRACTIONS[phrase[0]]
 			phrase[0] += "n't"
-		elif phrase and phrase[0] == 'can':
+		elif phrase and phrase[0] == 'can' and not question:
 			phrase[0] += 'not'
 		else:
 			phrase.insert(finite, 'not')
