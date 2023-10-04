@@ -13,6 +13,7 @@
 "^TPHAPLT": "enhancement",
 "^TPHOFRL": "anomaly",
 "^TPHOBGS": "innocuous",
+"^TPHERB": "inertia",
 "^TPHUPBGS": "enunciation",
 "^TPR*ERPB": "African-American",
 "^TPRERPB": "African American",
