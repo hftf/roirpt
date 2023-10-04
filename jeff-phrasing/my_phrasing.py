@@ -9,7 +9,7 @@ import os, sys
 jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
-from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
+from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, require_subject_unless_past
 from verb_data import verb_forms, ENDERS, DEFECTIVE_VERBS, VERBS_WITHOUT_DO_SUPPORT, existential_there_data
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
@@ -57,7 +57,11 @@ def stroke_to_obj(stroke):
 		if simple_pronoun in SIMPLE_PRONOUNS:
 			if question:
 				raise KeyError('Subject–aux question inversion does not apply to simple starters')
-			# should invalidate subordinator + '' pronoun + present
+			if SIMPLE_STARTERS[simple_starter] in require_subject_unless_past and \
+				not SIMPLE_PRONOUNS[simple_pronoun] and \
+				ENDERS[ender]['tense'] != 'past':
+				raise KeyError(f'Simple starter (subordinator) "{SIMPLE_STARTERS[simple_starter]}" requires subject unless in past')
+
 			data.update(noun_data[SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
 	elif valid_normal:

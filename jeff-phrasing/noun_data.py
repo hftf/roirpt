@@ -36,7 +36,7 @@ STARTERS = {
 
 # TODO rename 'simple'
 SIMPLE_STARTERS = {
-	# subordinators / complementizers
+	# subordinators / complementizers / relativizers
 	'STHA':  'that',
 	'STPA':  'if',
 	'SWH':   'when',
@@ -51,6 +51,10 @@ SIMPLE_STARTERS = {
 	'SKP':   'and',
 	# SKPR   or ?
 }
+require_subject_unless_past = [
+	'if', 'when',
+	'where', 'why',
+]
 
 SIMPLE_PRONOUNS = {
 	'E':   'he',
