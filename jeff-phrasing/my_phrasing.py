@@ -69,12 +69,7 @@ def stroke_to_obj(stroke):
 	data.update(ENDERS[ender])
 	return data
 
-def requires_do_support(verb):
-	if verb in ['be', None]:
-		return False
-	if verb in irregular_verb_data and verb != '' and type(irregular_verb_data[verb]) in [str, bool]:
-		return False
-	return True
+VERBS_WITHOUT_DO_SUPPORT = [None, 'be'] + [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
 
 def obj_to_phrase(obj):
 	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word = (obj.get(k, False) for k in
@@ -88,7 +83,7 @@ def obj_to_phrase(obj):
 		question = negation
 	if modal:
 		phrase.append(modal),  selects.append('')
-	elif (question or negation) and not (have or be) and finite and requires_do_support(verb):
+	elif (question or negation) and not (have or be) and finite and verb not in VERBS_WITHOUT_DO_SUPPORT:
 		phrase.append('do'),   selects.append('') # do-support
 	if have:
 		phrase.append('have'), selects.append('en')
