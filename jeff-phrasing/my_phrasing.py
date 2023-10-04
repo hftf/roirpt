@@ -10,7 +10,7 @@ jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
 from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
-from verb_data import verb_forms, ENDERS
+from verb_data import verb_forms, irregular_verb_data, ENDERS
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
 
@@ -36,6 +36,7 @@ def stroke_to_obj(stroke):
 	if not stroke_parts:
 		raise KeyError(f'Stroke "{stroke}" does not match STROKE_PARTS regex')
 
+	#                  [simple_starter] [simple_pronoun]
 	question, contract, starter, modal, negation, aspect, ender = stroke_parts.groups()
 
 	# SIMPLE STARTER
@@ -68,6 +69,12 @@ def stroke_to_obj(stroke):
 	data.update(ENDERS[ender])
 	return data
 
+def requires_do_support(verb):
+	if verb in ['be', None]:
+		return False
+	if verb in irregular_verb_data and verb != '' and type(irregular_verb_data[verb]) in [str, bool]:
+		return False
+	return True
 
 def obj_to_phrase(obj):
 	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word = (obj.get(k, False) for k in
@@ -81,7 +88,7 @@ def obj_to_phrase(obj):
 		question = negation
 	if modal:
 		phrase.append(modal),  selects.append('')
-	elif (question or negation) and not (have or be) and finite and (verb not in ['be', None]):
+	elif (question or negation) and not (have or be) and finite and requires_do_support(verb):
 		phrase.append('do'),   selects.append('') # do-support
 	if have:
 		phrase.append('have'), selects.append('en')
