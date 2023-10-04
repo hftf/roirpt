@@ -5,7 +5,7 @@ import glob
 import my_phrasing as phrasing
 
 PARTS_MATCHER = re.compile(
-	r'\#?\^?\+?(S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?R?P?B?L?G?T?S?D?Z?)'
+	r'(\#?\^?\+?)(S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?R?P?B?L?G?T?S?D?Z?)'
 )
 
 # These are strokes that are okay to remove, typically because they are mis-stroke entries
@@ -113,7 +113,7 @@ for dict_filename in dict_filenames:
 				continue
 
 			# Tally full form
-			starter, v1, star, v2, ending = match.groups()
+			symbols, starter, v1, star, v2, ending = match.groups()
 			key = starter + "…" + ending
 			d = defined_strokes.get(key)
 			if not d:
@@ -126,7 +126,7 @@ for dict_filename in dict_filenames:
 			if (star + v2) not in phrasing.SIMPLE_PRONOUNS:
 				continue
 
-			key = starter + v1 + '…' + ending
+			key = symbols + starter + v1 + '…' + ending
 			d = simple_defined_strokes.get(key)
 			if not d:
 				d = {}

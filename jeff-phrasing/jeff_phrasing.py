@@ -54,13 +54,15 @@ THERE_SUFFIXES = {
 	"PZ": True, "PDZ": True,                                  # Happen
 	"T": True, "TD": True, "TS": True, "TSDZ": True,          # Have (to)
 	"LZ": True, "LDZ": True,                                  # Live
-	"PL": True, "PLT": True, "PLD": True, "PLTD": True,       # May (have)
-	"PBLGS": True, "PBLGTS": True,                            # Must (have)
-	"PBLGSZ": True, "PBLGTSDZ": True,                         # Just
-	"RPG": True, "RPGD": True, "RPGT": True, "RPGTD": True,   # Need (to)
-	"RLG": True, "RLGD": True,                                # Really
 	"PLS": True, "PLSZ": True, "PLTS": True, "PLTSDZ": True,  # Seem (to)
 	"Z": True, "DZ": True, "TZ": True, "TDZ": True,           # Use (to)
+	# modals
+	"PL": True, "PLT": True, "PLD": True, "PLTD": True,       # May (have)
+	"PBLGS": True, "PBLGTS": True,                            # Must (have)
+	"RPG": True, "RPGD": True, "RPGT": True, "RPGTD": True,   # Need (to)
+	# adverbs
+	"PBLGSZ": True, "PBLGTSDZ": True,                         # Just
+	"RLG": True, "RLGD": True,                                # Really
 }
 
 NON_PHRASE_STROKES = {

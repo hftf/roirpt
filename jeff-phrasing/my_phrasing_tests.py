@@ -129,6 +129,9 @@ tests = {
 	"KPWR*ES/+":    "you have not seen",
 	"+TWRAO*GSZ":   "we wouldn't get",
 	"KWHR-PTZ":     "he happens to",
+	"^TWR-PL":      "may we",
+	"STPAT":        None, # *if have
+	"^STPAEUGS":    None, # *if do I have
 }
 
 for test, expected in tests.items():

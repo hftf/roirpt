@@ -55,6 +55,9 @@ def stroke_to_obj(stroke):
 	if valid_simple:
 		data['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
 		if simple_pronoun in SIMPLE_PRONOUNS:
+			if question:
+				raise KeyError('Subject–aux question inversion does not apply to simple starters')
+			# should invalidate subordinator + '' pronoun + present
 			data.update(noun_data[SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
 	elif valid_normal:
@@ -64,7 +67,7 @@ def stroke_to_obj(stroke):
 		data['modal']    = MODALS[modal]
 		data['question'] = question == '^'
 		data['negation'] = negation == '*'
-		data['contract'] = contract == '+'
+	data['contract'] = contract == '+'
 
 	data.update(ENDERS[ender])
 	return data
@@ -72,6 +75,9 @@ def stroke_to_obj(stroke):
 VERBS_WITHOUT_DO_SUPPORT = [None, 'be'] + [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
 
 def obj_to_phrase(obj):
+	if not obj:
+		return
+
 	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word = (obj.get(k, False) for k in
 	'subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word'.split(', '))
 
