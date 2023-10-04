@@ -130,8 +130,11 @@ tests = {
 	"+TWRAO*GSZ":   "we wouldn't get",
 	"KWHR-PTZ":     "he happens to",
 	"^TWR-PL":      "may we",
+	"^TWRUPL":      None, # *are we may
 	"STPAT":        None, # *if have
 	"^STPAEUGS":    None, # *if do I have
+	"^SKWHROEUPLT": None, # *shall she have been may be
+	"^KWHREUB":     None, # ?has he been being
 	"^SWRA*PB":     "can I not know", # *cannot I know
 	"STHRAEULT":    None, # *there can have been telling,
 	"STPHRAOEUPB":  None, # *there will have been knowing,
@@ -139,6 +142,7 @@ tests = {
 }
 
 for test, expected in tests.items():
+	print(f'{test:18} = {str(expected):30} Result: ', end='')
 	error = ''
 	try:
 		result = my_phrasing.lookup(tuple(test.split('/')))
@@ -148,5 +152,5 @@ for test, expected in tests.items():
 		if expected != result:
 			raise e
 	emoji = "❌✅"[expected == result]
-	print(f'Test: {test:24} Expect: {str(expected):40} Result: {str(result) + error:40} {emoji}')
+	print(f'{str(result) + error:32} {emoji}')
 	# assert expected == result

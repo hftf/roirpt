@@ -112,8 +112,8 @@ def obj_to_phrase(obj):
 			select = select.rstrip('123p')
 		if not select in forms:
 			# likely an illegal inflection of a modal ('to may', 'we maying')
+			raise KeyError(f'No inflection "{select}" of (defective) verb "{verb}"')
 			select = ''
-			# raise KeyError(f'No inflection "{select}" of (defective) verb "{verb}"')
 		phrase[i] = forms[select]
 
 	if negation:

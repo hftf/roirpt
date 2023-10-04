@@ -129,9 +129,9 @@ verb_ender_data = {
 	'have':       ('T',      'to'  ), # TODO remap F
 	'do':         ('RP',     'it'  ),
 	'go':         ('G',      'to'  ),
-	'get':        ('GS',     'to'  ), # he had gotten; he had got to
+	'get':        ('GS',     'to'  ), # he had gotten (obtain); he had got to (obligation)
 	'say':        ('BS',     'that'),
-	'use':        ('Z',      None  ),
+	'use':        ('Z',      None  ), # consider as + 'to'
 	'used to':    ('TZ',     None  ), # special case, but really acts as use + to (=T)
 	# desire
 	'want':       ('P',      'to'  ),
@@ -194,9 +194,9 @@ verb_ender_data = {
 	'see':        ('S',      None  ),
 	'look':       ('L',      None  ),
 
-#	'use':        ('Z',      'to'  ),
-
 	'help':       ('PLGS',   None  ), # TODO remap FP?
+	# recognize RGZ
+	# play
 }
 
 # generate verb forms
