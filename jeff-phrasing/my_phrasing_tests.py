@@ -123,13 +123,14 @@ tests = {
 	"+STWR*BLD":    "didn't believe",
 	"SWHA*PBLD":    "what it meant",
 	"^TWHEG":       "have they gone",
-	"KPWR*ES":      "you have not seen",
+	"KPWR*ES":      "you have not seen", # conflicts with 'empress'
+	"KPWR*ES/+":    "you have not seen",
 }
 
 for test, expected in tests.items():
 	error = ''
 	try:
-		result = my_phrasing.obj_to_phrase(my_phrasing.stroke_to_obj(test))
+		result = my_phrasing.lookup(tuple(test.split('/')))
 	except Exception as e:
 		result = None
 		error = f' ({e})'

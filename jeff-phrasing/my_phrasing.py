@@ -13,7 +13,7 @@ from noun_data import noun_data, STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
 from verb_data import verb_enders, verb_forms
 import re
 
-LONGEST_KEY = 1
+LONGEST_KEY = 2
 
 STROKE_PARTS = re.compile(r'''^\#?
 	(?P<question> \^?)
@@ -95,6 +95,7 @@ def obj_to_phrase(obj):
 		if not select in forms:
 			select = select.rstrip('123p')
 		phrase[i] = forms[select]
+		# need to ban modals here ('to may')
 
 	if negation:
 		if contract and finite and phrase[0] != 'am':
@@ -121,6 +122,13 @@ def obj_to_phrase(obj):
 	return ' '.join(phrase)
 
 def lookup(stroke):
+	if len(stroke) > 1:
+		# naive conflict workaround
+		if stroke[1] == '+':
+			pass
+		# can do other things here, like add post-hoc adverbs, contractions, passive voice, etc.
+		else:
+			raise KeyError(f'Two-stroke outline "{"/".join(stroke)}" not valid')
 	phrase = obj_to_phrase(stroke_to_obj(stroke[0]))
 	if phrase:
 		return phrase
