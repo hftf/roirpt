@@ -214,6 +214,9 @@ for verb in verb_ender_data.keys():
 
 	verb_forms[verb] = forms
 
+DEFECTIVE_VERBS = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
+VERBS_WITHOUT_DO_SUPPORT = [None, 'be'] + DEFECTIVE_VERBS
+
 # adds key to stroke
 # if result has 3 of 4 pinky keys, then returns both it and version with all 4 (TSDZ)
 # TODO: doesn't handle unergonomic diagonals with 2 pinky keys (TZ, SD)

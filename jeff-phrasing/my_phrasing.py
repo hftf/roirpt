@@ -10,7 +10,7 @@ jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
 from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
-from verb_data import verb_forms, irregular_verb_data, ENDERS
+from verb_data import verb_forms, ENDERS, DEFECTIVE_VERBS, VERBS_WITHOUT_DO_SUPPORT
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
 
@@ -71,8 +71,6 @@ def stroke_to_obj(stroke):
 
 	data.update(ENDERS[ender])
 	return data
-
-VERBS_WITHOUT_DO_SUPPORT = [None, 'be'] + [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
 
 def obj_to_phrase(obj):
 	if not obj:
