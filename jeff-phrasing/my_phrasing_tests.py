@@ -4,6 +4,8 @@ import my_phrasing
 'were you'
 
 tests = {
+	"":            None,
+	"HR-FR":       None,
 	"^KPWRAO*EBT": "will you not have been a",
 	"KPWR*B":      "you are not",
 	"^KPWR*B":     "are you not",
@@ -47,18 +49,18 @@ tests = {
 	"^TWH*B":      "are they not",
 	"TWH*":        "they do not",
 	"^TWH*":       "do they not",
-	"SWR*EB":       "I have not been",
-	"^SWR*EB":      "have I not been",
-	"SWR*E":        "I have not",
-	"^SWR*E":       "have I not",
-	"KPWR*EB":      "you have not been",
-	"^KPWR*EB":     "have you not been",
-	"KPWR*E":       "you have not",
-	"^KPWR*E":      "have you not",
-	"KWHR*EB":      "he has not been",
-	"^KWHR*EB":     "has he not been",
-	"KWHR*E":       "he has not",
-	"^KWHR*E":      "has he not",
+	"SWR*EB":      "I have not been",
+	"^SWR*EB":     "have I not been",
+	"SWR*E":       "I have not",
+	"^SWR*E":      "have I not",
+	"KPWR*EB":     "you have not been",
+	"^KPWR*EB":    "have you not been",
+	"KPWR*E":      "you have not",
+	"^KPWR*E":     "have you not",
+	"KWHR*EB":     "he has not been",
+	"^KWHR*EB":    "has he not been",
+	"KWHR*E":      "he has not",
+	"^KWHR*E":     "has he not",
 	"SWRAO*RP":    "I will not do",
 	"SWHAUPBLG":   "what you find",
 	"SWROERPD":    "I should have done",
@@ -125,6 +127,12 @@ tests = {
 }
 
 for test, expected in tests.items():
-	result = my_phrasing.obj_to_phrase(my_phrasing.stroke_to_obj(test))
-	print(f'Test: {test:24} Expect: {expected:40} Result: {result:40} {"❌✅"[expected == result]}')
+	error = ''
+	try:
+		result = my_phrasing.obj_to_phrase(my_phrasing.stroke_to_obj(test))
+	except Exception as e:
+		result = None
+		error = f' ({e})'
+	emoji = "❌✅"[expected == result]
+	print(f'Test: {test:24} Expect: {str(expected):40} Result: {str(result) + error:40} {emoji}')
 	# assert expected == result

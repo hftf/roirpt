@@ -1,6 +1,19 @@
+# Following ten lines of jank needed because Plover doesn't know how to import local modules
+try:
+	import plover
+	plover_dir = plover.oslayer.config.CONFIG_DIR
+except:
+	import appdirs
+	plover_dir = appdirs.user_data_dir('plover', 'plover')
+import os, sys
+jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
+sys.path.append(jeff_dir)
+
 from noun_data import noun_data, STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
 from verb_data import verb_enders, verb_forms
 import re
+
+LONGEST_KEY = 1
 
 STROKE_PARTS = re.compile(r'''^\#?
 	(?P<question> \^?)
@@ -107,6 +120,12 @@ def obj_to_phrase(obj):
 
 	return ' '.join(phrase)
 
+def lookup(stroke):
+	phrase = obj_to_phrase(stroke_to_obj(stroke[0]))
+	if phrase:
+		return phrase
+	else:
+		raise KeyError
 
 test_obj_1 = {
 	# coordinator or subordinator (also conjunction, preposition, complementizer)
