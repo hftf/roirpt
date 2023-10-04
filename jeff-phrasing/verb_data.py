@@ -52,6 +52,25 @@ irregular_verb_data = {
 	'':           False,
 }
 
+# allow dummy subject 'there' only for intransitive verbs (no direct object required for meaning)
+existential_there_data = [
+	'',
+	# modals
+	'can', 'shall', 'will', 'may', 'must', 'need', 'used to',
+	# presentational verbs (like 'exist', 'occur', 'appear', 'follow')
+	'be',
+	'have', # only as 'have to' main verb
+	'do',   # only as auxiliary (do-support or emphatic-do)
+	# intransitive verbs
+	'happen', 'seem',
+	# intransitive in some contexts, but also useful for locative inversion
+	# can be (stressed) deictic-there, pronoun-there rather than existential-there
+	'become', 'come', 'live',
+	'go',   # also as 'going to' future auxiliary
+	# non-verbs (adverbs)
+	'just', 'really',
+]
+
 # For regular verb, exceptions is None or {}
 def inflect(verb, suffix, exceptions=None):
 	# Irregular verb with 1 form

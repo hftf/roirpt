@@ -10,7 +10,7 @@ jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
 from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS
-from verb_data import verb_forms, ENDERS, DEFECTIVE_VERBS, VERBS_WITHOUT_DO_SUPPORT
+from verb_data import verb_forms, ENDERS, DEFECTIVE_VERBS, VERBS_WITHOUT_DO_SUPPORT, existential_there_data
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
 
@@ -61,6 +61,11 @@ def stroke_to_obj(stroke):
 			data.update(noun_data[SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
 	elif valid_normal:
+		if noun_data[STARTERS[starter]]['subject'] == 'there' and \
+			ENDERS[ender]['verb'] not in existential_there_data and \
+			('E' not in aspect or ENDERS[ender]['tense'] != 'past'):
+			raise KeyError(f'Existential "{STARTERS[starter]}" cannot go with verb "{ENDERS[ender]["verb"]}" unless in past')
+
 		data.update(noun_data[STARTERS[starter]])
 		data['have']     = 'E' in aspect
 		data['be']       = 'U' in aspect

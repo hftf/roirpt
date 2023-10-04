@@ -3,6 +3,7 @@ import re
 import glob
 
 import my_phrasing as phrasing
+import noun_data, verb_data
 
 PARTS_MATCHER = re.compile(
 	r'(\#?\^?\+?)(S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?R?P?B?L?G?T?S?D?Z?)'
@@ -146,6 +147,9 @@ for dict_filename in dict_filenames:
 			# 	enders = phrasing.ENDERS
 			enders = phrasing.ENDERS
 			for ender in enders:
+				if noun_data.noun_data[phrasing.STARTERS[starter]]['subject'] == 'there':
+					if phrasing.ENDERS[ender]['verb'] not in verb_data.existential_there_data:
+						continue
 				key = starter + "…" + ender
 				if key in defined_strokes:
 					collision_count = len(defined_strokes[key])

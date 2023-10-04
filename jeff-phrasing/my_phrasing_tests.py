@@ -133,6 +133,9 @@ tests = {
 	"STPAT":        None, # *if have
 	"^STPAEUGS":    None, # *if do I have
 	"^SWRA*PB":     "can I not know", # *cannot I know
+	"STHRAEULT":    None, # *there can have been telling,
+	"STPHRAOEUPB":  None, # *there will have been knowing,
+	"STPHRAEPB":    None, # *there can have known,
 }
 
 for test, expected in tests.items():
