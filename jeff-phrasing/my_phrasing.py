@@ -151,7 +151,7 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 	result = ' '.join(phrase)
 
 	if 'grammar' in obj:
-		result = f'*{result}\n{"":20}\033[91;3m[{obj["grammar"][:30]:31}…]\033[0m'
+		result = f'*{result}'
 
 	return result
 
@@ -160,6 +160,7 @@ def lookup(stroke, raise_grammar_errors=True):
 	if len(stroke) > 1:
 		# naive conflict workaround
 		if stroke[1] == '+':
+			raise_grammar_errors = False # only for debugging
 			pass
 		elif stroke[1] == '+-P':
 			data['passive'] = True
