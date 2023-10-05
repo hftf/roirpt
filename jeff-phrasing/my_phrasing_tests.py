@@ -212,6 +212,8 @@ tests = {
 	"SWR-PLS/+-P":    "*I am seemed",
 	"SWR-RGS":        None, # *I cares - TODO: add something to prevent auto suffixation
 	"^+SWHAO*ETS":    "why does she have to",
+	"^TWR":           "do we",
+	"KPWH-GSZ/+-P":   "it was gotten", # by
 }
 
 for test, expected in tests.items():
