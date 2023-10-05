@@ -130,16 +130,16 @@ tests = {
 	"+TWRAO*GSZ":     "we wouldn't get",
 	"KWHR-PTZ":       "he happens to",
 	"^TWR-PL":        "may we",
-	"^TWRUPL":        None, # *are we may
-	"SWRUPL":         None, # *I am may
-	"STPAT":          None, # *if have
-	"^STPAEUGS":      None, # *if do I have
-	"^SKWHROEUPLT":   None, # *shall she have been may be
-	"^KWHREUB":       None, # ?has he been being
+	"^TWRUPL":        "*are we may[*ing]",
+	"SWRUPL":         "*I am may[*ing]",
+	"STPAT":          "*if has",
+	"^STPAEUT":       "*if I have",
+	"^SKWHROEUPLT":   "*shall she have been may[*ing] be",
+	"^KWHREUB":       "has he been being", #?
 	"^SWRA*PB":       "can I not know", # *cannot I know
-	"STHRAEULT":      None, # *there can have been telling,
-	"STPHRAOEUPB":    None, # *there will have been knowing,
-	"STPHRAEPB":      None, # *there can have known,
+	"STHRAEULT":      "*there can have been telling",
+	"STPHRAOEUPB":    "*there will have been knowing",
+	"STPHRAEPB":      "*there can have known",
 	"SWR-LT/+-P":     "I am told",
 	"SWR-LTD/+-P":    "I was told",
 	"^SWR-LT/+-P":    "am I told",
@@ -210,8 +210,8 @@ for test, expected in tests.items():
 	print(f'{test:18} = {str(expected):30} Result: ', end='')
 	error = ''
 	try:
-		result = my_phrasing.lookup(tuple(test.split('/')))
-	except Exception as e:
+		result = my_phrasing.lookup(tuple(test.split('/')), False)
+	except KeyError as e:
 		result = None
 		error = f' ({e})'
 		if expected != result:
