@@ -139,6 +139,26 @@ tests = {
 	"STHRAEULT":    None, # *there can have been telling,
 	"STPHRAOEUPB":  None, # *there will have been knowing,
 	"STPHRAEPB":    None, # *there can have known,
+	"SWR-LT/+-P":    "I am told",
+	"SWR-LTD/+-P":   "I was told",
+	"^SWR-LT/+-P":   "am I told",
+	"^SWR-LTD/+-P":  "was I told",
+	"SWR*LT/+-P":    "I am not told",
+	"SWR*LTD/+-P":   "I was not told",
+	"^SWR*LT/+-P":   "am I not told",
+	"^SWR*LTD/+-P":  "was I not told",
+	"^SWR*LT/+-P":   "am I not told",
+	"^+SWR*LTD/+-P": "wasn't I told",
+	"SWRELT":        "I have told",
+	"SWRELT/+-P":    "I have been told",
+	"SWRELTD/+-P":   "I had been told",
+	"^SWRELT/+-P":   "have I been told",
+	"^SWRELTD/+-P":  "had I been told",
+	"+SWRELT/+-P":   "I've been told",
+	"+SWRELTD/+-P":  "I'd been told",
+	"SWREULT":       "I have been telling",
+	"SWREULT/+-P":   "I have been told",
+
 }
 
 for test, expected in tests.items():

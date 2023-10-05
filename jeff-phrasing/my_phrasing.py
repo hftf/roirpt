@@ -31,7 +31,7 @@ NEGATIVE_CONTRACTIONS = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
 CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
-def stroke_to_obj(stroke):
+def stroke_to_obj(stroke, data={}):
 	stroke_parts = STROKE_PARTS.match(stroke)
 	if not stroke_parts:
 		raise KeyError(f'Stroke "{stroke}" does not match STROKE_PARTS regex')
@@ -51,7 +51,6 @@ def stroke_to_obj(stroke):
 	if not valid_ender:
 		raise KeyError(f'Ender "{ender}" not found')
 
-	data = {}
 	if valid_simple:
 		data['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
 		if simple_pronoun in SIMPLE_PRONOUNS:
@@ -85,8 +84,8 @@ def obj_to_phrase(obj):
 	if not obj:
 		return
 
-	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word = (obj.get(k, False) for k in
-	'subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word'.split(', '))
+	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word, passive = (obj.get(k, False) for k in
+	'subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word, passive'.split(', '))
 
 	phrase = []
 	finite = not (subject == '' and question)
@@ -96,11 +95,13 @@ def obj_to_phrase(obj):
 		question = negation
 	if modal:
 		phrase.append(modal),  selects.append('')
-	elif (question or negation) and not (have or be) and finite and verb not in VERBS_WITHOUT_DO_SUPPORT:
+	elif (question or negation) and not (have or be or passive) and finite and verb not in VERBS_WITHOUT_DO_SUPPORT:
 		phrase.append('do'),   selects.append('') # do-support
 	if have:
 		phrase.append('have'), selects.append('en')
-	if be:
+	if passive:
+		phrase.append('be'),   selects.append('en')
+	elif be:
 		phrase.append('be'),   selects.append('ing')
 	if verb:
 		phrase.append(verb)
@@ -141,14 +142,17 @@ def obj_to_phrase(obj):
 	return ' '.join(phrase)
 
 def lookup(stroke):
+	data = {}
 	if len(stroke) > 1:
 		# naive conflict workaround
 		if stroke[1] == '+':
 			pass
+		elif stroke[1] == '+-P':
+			data['passive'] = True
 		# can do other things here, like add post-hoc adverbs, contractions, passive voice, etc.
 		else:
 			raise KeyError(f'Two-stroke outline "{"/".join(stroke)}" not valid')
-	phrase = obj_to_phrase(stroke_to_obj(stroke[0]))
+	phrase = obj_to_phrase(stroke_to_obj(stroke[0], data))
 	if phrase:
 		return phrase
 	else:
