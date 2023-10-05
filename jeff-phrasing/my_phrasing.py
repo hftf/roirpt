@@ -106,10 +106,10 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 		phrase.append('do'),   selects.append('') # do-support
 	if have:
 		phrase.append('have'), selects.append('en')
+	if be:
+		phrase.append('be'),   selects.append('ing')
 	if passive:
 		phrase.append('be'),   selects.append('en')
-	elif be:
-		phrase.append('be'),   selects.append('ing')
 	if verb:
 		phrase.append(verb)
 
