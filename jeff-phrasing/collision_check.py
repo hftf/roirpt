@@ -162,7 +162,7 @@ for dict_filename in dict_filenames:
 						# 	print(f'Skipping {conflict} (illegal inflection of {verb})')
 						# 	continue
 						print(f"{conflict:18} ", end='')
-						print(f"{phrasing.lookup((conflict,), raise_grammar_errors=False):30} {translation}")
+						print(f"{phrasing.lookup((conflict,), raise_grammar_errors=False):35} {translation}")
 					print('')
 					increment_collision_counter(
 						starter_collisions, starter, collision_count)
@@ -181,7 +181,7 @@ for dict_filename in dict_filenames:
 					print(f"\033[1m{key_:28} {phrasing.SIMPLE_STARTERS[starter]:10} {phrasing.ENDERS[ender]['verb']:10}\033[0m")
 
 					for conflict, translation in simple_defined_strokes[key].items():
-						print(f"{conflict:18} {phrasing.lookup((conflict,), raise_grammar_errors=False):30} {translation}")
+						print(f"{conflict:18} {phrasing.lookup((conflict,), raise_grammar_errors=False):35} {translation}")
 					print('')
 					increment_collision_counter(
 						simple_starter_collisions, starter, collision_count)

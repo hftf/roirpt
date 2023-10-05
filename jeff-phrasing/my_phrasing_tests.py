@@ -131,6 +131,7 @@ tests = {
 	"KWHR-PTZ":     "he happens to",
 	"^TWR-PL":      "may we",
 	"^TWRUPL":      None, # *are we may
+	"SWRUPL":       None, # *I am may
 	"STPAT":        None, # *if have
 	"^STPAEUGS":    None, # *if do I have
 	"^SKWHROEUPLT": None, # *shall she have been may be
@@ -158,7 +159,7 @@ tests = {
 	"+SWRELTD/+-P":  "I'd been told",
 	"SWREULT":       "I have been telling",
 	"SWREULT/+-P":   "I have been told",
-
+	"SWHR":          "where",
 }
 
 for test, expected in tests.items():

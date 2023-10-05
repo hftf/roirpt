@@ -64,8 +64,9 @@ def stroke_to_obj(stroke, data={}, raise_grammar_errors=True):
 				raise_grammar_error('Subject–aux question inversion does not apply to simple starters', data, raise_grammar_errors)
 			if SIMPLE_STARTERS[simple_starter] in require_subject_unless_past and \
 				not SIMPLE_PRONOUNS[simple_pronoun] and \
+				ENDERS[ender]['verb'] and \
 				ENDERS[ender]['tense'] != 'past':
-				raise_grammar_error(f'Subject required with simple starter (subordinator) "{SIMPLE_STARTERS[simple_starter]}" unless in past', data, raise_grammar_errors)
+				raise_grammar_error(f'Subject required after simple starter (subordinator) "{SIMPLE_STARTERS[simple_starter]}" unless in past', data, raise_grammar_errors)
 
 			data.update(noun_data[SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
@@ -150,7 +151,7 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 	result = ' '.join(phrase)
 
 	if 'grammar' in obj:
-		result = f'*{result} \033[31m{obj["grammar"][:20]}…\033[0m'
+		result = f'*{result}\n{"":20}\033[91;3m[{obj["grammar"][:30]:31}…]\033[0m'
 
 	return result
 
