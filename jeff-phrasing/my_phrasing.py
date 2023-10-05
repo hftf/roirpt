@@ -95,7 +95,7 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 	'subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word, passive'.split(', '))
 
 	phrase = []
-	finite = not (subject == '' and question)
+	finite = not (subject == '' and question and not modal)
 	selects = [tense + person + 'p'[:number == 'plural'] if finite else '']
 	if not finite:
 		subject = 'to'
