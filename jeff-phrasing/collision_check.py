@@ -140,6 +140,10 @@ for dict_filename in dict_filenames:
 
 			d[strokes] = dict_data[strokes]
 
+		def r(d):
+			if d[0] == '*':
+				return f'\033[91m{d:35}\033[30m'
+			return d
 		# Full form
 		for starter in phrasing.STARTERS:
 			# enders = phrasing.STARTERS[starter][2]
@@ -162,7 +166,8 @@ for dict_filename in dict_filenames:
 						# 	print(f'Skipping {conflict} (illegal inflection of {verb})')
 						# 	continue
 						print(f"{conflict:18} ", end='')
-						print(f"{phrasing.lookup((conflict,), raise_grammar_errors=False):35} {translation}")
+						phrase = r(phrasing.lookup((conflict,), raise_grammar_errors=False))
+						print(f"{phrase:35} {translation}")
 					print('')
 					increment_collision_counter(
 						starter_collisions, starter, collision_count)
@@ -181,7 +186,8 @@ for dict_filename in dict_filenames:
 					print(f"\033[1m{key_:28} {phrasing.SIMPLE_STARTERS[starter]:10} {phrasing.ENDERS[ender]['verb']:10}\033[0m")
 
 					for conflict, translation in simple_defined_strokes[key].items():
-						print(f"{conflict:18} {phrasing.lookup((conflict,), raise_grammar_errors=False):35} {translation}")
+						phrase = r(phrasing.lookup((conflict,), raise_grammar_errors=False))
+						print(f"{conflict:18} {phrase:35} {translation}")
 					print('')
 					increment_collision_counter(
 						simple_starter_collisions, starter, collision_count)
@@ -192,17 +198,17 @@ for dict_filename in dict_filenames:
 if len(starter_collisions):
 	print('Collisions caused by starters')
 	for k in sort(starter_collisions):
-		print(' %s: %d' % (k, starter_collisions[k]))
+		print(f'{k:10} {starter_collisions[k]}')
 
 if len(simple_starter_collisions):
 	print('Collisions caused by simple-starters')
 	for k in sort(simple_starter_collisions):
-		print(' %s: %d' % (k, simple_starter_collisions[k]))
+		print(f'{k:10} {simple_starter_collisions[k]}')
 
 if len(ender_collisions):
 	print('Collisions caused by enders')
 	for k in sort(ender_collisions):
-		print(' %s: %d' % (k, ender_collisions[k]))
+		print(f'{k:10} {ender_collisions[k]}')
 
 if count:
 	print('Total collisions: %d\n' % count)
