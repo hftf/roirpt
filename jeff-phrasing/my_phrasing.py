@@ -31,7 +31,13 @@ NEGATIVE_CONTRACTIONS = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
 CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
-def stroke_to_obj(stroke, data={}):
+def raise_grammar_error(message, data, raise_grammar_errors=True):
+	if raise_grammar_errors:
+		raise KeyError(message)
+	else:
+		data['grammar'] = message
+
+def stroke_to_obj(stroke, data={}, raise_grammar_errors=True):
 	stroke_parts = STROKE_PARTS.match(stroke)
 	if not stroke_parts:
 		raise KeyError(f'Stroke "{stroke}" does not match STROKE_PARTS regex')
@@ -55,11 +61,11 @@ def stroke_to_obj(stroke, data={}):
 		data['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
 		if simple_pronoun in SIMPLE_PRONOUNS:
 			if question:
-				raise KeyError('Subject–aux question inversion does not apply to simple starters')
+				raise_grammar_error('Subject–aux question inversion does not apply to simple starters', data, raise_grammar_errors)
 			if SIMPLE_STARTERS[simple_starter] in require_subject_unless_past and \
 				not SIMPLE_PRONOUNS[simple_pronoun] and \
 				ENDERS[ender]['tense'] != 'past':
-				raise KeyError(f'Simple starter (subordinator) "{SIMPLE_STARTERS[simple_starter]}" requires subject unless in past')
+				raise_grammar_error(f'Subject required with simple starter (subordinator) "{SIMPLE_STARTERS[simple_starter]}" unless in past', data, raise_grammar_errors)
 
 			data.update(noun_data[SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
@@ -67,7 +73,7 @@ def stroke_to_obj(stroke, data={}):
 		if noun_data[STARTERS[starter]]['subject'] == 'there' and \
 			ENDERS[ender]['verb'] not in existential_there_data and \
 			('E' not in aspect or ENDERS[ender]['tense'] != 'past'):
-			raise KeyError(f'Existential "{STARTERS[starter]}" cannot go with verb "{ENDERS[ender]["verb"]}" unless in past')
+			raise_grammar_error(f'Existential "{STARTERS[starter]}" cannot go with verb "{ENDERS[ender]["verb"]}" unless in past', data, raise_grammar_errors)
 
 		data.update(noun_data[STARTERS[starter]])
 		data['have']     = 'E' in aspect
@@ -80,7 +86,7 @@ def stroke_to_obj(stroke, data={}):
 	data.update(ENDERS[ender])
 	return data
 
-def obj_to_phrase(obj):
+def obj_to_phrase(obj, raise_grammar_errors=True):
 	if not obj:
 		return
 
@@ -109,13 +115,15 @@ def obj_to_phrase(obj):
 	for i, verb in enumerate(phrase):
 		select = selects[i]
 		forms = verb_forms[verb]
+		suffix = ''
 		if not select in forms:
 			select = select.rstrip('123p')
 		if not select in forms:
 			# likely an illegal inflection of a modal ('to may', 'we maying')
-			raise KeyError(f'No inflection "{select}" of (defective) verb "{verb}"')
+			raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', obj, raise_grammar_errors)
+			suffix = f'[*{select}]'
 			select = ''
-		phrase[i] = forms[select]
+		phrase[i] = forms[select] + suffix
 
 	if negation:
 		if contract and finite and phrase[0] != 'am':
@@ -139,9 +147,14 @@ def obj_to_phrase(obj):
 	if extra_word:
 		phrase.append(extra_word)
 
-	return ' '.join(phrase)
+	result = ' '.join(phrase)
 
-def lookup(stroke):
+	if 'grammar' in obj:
+		result = f'*{result} \033[31m{obj["grammar"][:20]}…\033[0m'
+
+	return result
+
+def lookup(stroke, raise_grammar_errors=True):
 	data = {}
 	if len(stroke) > 1:
 		# naive conflict workaround
@@ -152,7 +165,7 @@ def lookup(stroke):
 		# can do other things here, like add post-hoc adverbs, contractions, passive voice, etc.
 		else:
 			raise KeyError(f'Two-stroke outline "{"/".join(stroke)}" not valid')
-	phrase = obj_to_phrase(stroke_to_obj(stroke[0], data))
+	phrase = obj_to_phrase(stroke_to_obj(stroke[0], data, raise_grammar_errors), raise_grammar_errors)
 	if phrase:
 		return phrase
 	else:

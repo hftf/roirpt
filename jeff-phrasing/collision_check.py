@@ -147,17 +147,22 @@ for dict_filename in dict_filenames:
 			# 	enders = phrasing.ENDERS
 			enders = phrasing.ENDERS
 			for ender in enders:
-				if noun_data.noun_data[phrasing.STARTERS[starter]]['subject'] == 'there':
-					if phrasing.ENDERS[ender]['verb'] not in verb_data.existential_there_data:
-						continue
 				key = starter + "…" + ender
+				# if noun_data.noun_data[phrasing.STARTERS[starter]]['subject'] == 'there':
+				# 	if phrasing.ENDERS[ender]['verb'] not in verb_data.existential_there_data:
+				# 		continue
+
 				if key in defined_strokes:
 					collision_count = len(defined_strokes[key])
-					e = phrasing.ENDERS[ender]['verb']
+					verb = phrasing.ENDERS[ender]['verb']
 					print(f"\033[1m{key:18} {phrasing.STARTERS[starter]:10} {phrasing.ENDERS[ender]['verb']:10}\033[0m")
 					
 					for conflict, translation in defined_strokes[key].items():
-						print(f"{conflict:18} {phrasing.lookup((conflict,)):30} {translation}")
+						# if v2 and verb in verb_data.DEFECTIVE_VERBS:
+						# 	print(f'Skipping {conflict} (illegal inflection of {verb})')
+						# 	continue
+						print(f"{conflict:18} ", end='')
+						print(f"{phrasing.lookup((conflict,), raise_grammar_errors=False):30} {translation}")
 					print('')
 					increment_collision_counter(
 						starter_collisions, starter, collision_count)
@@ -171,12 +176,12 @@ for dict_filename in dict_filenames:
 				key = starter + "…" + ender
 				if key in simple_defined_strokes:
 					collision_count = len(simple_defined_strokes[key])
-					e = phrasing.ENDERS[ender]['verb']
+					verb = phrasing.ENDERS[ender]['verb']
 					key_ = f'\033[32m{starter}\033[30m…{ender}'
 					print(f"\033[1m{key_:28} {phrasing.SIMPLE_STARTERS[starter]:10} {phrasing.ENDERS[ender]['verb']:10}\033[0m")
 
 					for conflict, translation in simple_defined_strokes[key].items():
-						print(f"{conflict:18} {phrasing.lookup((conflict,)):30} {translation}")
+						print(f"{conflict:18} {phrasing.lookup((conflict,), raise_grammar_errors=False):30} {translation}")
 					print('')
 					increment_collision_counter(
 						simple_starter_collisions, starter, collision_count)
