@@ -70,6 +70,13 @@ existential_there_data = [
 	# non-verbs (adverbs)
 	'just', 'really',
 ]
+verbs_non_passive_data = [
+	'can', 'shall', 'will', 'may', 'must',
+	'be',
+	'happen', 'seem',
+	'mind',
+	'remain', 'live',
+]
 
 # For regular verb, exceptions is None or {}
 def inflect(verb, suffix, exceptions=None):

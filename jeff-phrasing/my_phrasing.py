@@ -10,7 +10,7 @@ jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
 from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, require_subject_unless_past, simple_starter_no_inversion
-from verb_data import verb_forms, ENDERS, DEFECTIVE_VERBS, VERBS_WITHOUT_DO_SUPPORT, existential_there_data
+from verb_data import verb_forms, ENDERS, DEFECTIVE_VERBS, VERBS_WITHOUT_DO_SUPPORT, existential_there_data, verbs_non_passive_data
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
 
@@ -56,6 +56,8 @@ def stroke_to_obj(stroke, data={}, raise_grammar_errors=True):
 	valid_ender  = ender in ENDERS
 	if not valid_ender:
 		raise KeyError(f'Ender "{ender}" not found')
+	if 'passive' in data and data['passive'] and ENDERS[ender]['verb'] in verbs_non_passive_data:
+		raise_grammar_error(f'Passive voice does not apply to ender "{ENDERS[ender]}"', data, raise_grammar_errors)
 
 	if valid_simple:
 		data['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
