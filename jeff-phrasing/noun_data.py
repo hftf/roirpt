@@ -55,6 +55,9 @@ require_subject_unless_past = [
 	'if', 'when',
 	'where', 'why',
 ]
+simple_starter_no_inversion = [
+	'that', 'if',
+]
 
 SIMPLE_PRONOUNS = {
 	'E':   'he',

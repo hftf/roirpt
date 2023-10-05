@@ -9,7 +9,7 @@ import os, sys
 jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
-from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, require_subject_unless_past
+from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, require_subject_unless_past, simple_starter_no_inversion
 from verb_data import verb_forms, ENDERS, DEFECTIVE_VERBS, VERBS_WITHOUT_DO_SUPPORT, existential_there_data
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
@@ -61,7 +61,9 @@ def stroke_to_obj(stroke, data={}, raise_grammar_errors=True):
 		data['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
 		if simple_pronoun in SIMPLE_PRONOUNS:
 			if question:
-				raise_grammar_error('Subject–aux question inversion does not apply to simple starters', data, raise_grammar_errors)
+				if SIMPLE_STARTERS[simple_starter] in simple_starter_no_inversion:
+					raise_grammar_error(f'Subject–aux question inversion does not apply to simple starter "{SIMPLE_STARTERS[simple_starter]}"', data, raise_grammar_errors)
+				data['question'] = question == '^'
 			if SIMPLE_STARTERS[simple_starter] in require_subject_unless_past and \
 				not SIMPLE_PRONOUNS[simple_pronoun] and \
 				ENDERS[ender]['verb'] and \
