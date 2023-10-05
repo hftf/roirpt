@@ -138,7 +138,7 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 
 	# inversion
 	if subject:
-		if contract and not question and phrase[0] in CONTRACTIONS:
+		if contract and not question and phrase and phrase[0] in CONTRACTIONS:
 			subject += CONTRACTIONS[phrase.pop(0)]
 		phrase.insert(question, subject)
 

@@ -204,6 +204,14 @@ tests = {
 	"^STWR*RBT/+-P":  "not to be taken",
 	"^STWR*ERBT":     "not to have taken",
 	"^STWR*ERBT/+-P": "not to have been taken",
+	"SWR":            "I",
+	"+SWR":           "I",
+	"SWRUFL":         "I am feeling",
+	"+SWRUFL":        "I'm feeling",
+	"+SWHAO*E":       "why she",
+	"SWR-PLS/+-P":    "*I am seemed",
+	"SWR-RGS":        None, # *I cares - TODO: add something to prevent auto suffixation
+	"^+SWHAO*ETS":    "why does she have to",
 }
 
 for test, expected in tests.items():
