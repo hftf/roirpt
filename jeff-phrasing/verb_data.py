@@ -195,7 +195,8 @@ verb_ender_data = {
 	'look':       ('L',      None  ),
 
 	'help':       ('PLGS',   None  ), # TODO remap FP?
-	# recognize RGZ
+	'recognize':  ('RGZ',    'that'),
+	'notice':     ('PBS',    'that'),
 	# play
 }
 
