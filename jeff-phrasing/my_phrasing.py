@@ -27,8 +27,8 @@ STROKE_PARTS = re.compile(r'''^\#?
 	re.X)
 
 MODALS = {'': None, 'A': 'can', 'AO': 'will', 'O': 'shall'}
-NEGATIVE_CONTRACTIONS = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
-CONTRACTIONS = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
+negative_contractions = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
+contractions = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
 def raise_grammar_error(message, data, raise_grammar_errors=True):
@@ -143,8 +143,8 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 
 	if negation:
 		if contract and finite and phrase[0] != 'am':
-			if phrase[0] in NEGATIVE_CONTRACTIONS:
-				phrase[0] = NEGATIVE_CONTRACTIONS[phrase[0]]
+			if phrase[0] in negative_contractions:
+				phrase[0] = negative_contractions[phrase[0]]
 			phrase[0] += "n't"
 		elif phrase and phrase[0] == 'can' and not question:
 			phrase[0] += 'not'
@@ -153,8 +153,8 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 
 	# inversion
 	if subject:
-		if contract and not question and phrase and phrase[0] in CONTRACTIONS:
-			subject += CONTRACTIONS[phrase.pop(0)]
+		if contract and not question and phrase and phrase[0] in contractions:
+			subject += contractions[phrase.pop(0)]
 		phrase.insert(question, subject)
 
 	if cosubordinator:
