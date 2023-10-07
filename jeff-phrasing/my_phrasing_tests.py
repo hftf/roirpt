@@ -236,3 +236,47 @@ for outline, expected_phrase in tests.items():
 	emoji = "❌✅"[expected_phrase == result_phrase]
 	print(f'{str(result_phrase) + error:32} {emoji}')
 	# assert expected == result
+
+test_avm_1 = {
+	# coordinator or subordinator (also conjunction, preposition, complementizer)
+	# 'cosubordinator': None,
+	
+	# NOUN (SUBJECT) FEATURES
+	'subject': 'I',
+	# singular, plural
+	'number': 'singular',
+	# 1, 2, 3
+	'person': '1',
+
+	# VERB FEATURES
+	# H  True = have (perfect), False = imperfect
+	'have': True,
+	# B  True = be (progressive/continuous), False = simple
+	'be': True,
+	# M  None, will, can, shall, may, must, need to
+	'modal':    'can',
+	# ‽  False = declarative (statement, indicative), True = interrogative (question, subject–auxiliary inversion)
+	'question': True,
+	# ±  polarity: False = positive (affirmative), True = negative
+	'negation': True,
+	# ’  True, False
+	'contract': False,
+	# T  '' = present, 'ed' = past
+	'tense': 'ed',
+	# V  main verb
+	'verb': 'want',
+
+	# X  to, it, a, the, that, on, like
+	'extra_word': 'to',
+
+	# A  None, just, really, even, still, always, never
+	# 'adverb': None,
+
+	# P  voice: False = active, True passive
+	# 'passive': False,
+	# subjunctive (irrealis), imperative
+}
+result_phrase_1 = my_phrasing.avm_to_phrase(test_avm_1, raise_grammar_errors=True)
+assert result_phrase_1 == "could I not have been wanting to"
+result_avm_1 = my_phrasing.stroke_to_avm("^SWRA*EUPTD", raise_grammar_errors=True)
+assert result_avm_1 == test_avm_1
