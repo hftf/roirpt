@@ -118,7 +118,7 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 	if be:
 		phrase.append('be'),   selects.append('ing')
 	if passive:
-		phrase.append('be'),   selects.append('en')
+		phrase.append('be'),   selects.append('enP')
 	if verb:
 		phrase.append(verb)
 	else:
@@ -133,7 +133,7 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 		suffix = ''
 		if not select in forms:
 			# Only be/have/get have irregular forms; most others are stripped here
-			select = select.rstrip('123p')
+			select = select.rstrip('123Pp')
 		if not select in forms:
 			# likely an illegal inflection of a modal ('to may', 'we maying')
 			raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', obj, raise_grammar_errors)

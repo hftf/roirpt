@@ -13,7 +13,7 @@ irregular_verb_data = {
 	'come':       {'en': 'come',      'ed': 'came'  },
 	'do':         {'en': 'done',      'ed': 'did'   },
 	'forget':     {'en': 'forgotten', 'ed': 'forgot'},
-	'get':        {'en': 'got',       'ed': 'got'   , 'en2': 'gotten'}, # he had gotten vs. he had got to (must)
+	'get':        {'en': 'got',       'ed': 'got'   , 'enP': 'gotten'}, # he had gotten vs. he had got to (must)
 	'give':       {'en': 'given',     'ed': 'gave'  },
 	'go':         {'en': 'gone',      'ed': 'went'  },
 	'know':       {'en': 'known',     'ed': 'knew'  },
@@ -229,8 +229,8 @@ for verb in verb_ender_data.keys():
 			'ed':  inflect(verb, 'ed' , exceptions),
 			'':    verb,
 		}
-		if 'en2' in exceptions:
-			forms.update({'en2': exceptions['en2']})
+		if 'enP' in exceptions:
+			forms.update({'enP': exceptions['enP']})
 		if 's1' in exceptions:
 			forms.update({
 				'1p':  exceptions['s'],
