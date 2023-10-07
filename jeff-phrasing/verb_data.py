@@ -47,7 +47,7 @@ irregular_verb_data = {
 	'may':        'might',
 	# Auxiliary verbs with 1 form
 	'must':       False, # have to?
-	'used to':    False,
+	'used to':    False, # note: requires do-support
 	# Adverbs / words with 1 form
 	'just':       False,
 	'really':     False,
@@ -248,7 +248,7 @@ for verb in verb_ender_data.keys():
 	verb_forms[verb] = forms
 
 defective_verbs = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
-verbs_without_do_support = [None, 'be'] + defective_verbs
+verbs_without_do_support = [None, 'be'] + defective_verbs[:5]
 
 # Part 2b: Generate all ender variants
 

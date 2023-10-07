@@ -214,6 +214,12 @@ tests = {
 	"STPAEUBD":       "if I were", # irrealis-were
 	"^KPWR-BD":       "were you",
 	"^KPWRUD":        "were you",
+	"^SWR-PBLGS":     "must I",
+	"^KPWR-PBLGS":    "must you",
+	"^SWR-TDZ":       "did I used to",
+	"^KPWR-TDZ":      "did you used to",
+	"^SWR-PBLGSZ":    "do I just",
+	"^KPWR-PBLGSZ":   "do you just",
 }
 
 for outline, expected_phrase in tests.items():
