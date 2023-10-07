@@ -98,9 +98,14 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word, passive = (obj.get(k, False) for k in
 	'subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word, passive'.split(', '))
 
-	phrase = []
 	finite = not (subject == '' and question and not modal)
-	selects = [tense + person + 'p'[:number == 'plural'] if finite else '']
+	subject_select = tense + person + 'p'[:number == 'plural']
+
+	# Queue of verbs (modal, auxiliary, main verb), e.g. ['have', 'be', 'go']
+	phrase = []
+	# Queue of verb forms selected by verbs above, e.g. ['past3p', 'en', 'ing']
+	selects = [subject_select if finite else '']
+
 	if not finite:
 		subject = 'to'
 		question = negation
@@ -116,12 +121,18 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 		phrase.append('be'),   selects.append('en')
 	if verb:
 		phrase.append(verb)
+	else:
+		selects.pop()
+	# At this point, selects should have same length as phrase.
+	assert len(phrase) == len(selects)
 
+	# Loop through verbs in phrase and apply the verb form selected by the previous verb/subject
 	for i, verb in enumerate(phrase):
 		select = selects[i]
 		forms = verb_forms[verb]
 		suffix = ''
 		if not select in forms:
+			# Only be/have/get have irregular forms; most others are stripped here
 			select = select.rstrip('123p')
 		if not select in forms:
 			# likely an illegal inflection of a modal ('to may', 'we maying')

@@ -1,9 +1,8 @@
 import re
 from collections import OrderedDict
-import pprint
 import sys
 
-# Part I: Verb forms
+# Part Ia: Verb form data (regular verbs are implicitly generated in Part Ib)
 
 irregular_verb_data = {
 	# Irregular verbs with 5+ forms (unpredictable -s forms, predictable -ing form)
@@ -52,7 +51,7 @@ irregular_verb_data = {
 	'':           False,
 }
 
-# allow dummy subject 'there' only for intransitive verbs (no direct object required for meaning)
+# dummy subject 'there' is only allowed for intransitive verbs (no direct object required for meaning)
 verbs_forbidding_existential_there = [
 	'',
 	# modals
@@ -70,6 +69,7 @@ verbs_forbidding_existential_there = [
 	# non-verbs (adverbs)
 	'just', 'really',
 ]
+# verbs not used in passive voice
 verbs_forbidding_passive = [
 	'can', 'shall', 'will', 'may', 'must',
 	'be',
@@ -113,7 +113,7 @@ def inflect(verb, suffix, exceptions=None):
 
 	return verb + suffix
 
-# Part 2: Ender data
+# Part 2a: Key mappings
 
 # Theory design guidelines:
 # 1. verbs with T in present ender should pair with another verb that doesn't have an extra word
@@ -156,7 +156,7 @@ verb_ender_data = {
 	'mean':       ('FR',     'to'  ), # was PBL
 	'learn':      ('RPBL',   'to'  ), # was RPBS
 	'seem':       ('PLS',    'to'  ), # TODO remap FPL?
-	'expect':     ('PGS',    'that'),
+	'expect':     ('PGS',    'that'), # TODO remap FP(G)T?
 	'realize':    ('RLS',    'that'), # TODO remap RLZ
 	'mind':       ('FRPB',   None  ), # was PBLS
 
@@ -207,7 +207,8 @@ verb_ender_data = {
 	# play
 }
 
-# generate verb forms
+# Part Ib: Generate all verb forms
+# (after Part 2a because it depends on verb_ender_data.keys() for the list of verbs)
 verb_forms = {}
 for verb in verb_ender_data.keys():
 	if verb in irregular_verb_data:
@@ -246,9 +247,12 @@ for verb in verb_ender_data.keys():
 defective_verbs = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
 verbs_without_do_support = [None, 'be'] + defective_verbs
 
+# Part 2b: Generate all ender variants
+
 # adds key to stroke
 # if result has 3 of 4 pinky keys, then returns both it and version with all 4 (TSDZ)
 # TODO: doesn't handle unergonomic diagonals with 2 pinky keys (TZ, SD)
+# TODO: replace with plover_stroke?
 def press(stroke, key):
 	if key in stroke:
 		sys.stderr.write(f'{key} already in {stroke}\n')
@@ -259,6 +263,7 @@ def press(stroke, key):
 		and not candidate == 'TDZ': # exception to avoid 'used to' 'had to' conflict
 		return [candidate, re.sub(r'T?S?D?Z?$', rf'TSDZ', candidate, 1)]
 	return [candidate]
+
 # flattens sublists, then gets unique items
 def fu(lists):
 	return list(set([i for l in lists for i in l]))
@@ -292,6 +297,3 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 			if ender in ENDERS:
 				sys.stderr.write(f'{verb}, {ender} already in ENDERS as {ENDERS[ender]}\n')
 			ENDERS[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word}
-
-# pprint.pprint(verb_forms, width=180)
-# pprint.pprint(ENDERS, width=180)

@@ -1,3 +1,4 @@
+# Grammatical data
 noun_data = {
 	'I':      {'subject': 'I',     'number': 'singular', 'person': '1'},
 	'he':     {'subject': 'he',    'number': 'singular', 'person': '3'},
@@ -15,14 +16,19 @@ noun_data = {
 	'':       {'subject': '',      'number': 'singular', 'person': '3'},
 	'2':      {'subject': '',      'number': 'plural',   'person': '3'},
 }
+# Simple starters that require a following subject
+# (unless in past/passive, e.g. if found, but *if finds)
 simple_starters_requiring_subject = [
 	'if', 'when',
 	'where', 'why',
 ]
+# Simple starters that cannot be followed by subject–auxiliary question inversion
+# e.g. what do you find vs. *that do you find
 simple_starters_forbidding_inversion = [
 	'that', 'if',
 ]
 
+# Key mappings
 STARTERS = {
 	'SWR':     'I',
 	'KWHR':    'he',
