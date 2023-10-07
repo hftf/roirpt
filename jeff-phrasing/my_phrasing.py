@@ -28,13 +28,13 @@ STROKE_PARTS = re.compile(r'''^\#?
 	(?P<ender>    F?R?P?B?L?G?T?S?D?Z?)$''', # note: D is tense
 	re.X)
 
-def raise_grammar_error(message, data, raise_grammar_errors=True):
+def raise_grammar_error(message, avm, raise_grammar_errors=True):
 	if raise_grammar_errors:
 		raise KeyError(message)
 	else:
-		data['grammar'] = message
+		avm['grammar'] = message
 
-def stroke_to_obj(stroke, data={}, raise_grammar_errors=True):
+def stroke_to_avm(stroke, avm={}, raise_grammar_errors=True):
 	stroke_parts = STROKE_PARTS.match(stroke)
 	if not stroke_parts:
 		raise KeyError(f'Stroke "{stroke}" does not match STROKE_PARTS regex')
@@ -53,46 +53,46 @@ def stroke_to_obj(stroke, data={}, raise_grammar_errors=True):
 	valid_ender  = ender in ENDERS
 	if not valid_ender:
 		raise KeyError(f'Ender "{ender}" not found')
-	if 'passive' in data and data['passive'] and ENDERS[ender]['verb'] in verbs_forbidding_passive:
-		raise_grammar_error(f'Passive voice does not apply to ender "{ENDERS[ender]}"', data, raise_grammar_errors)
+	if 'passive' in avm and avm['passive'] and ENDERS[ender]['verb'] in verbs_forbidding_passive:
+		raise_grammar_error(f'Passive voice does not apply to ender "{ENDERS[ender]}"', avm, raise_grammar_errors)
 
 	if valid_simple:
-		data['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
+		avm['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
 		if simple_pronoun in SIMPLE_PRONOUNS:
 			if question:
 				if SIMPLE_STARTERS[simple_starter] in simple_starters_forbidding_inversion:
-					raise_grammar_error(f'Subject–aux question inversion does not apply to simple starter "{SIMPLE_STARTERS[simple_starter]}"', data, raise_grammar_errors)
-				data['question'] = question == '^'
+					raise_grammar_error(f'Subject–aux question inversion does not apply to simple starter "{SIMPLE_STARTERS[simple_starter]}"', avm, raise_grammar_errors)
+				avm['question'] = question == '^'
 			if SIMPLE_STARTERS[simple_starter] in simple_starters_requiring_subject and \
 				not SIMPLE_PRONOUNS[simple_pronoun] and \
 				ENDERS[ender]['verb'] and \
 				ENDERS[ender]['tense'] != 'past':
-				raise_grammar_error(f'Subject required after simple starter (subordinator) "{SIMPLE_STARTERS[simple_starter]}" unless in past', data, raise_grammar_errors)
+				raise_grammar_error(f'Subject required after simple starter (subordinator) "{SIMPLE_STARTERS[simple_starter]}" unless in past', avm, raise_grammar_errors)
 
-			data.update(noun_data[SIMPLE_PRONOUNS[simple_pronoun]])
+			avm.update(noun_data[SIMPLE_PRONOUNS[simple_pronoun]])
 	# NORMAL STARTER
 	elif valid_normal:
 		if noun_data[STARTERS[starter]]['subject'] == 'there' and \
 			ENDERS[ender]['verb'] not in verbs_forbidding_existential_there and \
 			('E' not in aspect or ENDERS[ender]['tense'] != 'past'):
-			raise_grammar_error(f'Existential "{STARTERS[starter]}" cannot go with verb "{ENDERS[ender]["verb"]}" unless in past', data, raise_grammar_errors)
+			raise_grammar_error(f'Existential "{STARTERS[starter]}" cannot go with verb "{ENDERS[ender]["verb"]}" unless in past', avm, raise_grammar_errors)
 
-		data.update(noun_data[STARTERS[starter]])
-		data['have']     = 'E' in aspect
-		data['be']       = 'U' in aspect
-		data['modal']    = MODALS[modal]
-		data['question'] = question == '^'
-		data['negation'] = negation == '*'
-	data['contract'] = contract == '+'
+		avm.update(noun_data[STARTERS[starter]])
+		avm['have']     = 'E' in aspect
+		avm['be']       = 'U' in aspect
+		avm['modal']    = MODALS[modal]
+		avm['question'] = question == '^'
+		avm['negation'] = negation == '*'
+	avm['contract'] = contract == '+'
 
-	data.update(ENDERS[ender])
-	return data
+	avm.update(ENDERS[ender])
+	return avm
 
-def obj_to_phrase(obj, raise_grammar_errors=True):
-	if not obj:
+def avm_to_phrase(avm, raise_grammar_errors=True):
+	if not avm:
 		return
 
-	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word, passive = (obj.get(k, False) for k in
+	subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word, passive = (avm.get(k, False) for k in
 	'subject, person, number, tense, modal, have, be, verb, question, negation, contract, cosubordinator, extra_word, passive'.split(', '))
 
 	finite = not (subject == '' and question and not modal)
@@ -133,7 +133,7 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 			select = select.rstrip('123Pp')
 		if not select in forms:
 			# likely an illegal inflection of a modal ('to may', 'we maying')
-			raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', obj, raise_grammar_errors)
+			raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', avm, raise_grammar_errors)
 			suffix = f'[*{select}]'
 			select = ''
 		phrase[i] = forms[select] + suffix
@@ -162,24 +162,24 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 
 	result = ' '.join(phrase)
 
-	if 'grammar' in obj:
+	if 'grammar' in avm:
 		result = f'*{result}'
 
 	return result
 
 def lookup(stroke, raise_grammar_errors=True):
-	data = {}
+	avm = {}
 	if len(stroke) > 1:
 		# naive conflict workaround
 		if stroke[1] == '+':
 			raise_grammar_errors = False # only for debugging
 			pass
 		elif stroke[1] == '+-P':
-			data['passive'] = True
+			avm['passive'] = True
 		# can do other things here, like add post-hoc adverbs, contractions, passive voice, etc.
 		else:
 			raise KeyError(f'Two-stroke outline "{"/".join(stroke)}" not valid')
-	phrase = obj_to_phrase(stroke_to_obj(stroke[0], data, raise_grammar_errors), raise_grammar_errors)
+	phrase = avm_to_phrase(stroke_to_avm(stroke[0], avm, raise_grammar_errors), raise_grammar_errors)
 	if phrase:
 		return phrase
 	else:

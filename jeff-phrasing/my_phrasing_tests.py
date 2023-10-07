@@ -216,16 +216,17 @@ tests = {
 	"^KPWRUD":        "were you",
 }
 
-for test, expected in tests.items():
-	print(f'{test:18} = {str(expected):30} Result: ', end='')
+for outline, expected_phrase in tests.items():
+	print(f'{outline:18} = {str(expected_phrase):30} → ', end='')
+
 	error = ''
 	try:
-		result = my_phrasing.lookup(tuple(test.split('/')), False)
+		result_phrase = my_phrasing.lookup(tuple(outline.split('/')), False)
 	except KeyError as e:
-		result = None
+		result_phrase = None
 		error = f' ({e})'
-		if expected != result:
+		if expected_phrase != result_phrase:
 			raise e
-	emoji = "❌✅"[expected == result]
-	print(f'{str(result) + error:32} {emoji}')
+	emoji = "❌✅"[expected_phrase == result_phrase]
+	print(f'{str(result_phrase) + error:32} {emoji}')
 	# assert expected == result
