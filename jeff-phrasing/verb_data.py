@@ -53,7 +53,7 @@ irregular_verb_data = {
 }
 
 # allow dummy subject 'there' only for intransitive verbs (no direct object required for meaning)
-existential_there_data = [
+verbs_forbidding_existential_there = [
 	'',
 	# modals
 	'can', 'shall', 'will', 'may', 'must', 'need', 'used to',
@@ -70,7 +70,7 @@ existential_there_data = [
 	# non-verbs (adverbs)
 	'just', 'really',
 ]
-verbs_non_passive_data = [
+verbs_forbidding_passive = [
 	'can', 'shall', 'will', 'may', 'must',
 	'be',
 	'happen', 'seem',
@@ -208,7 +208,7 @@ verb_ender_data = {
 }
 
 # generate verb forms
-verb_forms = {} #OrderedDict()
+verb_forms = {}
 for verb in verb_ender_data.keys():
 	if verb in irregular_verb_data:
 		exceptions = irregular_verb_data[verb] 
@@ -243,8 +243,8 @@ for verb in verb_ender_data.keys():
 
 	verb_forms[verb] = forms
 
-DEFECTIVE_VERBS = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
-VERBS_WITHOUT_DO_SUPPORT = [None, 'be'] + DEFECTIVE_VERBS
+defective_verbs = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
+verbs_without_do_support = [None, 'be'] + defective_verbs
 
 # adds key to stroke
 # if result has 3 of 4 pinky keys, then returns both it and version with all 4 (TSDZ)

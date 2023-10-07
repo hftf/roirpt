@@ -15,6 +15,13 @@ noun_data = {
 	'':       {'subject': '',      'number': 'singular', 'person': '3'},
 	'2':      {'subject': '',      'number': 'plural',   'person': '3'},
 }
+simple_starters_requiring_subject = [
+	'if', 'when',
+	'where', 'why',
+]
+simple_starters_forbidding_inversion = [
+	'that', 'if',
+]
 
 STARTERS = {
 	'SWR':     'I',
@@ -51,13 +58,6 @@ SIMPLE_STARTERS = {
 	'SKP':   'and',
 	# SKPR   or ?
 }
-require_subject_unless_past = [
-	'if', 'when',
-	'where', 'why',
-]
-simple_starter_no_inversion = [
-	'that', 'if',
-]
 
 SIMPLE_PRONOUNS = {
 	'E':   'he',

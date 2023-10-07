@@ -9,8 +9,8 @@ import os, sys
 jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
-from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, require_subject_unless_past, simple_starter_no_inversion
-from verb_data import verb_forms, ENDERS, DEFECTIVE_VERBS, VERBS_WITHOUT_DO_SUPPORT, existential_there_data, verbs_non_passive_data
+from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, simple_starters_requiring_subject, simple_starters_forbidding_inversion
+from verb_data import verb_forms, ENDERS, defective_verbs, verbs_without_do_support, verbs_forbidding_existential_there, verbs_forbidding_passive
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
 
@@ -56,17 +56,17 @@ def stroke_to_obj(stroke, data={}, raise_grammar_errors=True):
 	valid_ender  = ender in ENDERS
 	if not valid_ender:
 		raise KeyError(f'Ender "{ender}" not found')
-	if 'passive' in data and data['passive'] and ENDERS[ender]['verb'] in verbs_non_passive_data:
+	if 'passive' in data and data['passive'] and ENDERS[ender]['verb'] in verbs_forbidding_passive:
 		raise_grammar_error(f'Passive voice does not apply to ender "{ENDERS[ender]}"', data, raise_grammar_errors)
 
 	if valid_simple:
 		data['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
 		if simple_pronoun in SIMPLE_PRONOUNS:
 			if question:
-				if SIMPLE_STARTERS[simple_starter] in simple_starter_no_inversion:
+				if SIMPLE_STARTERS[simple_starter] in simple_starters_forbidding_inversion:
 					raise_grammar_error(f'Subject–aux question inversion does not apply to simple starter "{SIMPLE_STARTERS[simple_starter]}"', data, raise_grammar_errors)
 				data['question'] = question == '^'
-			if SIMPLE_STARTERS[simple_starter] in require_subject_unless_past and \
+			if SIMPLE_STARTERS[simple_starter] in simple_starters_requiring_subject and \
 				not SIMPLE_PRONOUNS[simple_pronoun] and \
 				ENDERS[ender]['verb'] and \
 				ENDERS[ender]['tense'] != 'past':
@@ -76,7 +76,7 @@ def stroke_to_obj(stroke, data={}, raise_grammar_errors=True):
 	# NORMAL STARTER
 	elif valid_normal:
 		if noun_data[STARTERS[starter]]['subject'] == 'there' and \
-			ENDERS[ender]['verb'] not in existential_there_data and \
+			ENDERS[ender]['verb'] not in verbs_forbidding_existential_there and \
 			('E' not in aspect or ENDERS[ender]['tense'] != 'past'):
 			raise_grammar_error(f'Existential "{STARTERS[starter]}" cannot go with verb "{ENDERS[ender]["verb"]}" unless in past', data, raise_grammar_errors)
 
@@ -106,7 +106,7 @@ def obj_to_phrase(obj, raise_grammar_errors=True):
 		question = negation
 	if modal:
 		phrase.append(modal),  selects.append('')
-	elif (question or negation) and not (have or be or passive) and finite and verb not in VERBS_WITHOUT_DO_SUPPORT:
+	elif (question or negation) and not (have or be or passive) and finite and verb not in verbs_without_do_support:
 		phrase.append('do'),   selects.append('') # do-support
 	if have:
 		phrase.append('have'), selects.append('en')
