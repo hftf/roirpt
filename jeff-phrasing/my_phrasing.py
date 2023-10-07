@@ -9,8 +9,10 @@ import os, sys
 jeff_dir = os.path.join(plover_dir, 'jeff-phrasing/')
 sys.path.append(jeff_dir)
 
-from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, simple_starters_requiring_subject, simple_starters_forbidding_inversion
-from verb_data import verb_forms, ENDERS, defective_verbs, verbs_without_do_support, verbs_forbidding_existential_there, verbs_forbidding_passive
+from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, \
+	simple_starters_requiring_subject, simple_starters_forbidding_inversion
+from verb_data import verb_forms, MODALS, ENDERS, contractions, negative_contractions, defective_verbs, \
+	verbs_without_do_support, verbs_forbidding_existential_there, verbs_forbidding_passive
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
 
@@ -25,11 +27,6 @@ STROKE_PARTS = re.compile(r'''^\#?
 	(?P<aspect>   E?U?)
 	(?P<ender>    F?R?P?B?L?G?T?S?D?Z?)$''', # note: D is tense
 	re.X)
-
-MODALS = {'': None, 'A': 'can', 'AO': 'will', 'O': 'shall'}
-negative_contractions = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
-contractions = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
-	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
 def raise_grammar_error(message, data, raise_grammar_errors=True):
 	if raise_grammar_errors:

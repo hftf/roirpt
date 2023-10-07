@@ -1,8 +1,11 @@
 import re
-from collections import OrderedDict
 import sys
 
 # Part Ia: Verb form data (regular verbs are implicitly generated in Part Ib)
+
+negative_contractions = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
+contractions = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
+	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve"}
 
 irregular_verb_data = {
 	# Irregular verbs with 5+ forms (unpredictable -s forms, predictable -ing form)
@@ -297,3 +300,7 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 			if ender in ENDERS:
 				sys.stderr.write(f'{verb}, {ender} already in ENDERS as {ENDERS[ender]}\n')
 			ENDERS[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word}
+
+# Part 2c: Key mapping for modals
+
+MODALS = {'': None, 'A': 'can', 'AO': 'will', 'O': 'shall'}
