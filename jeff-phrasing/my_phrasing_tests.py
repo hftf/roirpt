@@ -127,11 +127,11 @@ tests = {
 	"+TWRAO*GSZ":     "we wouldn't get",
 	"KWHR-PTZ":       "he happens to",
 	"^TWR-PL":        "may we",
-	"^TWRUPL":        "*are we may[*ing]",
-	"SWRUPL":         "*I am may[*ing]",
+	"^TWRUPL":        "*are we may†",
+	"SWRUPL":         "*I am may†",
 	"STPAT":          "*if has",
 	"^STPAEUT":       "*if I have",
-	"^SKWHROEUPLT":   "*shall she have been may[*ing] be",
+	"^SKWHROEUPLT":   "*shall she have been may† be",
 	"^KWHREUB":       "has he been being", #?
 	"^SWRA*PB":       "can I not know", # *cannot I know
 	"STHRAEULT":      "*there can have been telling",
