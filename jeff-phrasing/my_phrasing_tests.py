@@ -1,8 +1,5 @@
 import my_phrasing
 
-# print(obj_to_phrase(test_obj_1))
-'were you'
-
 tests = {
 	"":               None,
 	"HR-FR":          None,
@@ -214,6 +211,9 @@ tests = {
 	"^+SWHAO*ETS":    "why does she have to",
 	"^TWR":           "do we",
 	"KPWH-GSZ/+-P":   "it was gotten", # by
+	"STPAEUBD":       "if I were", # irrealis-were
+	"^KPWR-BD":       "were you",
+	"^KPWRUD":        "were you",
 }
 
 for test, expected in tests.items():
