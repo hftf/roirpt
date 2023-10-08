@@ -7,6 +7,7 @@ negative_contractions = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
 contractions = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve",
 	'not': "n't"} # n't is only for reversing purposes
+interrogative_contractions = {'did': "'d", "does": "'s"} | contractions
 
 irregular_verb_data = {
 	# Irregular verbs with 5+ forms (unpredictable -s forms, predictable -ing form)

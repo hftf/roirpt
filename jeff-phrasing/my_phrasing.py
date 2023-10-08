@@ -11,7 +11,8 @@ sys.path.append(jeff_dir)
 
 from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, \
 	simple_starters_requiring_subject, simple_starters_forbidding_inversion
-from verb_data import verb_forms, MODALS, ENDERS, contractions, negative_contractions, defective_verbs, \
+from verb_data import verb_forms, MODALS, ENDERS, \
+	contractions, negative_contractions, interrogative_contractions, defective_verbs, \
 	verbs_without_do_support, verbs_forbidding_existential_there, verbs_forbidding_passive
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
@@ -165,7 +166,7 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 			if phrase[0] in negative_contractions:
 				phrase[0] = negative_contractions[phrase[0]]
 			phrase[0] += "n't"
-		elif phrase and phrase[0] == 'can' and not question:
+		elif phrase and phrase[0] == 'can' and (not question or subject == ''):
 			phrase[0] += 'not'
 		else:
 			phrase.insert(finite, 'not')
@@ -177,6 +178,8 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 		phrase.insert(question, subject)
 
 	if cosubordinator:
+		if contract and 'w' in cosubordinator and phrase and phrase[0] in interrogative_contractions:
+			cosubordinator += interrogative_contractions[phrase.pop(0)]
 		phrase.insert(0, cosubordinator)
 
 	if extra_word:

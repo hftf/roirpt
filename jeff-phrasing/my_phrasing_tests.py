@@ -209,7 +209,8 @@ tests = {
 	"+SWHAO*E":       "why she",
 	"SWR-PLS/+-P":    "*I am seemed",
 	"SWR-RGS":        None, # *I cares - TODO: add something to prevent auto suffixation
-	"^+SWHAO*ETS":    "why does she have to",
+	"^SWHAO*ETS":     "why does she have to",
+	"^+SWHAO*ETS":    "why's she have to",
 	"^TWR":           "do we",
 	"KPWH-GSZ/+-P":   "it was gotten", # by
 	"STPAEUBD":       "if I were", # irrealis-were
@@ -229,6 +230,24 @@ tests = {
 	"+KPWH-B":        "it's",
 	"+KPWHU":         "it's",
 	"+KPWHE":         "it's",
+	"+KPWR-B/+-P":    "*you're been",
+	"+KPWREBD":       "you'd been",
+	"+KPWRAOUD":      "you'd be",
+	"+KPWRAOD/+-P":   "you'd be",
+	"^SWHOUD":        "who did you",
+	"^+SWHOUD":       "who'd you",
+	"^SWHAEB":        "what is he",
+	"^+SWHAEB":       "what's he",
+	"^SWHAE":         "what does he",
+	"^+SWHAE":        "what's he",
+	"^SWHAUB":        "what are you",
+	"^+SWHAUB":       "what're you",
+	"STWR-RBGT":      "work on",
+	"^STWR-RBGT":     "to work on",
+	"STWRARBGT":      "can work on",
+	"^STWRARBGT":     "can work on",
+	"STWRA*RBGT":     "cannot work on",
+	"^STWRA*RBGT":    "cannot work on",
 }
 
 for outline, expected_phrase in tests.items():
