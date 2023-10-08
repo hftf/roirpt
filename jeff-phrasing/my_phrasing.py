@@ -156,7 +156,7 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 		if not select in forms:
 			# likely an illegal inflection of a modal ('to may', 'we maying')
 			raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', avm, raise_grammar_errors)
-			suffix = '†' # f'[*{select}]'
+			suffix = '' # '†' # f'[*{select}]'
 			select = ''
 		phrase[i] = forms[select] + suffix
 
