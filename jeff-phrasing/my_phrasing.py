@@ -34,6 +34,25 @@ def raise_grammar_error(message, avm, raise_grammar_errors=True):
 	else:
 		avm['grammar'] = message
 
+def outline_to_avm(outline, raise_grammar_errors=True):
+	if type(outline) == str:
+		outline = tuple(outline.split('/'))
+
+	avm = {}
+	# parse second stroke and add features to avm
+	if len(outline) > 1:
+		# naive conflict workaround
+		if outline[1] == '+':
+			raise_grammar_errors = False # only for debugging
+			pass
+		elif outline[1] == '+-P':
+			avm['passive'] = True
+		# can do other things here, like add post-hoc adverbs, contractions, passive voice, etc.
+		else:
+			raise KeyError(f'Two-stroke outline "{"/".join(outline)}" not valid')
+
+	return stroke_to_avm(outline[0], avm, raise_grammar_errors)
+
 def stroke_to_avm(stroke, avm={}, raise_grammar_errors=True):
 	stroke_parts = STROKE_PARTS.match(stroke)
 	if not stroke_parts:
@@ -167,19 +186,8 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 
 	return result
 
-def lookup(stroke, raise_grammar_errors=True):
-	avm = {}
-	if len(stroke) > 1:
-		# naive conflict workaround
-		if stroke[1] == '+':
-			raise_grammar_errors = False # only for debugging
-			pass
-		elif stroke[1] == '+-P':
-			avm['passive'] = True
-		# can do other things here, like add post-hoc adverbs, contractions, passive voice, etc.
-		else:
-			raise KeyError(f'Two-stroke outline "{"/".join(stroke)}" not valid')
-	phrase = avm_to_phrase(stroke_to_avm(stroke[0], avm, raise_grammar_errors), raise_grammar_errors)
+def lookup(outline, raise_grammar_errors=True):
+	phrase = avm_to_phrase(outline_to_avm(outline, raise_grammar_errors), raise_grammar_errors)
 	if phrase:
 		return phrase
 	else:
@@ -192,7 +200,7 @@ reverse_SIMPLE_PRONOUNS       = {v: k for k, v in SIMPLE_PRONOUNS.items()}
 reverse_MODALS                = {v: k for k, v in MODALS.items()}
 reverse_ENDERS                = {tuple(v.values()): k for k, v in ENDERS.items()}
 
-def avm_to_stroke(avm):
+def avm_to_outline(avm):
 	lookups = {
 		'question':       '^',
 		'contract':       '+',
@@ -207,16 +215,17 @@ def avm_to_stroke(avm):
 	if 'cosubordinator' in avm and avm['cosubordinator']:
 		lookups['subject'] = reverse_SIMPLE_PRONOUNS
 
-	stroke = ''
+	outline = ''
 	for feature in lookups:
 		if feature in avm and avm[feature]:
 			if type(lookups[feature]) == str:
-				stroke += lookups[feature]
+				outline += lookups[feature]
 			else:
-				stroke += lookups[feature][avm[feature]]
+				outline += lookups[feature][avm[feature]]
 
-	stroke += reverse_ENDERS[(avm['tense'], avm['verb'], avm['extra_word'])]
+	outline += reverse_ENDERS[(avm['tense'], avm['verb'], avm['extra_word'])]
 
-	if 'passive' in avm and avm['passive']: stroke += '/+-P'
+	if 'passive' in avm and avm['passive']:
+		outline += '/+-P'
 
-	return stroke
+	return outline

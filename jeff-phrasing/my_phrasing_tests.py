@@ -281,11 +281,11 @@ avm_tests = [
 	("^SWRA*EUPTD",     test_avm_1, "could I not have been wanting to"),
 	("^SWRA*EUPTD/+-P", test_avm_2, "could I not have been being wanted to"),
 ]
-for (stroke, avm, phrase) in avm_tests:
-	result_phrase = my_phrasing.avm_to_phrase(avm,    raise_grammar_errors=True)
-	result_avm    = my_phrasing.stroke_to_avm(stroke, raise_grammar_errors=True)
-	result_stroke = my_phrasing.avm_to_stroke(avm)
-	print(result_phrase, result_stroke)
-	assert result_phrase == phrase
-	assert result_avm    == avm
-	assert result_stroke == stroke
+for (outline, avm, phrase) in avm_tests:
+	result_phrase  = my_phrasing.avm_to_phrase(avm,    raise_grammar_errors=True)
+	result_avm     = my_phrasing.outline_to_avm(outline, raise_grammar_errors=True)
+	result_outline = my_phrasing.avm_to_outline(avm)
+	print(result_phrase, result_outline)
+	assert result_phrase  == phrase
+	assert result_avm     == avm
+	assert result_outline == outline
