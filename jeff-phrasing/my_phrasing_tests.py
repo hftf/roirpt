@@ -134,6 +134,7 @@ tests = {
 	"^SKWHROEUPLT":   "*shall she have been may† be",
 	"^KWHREUB":       "has he been being", #?
 	"^SWRA*PB":       "can I not know", # *cannot I know
+	"^+SWRA*PB":      "can't I know",
 	"STHRAEULT":      "*there can have been telling",
 	"STPHRAOEUPB":    "*there will have been knowing",
 	"STPHRAEPB":      "*there can have known",
@@ -220,6 +221,14 @@ tests = {
 	"^KPWR-TDZ":      "did you used to",
 	"^SWR-PBLGSZ":    "do I just",
 	"^KPWR-PBLGSZ":   "do you just",
+	"SWRETDZ":        "I had used to",
+	"^SWRETDZ":       "had I used to",
+	"KPWHB":          "it is",
+	"KPWHU":          "it is",
+	"KPWHE":          "it has",
+	"+KPWHB":         "it's",
+	"+KPWHU":         "it's",
+	"+KPWHE":         "it's",
 }
 
 for outline, expected_phrase in tests.items():
@@ -234,7 +243,19 @@ for outline, expected_phrase in tests.items():
 		if expected_phrase != result_phrase:
 			raise e
 	emoji = "❌✅"[expected_phrase == result_phrase]
-	print(f'{str(result_phrase) + error:32} {emoji}')
+	print(f'{str(result_phrase) + error:32} {emoji} ', end='')
+
+	error = ''
+	try:
+		reversed_outlines = my_phrasing.reverse_lookup(result_phrase)
+	except KeyError as e:
+		reversed_outlines = None
+		error = f' ({e})'
+		if outline not in reversed_outlines:
+			raise e
+	emoji = "❌✅"[outline in reversed_outlines]
+	print(f'{str(reversed_outlines) + error:32} {emoji}')
+
 	# assert expected == result
 
 test_avm_1 = {

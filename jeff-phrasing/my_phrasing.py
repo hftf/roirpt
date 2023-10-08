@@ -81,6 +81,7 @@ def stroke_to_avm(stroke, avm={}, raise_grammar_errors=True):
 			if question:
 				if SIMPLE_STARTERS[simple_starter] in simple_starters_forbidding_inversion:
 					raise_grammar_error(f'Subject–aux question inversion does not apply to simple starter "{SIMPLE_STARTERS[simple_starter]}"', avm, raise_grammar_errors)
+					question = ''
 				avm['question'] = question == '^'
 			if SIMPLE_STARTERS[simple_starter] in simple_starters_requiring_subject and \
 				not SIMPLE_PRONOUNS[simple_pronoun] and \
@@ -150,6 +151,8 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 		if not select in forms:
 			# Only be/have/get have irregular forms; most others are stripped here
 			select = select.rstrip('123Pp')
+		if verb == 'used to':
+			select = ''
 		if not select in forms:
 			# likely an illegal inflection of a modal ('to may', 'we maying')
 			raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', avm, raise_grammar_errors)
@@ -194,11 +197,15 @@ def lookup(outline, raise_grammar_errors=True):
 		raise KeyError
 
 
-reverse_STARTERS              = {v: k for k, v in STARTERS.items()}
-reverse_SIMPLE_STARTERS       = {v: k for k, v in SIMPLE_STARTERS.items()}
-reverse_SIMPLE_PRONOUNS       = {v: k for k, v in SIMPLE_PRONOUNS.items()}
-reverse_MODALS                = {v: k for k, v in MODALS.items()}
-reverse_ENDERS                = {tuple(v.values()): k for k, v in ENDERS.items()}
+reverse_STARTERS        = {v: k for k, v in STARTERS.items()}
+reverse_SIMPLE_STARTERS = {v: k for k, v in SIMPLE_STARTERS.items()}
+reverse_SIMPLE_PRONOUNS = {v: k for k, v in SIMPLE_PRONOUNS.items()}
+reverse_MODALS          = {v: k for k, v in MODALS.items()}
+reverse_ENDERS          = {tuple(v.values()): k for k, v in ENDERS.items()}
+reverse_contractions    = {v: k for k, v in (contractions | negative_contractions).items()}
+
+POSSIBLE_REVERSE_MATCH = re.compile(r"[a-zI ']+")
+
 
 def avm_to_outline(avm):
 	lookups = {
@@ -229,3 +236,18 @@ def avm_to_outline(avm):
 		outline += '/+-P'
 
 	return outline
+
+def reverse_lookup(text):
+	if not text or not POSSIBLE_REVERSE_MATCH.fullmatch(text):
+		return []
+
+	words = re.split(r" |(?=\Bn[o']t)|(?='[^t])", text)
+	words = [reverse_contractions[w] if w in reverse_contractions else w for w in words]
+
+	# Quit early if beyond maximum phrase length
+	if len(words) > 8:
+		return []
+
+	result = []
+	# return result
+	return words

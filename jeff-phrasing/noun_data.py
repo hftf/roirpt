@@ -53,10 +53,11 @@ SIMPLE_STARTERS = {
 	'STHA':  'that',
 	'STPA':  'if',
 	'SWH':   'when',
-	'SWHA':  'what',
 	'SWHR':  'where',
+	'SWHA':  'what',
 	'SWHO':  'who',
 	'SWHAO': 'why', # was STKWH
+	# how
 	# STWHR  whether ?
 
 	# coordinators
