@@ -202,7 +202,9 @@ reverse_SIMPLE_STARTERS = {v: k for k, v in SIMPLE_STARTERS.items()}
 reverse_SIMPLE_PRONOUNS = {v: k for k, v in SIMPLE_PRONOUNS.items()}
 reverse_MODALS          = {v: k for k, v in MODALS.items()}
 reverse_ENDERS          = {tuple(v.values()): k for k, v in ENDERS.items()}
-reverse_contractions    = {v: k for k, v in (contractions | negative_contractions).items()}
+reverse_contractions = {}
+for k, v in (contractions | negative_contractions).items():
+	reverse_contractions[v] = [reverse_contractions[v], k] if v in reverse_contractions else k
 
 POSSIBLE_REVERSE_MATCH = re.compile(r"[a-zI ']+")
 
@@ -241,7 +243,8 @@ def reverse_lookup(text):
 	if not text or not POSSIBLE_REVERSE_MATCH.fullmatch(text):
 		return []
 
-	words = re.split(r" |(?=\Bn[o']t)|(?='[^t])", text)
+	# 1. Undo contractions
+	words = re.split(r" |(?=\Bn't\b)|(?<=\bcan)(?=not\b)|(?='[^t])", text)
 	words = [reverse_contractions[w] if w in reverse_contractions else w for w in words]
 
 	# Quit early if beyond maximum phrase length
