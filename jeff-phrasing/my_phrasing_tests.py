@@ -248,8 +248,10 @@ tests = {
 	"^STWRARBGT":     "can work on",
 	"STWRA*RBGT":     "cannot work on",
 	"^STWRA*RBGT":    "cannot work on",
-	"+STWRA*RBGT":     "can't work on",
-	"^+STWRA*RBGT":    "can't work on",
+	"+STWRA*RBGT":    "can't work on",
+	"^+STWRA*RBGT":   "can't work on",
+	"^+STWRE":        "to have", # *to've
+	"^+STWREU":       "to have been", # *to've been
 }
 
 for i, (outline, expected_phrase) in enumerate(tests.items()):
