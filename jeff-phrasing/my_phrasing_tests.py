@@ -1,6 +1,104 @@
 import my_phrasing
 
 tests = {
+	"SWR*":            "I do not",
+	"SWR*T":           "I do not have",
+	"SWR*RP":          "I do not do",
+	"SWR*E":           "I have not",
+	"SWR*ET":          "I have not had",
+	"SWR*ERP":         "I have not done",
+	"SWR*U":           "I am not",
+	"SWR*UT":          "I am not having",
+	"SWR*URP":         "I am not doing",
+	"SWR*EU":          "I have not been",
+	"SWR*EUT":         "I have not been having",
+	"SWR*EURP":        "I have not been doing",
+	"^SWR*":           "do I not",
+	"^SWR*T":          "do I not have",
+	"^SWR*RP":         "do I not do",
+	"^SWR*E":          "have I not",
+	"^SWR*ET":         "have I not had",
+	"^SWR*ERP":        "have I not done",
+	"^SWR*U":          "am I not",
+	"^SWR*UT":         "am I not having",
+	"^SWR*URP":        "am I not doing",
+	"^SWR*EU":         "have I not been",
+	"^SWR*EUT":        "have I not been having",
+	"^SWR*EURP":       "have I not been doing",
+	"+SWR*":           "I don't",
+	"+SWR*T":          "I don't have",
+	"+SWR*RP":         "I don't do",
+	"+SWR*E":          "I haven't",
+	"+SWR*ET":         "I haven't had",
+	"+SWR*ERP":        "I haven't done",
+	"+SWR*U":          "I'm not",
+	"+SWR*UT":         "I'm not having",
+	"+SWR*URP":        "I'm not doing",
+	"+SWR*EU":         "I haven't been",
+	"+SWR*EUT":        "I haven't been having",
+	"+SWR*EURP":       "I haven't been doing",
+	"^+SWR*":          "don't I",
+	"^+SWR*T":         "don't I have",
+	"^+SWR*RP":        "don't I do",
+	"^+SWR*E":         "haven't I",
+	"^+SWR*ET":        "haven't I had",
+	"^+SWR*ERP":       "haven't I done",
+	"^+SWR*U":         "aren't I",
+	"^+SWR*UT":        "aren't I having",
+	"^+SWR*URP":       "aren't I doing",
+	"^+SWR*EU":        "haven't I been",
+	"^+SWR*EUT":       "haven't I been having",
+	"^+SWR*EURP":      "haven't I been doing",
+	"SWRO*D":          "I should not",
+	"SWRO*TD":         "I should not have",
+	"SWRO*RPD":        "I should not do",
+	"SWRO*ED":         "I should not have",
+	"SWRO*ETD":        "I should not have had",
+	"SWRO*ERPD":       "I should not have done",
+	"SWRO*UD":         "I should not be",
+	"SWRO*UTD":        "I should not be having",
+	"SWRO*URPD":       "I should not be doing",
+	"SWRO*EUD":        "I should not have been",
+	"SWRO*EUTD":       "I should not have been having",
+	"SWRO*EURPD":      "I should not have been doing",
+	"^SWRO*D":         "should I not",
+	"^SWRO*TD":        "should I not have",
+	"^SWRO*RPD":       "should I not do",
+	"^SWRO*ED":        "should I not have",
+	"^SWRO*ETD":       "should I not have had",
+	"^SWRO*ERPD":      "should I not have done",
+	"^SWRO*UD":        "should I not be",
+	"^SWRO*UTD":       "should I not be having",
+	"^SWRO*URPD":      "should I not be doing",
+	"^SWRO*EUD":       "should I not have been",
+	"^SWRO*EUTD":      "should I not have been having",
+	"^SWRO*EURPD":     "should I not have been doing",
+	"+SWRO*D":         "I shouldn't",
+	"+SWRO*TD":        "I shouldn't have",
+	"+SWRO*RPD":       "I shouldn't do",
+	"+SWRO*ED":        "I shouldn't have",
+	"+SWRO*ETD":       "I shouldn't have had",
+	"+SWRO*ERPD":      "I shouldn't have done",
+	"+SWRO*UD":        "I shouldn't be",
+	"+SWRO*UTD":       "I shouldn't be having",
+	"+SWRO*URPD":      "I shouldn't be doing",
+	"+SWRO*EUD":       "I shouldn't have been",
+	"+SWRO*EUTD":      "I shouldn't have been having",
+	"+SWRO*EURPD":     "I shouldn't have been doing",
+	"^+SWRO*D":        "shouldn't I",
+	"^+SWRO*TD":       "shouldn't I have",
+	"^+SWRO*RPD":      "shouldn't I do",
+	"^+SWRO*ED":       "shouldn't I have",
+	"^+SWRO*ETD":      "shouldn't I have had",
+	"^+SWRO*ERPD":     "shouldn't I have done",
+	"^+SWRO*UD":       "shouldn't I be",
+	"^+SWRO*UTD":      "shouldn't I be having",
+	"^+SWRO*URPD":     "shouldn't I be doing",
+	"^+SWRO*EUD":      "shouldn't I have been",
+	"^+SWRO*EUTD":     "shouldn't I have been having",
+	"^+SWRO*EURPD":    "shouldn't I have been doing",
+# }
+# tests2 = {
 	"":               None,
 	"HR-FR":          None,
 	"^KPWRAO*EBT":    "will you not have been a",
@@ -261,6 +359,9 @@ tests = {
 
 t = p = q = 0
 for i, (outline, expected_phrase) in enumerate(tests.items()):
+	# if 45 > i or i > 50:
+	# if i > 5:
+		# continue
 	print(f'{i:03} {outline:18} = {str(expected_phrase):30} → ', end='')
 
 	error = ''
@@ -275,10 +376,11 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 	t += 1
 	q += expected_phrase == result_phrase
 	print(f'{str(result_phrase) + error:32} {emoji} ')
+	# print(my_phrasing.outline_to_avm(outline))
 	if not result_phrase:
+		print(f'\033[4m{" "*93}\033[0m')
 		continue
 
-	print(' '*52, end='')
 	error = ''
 	try:
 		reversed_outlines = my_phrasing.reverse_lookup(result_phrase.strip('*'))
@@ -286,11 +388,16 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 		reversed_outlines = []
 		error = f' ({e})'
 		if outline not in reversed_outlines:
-			raise e
-			# pass
+			# raise e
+			pass
 	emoji = "❌✅"[outline in reversed_outlines]
-	print(f'{str(reversed_outlines) + error:52} {emoji}')
 	p += outline in reversed_outlines
+	phrase = my_phrasing.lookup(outline, raise_grammar_errors=False)
+	if outline not in reversed_outlines and phrase == expected_phrase:
+		p += 1j
+		emoji = "🉑"
+	print(f'\033[4m    {str(reversed_outlines[0]) + error:53} {phrase:32} {emoji}\033[0m')
+	# print(f'{str(reversed_outlines) + error} {emoji}')
 
 print(f'{q}/{t} and {p}/{t} tests passed')
 	# assert expected == result

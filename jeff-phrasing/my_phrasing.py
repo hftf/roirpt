@@ -11,7 +11,7 @@ sys.path.append(jeff_dir)
 
 from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, \
 	simple_starters_requiring_subject, simple_starters_forbidding_inversion
-from verb_data import verb_forms, MODALS, ENDERS, \
+from verb_data import verb_forms, verb_ender_data, MODALS, ENDERS, \
 	contractions, negative_contractions, interrogative_contractions, defective_verbs, \
 	verbs_without_do_support, verbs_forbidding_existential_there, verbs_forbidding_passive
 from jeff_phrasing import NON_PHRASE_STROKES
@@ -210,21 +210,24 @@ def lookup(outline, raise_grammar_errors=True):
 	else:
 		raise KeyError
 
+def reverse_dict_with_repeats(d):
+	r = {}
+	for k, v in d.items():
+		if v in r:
+			if type(r[v]) == tuple:
+				r[v] += (k,)
+			else:
+				r[v] = (r[v], k)
+		else:
+			r[v] = k
+	return r
 
 reverse_STARTERS        = {v: k for k, v in STARTERS.items()}
 reverse_SIMPLE_STARTERS = {v: k for k, v in SIMPLE_STARTERS.items()}
 reverse_SIMPLE_PRONOUNS = {v: k for k, v in SIMPLE_PRONOUNS.items()}
 reverse_MODALS          = {v: k for k, v in MODALS.items()}
 reverse_ENDERS          = {tuple(v.values()): k for k, v in ENDERS.items()}
-reverse_contractions = {}
-for k, v in (contractions | negative_contractions | interrogative_contractions).items():
-	if v in reverse_contractions:
-		if type(reverse_contractions[v]) == tuple:
-			reverse_contractions[v].append(k)
-		else:
-			reverse_contractions[v] = (reverse_contractions[v], k)
-	else:
-		reverse_contractions[v] = (k,)
+reverse_contractions    = reverse_dict_with_repeats(contractions | negative_contractions | interrogative_contractions)
 reverse_verb_forms = {form: (inflection, verb) for verb, forms in verb_forms.items() for inflection, form in forms.items()}
 
 POSSIBLE_REVERSE_MATCH = re.compile(r"[a-zI ']+")
@@ -269,7 +272,9 @@ def reverse_lookup(text):
 	if not text or not POSSIBLE_REVERSE_MATCH.fullmatch(text):
 		return []
 
-	avm = {}
+	avm = {'subject': None, 'person': None, 'number': None, 'have': False, 'be': False, \
+		'modal': None, 'question': False, 'negation': False, 'contract': False, \
+		'tense': None, 'verb': None, 'extra_word': None}
 	words = text.split(' ')
 
 	# Quit early if beyond maximum phrase length
@@ -288,8 +293,128 @@ def reverse_lookup(text):
 				parts[0] = reverse_contractions[parts[0]]
 
 			words = words[:i] + parts + words[i+1:]
-			avm['contract'] = True
+			avm['contract'] = word != 'cannot'
 			break
+
+	# 2. Cosubordinator
+	if words[0] in reverse_SIMPLE_STARTERS:
+		avm['cosubordinator'] = words.pop(0)
+		reverse_subjects = reverse_SIMPLE_PRONOUNS
+	else:
+		reverse_subjects = reverse_STARTERS
+
+	# 3. Subject
+	for subject in reverse_subjects:
+		if subject in words:
+			words[words.index(subject)] = '_'
+			break
+	else:
+		subject = '2'
+	avm.update(noun_data[subject])
+
+	do_support = False
+	# 4. Negation
+	if 'not' in words:
+		avm['negation'] = True
+		not_index = words.index('not')
+		# print(words, not_index)
+		words.pop(not_index)
+		do_support = not_index > 1
+
+	# 5. Question
+	if '_' in words[1:]:
+		avm['question'] = True
+		words.pop(words.index('_'))
+		do_support = True
+	if 'to' in words[:1]:
+		avm['question'] = True
+		words.pop(words.index('to'))
+	if words and '_' == words[0]:
+		words.pop(0)
+
+	# Only verbs and extra_word left
+	# print(words)
+
+	subject, person, number = [noun_data[avm['subject']][k] for k in ['subject', 'person', 'number']]
+	subject_select = person + 'p'[:number == 'plural']
+	selects = [subject_select]
+	avm['tense'] = ''
+	verb_ = ''
+	for i, inflected_verb in enumerate(words):
+		if type(inflected_verb) == tuple and len(inflected_verb) > 1:
+			inflected_verb = inflected_verb[0]
+		if i >= len(selects):
+			break
+		if inflected_verb not in reverse_verb_forms:
+			break
+
+		inflection, verb = reverse_verb_forms[inflected_verb]
+		# if finite, figure out the actual tense
+		if len(selects) == 1:
+			for tense in ['', 'ed']:
+				selected_verb = select(verb, tense + selects[i], avm)
+				if selected_verb == inflected_verb:
+					avm['tense'] = tense
+					break
+
+		verbs_remaining = any(w in reverse_verb_forms for w in words[i+1:])
+		if verb in reverse_MODALS:
+			avm['modal'] = verb
+			if verbs_remaining or do_support:
+				if do_support:
+					verb = ''
+					do_support = False
+				selects.append('')
+		elif verb == 'do':
+			if verbs_remaining or do_support:
+				selects.append('') # do-support
+				if do_support:
+					verb = ''
+					do_support = False
+		elif verb == 'have':
+			if verbs_remaining or do_support:
+				avm['have'] = True
+				if do_support:
+					verb = ''
+					do_support = False
+			selects.append('en')
+		elif verb == 'be':
+			if verbs_remaining or do_support:
+				if verbs_remaining and reverse_verb_forms[words[i+1]][0].startswith('e'):
+					avm['passive'] = True
+				else:
+					avm['be'] = True
+				if do_support:
+					verb = ''
+					do_support = False
+			elif not words[i+1:]: # DO NOT KEEP THIS WAY
+				# yield
+				avm['be'] = True
+				verb = ''
+			selects.append('ing')
+		verb_ = verb
+		# if verb == 'be':    selects.append('enP') passive?
+		# print([inflected_verb, inflection, verb, '|', tense, selects[i], selected_verb])
+
+
+
+	avm.update({'verb': verb_, 'extra_word': None})
+
+	# 6. Extra word
+	if words and (words[-1] in ['a', 'be', 'it', 'on', 'that', 'the', 'to'] or words[-1] == 'like' and reverse_verb_forms[words[-2]][1] == 'feel'):
+		# print(verb_ender_data[verb], words[-1])
+		if verb and verb_ender_data[verb][1] == words[-1]:
+			avm['extra_word'] = words.pop()
+
+	# 7.
+	# if words and words[-1] in reverse_verb_forms:
+		# last_tense, avm['verb'] = reverse_verb_forms[words.pop()]
+
+
 	result = []
 	# return result
-	return words
+	# for:
+	# print(words)
+	# print(avm)
+	outline = avm_to_outline(avm)
+	return [outline]
