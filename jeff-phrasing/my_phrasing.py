@@ -178,8 +178,8 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 		phrase.insert(question, subject)
 
 	if cosubordinator:
-		if contract and 'w' in cosubordinator and phrase and phrase[0] in interrogative_contractions:
-			cosubordinator += interrogative_contractions[phrase.pop(0)]
+		if contract and 'w' in cosubordinator and phrase and phrase[0] in (contractions | interrogative_contractions):
+			cosubordinator += (contractions | interrogative_contractions)[phrase.pop(0)]
 		phrase.insert(0, cosubordinator)
 
 	if extra_word:
@@ -206,8 +206,15 @@ reverse_SIMPLE_PRONOUNS = {v: k for k, v in SIMPLE_PRONOUNS.items()}
 reverse_MODALS          = {v: k for k, v in MODALS.items()}
 reverse_ENDERS          = {tuple(v.values()): k for k, v in ENDERS.items()}
 reverse_contractions = {}
-for k, v in (contractions | negative_contractions).items():
-	reverse_contractions[v] = [reverse_contractions[v], k] if v in reverse_contractions else k
+for k, v in (contractions | negative_contractions | interrogative_contractions).items():
+	if v in reverse_contractions:
+		if type(reverse_contractions[v]) == list:
+			reverse_contractions[v].append(k)
+		else:
+			reverse_contractions[v] = [reverse_contractions[v], k]
+	else:
+		reverse_contractions[v] = k
+
 
 POSSIBLE_REVERSE_MATCH = re.compile(r"[a-zI ']+")
 
@@ -246,14 +253,25 @@ def reverse_lookup(text):
 	if not text or not POSSIBLE_REVERSE_MATCH.fullmatch(text):
 		return []
 
-	# 1. Undo contractions
-	words = re.split(r" |(?=\Bn't\b)|(?<=\bcan)(?=not\b)|(?='[^t])", text)
-	words = [reverse_contractions[w] if w in reverse_contractions else w for w in words]
+	avm = {}
+	words = text.split(' ')
 
 	# Quit early if beyond maximum phrase length
 	if len(words) > 8:
 		return []
 
+	# 1. Undo contractions
+	for i, word in enumerate(words):
+		if "'" in word or word == 'cannot':
+			parts = re.split(r"(?=\Bn't\b)|(?<=\bcan)(?=not\b)|(?='[^t])", word)
+			if parts[1] in reverse_contractions:
+				parts[1] = reverse_contractions[parts[1]]
+			if parts[0] in reverse_contractions:
+				parts[0] = reverse_contractions[parts[0]]
+
+			words = words[:i] + parts + words[i+1:]
+			avm['contract'] = True
+			break
 	result = []
 	# return result
 	return words

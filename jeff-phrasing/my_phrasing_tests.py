@@ -248,6 +248,8 @@ tests = {
 	"^STWRARBGT":     "can work on",
 	"STWRA*RBGT":     "cannot work on",
 	"^STWRA*RBGT":    "cannot work on",
+	"+STWRA*RBGT":     "can't work on",
+	"^+STWRA*RBGT":    "can't work on",
 }
 
 for outline, expected_phrase in tests.items():
