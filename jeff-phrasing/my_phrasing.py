@@ -185,3 +185,38 @@ def lookup(stroke, raise_grammar_errors=True):
 	else:
 		raise KeyError
 
+
+reverse_STARTERS              = {v: k for k, v in STARTERS.items()}
+reverse_SIMPLE_STARTERS       = {v: k for k, v in SIMPLE_STARTERS.items()}
+reverse_SIMPLE_PRONOUNS       = {v: k for k, v in SIMPLE_PRONOUNS.items()}
+reverse_MODALS                = {v: k for k, v in MODALS.items()}
+reverse_ENDERS                = {tuple(v.values()): k for k, v in ENDERS.items()}
+
+def avm_to_stroke(avm):
+	lookups = {
+		'question':       '^',
+		'contract':       '+',
+		'cosubordinator': reverse_SIMPLE_STARTERS,
+		'subject':        reverse_STARTERS,
+		'modal':          reverse_MODALS,
+		'negation':       '*',
+		'have':           'E',
+		'be':             'U',
+	}
+
+	if 'cosubordinator' in avm and avm['cosubordinator']:
+		lookups['subject'] = reverse_SIMPLE_PRONOUNS
+
+	stroke = ''
+	for feature in lookups:
+		if feature in avm and avm[feature]:
+			if type(lookups[feature]) == str:
+				stroke += lookups[feature]
+			else:
+				stroke += lookups[feature][avm[feature]]
+
+	stroke += reverse_ENDERS[(avm['tense'], avm['verb'], avm['extra_word'])]
+
+	if 'passive' in avm and avm['passive']: stroke += '/+-P'
+
+	return stroke
