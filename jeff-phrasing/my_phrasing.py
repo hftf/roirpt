@@ -208,13 +208,13 @@ reverse_ENDERS          = {tuple(v.values()): k for k, v in ENDERS.items()}
 reverse_contractions = {}
 for k, v in (contractions | negative_contractions | interrogative_contractions).items():
 	if v in reverse_contractions:
-		if type(reverse_contractions[v]) == list:
+		if type(reverse_contractions[v]) == tuple:
 			reverse_contractions[v].append(k)
 		else:
-			reverse_contractions[v] = [reverse_contractions[v], k]
+			reverse_contractions[v] = (reverse_contractions[v], k)
 	else:
 		reverse_contractions[v] = k
-
+reverse_verb_forms = {form: verb for verb, forms in verb_forms.items() for form in forms.values()}
 
 POSSIBLE_REVERSE_MATCH = re.compile(r"[a-zI ']+")
 
@@ -236,12 +236,16 @@ def avm_to_outline(avm):
 
 	outline = ''
 	for feature in lookups:
-		if feature in avm and avm[feature]:
+		if feature in avm and avm[feature] not in [None, False]:
 			if type(lookups[feature]) == str:
 				outline += lookups[feature]
 			else:
 				outline += lookups[feature][avm[feature]]
 
+	if outline[-1] not in 'A5O0*EU':
+		outline += '-'
+
+	# try:
 	outline += reverse_ENDERS[(avm['tense'], avm['verb'], avm['extra_word'])]
 
 	if 'passive' in avm and avm['passive']:
@@ -259,6 +263,8 @@ def reverse_lookup(text):
 	# Quit early if beyond maximum phrase length
 	if len(words) > 8:
 		return []
+
+	# Should probably memoize a lookup table for 1-word-long phrases
 
 	# 1. Undo contractions
 	for i, word in enumerate(words):

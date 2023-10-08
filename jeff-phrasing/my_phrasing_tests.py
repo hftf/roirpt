@@ -252,8 +252,8 @@ tests = {
 	"^+STWRA*RBGT":    "can't work on",
 }
 
-for outline, expected_phrase in tests.items():
-	print(f'{outline:18} = {str(expected_phrase):30} → ', end='')
+for i, (outline, expected_phrase) in enumerate(tests.items()):
+	print(f'{i:03} {outline:18} = {str(expected_phrase):30} → ', end='')
 
 	error = ''
 	try:
@@ -264,19 +264,20 @@ for outline, expected_phrase in tests.items():
 		if expected_phrase != result_phrase:
 			raise e
 	emoji = "❌✅"[expected_phrase == result_phrase]
-	print(f'{str(result_phrase) + error:32} {emoji} ', end='')
+	print(f'{str(result_phrase) + error:32} {emoji} ')
 	if not result_phrase:
-		print()
 		continue
 
+	print(' '*52, end='')
 	error = ''
 	try:
 		reversed_outlines = my_phrasing.reverse_lookup(result_phrase.strip('*'))
 	except KeyError as e:
-		reversed_outlines = None
+		reversed_outlines = []
 		error = f' ({e})'
 		if outline not in reversed_outlines:
 			raise e
+			# pass
 	emoji = "❌✅"[outline in reversed_outlines]
 	print(f'{str(reversed_outlines) + error:52} {emoji}')
 
