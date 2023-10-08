@@ -37,7 +37,7 @@ def raise_grammar_error(message, avm, raise_grammar_errors=True):
 
 def outline_to_avm(outline, raise_grammar_errors=True):
 	if not outline:
-		raise KeyError
+		raise KeyError('Outline argument empty')
 
 	if type(outline) == str:
 		outline = tuple(outline.split('/'))
@@ -171,6 +171,8 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 			if phrase[0] in negative_contractions:
 				phrase[0] = negative_contractions[phrase[0]]
 			phrase[0] += "n't"
+		elif contract and question and phrase[0] == 'am':
+			phrase[0] = "aren't"
 		elif phrase and phrase[0] == 'can' and (not question or subject == ''):
 			phrase[0] += 'not'
 		else:
@@ -180,6 +182,10 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 	if subject:
 		if contract and finite and not question and phrase and phrase[0] in contractions:
 			subject += contractions[phrase.pop(0)]
+		elif contract and phrase and "'" not in phrase[0]:
+			# contract was enabled, but there was nothing found to contract
+			pass
+			# raise_grammar_error('There was nothing to contract', avm, raise_grammar_errors)
 		phrase.insert(question, subject)
 
 	if cosubordinator:
@@ -238,6 +244,7 @@ def avm_to_outline(avm):
 
 	if 'cosubordinator' in avm and avm['cosubordinator']:
 		lookups['subject'] = reverse_SIMPLE_PRONOUNS
+		del lookups['modal'], lookups['have'], lookups['be']
 
 	outline = ''
 	for feature in lookups:

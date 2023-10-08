@@ -1,20 +1,20 @@
 # Grammatical data
 noun_data = {
-	'I':      {'subject': 'I',     'number': 'singular', 'person': '1'},
-	'he':     {'subject': 'he',    'number': 'singular', 'person': '3'},
-	'she':    {'subject': 'she',   'number': 'singular', 'person': '3'},
-	'it':     {'subject': 'it',    'number': 'singular', 'person': '3'},
+	'I':      {'subject': 'I',     'person': '1', 'number': 'singular' },
+	'he':     {'subject': 'he',    'person': '3', 'number': 'singular' },
+	'she':    {'subject': 'she',   'person': '3', 'number': 'singular' },
+	'it':     {'subject': 'it',    'person': '3', 'number': 'singular' },
 
-	'we':     {'subject': 'we',    'number': 'plural',   'person': '1'},
-	'you':    {'subject': 'you',   'number': 'plural',   'person': '2'},
-	'they':   {'subject': 'they',  'number': 'plural',   'person': '3'},
+	'we':     {'subject': 'we',    'person': '1', 'number': 'plural'   },
+	'you':    {'subject': 'you',   'person': '2', 'number': 'plural'   },
+	'they':   {'subject': 'they',  'person': '3', 'number': 'plural'   },
 
-	'this':   {'subject': 'this',  'number': 'singular', 'person': '3'},
-	'that':   {'subject': 'that',  'number': 'singular', 'person': '3'},
-	'there':  {'subject': 'there', 'number': 'singular', 'person': '3'},
-	'there2': {'subject': 'there', 'number': 'plural',   'person': '3'},
-	'':       {'subject': '',      'number': 'singular', 'person': '3'},
-	'2':      {'subject': '',      'number': 'plural',   'person': '3'},
+	'this':   {'subject': 'this',  'person': '3', 'number': 'singular' },
+	'that':   {'subject': 'that',  'person': '3', 'number': 'singular' },
+	'there':  {'subject': 'there', 'person': '3', 'number': 'singular' },
+	'there2': {'subject': 'there', 'person': '3', 'number': 'plural'   },
+	'':       {'subject': '',      'person': '3', 'number': 'singular' },
+	'2':      {'subject': '',      'person': '3', 'number': 'plural'   },
 }
 # Simple starters that require a following subject
 # (unless in past/passive, e.g. if found, but *if finds)

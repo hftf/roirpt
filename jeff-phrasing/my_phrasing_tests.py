@@ -211,6 +211,9 @@ tests = {
 	"SWR-RGS":        None, # *I cares - TODO: add something to prevent auto suffixation
 	"^SWHAO*ETS":     "why does she have to",
 	"^+SWHAO*ETS":    "why's she have to",
+	"^SWHAO*ETSD":    "why did she have to",
+	"^SWHAO*ETSDZ":   "why did she have to",
+	"^+SWHAO*ETSD":   "why'd she have to",
 	"^TWR":           "do we",
 	"KPWH-GSZ/+-P":   "it was gotten", # by
 	"STPAEUBD":       "if I were", # irrealis-were
@@ -252,8 +255,11 @@ tests = {
 	"^+STWRA*RBGT":   "can't work on",
 	"^+STWRE":        "to have", # *to've
 	"^+STWREU":       "to have been", # *to've been
+	"SWR-FLT":        "I feel like",
+	"+STWR*PLT":      "mayn't be",
 }
 
+t = p = q = 0
 for i, (outline, expected_phrase) in enumerate(tests.items()):
 	print(f'{i:03} {outline:18} = {str(expected_phrase):30} → ', end='')
 
@@ -266,6 +272,8 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 		if expected_phrase != result_phrase:
 			raise e
 	emoji = "❌✅"[expected_phrase == result_phrase]
+	t += 1
+	q += expected_phrase == result_phrase
 	print(f'{str(result_phrase) + error:32} {emoji} ')
 	if not result_phrase:
 		continue
@@ -282,7 +290,9 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 			# pass
 	emoji = "❌✅"[outline in reversed_outlines]
 	print(f'{str(reversed_outlines) + error:52} {emoji}')
+	p += outline in reversed_outlines
 
+print(f'{q}/{t} and {p}/{t} tests passed')
 	# assert expected == result
 
 test_avm_1 = {
@@ -330,7 +340,7 @@ avm_tests = [
 	("^SWRA*EUPTD/+-P", test_avm_2, "could I not have been being wanted to"),
 ]
 for (outline, avm, phrase) in avm_tests:
-	result_phrase  = my_phrasing.avm_to_phrase(avm,    raise_grammar_errors=True)
+	result_phrase  = my_phrasing.avm_to_phrase (avm,     raise_grammar_errors=True)
 	result_avm     = my_phrasing.outline_to_avm(outline, raise_grammar_errors=True)
 	result_outline = my_phrasing.avm_to_outline(avm)
 	print(result_phrase, result_outline)

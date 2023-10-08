@@ -296,12 +296,12 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 			('ed', past_enders_extra_word,   extra_word),
 		]
 
-	for (tense, enders, extra_word) in queue:
+	for (tense, enders, extra_word_) in queue:
 		for ender in enders if type(enders) is list else [enders]:
 			# sys.stderr.write(f'{verb:10} {ender:10} {tense}\n')
 			if ender in ENDERS:
 				sys.stderr.write(f'{verb}, {ender} already in ENDERS as {ENDERS[ender]}\n')
-			ENDERS[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word}
+			ENDERS[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word_}
 
 # Part 2c: Key mapping for modals
 
