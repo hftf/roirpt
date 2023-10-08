@@ -36,6 +36,9 @@ def raise_grammar_error(message, avm, raise_grammar_errors=True):
 		avm['grammar'] = message
 
 def outline_to_avm(outline, raise_grammar_errors=True):
+	if not outline:
+		raise KeyError
+
 	if type(outline) == str:
 		outline = tuple(outline.split('/'))
 
@@ -109,6 +112,21 @@ def stroke_to_avm(stroke, avm={}, raise_grammar_errors=True):
 	avm.update(ENDERS[ender])
 	return avm
 
+def select(verb, select, avm, raise_grammar_errors=True):
+	forms = verb_forms[verb]
+	suffix = ''
+	if not select in forms:
+		# Only be/have/get have irregular forms; most others are stripped here
+		select = select.rstrip('123Pp')
+	if verb == 'used to':
+		select = ''
+	if not select in forms:
+		# likely an illegal inflection of a modal ('to may', 'we maying')
+		raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', avm, raise_grammar_errors)
+		suffix = '' # '†' # f'[*{select}]'
+		select = ''
+	return forms[select] + suffix
+
 def avm_to_phrase(avm, raise_grammar_errors=True):
 	if not avm:
 		return
@@ -146,20 +164,7 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 
 	# Loop through verbs in phrase and apply the verb form selected by the previous verb/subject
 	for i, verb in enumerate(phrase):
-		select = selects[i]
-		forms = verb_forms[verb]
-		suffix = ''
-		if not select in forms:
-			# Only be/have/get have irregular forms; most others are stripped here
-			select = select.rstrip('123Pp')
-		if verb == 'used to':
-			select = ''
-		if not select in forms:
-			# likely an illegal inflection of a modal ('to may', 'we maying')
-			raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', avm, raise_grammar_errors)
-			suffix = '' # '†' # f'[*{select}]'
-			select = ''
-		phrase[i] = forms[select] + suffix
+		phrase[i] = select(verb, selects[i], avm, raise_grammar_errors)
 
 	if negation:
 		if contract and finite and phrase[0] != 'am':
@@ -213,8 +218,8 @@ for k, v in (contractions | negative_contractions | interrogative_contractions).
 		else:
 			reverse_contractions[v] = (reverse_contractions[v], k)
 	else:
-		reverse_contractions[v] = k
-reverse_verb_forms = {form: verb for verb, forms in verb_forms.items() for form in forms.values()}
+		reverse_contractions[v] = (k,)
+reverse_verb_forms = {form: (inflection, verb) for verb, forms in verb_forms.items() for inflection, form in forms.items()}
 
 POSSIBLE_REVERSE_MATCH = re.compile(r"[a-zI ']+")
 
