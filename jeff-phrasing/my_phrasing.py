@@ -381,7 +381,7 @@ def reverse_lookup(text):
 			selects.append('en')
 		elif verb == 'be':
 			if verbs_remaining or do_support:
-				if verbs_remaining and reverse_verb_forms[words[i+1]][0].startswith('e'):
+				if verbs_remaining and words[i+1] in reverse_verb_forms and reverse_verb_forms[words[i+1]][0].startswith('e'):
 					avm['passive'] = True
 				else:
 					avm['be'] = True
@@ -402,9 +402,9 @@ def reverse_lookup(text):
 	avm.update({'verb': verb_, 'extra_word': None})
 
 	# 6. Extra word
-	if words and (words[-1] in ['a', 'be', 'it', 'on', 'that', 'the', 'to'] or words[-1] == 'like' and reverse_verb_forms[words[-2]][1] == 'feel'):
+	if words and (words[-1] in ['a', 'be', 'it', 'on', 'that', 'the', 'to'] or words[-1] == 'like' and words[-2] in reverse_verb_forms and reverse_verb_forms[words[-2]][1] == 'feel'):
 		# print(verb_ender_data[verb], words[-1])
-		if verb and verb_ender_data[verb][1] == words[-1]:
+		if verb_ and verb_ender_data[verb_][1] == words[-1]:
 			avm['extra_word'] = words.pop()
 
 	# 7.
