@@ -268,6 +268,9 @@ def avm_to_outline(avm):
 	# try:
 	outline += reverse_ENDERS[(avm['tense'], avm['verb'], avm['extra_word'])]
 
+	if outline[-1] == '-':
+		outline = outline[:-1]
+
 	if 'passive' in avm and avm['passive']:
 		outline += '/+-P'
 
