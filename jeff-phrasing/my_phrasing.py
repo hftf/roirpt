@@ -285,17 +285,21 @@ def reverse_lookup(text):
 	# Should probably memoize a lookup table for 1-word-long phrases
 
 	# 1. Undo contractions
-	for i, word in enumerate(words):
-		if "'" in word or word == 'cannot':
-			parts = re.split(r"(?=\Bn't\b)|(?<=\bcan)(?=not\b)|(?='[^t])", word)
-			if parts[1] in reverse_contractions:
-				parts[1] = reverse_contractions[parts[1]]
-			if parts[0] in reverse_contractions:
-				parts[0] = reverse_contractions[parts[0]]
+	try:
+		for i, word in enumerate(words):
+			if "'" in word or word == 'cannot':
+				parts = re.split(r"(?=\Bn't\b)|(?<=\bcan)(?=not\b)|(?='[^t])", word)
+				if parts[1] in reverse_contractions:
+					parts[1] = reverse_contractions[parts[1]]
+				if parts[0] in reverse_contractions:
+					parts[0] = reverse_contractions[parts[0]]
 
-			words = words[:i] + parts + words[i+1:]
-			avm['contract'] = word != 'cannot'
-			break
+				words = words[:i] + parts + words[i+1:]
+				avm['contract'] = word != 'cannot'
+				break
+	except IndexError:
+		# raise KeyError(f'Failed at contractions: {text}')
+		return []
 
 	# 2. Cosubordinator
 	if words[0] in reverse_SIMPLE_STARTERS:
@@ -418,4 +422,6 @@ def reverse_lookup(text):
 	# print(words)
 	# print(avm)
 	outline = avm_to_outline(avm)
+	if not outline or not text or lookup(outline, raise_grammar_errors=False) != text:
+		return []
 	return [outline]
