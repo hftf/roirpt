@@ -157,6 +157,7 @@ tests = {
 	"KWHR*E":         "he has not",
 	"^KWHR*E":        "has he not",
 	"SWRAO*RP":       "I will not do",
+	"+SWRAORP":       "I'll do",
 	"SWHAUFPB":       "what you find",
 	"SWROERPD":       "I should have done",
 	"SWRO*ERPD":      "I should not have done",

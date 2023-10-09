@@ -210,16 +210,17 @@ def lookup(outline, raise_grammar_errors=True):
 	else:
 		raise KeyError
 
-def reverse_dict_with_repeats(d):
+def reverse_dict_with_repeats(ds):
 	r = {}
-	for k, v in d.items():
-		if v in r:
-			if type(r[v]) == tuple:
-				r[v] += (k,)
+	for d in ds:
+		for k, v in d.items():
+			if v in r:
+				if type(r[v]) == tuple:
+					r[v] += (k,)
+				else:
+					r[v] = (r[v], k)
 			else:
-				r[v] = (r[v], k)
-		else:
-			r[v] = k
+				r[v] = k
 	return r
 
 reverse_STARTERS        = {v: k for k, v in STARTERS.items()}
@@ -227,7 +228,7 @@ reverse_SIMPLE_STARTERS = {v: k for k, v in SIMPLE_STARTERS.items()}
 reverse_SIMPLE_PRONOUNS = {v: k for k, v in SIMPLE_PRONOUNS.items()}
 reverse_MODALS          = {v: k for k, v in MODALS.items()}
 reverse_ENDERS          = {tuple(v.values()): k for k, v in ENDERS.items()}
-reverse_contractions    = reverse_dict_with_repeats(contractions | negative_contractions | interrogative_contractions)
+reverse_contractions    = reverse_dict_with_repeats([contractions, negative_contractions, interrogative_contractions])
 reverse_verb_forms = {form: (inflection, verb) for verb, forms in verb_forms.items() for inflection, form in forms.items()}
 
 POSSIBLE_REVERSE_MATCH = re.compile(r"[a-zI ']+")
