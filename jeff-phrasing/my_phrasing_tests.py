@@ -360,14 +360,15 @@ tests = {
 
 t = p = q = 0
 for i, (outline, expected_phrase) in enumerate(tests.items()):
+	outline = tuple(outline.split('/'))
 	# if 45 > i or i > 50:
 	# if i > 5:
 		# continue
-	print(f'{i:03} {outline:18} = {str(expected_phrase):30} → ', end='')
+	print(f'{i:03} {"/".join(outline):18} = {str(expected_phrase):30} → ', end='')
 
 	error = ''
 	try:
-		result_phrase = my_phrasing.lookup(tuple(outline.split('/')), False)
+		result_phrase = my_phrasing.lookup(outline, False)
 	except KeyError as e:
 		result_phrase = None
 		error = f' ({e})'
@@ -376,7 +377,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 	emoji = "❌✅"[expected_phrase == result_phrase]
 	t += 1
 	q += expected_phrase == result_phrase
-	print(f'{str(result_phrase) + error:32} {emoji} ')
+	print(f'{str(result_phrase) + error:32} {emoji}⎞')
 	# print(my_phrasing.outline_to_avm(outline))
 	if not result_phrase:
 		print(f'\033[4m{" "*93}\033[0m')
@@ -386,7 +387,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 	try:
 		reversed_outlines = my_phrasing.reverse_lookup(result_phrase.strip('*'))
 	except KeyError as e:
-		reversed_outlines = []
+		reversed_outlines = [(None,)]
 		error = f' ({e})'
 		if outline not in reversed_outlines:
 			# raise e
@@ -397,7 +398,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 	if outline not in reversed_outlines and phrase == expected_phrase:
 		p += 1j
 		emoji = "🉑"
-	print(f'\033[4m    {str(reversed_outlines[0]) + error:53} {phrase:32} {emoji}\033[0m')
+	print(f'\033[4m    {str("/".join(reversed_outlines[0]) if reversed_outlines else None) + error:52}← {phrase:32} {emoji}\033[0m⎠')
 	# print(f'{str(reversed_outlines) + error} {emoji}')
 
 print(f'{q}/{t} and {p}/{t} tests passed')
@@ -451,7 +452,7 @@ for (outline, avm, phrase) in avm_tests:
 	result_phrase  = my_phrasing.avm_to_phrase (avm,     raise_grammar_errors=True)
 	result_avm     = my_phrasing.outline_to_avm(outline, raise_grammar_errors=True)
 	result_outline = my_phrasing.avm_to_outline(avm)
-	print(result_phrase, result_outline)
-	assert result_phrase  == phrase
-	assert result_avm     == avm
-	assert result_outline == outline
+	print(result_phrase, '/'.join(result_outline))
+	assert phrase  == result_phrase
+	assert avm     == result_avm
+	assert outline == '/'.join(result_outline)

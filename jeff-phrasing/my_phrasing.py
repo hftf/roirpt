@@ -267,7 +267,7 @@ def avm_to_outline(avm):
 	if 'passive' in avm and avm['passive']:
 		outline += '/+-P'
 
-	return outline
+	return tuple(outline.split('/'))
 
 def reverse_lookup(text):
 	if not text or not POSSIBLE_REVERSE_MATCH.fullmatch(text):
