@@ -354,6 +354,8 @@ tests = {
 	"^+STWRA*RBGT":   "can't work on",
 	"^+STWRE":        "to have", # *to've
 	"^+STWREU":       "to have been", # *to've been
+	"STWREU":         "have been",
+	"STKPWHREU":      "has been",
 	"SWR-FLT":        "I feel like",
 	"+STWR*PLT":      "mayn't be",
 }

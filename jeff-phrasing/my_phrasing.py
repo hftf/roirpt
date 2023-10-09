@@ -223,9 +223,9 @@ def reverse_dict_with_repeats(ds):
 				r[v] = k
 	return r
 
-reverse_STARTERS        = {v: k for k, v in STARTERS.items()}
+reverse_STARTERS        = {tuple(noun_data[v].values()): k for k, v in STARTERS.items()}
 reverse_SIMPLE_STARTERS = {v: k for k, v in SIMPLE_STARTERS.items()}
-reverse_SIMPLE_PRONOUNS = {v: k for k, v in SIMPLE_PRONOUNS.items()}
+reverse_SIMPLE_PRONOUNS = {tuple(noun_data[v].values()): k for k, v in SIMPLE_PRONOUNS.items()}
 reverse_MODALS          = {v: k for k, v in MODALS.items()}
 reverse_ENDERS          = {tuple(v.values()): k for k, v in ENDERS.items()}
 reverse_contractions    = reverse_dict_with_repeats([contractions, negative_contractions, interrogative_contractions])
@@ -253,10 +253,14 @@ def avm_to_outline(avm):
 	outline = ''
 	for feature in lookups:
 		if feature in avm and avm[feature] not in [None, False]:
+			if feature == 'subject':
+				k = (avm['subject'], avm['person'], avm['number'])
+			else:
+				k = avm[feature]
 			if type(lookups[feature]) == str:
 				outline += lookups[feature]
 			else:
-				outline += lookups[feature][avm[feature]]
+				outline += lookups[feature][k]
 
 	if outline[-1] not in 'A5O0*EU':
 		outline += '-'
@@ -309,12 +313,12 @@ def reverse_lookup(text):
 		reverse_subjects = reverse_STARTERS
 
 	# 3. Subject
-	for subject in reverse_subjects:
+	for (subject, person, number) in reverse_subjects:
 		if subject in words:
 			words[words.index(subject)] = '_'
 			break
 	else:
-		subject = '2'
+		subject = '2'[:'cosubordinator' not in avm] # or first verb is 3ps
 	avm.update(noun_data[subject])
 
 	do_support = False
