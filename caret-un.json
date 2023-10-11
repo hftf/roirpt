@@ -64,5 +64,7 @@
 "^WRERBL": "irreversible",
 "^WRERS/PWHREU": "irreversibly",
 "^WRERS/-BL": "irreversible",
-"^WRERS/-BLT": "irreversibility"
+"^WRERS/-BLT": "irreversibility",
+"^REFBG/PWHREU": "irrevocably",
+"^REFBG/-BL": "irrevocable"
 }
