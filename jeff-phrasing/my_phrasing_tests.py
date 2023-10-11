@@ -397,7 +397,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 	emoji = "❌✅"[outline in reversed_outlines]
 	p += outline in reversed_outlines
 	phrase = my_phrasing.lookup(outline, raise_grammar_errors=False)
-	if outline not in reversed_outlines and phrase == expected_phrase:
+	if reversed_outlines and outline not in reversed_outlines and phrase == expected_phrase:
 		p += 1j
 		emoji = "🉑"
 	print(f'\033[4m    {str("/".join(reversed_outlines[0]) if reversed_outlines else None) + error:52}← {phrase:32} {emoji}\033[0m⎠')
