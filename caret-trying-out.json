@@ -169,6 +169,7 @@
 "^PH-LT": "amulet",
 "^PRA": "opera",
 "^PA*EUBG": "opaque",
+"^PAEUBG": "opaque",
 "^POFT": "opposite",
 "^POR/TAOUPB": "opportune",
 "^PEUBG": "epic",
