@@ -143,7 +143,7 @@ verb_ender_data = {
 	'go':         ('G',      'to'  ),
 	'get':        ('GS',     'to'  ), # he had gotten (obtain); he had got to (obligation)
 	'say':        ('BS',     'that'),
-	'use':        ('Z',      None  ), # consider as + 'to'
+	'use':        ('Z',      None  ), # consider as having extra word 'to' rather than None
 	'used to':    ('TZ',     None  ), # special case, but really acts as use + to (=T)
 	# desire
 	'want':       ('P',      'to'  ),
@@ -199,10 +199,10 @@ verb_ender_data = {
 	'show':       ('RB',     None  ), # was RBZ
 	'ask':        ('FBG',    None  ), # was RB
 	'tell':       ('LT',     None  ), # was RLT
-	# 'talk':     ('BLGT',   None  ), # conflicts with like to. maybe FLG?
+	# 'talk':     ('BLGT',   None  ), # conflicts with like to. maybe FLG? T?
 	# sensory, perception
 	'feel':       ('FL',     'like'), # was LT
-	'hear':       ('PG',     'that'),
+	'hear':       ('PG',     'that'), # TODO remap FRP?
 	'see':        ('S',      None  ),
 	'look':       ('L',      None  ),
 
