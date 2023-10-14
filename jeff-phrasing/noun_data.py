@@ -60,7 +60,7 @@ SIMPLE_STARTERS = {
 	'SWHO':  'who', # SWHRO - plural who? no - make a key for pluralize
 	'SWHAO': 'why', # was STKWH
 	'SWHRAO':'how',
-	# STWHR  whether ?
+	# STWHR  whether ? or those?
 
 	# coordinators
 	'SPWH':  'but',

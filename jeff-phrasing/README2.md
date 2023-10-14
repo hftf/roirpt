@@ -208,7 +208,7 @@ or are counterintuitive (e.g. “simple form”).
 Using mainstream linguistic terminology helps understand the reasons behind the system’s design.
 The algorithm itself should be based on linguistic principles.
 Something like [do-support](https://en.wikipedia.org/wiki/Do-support) should really not need to be documented in a table,
-since the use of do-support should already be intuitive to the user.
+since the use of do-support should already be intuitive to the user (do what I mean).
 
 While tables of starters and enders are useful, tables of phrase structures are hard to remember.
 Iconic and pictorial diagrams (not just infographic – information spatially arranged into a graphic)
@@ -446,7 +446,10 @@ TODO/Self-explanatory.
 Some defective verbs and non-verbs (common adverbs) are also available.
 
 > [!NOTE]
-> Main-verb <samp>have</samp> can rarely take do-support (<samp>have you no shame</samp>), but this is archaic in my dialect.
+> Main-verb <samp>have</samp> can rarely take do-support (e.g. <samp>have you no shame</samp>),
+but this is archaic in most English dialects.
+
+For the full verb ender chart, see the definition of `verb_ender_data` in [`verb_data.py:127`](./verb_data.py#L127).
 
 ### Extra word
 
@@ -500,6 +503,7 @@ TODO
 ### Short-term
 
 * Write installation instructions
+	* Mention dictionary priority
 * Finish implementing reverse lookup
 	* If multiple options, must yield all of them
 	* As early as possible, must not yield any impossible options
