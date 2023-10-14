@@ -284,11 +284,15 @@ Symbol | Keys | Usage (oversimplified)
 ```
 </h2>
 
-Symbol | Keys | Usage (oversimplified)
--|-|-
-🚾 | <kbd>STKPWHRAO</kbd> | relativizer
-🚹 | <kbd>*EU</kbd> | simple subject pronoun</td></tr><tr><td colspan="3" height="148" valign="center" align="center">Ⓜ️, ⛔, 🏧, ⛎ are invalid</td></tr><tr><td colspan="3" height="185" valign="center" align="center">same
-</td></tr></table>
+<table>
+<thead><tr><th>Symbol</th><th>Keys</th><th>Usage (oversimplified)</th></tr></thead>
+<tbody valign="center">
+<tr><td  align="center" colspan="3">Ⓜ️, ⛔, 🏧, ⛎ are invalid</td></tr>
+<tr height="74"><td>🚾</td><td><kbd>STKPWHRAO</kbd></td><td>relativizer</td></tr>
+<tr height="113"><td>🚹</td><td><kbd>*EU</kbd></td><td>simple subject pronoun</td></tr>
+<tr><td colspan="3" height="185" align="center">same</td></tr>
+</tbody></table>
+</tbody></table>
 
 ### Relativizer
 
