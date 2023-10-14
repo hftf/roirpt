@@ -216,6 +216,7 @@ Using mainstream linguistic terminology helps understand the reasons behind the 
 The algorithm itself should be based on linguistic principles.
 Something like [do-support](https://en.wikipedia.org/wiki/Do-support) should really not need to be documented in a table,
 since the use of do-support should already be intuitive to the user (do what I mean).
+Similarly, contractions and irregular verb forms are implementation details and do not need full documentation.
 
 While tables of starters and enders are useful, tables of phrase structures are hard to remember.
 Iconic and pictorial diagrams (not just infographic – information spatially arranged into a graphic)
@@ -332,6 +333,7 @@ despite adding an extra initial word.
 ### Subject pronoun
 
 Subjects specify the person (first, second, third) and number (singular, plural) of the phrase.
+These features surface as inflections on the tensed (finite) verb.
 
 Two third-person null subjects exist in “full form”:
 <kbd>STWR</kbd> (singular) and <kbd>STKPWHR</kbd> (plural).
