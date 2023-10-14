@@ -250,14 +250,14 @@ Nuances are discussed in later sections.
 
 <table>
 <thead><tr><th>Subject<br>(“full form”)</th><th>Relativizer + Subject<br>(“simple form”)</th></tr></thead>
-<tbody valign="top" align="center"><tr><td><h2>
+<tbody valign="top" align="center"><tr><td><h2><blockquote>
 
 ```
 ❓🚻🚻🚻⛔🆚🆚🆚🆙🔙
 🚻🚻🚻🚻⛔🆚🆚🆚🆚🆚
 　#️⃣Ⓜ️Ⓜ️　🏧⛎🗜　　
 ```
-</h2>
+</blockquote></h2>
 
 Symbol | Keys | Usage (oversimplified)
 -|-|-
@@ -275,21 +275,21 @@ Symbol | Keys | Usage (oversimplified)
 </td>
 <td>
 
-<h2>
+<h2><blockquote>
 
 ```
 ❓🚾🚾🚾🚹🆚🆚🆚🆙🔙
 🚾🚾🚾🚾🚹🆚🆚🆚🆚🆚
 　#️⃣🚾🚾　🚹🚹🗜　　
 ```
-</h2>
+</blockquote></h2>
 
 <table>
 <thead><tr><th>Symbol</th><th>Keys</th><th>Usage (oversimplified)</th></tr></thead>
 <tbody valign="center">
 <tr><td  align="center" colspan="3">Ⓜ️, ⛔, 🏧, ⛎ are invalid</td></tr>
 <tr height="74"><td>🚾</td><td><kbd>STKPWHRAO</kbd></td><td>relativizer</td></tr>
-<tr height="113"><td>🚹</td><td><kbd>*EU</kbd></td><td>simple subject pronoun</td></tr>
+<tr height="111"><td>🚹</td><td><kbd>*EU</kbd></td><td>simple subject pronoun</td></tr>
 <tr><td colspan="3" height="185" align="center">same</td></tr>
 </tbody></table>
 </tbody></table>
