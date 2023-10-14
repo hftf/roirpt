@@ -180,7 +180,7 @@ verb_ender_data = {
 	'work':       ('RBG',    'on'  ),
 
 	'put':        ('PS',     'it'  ), # TODO remap PT?
-	'set':        ('BLS',    None  ), # TODO remap FT?
+	'set':        ('BLS',    None  ), # TODO remap FT? FS?
 	'let':        ('LS',     None  ), # TODO remap LT?
 	'give':       ('GZ',     None  ),
 	'take':       ('RBT',    None  ),
