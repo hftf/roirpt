@@ -131,8 +131,7 @@ Some verb enders that benefit are:
 </tbody>
 <tbody><tr><th colspan="4"><kbd>-F</kbd> as early fricative (S, H, CH, X)</th></tr>
 <tr><td><samp>ask</samp>   </td><td><kbd>FBG</kbd>  </td><td><kbd><del>RB</del></kbd>   </td><td>a<b>SK</b></td></tr>
-<tr><td><samp>set</samp>   </td><td><kbd><del>FT</del></kbd>   </td><td><kbd><del>BLS</del></kbd>  </td><td><del><b>S</b>e<b>T</b></del> oops</td></tr>
-<tr><td><samp>seem</samp>  </td><td><kbd><del>FPL</del></kbd>  </td><td><kbd><del>PLS</del></kbd>  </td><td><del><b>S</b>ee<b>M</b></del> oops</td></tr>
+<tr><td><samp>set</samp>   </td><td><kbd>FS</kbd>   </td><td><kbd><del>BLS</del></kbd>  </td><td><b>S</b>et + <kbd>S</kbd></td></tr>
 <tr><td><samp>change</samp></td><td><kbd>FPG</kbd>  </td><td><kbd><del>PBGZ</del></kbd> </td><td><b>CH</b>an<b>G</b>e</td></tr>
 <tr><td><samp>expect</samp></td><td><kbd>FPGT</kbd> </td><td><kbd><del>PGS</del></kbd>  </td><td>e<b>XP</b>e<b>CT</b></td></tr>
 <tr><td><samp>hope</samp>  </td><td><kbd>FP</kbd>   </td><td><kbd><del>RPS</del></kbd>  </td><td><b>H</b>o<b>P</b>e</td></tr>
@@ -541,9 +540,9 @@ Table is a work in progress
 <tr><td><samp>work      </samp></td><td><samp>on  </samp></td><td><kbd>RBG</kbd>   </td><td>=                         </td><td>wo<b>RK</b></td><td></td></tr>
 </tbody>
 <tbody>
-<tr><td><samp>put       </samp></td><td><samp>it  </samp></td><td><kbd>PS</kbd>    </td><td>=                         </td><td><b>P</b>ut + <kbd>S</kbd></td><td>TODO remap <kbd>PT</kbd>?</td></tr>
-<tr><td><samp>set       </samp></td><td>                 </td><td><kbd>BLS</kbd>   </td><td>=                         </td><td>arb.                     </td><td>TODO remap <kbd>FT</kbd>? <kbd>FS</kbd>?</td></tr>
-<tr><td><samp>let       </samp></td><td>                 </td><td><kbd>LS</kbd>    </td><td>=                         </td><td><b>L</b>et + <kbd>S</kbd></td><td>TODO remap <kbd>LT</kbd>?</td></tr>
+<tr><td><samp>put       </samp></td><td><samp>it  </samp></td><td><kbd>PS</kbd>    </td><td>=                         </td><td><b>P</b>ut + <kbd>S</kbd></td><td></td></tr>
+<tr><td><samp>set       </samp></td><td>                 </td><td><kbd>FS</kbd>    </td><td><kbd><del>BLS </del></kbd></td><td><b>S</b>et + <kbd>S</kbd></td><td></td></tr>
+<tr><td><samp>let       </samp></td><td>                 </td><td><kbd>LS</kbd>    </td><td>=                         </td><td><b>L</b>et + <kbd>S</kbd></td><td></td></tr>
 <tr><td><samp>give      </samp></td><td>                 </td><td><kbd>GZ</kbd>    </td><td>=                         </td><td><b>G</b>i<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
 <tr><td><samp>take      </samp></td><td>                 </td><td><kbd>RBT</kbd>   </td><td>=                         </td><td>arb.</td><td></td></tr>
 <tr><td><samp>keep      </samp></td><td>                 </td><td><kbd>PBGS</kbd>  </td><td>=                         </td><td><b>K</b>ee<b>↶P</b> + <kbd>S</kbd></td><td></td></tr>

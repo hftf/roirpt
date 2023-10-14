@@ -179,9 +179,9 @@ verb_ender_data = {
 	'make':       ('PBLG',   'a'   ), # was RPBL
 	'work':       ('RBG',    'on'  ),
 
-	'put':        ('PS',     'it'  ), # TODO remap PT?
-	'set':        ('BLS',    None  ), # TODO remap FT? FS?
-	'let':        ('LS',     None  ), # TODO remap LT?
+	'put':        ('PS',     'it'  ),
+	'set':        ('FS',     None  ), # was BLS
+	'let':        ('LS',     None  ),
 	'give':       ('GZ',     None  ),
 	'take':       ('RBT',    None  ),
 	'keep':       ('PBGS',   None  ),
