@@ -11,6 +11,7 @@ noun_data = {
 
 	'this':   {'subject': 'this',  'person': '3', 'number': 'singular' },
 	'that':   {'subject': 'that',  'person': '3', 'number': 'singular' },
+	'these':  {'subject': 'these', 'person': '3', 'number': 'plural'   },
 	'there':  {'subject': 'there', 'person': '3', 'number': 'singular' },
 	'there2': {'subject': 'there', 'person': '3', 'number': 'plural'   },
 	'':       {'subject': '',      'person': '3', 'number': 'singular' },
@@ -41,6 +42,7 @@ STARTERS = {
 
 	'STKH':    'this',
 	'STWH':    'that',
+	'STKWH':   'these',
 	'STHR':    'there',
 	'STPHR':   'there2',
 	'STKPWHR': '',
@@ -55,9 +57,9 @@ SIMPLE_STARTERS = {
 	'SWH':   'when',
 	'SWHR':  'where',
 	'SWHA':  'what',
-	'SWHO':  'who',
+	'SWHO':  'who', # SWHRO - plural who? no - make a key for pluralize
 	'SWHAO': 'why', # was STKWH
-	# how
+	'SWHRAO':'how',
 	# STWHR  whether ?
 
 	# coordinators

@@ -172,7 +172,7 @@ Accounting for the most necessary bits of information, we need all of them:
 
 Feature | Number | Bits required
 -|-|-
-Subject     | 8–13 | 3–4 (but free only among 7 keys)
+Subject     | 8–15 | 3–4 (but free only among 7 keys)
 Modal       | 4+   | 2+
 Aspect      | 4    | 2
 Tense       | 2    | 1
@@ -246,6 +246,7 @@ In Jeff phrasing, these are called “full form” and “simple form” respect
 
 Each region of the keyboard controls a different feature of the phrase.
 These regions are mapped below.
+Nuances are discussed in later sections.
 
 <table>
 <thead><tr><th>Subject<br>(“full form”)</th><th>Relativizer + Subject<br>(“simple form”)</th></tr></thead>
@@ -302,12 +303,52 @@ Relativizers overload the keyspace used by both “full form” starters and mod
 **so they cannot be used with modals, aspect, or negation.**
 This limitation may be why it is counterintuitively called “simple form” in Jeff phrasing.
 
+<table>
+<thead><tr><th colspan="2">Subordinators</th><th colspan="2">Coordinators</th></tr></thead>
+<tbody>
+<tr><td><kbd>STPA  </kbd></td><td><samp>if</samp>*†  </td><td><kbd>SPWH</kbd></td><td><samp>but</samp></td></tr>
+<tr><td><kbd>STHA  </kbd></td><td><samp>that</samp>* </td><td><kbd>SKP </kbd></td><td><samp>and</samp></td></tr>
+<tr><td><kbd>SWH   </kbd></td><td><samp>when</samp>† </td><td><kbd>SKPR</kbd></td><td><samp>or</samp></td></tr>
+<tr><td><kbd>SWHR  </kbd></td><td><samp>where</samp>†</td><td colspan="2" rowspan="5"></td></tr>
+<tr><td><kbd>SWHA  </kbd></td><td><samp>what</samp>  </td></tr>
+<tr><td><kbd>SWHO  </kbd></td><td><samp>who</samp>   </td></tr>
+<tr><td><kbd>SWHAO </kbd></td><td><samp>why</samp>†  </td></tr>
+<tr><td><kbd>SWHRAO</kbd></td><td><samp>how</samp>   </td></tr>
+</tbody><tfoot><tr><td colspan="2">* forbids inversion</td><td colspan="2">† requires subject</td></tr></tfoot></table>
+
 ### Subject pronoun
 
 Subjects specify the person (first, second, third) and number (singular, plural) of the phrase.
 
 Two third-person null subjects exist in “full form”:
 <kbd>STWR</kbd> (singular) and <kbd>STKPWHR</kbd> (plural).
+
+<table>
+<thead><tr><td></td><th colspan="2">Singular</th><th colspan="2">Plural</th></tr></thead>
+<tbody valign="top" align="left">
+<tr><th>First  person</th><td><kbd>SWR</kbd></td><td><samp>I</samp></td><td><kbd>TWR </kbd></td><td><samp>we </samp></td></tr>
+<tr><th>Second person</th><td><kbd>KPWR</kbd></td><td colspan="3"><samp>you</samp></td></tr>
+<tr><th rowspan="7">Third person</th><td><kbd>KWHR</kbd></td><td><samp>he</samp></td><td rowspan="3"><kbd>TWH</kbd></td><td rowspan="3"><samp>they</samp></tr>
+<tr><td><kbd>SKWHR</kbd></td><td><samp>she </samp></td></tr>
+<tr><td><kbd>KPWH </kbd></td><td><samp>it  </samp></td></tr>
+<tr><td><kbd>STKH</kbd></td><td><samp>this </samp></td><td><kbd>STKWH</kbd></td><td><samp>these</samp></td></tr>
+<tr><td><kbd>STWH</kbd></td><td><samp>that </samp></td><td></td><td></td></tr>
+<tr><td><kbd>STHR</kbd></td><td><samp>there</samp></td><td><kbd>STPHR</kbd></td><td><samp>there</samp>₂</td></tr>
+<tr><td><kbd>STKPWHR</kbd></td><td>(null)</td><td><kbd>STWR</kbd></td><td>(null)₂</td></tr>
+</tbody></table>
+
+Only eight subjects total exist in “simple form”:
+
+<table>
+<thead><tr><td></td><th colspan="2">Singular</th><th colspan="2">Plural</th></tr></thead>
+<tbody valign="top" align="left">
+<tr><th>First  person</th><td><kbd>EU</kbd></td><td><samp>I</samp></td><td><kbd>*EU </kbd></td><td><samp>we </samp></td></tr>
+<tr><th>Second person</th><td><kbd>U</kbd></td><td colspan="3"><samp>you</samp></td></tr>
+<tr><th rowspan="7">Third person</th><td><kbd>E</kbd></td><td><samp>he</samp></td><td rowspan="3"><kbd>*U</kbd></td><td rowspan="3"><samp>they</samp></tr>
+<tr><td><kbd>*E</kbd></td><td><samp>she </samp></td></tr>
+<tr><td><kbd>* </kbd></td><td><samp>it  </samp></td></tr>
+<tr><td><kbd> </kbd></td><td>(null)</td><td></td><td></td></tr>
+</tbody></table>
 
 ### Tense
 
@@ -414,8 +455,7 @@ TODO
 
 ### Short-term
 
-* Write documentation
-	* Write installation instructions
+* Write installation instructions
 * Finish implementing reverse lookup
 	* If multiple options, must yield all of them
 	* As early as possible, must not yield any impossible options
