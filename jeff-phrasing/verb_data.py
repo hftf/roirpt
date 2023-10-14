@@ -161,7 +161,7 @@ verb_ender_data = {
 	'mean':       ('FR',     'to'  ), # was PBL
 	'learn':      ('RPBL',   'to'  ), # was RPBS
 	'seem':       ('PLS',    'to'  ), # TODO remap FPL?
-	'expect':     ('FPGT',   'that'), # was PGS
+	'expect':     ('FPGT',   'that'), # was PGS. could be FPBG
 	'realize':    ('RLZ',    'that'), # was RLS
 	'mind':       ('FRPB',   None  ), # was PBLS
 

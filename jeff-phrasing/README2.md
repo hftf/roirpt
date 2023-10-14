@@ -483,10 +483,10 @@ Table is a work in progress
 <tbody>
 <tr><th align="left" colspan="6">Auxiliary verbs</th></tr>
 <tr><td><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion</td></tr>
-<tr><td><samp>shall     </samp></td><td>                 </td>                          <td><kbd><del>RBL </del></kbd></td><td></td></tr>
 <tr><td><samp>will      </samp></td><td>                 </td>                          <td><kbd><del>RBGS</del></kbd></td><td></td></tr>
+<tr><td><samp>shall     </samp></td><td>                 </td>                          <td><kbd><del>RBL </del></kbd></td><td></td></tr>
 <tr><td><samp>may       </samp></td><td><samp>be  </samp></td><td><kbd>PL</kbd>    </td><td>=                         </td><td><b>M</b>ay</td><td></td></tr>
-<tr><td><samp>must      </samp></td><td><samp>be  </samp></td><td><kbd>PBLGS</kbd> </td><td>=                         </td><td><b>M</b>u<b>S</b>t + just’s <kbd>BG</kbd></td><td>has no past tense: taken by <samp>just</samp></td></tr>
+<tr><td><samp>must      </samp></td><td><samp>be  </samp></td><td><kbd>PBLGS</kbd> </td><td>=                         </td><td><b>M</b>u<b>S</b>t + just’s <kbd>BG</kbd></td><td>defective (no past tense): taken by <samp>just</samp></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="6">Adverbs (non-verbs)</th></tr>
@@ -579,6 +579,7 @@ Table is a work in progress
 <tr><td><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>=                         </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>
 <tr><td><samp>talk      </samp></td><td><samp>to  </samp></td><td><kbd>T</kbd>     </td><td><kbd><del>BLGT</del></kbd></td><td><b>T</b>alk</td><td></td></tr>
 </tbody>
+<tfoot><tr><td colspan="3">→ = no extra word due to another ender</td><td>= same</td><td>↶ = inversion</td><td><b>X</b><sup><var>Y</var></sup> = <kbd>Y</kbd> key represents variant of X sound</td></tr></tfoot>
 </table>
 
 ### Infinitive
