@@ -132,11 +132,11 @@ Some verb enders that benefit are:
 <tbody><tr><th colspan="4"><kbd>-F</kbd> as early fricative (S, H, CH, X)</th></tr>
 <tr><td><samp>ask</samp>   </td><td><kbd>FBG</kbd>  </td><td><kbd><del>RB</del></kbd>   </td><td>a<b>SK</b></td></tr>
 <tr><td><samp>set</samp>   </td><td><kbd>FT</kbd>   </td><td><kbd><del>BLS</del></kbd>  </td><td><b>S</b>e<b>T</b></td></tr>
-<tr><td><samp>seem</samp>  </td><td><kbd>FPL</kbd>  </td><td><kbd><del>PLS</del></kbd>  </td><td><b>S</b>ee<b>M</b></td></tr>
+<tr><td><samp>seem</samp>  </td><td><kbd><del>FPL</del></kbd>  </td><td><kbd><del>PLS</del></kbd>  </td><td><del><b>S</b>ee<b>M</b></del> oops</td></tr>
 <tr><td><samp>change</samp></td><td><kbd>FPG</kbd>  </td><td><kbd><del>PBGZ</del></kbd> </td><td><b>CH</b>an<b>G</b>e</td></tr>
 <tr><td><samp>expect</samp></td><td><kbd>FPGT</kbd> </td><td><kbd><del>PGS</del></kbd>  </td><td>e<b>XP</b>e<b>CT</b></td></tr>
 <tr><td><samp>hope</samp>  </td><td><kbd>FP</kbd>   </td><td><kbd><del>RPS</del></kbd>  </td><td><b>H</b>o<b>P</b>e</td></tr>
-<tr><td><samp>help</samp>  </td><td><kbd><del>FPL</del></kbd>  </td><td><kbd><del>PLGS</del></kbd> </td><td><del><b>H</b>e<b>L↶P</b></del> oops</td></tr>
+<tr><td><samp>help</samp>  </td><td><kbd>FPL</kbd>  </td><td><kbd><del>PLGS</del></kbd> </td><td><b>H</b>e<b>L↶P</b></del></td></tr>
 <tr><td><samp>leave</samp> </td><td><kbd>FLZ</kbd>  </td><td><kbd><del>LGZ</del></kbd>  </td><td><b>L</b>ea<b>↶V</b>e + <kbd>Z</kbd></td></tr></tbody>
 <tfoot><tr><td colspan="4" align="right">↶ = inversion</td></tr></tfoot>
 </table>
@@ -568,7 +568,7 @@ Table is a work in progress
 <tbody>
 <tr><th align="left" colspan="6">Verbs of perception</th></tr>
 <tr><td><samp>feel      </samp></td><td><samp>like</samp></td><td><kbd>FL</kbd>    </td><td><kbd><del>LT  </del></kbd></td><td><b>F</b>ee<b>L</b></td><td></td></tr>
-<tr><td><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.</td><td></td></tr>
+<tr><td><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.</td><td>TODO remap <kbd>FRP</kbd>?</td></tr>
 <tr><td><samp>see       </samp></td><td align="right">→ <var>talk to</var></td><td><kbd>S</kbd>     </td><td>=                         </td><td><b>S</b>ee</td><td></td></tr>
 <tr><td><samp>look      </samp></td><td align="right">→ <var>tell</var></td><td><kbd>L</kbd>     </td><td>=                         </td><td><b>L</b>ook</td><td></td></tr>
 </tbody>
