@@ -165,7 +165,7 @@ verb_ender_data = {
 	'realize':    ('RLS',    'that'), # TODO remap RLZ
 	'mind':       ('FRPB',   None  ), # was PBLS
 
-	'hope':       ('RPS',    'to'  ),
+	'hope':       ('RPS',    'to'  ), # TODO remap FP?
 	'like':       ('LG',     'to'  ), # was BLG
 	'love':       ('LGZ',    'to'  ), # was LG
 	'care':       ('RG',     None  ), # was RZ

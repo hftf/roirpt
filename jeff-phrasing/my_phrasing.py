@@ -29,6 +29,7 @@ STROKE_PARTS = re.compile(r'''^\#?
 	(?P<ender>    F?R?P?B?L?G?T?S?D?Z?)$''', # note: D is tense
 	re.X)
 
+# raise_grammar_errors should always be true, except in testing mode
 def raise_grammar_error(message, avm, raise_grammar_errors=True):
 	if raise_grammar_errors:
 		raise KeyError(message)
@@ -62,6 +63,7 @@ def stroke_to_avm(stroke, avm={}, raise_grammar_errors=True):
 	if not stroke_parts:
 		raise KeyError(f'Stroke "{stroke}" does not match STROKE_PARTS regex')
 
+	# TODO: shouldn't use bare .groups()
 	#                  [simple_starter] [simple_pronoun]
 	question, contract, starter, modal, negation, aspect, ender = stroke_parts.groups()
 
