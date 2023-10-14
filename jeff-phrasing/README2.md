@@ -203,7 +203,7 @@ Learning resources should distinguish iconic from [arbitrary](https://discord.co
 It should also be possible to generate documentation and learning resources from code (code-as-data).
 
 Phrasing resources often misuse linguistic terminology
-(e.g. use “plural” to refer to the third-person *singular* inflection <samp>-s</samp>)
+(e.g. misuse “plural” to refer to the third-person *singular* inflection <samp>-s</samp>)
 or are counterintuitive (e.g. “simple form”).
 Using mainstream linguistic terminology helps understand the reasons behind the system’s design.
 The algorithm itself should be based on linguistic principles.
@@ -218,7 +218,8 @@ would be most helpful for visual learners.
 
 Paradoxically, the ultimate end goal of this project
 is not for each user to customize and tweak their phrasing system or design their own,
-but, through it, once enough people have done so, to converge closer to a single ideal English phrasing system design.
+but, through it, once enough people have done so,
+to converge closer to a single optimal English phrasing system design.
 People need to try diverse possibilities for us to collectively reach the best ideas.
 
 ## Phrasing system (default design)
@@ -305,7 +306,8 @@ This limitation may be why it is counterintuitively called “simple form” in 
 
 Subjects specify the person (first, second, third) and number (singular, plural) of the phrase.
 
-Two third-person null subjects exist: <kbd>STWR</kbd> (singular) and <kbd>STKPWHR</kbd> (plural).
+Two third-person null subjects exist in “full form”:
+<kbd>STWR</kbd> (singular) and <kbd>STKPWHR</kbd> (plural).
 
 ### Tense
 
