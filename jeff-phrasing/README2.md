@@ -356,7 +356,8 @@ Only eight subjects total exist in “simple form”:
 
 Phrases can be in present (non-past) or past tense.
 
-Note that tense applies to the first verb in the clause, not the main verb.
+> [!NOTE]
+> Tense applies to the first verb in the clause, not the main verb.
 
 || Tense
 -|-
@@ -388,7 +389,8 @@ but these are not available as phrase-level modals, only as ad-hoc enders.)
 
 Modals are defective verbs (so cannot inflect, except possibly for tense).
 
-Note: the so-called “future tense” is treated here as a <samp>will</samp> modal, not a tense,
+> [!NOTE]
+> The so-called “future tense” is treated here as a <samp>will</samp> modal, not a tense,
 as seen in many English grammars.
 
 || Modal
@@ -428,7 +430,8 @@ while <samp>\*he could have not gone</samp> is not.
 
 TODO/Self-explanatory.
 
-Note: <samp>aren’t</samp> is the exceptional contracted form of <samp>am</samp> + <samp>not</samp>
+> [!NOTE]
+> <samp>aren’t</samp> is the exceptional contracted form of <samp>am</samp> + <samp>not</samp>
 (which only appears in interrogatives).
 
 || Contraction
@@ -442,7 +445,8 @@ TODO/Self-explanatory.
 
 Some defective verbs and non-verbs (common adverbs) are also available.
 
-Note: main-verb <samp>have</samp> can rarely take do-support (<samp>have you no shame</samp>), but this is archaic in my dialect.
+> [!NOTE]
+> Main-verb <samp>have</samp> can rarely take do-support (<samp>have you no shame</samp>), but this is archaic in my dialect.
 
 ### Extra word
 
@@ -460,7 +464,8 @@ Verbs have only one infinitive form, which follows <samp>to</samp>,
 thus <kbd>STWR</kbd> and <kbd>STKPWHR</kbd> neutralize (behave identically) in this context.
 <!-- however it could probably be used to invert to/not -->
 
-Defective verbs (modals and non-verbs) do not have an infinitive form.
+> [!NOTE]
+> Defective verbs (modals and non-verbs) do not have an infinitive form.
 
 ### Passive voice
 
