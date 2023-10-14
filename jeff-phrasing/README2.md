@@ -530,6 +530,7 @@ Table is a work in progress
 <tr><td><samp>care      </samp></td><td>                 </td><td><kbd>RG</kbd>    </td><td><kbd><del>RZ  </del></kbd></td><td><b>C</b><sup><var>G</var></sup>a<b>↶R</b>e</td><td></td></tr>
 </tbody>
 <tbody>
+<tr><th align="left" colspan="6">More verbs</th></tr>
 <tr><td><samp>become    </samp></td><td><samp>a   </samp></td><td><kbd>BGS</kbd>   </td><td><kbd><del>RPBG</del></kbd></td><td>be<b>K</b>ome + <kbd>S</kbd></td><td></td></tr>
 <tr><td><samp>change    </samp></td><td align="right">→ <var>expect</var></td><td><kbd>FPG</kbd>   </td><td><kbd><del>PBGZ</del></kbd></td><td><b>CH</b>an<b>G</b>e</td><td></td></tr>
 <tr><td><samp>consider  </samp></td><td>                 </td><td><kbd>RBGS</kbd>  </td><td><kbd><del>RBGZ</del></kbd></td><td><b>K</b>on<b>S</b>ide↶<b>R</b></td><td></td></tr>
