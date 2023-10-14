@@ -264,12 +264,12 @@ Symbol | Keys | Usage (oversimplified)
 <del>#️⃣</del> | <kbd><del>#</del></kbd> | <del>number key</del> (unused)
 🚻 | <kbd>STKPWHR</kbd>  | [subject pronoun](#subject-pronoun)
 Ⓜ️ | <kbd>AO</kbd>       | [modal](#modality)
-⛔ | <kbd>*</kbd>        | [negation](#negation)
+⛔ | <kbd>*</kbd>        | [negation](#polarity)
 🏧 | <kbd>E</kbd>        | [perfect aspect](#aspect) (<samp>have</samp>)
 ⛎ | <kbd>U</kbd>        | [progressive aspect](#aspect) (<samp>be</samp>)
 🔙 | <kbd>D</kbd>        | [tense](#tense)
 🗜 | <kbd>+</kbd>        | [contraction](#contraction)
-❓ | <kbd>^</kbd>        | [inversion](#inversion)
+❓ | <kbd>^</kbd>        | [inversion](#subjectauxiliary-question-inversion)
 🆚 | <kbd>FRPBLGSZ</kbd> | [main verb](#main-verb-or-other-ender)
 🆙 | <kbd>T</kbd>        | [extra word](#extra-word)
 </td>
@@ -489,19 +489,7 @@ Not yet implemented.
 Adverbs can include medial <samp>just</samp>, <samp>really</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>, etc.
 There is extra complexity because adverbs may exhibit free positioning.
 
-## Learning and practice
-
-Materials or curricula for specifically practicing a phrasing system do not really exist yet.
-However, a drill on [Steno Jig](https://joshuagrams.github.io/steno-jig/) often gives
-many sentences with high-frequency phrases:
-[Markov-chain (randomly) generated sentences](https://joshuagrams.github.io/steno-jig/markov.html?word_count=100&seed=0.99831923480476&hints=1&show_timer=1).
-
-The phrasing system should be relatively straightforward to pick up; just read this documentation, then start using it.
-It is recommended to make liberal use of the suggestions window
-and [tapey-tape](https://github.com/rabbitgrowth/plover-tapey-tape).
-
-
-## Summary of differences with Jeff phrasing
+### Summary of differences with Jeff phrasing
 
 Feature | Jeff | Dope
 -|-|-
@@ -512,6 +500,17 @@ Past tense of ender containing <kbd>-S</kbd> | <kbd>-SZ</kbd> | Both <kbd>-SZ</k
 Contraction        | Hard-coded only | Controlled by <kbd>+</kbd>
 Adverbs (<samp>just</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>) | Overloaded <kbd>*EUF</kbd> | Not implemented
 Reverse lookup     | Ready | Partly implemented </td></tr><tr><td>Chord assignments</td><td colspan="2" align="center">May differ variously</td>
+
+## Learning and practice
+
+Materials or curricula for specifically practicing a phrasing system do not really exist yet.
+However, a drill on [Steno Jig](https://joshuagrams.github.io/steno-jig/) often gives
+many sentences with high-frequency phrases:
+[Markov-chain (randomly) generated sentences](https://joshuagrams.github.io/steno-jig/markov.html?word_count=100&seed=0.99831923480476&hints=1&show_timer=1).
+
+The phrasing system should be relatively straightforward to pick up; just read this documentation, then start using it.
+It is recommended to make liberal use of the suggestions window
+and [tapey-tape](https://github.com/rabbitgrowth/plover-tapey-tape).
 
 ## Installation
 
