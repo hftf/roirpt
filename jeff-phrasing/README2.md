@@ -239,6 +239,13 @@ Look for dicts in files named `*_data.py`.
 
 ### Pictographic key layout
 
+There are two types of phrase:
+phrases without a relativizer (just a subject), and phrases with a relativizer (and a subject).
+In Jeff phrasing, these are called “full form” and “simple form” respectively.
+
+Each region of the keyboard controls a different feature of the phrase.
+These regions are mapped below.
+
 <table>
 <thead><tr><th>Subject<br>(“full form”)</th><th>Relativizer + Subject<br>(“simple form”)</th></tr></thead>
 <tbody valign="top" align="center"><tr><td><h2>
@@ -379,6 +386,13 @@ and selects the past participle form of the main verb.
 
 A test implementation currently uses a retroactive second stroke <kbd>+-P</kbd>
 (i.e. press <kbd>+</kbd> and <kbd>P</kbd> after the first stroke).
+
+### Infinitive
+
+The infinitive (or non-finite) form is selected by a null subject with inversion
+(which makes sense as there cannot be inversion without a subject).
+Verbs have only one infinitive form,
+thus <kbd>STWR</kbd> and <kbd>STKPWHR</kbd> neutralize (behave identically) in this context.
 
 ## Learning and practice
 
