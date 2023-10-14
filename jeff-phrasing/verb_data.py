@@ -172,7 +172,7 @@ verb_ender_data = {
 
 	'become':     ('BGS',    'a'   ), # was RPBG
 	'change':     ('FPG',    None  ), # was PBGZ
-	'consider':   ('RBGZ',   None  ),
+	'consider':   ('RBGZ',   None  ), # TODO remap RBGS?
 	'find':       ('FPB',    'that'), # was PBLG
 	'happen':     ('PZ',     'to'  ), # TRYING 'to'
 	'try':        ('RT',     'to'  ),
@@ -192,7 +192,7 @@ verb_ender_data = {
 	'move':       ('PLZ',    None  ),
 	'leave':      ('FLZ',    None  ), # was LGZ
 	'remain':     ('RPLS',   None  ),
-	'call':       ('RBLG',   None  ),
+	'call':       ('RBLG',   None  ), # TODO remap BLG
 	'recall':     ('RL',     None  ),
 	'read':       ('RS',     None  ),
 	'run':        ('R',      None  ),
