@@ -299,9 +299,11 @@ A relativizer may also be called a conjunction, preposition, complementizer, or 
 Relativizers are so named because they introduce a relative (or subordinate) clause –
 also called a wh-clause as it often begins with a wh-word (what, who, which, when, where, why, how).
 
-Relativizers overload the keyspace used by both “full form” starters and modals,
-**so they cannot be used with modals, aspect, or negation.**
-This limitation may be why it is counterintuitively called “simple form” in Jeff phrasing.
+**Relativizers cannot be used with modality, aspect, or negation,**
+as they overload the keyspace used by both “full form” subjects and modals,
+and are used in conjunction with a limited set of subject pronouns that overload aspect and negation.
+This limitation may be why it is counterintuitively called “simple form” in Jeff phrasing,
+despite adding an extra initial word.
 
 <table>
 <thead><tr><th colspan="2">Subordinators</th><th colspan="2">Coordinators</th></tr></thead>
@@ -324,7 +326,7 @@ Two third-person null subjects exist in “full form”:
 <kbd>STWR</kbd> (singular) and <kbd>STKPWHR</kbd> (plural).
 
 <table>
-<thead><tr><td></td><th colspan="2">Singular</th><th colspan="2">Plural</th></tr></thead>
+<thead><tr><th><ins>Subjects</ins></th><th colspan="2">Singular</th><th colspan="2">Plural</th></tr></thead>
 <tbody valign="top" align="left">
 <tr><th>First  person</th><td><kbd>SWR</kbd></td><td><samp>I</samp></td><td><kbd>TWR </kbd></td><td><samp>we </samp></td></tr>
 <tr><th>Second person</th><td><kbd>KPWR</kbd></td><td colspan="3"><samp>you</samp></td></tr>
@@ -340,7 +342,7 @@ Two third-person null subjects exist in “full form”:
 Only eight subjects total exist in “simple form”:
 
 <table>
-<thead><tr><td></td><th colspan="2">Singular</th><th colspan="2">Plural</th></tr></thead>
+<thead><tr><th><ins>Simple subjects</ins></th><th colspan="2">Singular</th><th colspan="2">Plural</th></tr></thead>
 <tbody valign="top" align="left">
 <tr><th>First  person</th><td><kbd>EU</kbd></td><td><samp>I</samp></td><td><kbd>*EU </kbd></td><td><samp>we </samp></td></tr>
 <tr><th>Second person</th><td><kbd>U</kbd></td><td colspan="3"><samp>you</samp></td></tr>
@@ -356,6 +358,11 @@ Phrases can be in present (non-past) or past tense.
 
 Note that tense applies to the first verb in the clause, not the main verb.
 
+|| Tense
+-|-
+<kbd> </kbd> | Present (non-past)
+<kbd>D</kbd>      | Past
+
 ### Aspect
 
 English has two axes of aspect:
@@ -365,9 +372,16 @@ and simple vs. progressive (auxiliary <samp>be</samp>).
 Perfect aspect generally indicates completed actions,
 and progressive aspect indicates continuous actions.
 
+<table>
+<thead><tr><th><ins>Aspect</ins></th><th colspan="2">Imperfect</th><th colspan="2">Perfect</th></tr></thead>
+<tbody valign="top" align="left">
+<tr><th>Simple</th><td><kbd> </kbd></td><td>Simple</td><td><kbd>E</kbd></td><td>Perfect (<samp>have V·en</samp>)</td></tr>
+<tr><th>Progressive</th><td><kbd>U</kbd></td><td>Progressive (<samp>be V·ing</samp>)</td><td><kbd>EU</kbd></td><td>Perfect progressive (<samp>have been V·ing</samp>)</td></tr>
+</tbody></table>
+
 ### Modality
 
-The modality (or mood) can be <samp>will</samp>, <samp>can</samp>, <samp>shall</samp>, or none.
+The modality (or mood) can be <samp>will</samp>, <samp>can</samp>, <samp>shall</samp>, or null.
 The forms <samp>would</samp>, <samp>could</samp>, <samp>should</samp> are selected by past tense.
 (Other modals in English include <samp>may</samp>/<samp>might</samp>, <samp>must</samp>, <samp>need to</samp>, etc.,
 but these are not available as phrase-level modals, only as ad-hoc enders.)
@@ -377,11 +391,23 @@ Modals are defective verbs (so cannot inflect, except possibly for tense).
 Note: the so-called “future tense” is treated here as a <samp>will</samp> modal, not a tense,
 as seen in many English grammars.
 
+|| Modal
+-|-
+<kbd> </kbd>  | (null)
+<kbd>A</kbd>  | <samp>can</samp>
+<kbd>AO</kbd> | <samp>will</samp>
+<kbd>O</kbd>  | <samp>shall</samp>
+
 ### Subject–auxiliary question inversion
 
 Subject–auxiliary inversion is the main feature of questions or interrogative phrases.
 When an auxiliary is absent, there is do-support (a dummy <samp>do</samp> acts like an auxiliary).
 Interrogatives are contrasted with declarative (or indicative) statements.
+
+|| Inversion
+-|-
+<kbd> </kbd> | No inversion
+<kbd>^</kbd> | Subject–auxiliary inversion
 
 ### Polarity
 
@@ -393,12 +419,22 @@ and so it is governed by (attaches after) the first verb.
 This means that e.g. <samp>he could not have gone</samp> is possible in the phrasing system,
 while <samp>\*he could have not gone</samp> is not.
 
+|| Polarity
+-|-
+<kbd> </kbd> | Positive
+<kbd>*</kbd> | Negative
+
 ### Contraction
 
 TODO/Self-explanatory.
 
 Note: <samp>aren’t</samp> is the exceptional contracted form of <samp>am</samp> + <samp>not</samp>
 (which only appears in interrogatives).
+
+|| Contraction
+-|-
+<kbd> </kbd> | No contraction
+<kbd>+</kbd> | Contraction
 
 ### Main verb (or other ender)
 
