@@ -481,7 +481,7 @@ Table is a work in progress
 <tr><td>(null)                 </td><td align="right">→ <var>talk</var></td><td><kbd> </kbd></td><td></td><td></td><td></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Auxiliary verbs</th></tr>
+<tr><th align="left" colspan="6">Modal verbs (auxiliary verbs)</th></tr>
 <tr><td><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion</td></tr>
 <tr><td><samp>will      </samp></td><td>                 </td>                          <td><kbd><del>RBGS</del></kbd></td><td></td></tr>
 <tr><td><samp>shall     </samp></td><td>                 </td>                          <td><kbd><del>RBL </del></kbd></td><td></td></tr>
@@ -505,12 +505,6 @@ Table is a work in progress
 <tr><td><samp>used to   </samp></td><td>                 </td><td><kbd>TZ</kbd>    </td><td>=                         </td><td>u<b>Z</b>ed <b>T</b>o</td><td>special case, but really acts as <samp>use</samp> + <samp>to</samp> <kbd>T</kbd></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Verbs of desire</th></tr>
-<tr><td><samp>want      </samp></td><td><samp>to  </samp></td><td><kbd>P</kbd>     </td><td>=                         </td><td>commonly <kbd>PT</kbd></td><td></td></tr>
-<tr><td><samp>wish      </samp></td><td><samp>to  </samp></td><td><kbd>RBS</kbd>   </td><td>=                         </td><td>wi<b>SH</b> + <kbd>S</kbd></td><td></td></tr>
-<tr><td><samp>need      </samp></td><td><samp>to  </samp></td><td><kbd>PBL</kbd>   </td><td><kbd><del>RPG </del></kbd></td><td><b>N</b>eed + dental <kbd>L</kbd></var></sup></td><td></td></tr>
-</tbody>
-<tbody>
 <tr><th align="left" colspan="6">Verbs of cognition</th></tr>
 <tr><td><samp>know      </samp></td><td><samp>that</samp></td><td><kbd>PB</kbd>    </td><td>=                         </td><td>k<b>N</b>ow</td><td></td></tr>
 <tr><td><samp>think     </samp></td><td><samp>that</samp></td><td><kbd>PBG</kbd>   </td><td>=                         </td><td>thi<b>NG</b>k</td><td></td></tr>
@@ -527,6 +521,10 @@ Table is a work in progress
 <tr><td><samp>mind      </samp></td><td>                 </td><td><kbd>FRPB</kbd>  </td><td><kbd><del>PBLS</del></kbd></td><td><b>M</b>i<b>N</b>d</td><td></td></tr>
 </tbody>
 <tbody>
+<tr><th align="left" colspan="6">Verbs of desire</th></tr>
+<tr><td><samp>want      </samp></td><td><samp>to  </samp></td><td><kbd>P</kbd>     </td><td>=                         </td><td>commonly <kbd>PT</kbd></td><td></td></tr>
+<tr><td><samp>wish      </samp></td><td><samp>to  </samp></td><td><kbd>RBS</kbd>   </td><td>=                         </td><td>wi<b>SH</b> + <kbd>S</kbd></td><td></td></tr>
+<tr><td><samp>need      </samp></td><td><samp>to  </samp></td><td><kbd>PBL</kbd>   </td><td><kbd><del>RPG </del></kbd></td><td><b>N</b>eed + dental <kbd>L</kbd></var></sup></td><td></td></tr>
 <tr><td><samp>hope      </samp></td><td><samp>to  </samp></td><td><kbd>FP</kbd>    </td><td><kbd><del>RPS </del></kbd></td><td><b>H</b>o<b>P</b>e</td><td></td></tr>
 <tr><td><samp>like      </samp></td><td><samp>to  </samp></td><td><kbd>LG</kbd>    </td><td><kbd><del>BLG </del></kbd></td><td><b>L</b>i<b>K</b><sup><var>G</var></sup>e</td><td></td></tr>
 <tr><td><samp>love      </samp></td><td><samp>to  </samp></td><td><kbd>LGZ</kbd>   </td><td><kbd><del>LG  </del></kbd></td><td><b>L</b>o<b>V</b><sup><var>Z</var></sup>e + like’s <kbd>G</kbd></td><td></td></tr>
@@ -564,6 +562,8 @@ Table is a work in progress
 <tr><td><samp>show      </samp></td><td>                 </td><td><kbd>RB</kbd>    </td><td><kbd><del>RBZ </del></kbd></td><td><b>SH</b>ow</td><td></td></tr>
 <tr><td><samp>ask       </samp></td><td>                 </td><td><kbd>FBG</kbd>   </td><td><kbd><del>RB  </del></kbd></td><td>a<b>SK</b></td><td></td></tr>
 <tr><td><samp>tell      </samp></td><td>                 </td><td><kbd>LT</kbd>    </td><td><kbd><del>RLT </del></kbd></td><td><b>T</b>e<b>↶LL</b></td><td></td></tr>
+<tr><td><samp>talk      </samp></td><td><samp>to  </samp></td><td><kbd>T</kbd>     </td><td>🆕                        </td><td><b>T</b>alk</td><td></td></tr>
+<tr><td><samp>help      </samp></td><td>                 </td><td><kbd>FPL</kbd>   </td><td>🆕                        </td><td><b>H</b>e<b>L↶P</b></td><td></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="6">Verbs of perception</th></tr>
@@ -571,13 +571,8 @@ Table is a work in progress
 <tr><td><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.</td><td>TODO remap <kbd>FRP</kbd>?</td></tr>
 <tr><td><samp>see       </samp></td><td align="right">→ <var>talk to</var></td><td><kbd>S</kbd>     </td><td>=                         </td><td><b>S</b>ee</td><td></td></tr>
 <tr><td><samp>look      </samp></td><td align="right">→ <var>tell</var></td><td><kbd>L</kbd>     </td><td>=                         </td><td><b>L</b>ook</td><td></td></tr>
-</tbody>
-<tbody>
-<tr><th align="left" colspan="6">New verbs (absent in Jeff’s)</th></tr>
-<tr><td><samp>help      </samp></td><td>                 </td><td><kbd>FPL</kbd>   </td><td>🆕                        </td><td><b>H</b>e<b>L↶P</b></td><td></td></tr>
-<tr><td><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>🆕                        </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
 <tr><td><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>🆕                        </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>
-<tr><td><samp>talk      </samp></td><td><samp>to  </samp></td><td><kbd>T</kbd>     </td><td>🆕                        </td><td><b>T</b>alk</td><td></td></tr>
+<tr><td><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>🆕                        </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
 </tbody>
 <tfoot><tr><td colspan="3">→ = no extra word due to another ender</td><td>= same</td><td>↶ = inversion</td><td><b>X</b><sup><var>Y</var></sup> = <kbd>Y</kbd> key represents variant of X sound</td></tr></tfoot>
 </table>
