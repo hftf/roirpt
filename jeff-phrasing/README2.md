@@ -452,11 +452,15 @@ It tries to be the most frequent collocation or most useful otherwise.
 Some examples of extra words:
 <samp>a</samp>, <samp>it</samp>, <samp>to</samp>, <samp>the</samp>, <samp>that</samp>, <samp>like</samp>, <samp>on</samp>.
 
-### Adverb
+### Infinitive
 
-Not yet implemented.
-Adverbs can include medial <samp>just</samp>, <samp>really</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>, etc.
-There is extra complexity because adverbs may exhibit free positioning.
+The infinitive (or non-finite) form is selected by a null subject with inversion (<kbd>^</kbd>).
+This makes sense as there cannot be inversion without a subject.
+Verbs have only one infinitive form, which follows <samp>to</samp>,
+thus <kbd>STWR</kbd> and <kbd>STKPWHR</kbd> neutralize (behave identically) in this context.
+<!-- however it could probably be used to invert to/not -->
+
+Defective verbs (modals and non-verbs) do not have an infinitive form.
 
 ### Passive voice
 
@@ -466,12 +470,11 @@ and selects the past participle form of the main verb.
 A test implementation currently uses a retroactive second stroke <kbd>+-P</kbd>
 (i.e. press <kbd>+</kbd> and <kbd>P</kbd> after the first stroke).
 
-### Infinitive
+### Adverb
 
-The infinitive (or non-finite) form is selected by a null subject with inversion
-(which makes sense as there cannot be inversion without a subject).
-Verbs have only one infinitive form,
-thus <kbd>STWR</kbd> and <kbd>STKPWHR</kbd> neutralize (behave identically) in this context.
+Not yet implemented.
+Adverbs can include medial <samp>just</samp>, <samp>really</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>, etc.
+There is extra complexity because adverbs may exhibit free positioning.
 
 ## Learning and practice
 
@@ -496,6 +499,7 @@ TODO
 	* If multiple options, must yield all of them
 	* As early as possible, must not yield any impossible options
 * Mention <samp>have you got, did you get; got/gotten</samp>
+* Consider dropping the terms starter/medial/ender
 
 ### Long-term
 
