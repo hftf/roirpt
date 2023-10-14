@@ -485,7 +485,7 @@ Table is a work in progress
 <tr><td><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion</td></tr>
 <tr><td><samp>will      </samp></td><td>                 </td>                          <td><kbd><del>RBGS</del></kbd></td><td></td></tr>
 <tr><td><samp>shall     </samp></td><td>                 </td>                          <td><kbd><del>RBL </del></kbd></td><td></td></tr>
-<tr><td><samp>may       </samp></td><td><samp>be  </samp></td><td><kbd>PL</kbd>    </td><td>=                         </td><td><b>M</b>ay</td><td></td></tr>
+<tr><td><samp>may       </samp></td><td><samp>be  </samp></td><td><kbd>PL</kbd>    </td><td>=                         </td><td><b>M</b>ay</td><td>past tense: <samp>might</samp></td></tr>
 <tr><td><samp>must      </samp></td><td><samp>be  </samp></td><td><kbd>PBLGS</kbd> </td><td>=                         </td><td><b>M</b>u<b>S</b>t + just’s <kbd>BG</kbd></td><td>defective (no past tense): taken by <samp>just</samp></td></tr>
 </tbody>
 <tbody>
@@ -499,7 +499,7 @@ Table is a work in progress
 <tr><td><samp>have      </samp></td><td><samp>to  </samp></td><td><kbd>F</kbd>     </td><td><kbd><del>T   </del></kbd></td><td>ha<b>V</b>e</td><td></td></tr>
 <tr><td><samp>do        </samp></td><td><samp>it  </samp></td><td><kbd>RP</kbd>    </td><td>=                         </td><td>arb.</td><td></td></tr>
 <tr><td><samp>go        </samp></td><td><samp>to  </samp></td><td><kbd>G</kbd>     </td><td>=                         </td><td><b>G</b>o</td></tr>
-<tr><td><samp>get       </samp></td><td><samp>to  </samp></td><td><kbd>GS</kbd>    </td><td>=                         </td><td><b>G</b>et + <kbd>S</kbd></td><td><samp>he had gotten</samp> (obtain);<br><samp>he had got to</samp> (obligation)</td></tr>
+<tr><td><samp>get       </samp></td><td><samp>to  </samp></td><td><kbd>GS</kbd>    </td><td>=                         </td><td><b>G</b>et + <kbd>S</kbd></td><td>past participle: <samp>got</samp>; passive voice: <samp>gotten</samp><br><samp>he had gotten</samp> (obtained) unavailable;<br><samp>he had got to</samp> (obligation) available</td></tr>
 <tr><td><samp>say       </samp></td><td><samp>that</samp></td><td><kbd>BS</kbd>    </td><td>=                         </td><td>commonly <kbd>BS</kbd></td></tr>
 <tr><td><samp>use       </samp></td><td align="right">→ <var>used to</var></td><td><kbd>Z</kbd></td><td>=             </td><td>u<b>Z</b>e</td><td></td></tr>
 <tr><td><samp>used to   </samp></td><td>                 </td><td><kbd>TZ</kbd>    </td><td>=                         </td><td>u<b>Z</b>ed <b>T</b>o</td><td>special case, but really acts as <samp>use</samp> + <samp>to</samp> <kbd>T</kbd></td></tr>
@@ -638,7 +638,6 @@ TODO
 * Finish implementing reverse lookup
 	* If multiple options, must yield all of them
 	* As early as possible, must not yield any impossible options
-* Mention <samp>have you got, did you get; got/gotten</samp>
 * Consider dropping the terms starter/medial/ender entirely
 * Add examples in readme
 * Testing instructions
