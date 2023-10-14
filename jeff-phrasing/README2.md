@@ -65,7 +65,7 @@ like conjugations and phrase structures.
 Such repetitive programs are hard to check, change, and maintain,
 and allow for typos to easily creep in.
 This means far greater use of declarative programming, unbundling control flow,
-and code that is basically self-documenting.
+passing state via objects, and code that is basically self-documenting.
 
 Admittedly, hardcoding as a strategy can make a reverse lookup algorithm easier to write,
 and replacing hard-coded data with routines that generate the same data may add lines of code.
@@ -75,7 +75,7 @@ But I believe the readability and extensibility trade-off is worth it.
 
 Automated testing increases confidence in making changes and contributions
 as you can instantly check whether changes introduce regressions.
-Note that test cases and harnesses are not included when judging total lines of code.
+Test cases and harnesses are not included when judging total lines of code.
 
 ### Automatically handle conjugation, contraction, negation, and subject–auxiliary question inversion
 
@@ -119,8 +119,7 @@ Some verb enders that benefit are:
 
 Verb | Ender | Jeff’s | Explanation
 -|-|-|-
-|||| </tr><tr><td colspan="4" align="center"><kbd>-F</kbd> as F or V</td></tr></tbody><tbody><tr><td>
-<samp>feel</samp>   | <kbd>FL</kbd>    | <kbd><del>LT</del></kbd>    | **F**ee**L**
+|||| </tbody><tbody><tr><td colspan="4" align="center"><kbd>-F</kbd> as F or V</td></tr><tr><td><samp>feel</samp>   </td><td> <kbd>FL</kbd>    </td><td> <kbd><del>LT</del></kbd>    </td><td> **F**ee**L**
 <samp>find</samp>   | <kbd>FPB</kbd>   | <kbd><del>PBLG</del></kbd>  | **F**i**N**d
 <samp>forget</samp> | <kbd>FRG</kbd>   | <kbd><del>RG</del></kbd>    | **F**o**RG**et
 <samp>have</samp>   | <kbd>F</kbd>     | <kbd><del>T</del></kbd>     | ha**V**e</td></tr></tbody><tbody><tr><td colspan="4" align="center"><kbd>-FR</kbd> as M</td>
@@ -132,7 +131,7 @@ Verb | Ender | Jeff’s | Explanation
 <samp>change</samp> | <kbd>FPG</kbd>   | <kbd><del>PBGZ</del></kbd>  | **CH**an**G**e
 <samp>expect</samp> | <kbd>FPGT</kbd>  | <kbd><del>PGS</del></kbd>   | ek**SP**e**CT**
 <samp>hope</samp>   | <kbd>FP</kbd>    | <kbd><del>RPS</del></kbd>   | **H**o**P**e
-<samp>help</samp>   | <kbd>FPL</kbd>   | <kbd><del>PLGS</del></kbd>  | **H**e**L↶P**
+<samp>help</samp>   | <kbd><del>FPL</del></kbd>   | <kbd><del>PLGS</del></kbd>  | <del>**H**e**L↶P**</del> oops
 <samp>leave</samp>  | <kbd>FLZ</kbd>   | <kbd><del>LGZ</del></kbd>   | **L**ea**↶V**e + <kbd>-Z</kbd></td></tr></tbody><tfoot><tr><td colspan="4" align="right">↶ = inversion</td>
 
 While this change may not make optimal use of keyboard space,
@@ -173,7 +172,7 @@ Accounting for the most necessary bits of information, we need all of them:
 
 Feature | Number | Bits required
 -|-|-
-Subject     | 7–13 | 3–4 (but free only among 7 keys)
+Subject     | 8–13 | 3–4 (but free only among 7 keys)
 Modal       | 4+   | 2+
 Aspect      | 4    | 2
 Tense       | 2    | 1
@@ -195,25 +194,27 @@ EU + /+-P -> having been run - passive present participle, perfect aspect
 
 ### Better learning resources and terminology
 
-In my opinion, phrasing resources suffer from two key issues: organization and terminology.
+In my opinion, phrasing resources suffer from two key issues, aside from practice materials:
+organization and terminology.
 
 I find many existing resources confusingly organized and too shape-focused;
 many infographic explainers [omit key labels](https://steno.sammdot.ca/aerick-phrasing.png)!
 Learning resources should distinguish iconic from [arbitrary](https://discord.com/channels/136953735426473984/827241377020379186/1134593088287936602) chords.
 It should also be possible to generate documentation and learning resources from code (code-as-data).
 
-Phrasing resources often misuse of linguistic terminology
-(e.g. “plural” to refer to the third-person singular inflection <samp>-s</samp>)
-or are counterintuitive (e.g. “simple starter”).
+Phrasing resources often misuse linguistic terminology
+(e.g. use “plural” to refer to the third-person *singular* inflection <samp>-s</samp>)
+or are counterintuitive (e.g. “simple form”).
 Using mainstream linguistic terminology helps understand the reasons behind the system’s design.
 The algorithm itself should be based on linguistic principles.
-Something like do-support should really not need to be documented in a table,
+Something like [do-support](https://en.wikipedia.org/wiki/Do-support) should really not need to be documented in a table,
 since the use of do-support should already be intuitive to the user.
 
-While tables of starters and enders are useful, tables of phrase structures but hard to remember.
-Iconic and pictorial diagrams (not just infographics) would be most helpful for visual learners.
+While tables of starters and enders are useful, tables of phrase structures are hard to remember.
+Iconic and pictorial diagrams (not just infographic – information spatially arranged into a graphic)
+would be most helpful for visual learners.
 
-### Eventual convergence through divergence
+### Eventual convergence through experimentation and divergence
 
 Paradoxically, the ultimate end goal of this project
 is not for each user to customize and tweak their phrasing system or design their own,
@@ -277,42 +278,49 @@ Symbol | Keys | Usage (oversimplified)
 Symbol | Keys | Usage (oversimplified)
 -|-|-
 🚾 | <kbd>STKPWHRAO</kbd> | relativizer
-🚹 | <kbd>*EU</kbd> | simple subject pronoun</td></tr><tr><td colspan="3" height="148" valign="center" align="center">Ⓜ️, ⛔, 🏧, ⛎ are invalid
+🚹 | <kbd>*EU</kbd> | simple subject pronoun</td></tr><tr><td colspan="3" height="148" valign="center" align="center">Ⓜ️, ⛔, 🏧, ⛎ are invalid</td></tr><tr><td colspan="3" height="185" valign="center" align="center">same
 </td></tr></table>
 
 ### Relativizer
 
-Effectively an extra word prefixed before the subject.
+For phrasing purposes, a relativizer is effectively an extra word prefixed before the subject.
 Relativizers can be coordinators (e.g. <samp>and</samp>, <samp>but</samp>)
 or subordinators (e.g. <samp>if</samp>, <samp>that</samp>, <samp>when</samp>, <samp>who</samp>).
 A relativizer may also be called a conjunction, preposition, complementizer, or relative pronoun.
+Relativizers are so named because they introduce a relative (or subordinate) clause –
+also called a wh-clause as it often begins with a wh-word (what, who, which, when, where, why, how).
 
-Overloads the keyspace used for both “full form” starters and modals,
-so cannot be used with modals, aspect, or negation.
-This may be why it is counterintuitively called “simple form” or “simple starters” in Jeff phrasing.
+Relativizers overload the keyspace used by both “full form” starters and modals,
+**so they cannot be used with modals, aspect, or negation.**
+This limitation may be why it is counterintuitively called “simple form” in Jeff phrasing.
 
-### Subject
+### Subject pronoun
 
 Subjects specify the person (first, second, third) and number (singular, plural) of the phrase.
 
+Two third-person null subjects exist: <kbd>STWR</kbd> (singular) and <kbd>STKPWHR</kbd> (plural).
+
 ### Tense
 
-Phrases can be in present or past tense.
+Phrases can be in present (non-past) or past tense.
 
 Note that tense applies to the first verb in the clause, not the main verb.
 
 ### Aspect
 
 English has two axes of aspect:
-imperfect vs. perfect (<samp>have</samp>),
-and simple vs. progressive (<samp>be</samp>).
+imperfect vs. perfect (auxiliary <samp>have</samp>),
+and simple vs. progressive (auxiliary <samp>be</samp>).
 
-### Modality (or mood)
+Perfect aspect generally indicates completed actions,
+and progressive aspect indicates continuous actions.
 
-The modality can be <samp>will</samp>, <samp>can</samp>, <samp>shall</samp>, or none.
+### Modality
+
+The modality (or mood) can be <samp>will</samp>, <samp>can</samp>, <samp>shall</samp>, or none.
 The forms <samp>would</samp>, <samp>could</samp>, <samp>should</samp> are selected by past tense.
-(Other modals in English include <samp>may</samp>, <samp>must</samp>, <samp>need to</samp>, etc.,
-but these are not available as phrase-level modals, only as enders.)
+(Other modals in English include <samp>may</samp>/<samp>might</samp>, <samp>must</samp>, <samp>need to</samp>, etc.,
+but these are not available as phrase-level modals, only as ad-hoc enders.)
 
 Modals are defective verbs (so cannot inflect, except possibly for tense).
 
@@ -332,7 +340,7 @@ When an auxiliary is absent in a negative phrase, there is do-support.
 
 Negation is only implemented for the matrix (main) clause,
 and so it is governed by (attaches after) the first verb.
-This means that <samp>he could not have gone</samp> is possible in the phrasing system,
+This means that e.g. <samp>he could not have gone</samp> is possible in the phrasing system,
 while <samp>\*he could have not gone</samp> is not.
 
 ### Contraction
@@ -348,7 +356,7 @@ TODO/Self-explanatory.
 
 Some defective verbs and non-verbs (common adverbs) are also available.
 
-Note: main-verb <samp>have</samp> can take do-support, but this is rare in my dialect.
+Note: main-verb <samp>have</samp> can rarely take do-support (<samp>have you no shame</samp>), but this is archaic in my dialect.
 
 ### Extra word
 
@@ -366,10 +374,10 @@ There is extra complexity because adverbs may exhibit free positioning.
 
 ### Passive voice
 
-Passive voice effectively inserts <samp>be</samp> before the main verb
+Passive voice effectively inserts auxiliary <samp>be</samp> before the main verb
 and selects the past participle form of the main verb.
 
-A test implementation currently uses a retroactive second stroke <kbd>/+-P</kbd>
+A test implementation currently uses a retroactive second stroke <kbd>+-P</kbd>
 (i.e. press <kbd>+</kbd> and <kbd>P</kbd> after the first stroke).
 
 ## Learning and practice
@@ -379,7 +387,8 @@ However, a drill on [Steno Jig](https://joshuagrams.github.io/steno-jig/) often 
 many sentences with high-frequency phrases:
 [Markov-chain (randomly) generated sentences](https://joshuagrams.github.io/steno-jig/markov.html?word_count=100&seed=0.99831923480476&hints=1&show_timer=1).
 
-Make use of the suggestions window and tapey-tape.
+It is recommended to make liberal use of the suggestions window
+and [tapey-tape](https://github.com/rabbitgrowth/plover-tapey-tape).
 
 ## Installation
 
