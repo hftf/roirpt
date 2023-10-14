@@ -118,7 +118,8 @@ particularly in the right-bank compounds MB and MP).
 Some verb enders that benefit are:
 
 Verb | Ender | Jeff’s | Explanation
--|-|-|-</tr><tr><td colspan="4" align="center"><kbd>-F</kbd> as F or V</td></tr></tbody><tbody><tr><td>
+-|-|-|-
+|||| </tr><tr><td colspan="4" align="center"><kbd>-F</kbd> as F or V</td></tr></tbody><tbody><tr><td>
 <samp>feel</samp>   | <kbd>FL</kbd>    | <kbd><del>LT</del></kbd>    | **F**ee**L**
 <samp>find</samp>   | <kbd>FPB</kbd>   | <kbd><del>PBLG</del></kbd>  | **F**i**N**d
 <samp>forget</samp> | <kbd>FRG</kbd>   | <kbd><del>RG</del></kbd>    | **F**o**RG**et
