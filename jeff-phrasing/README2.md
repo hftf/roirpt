@@ -167,8 +167,8 @@ We still have a need to write phrases in perfect and progressive aspects with qu
 Some phrasing systems and extensions aspire to do too many things at once in a stroke:
 control several adverbs, passive voice, suffixed object pronouns, and contractions.
 Remember, a stenographic keyboard typically has only 23–28 keys
-(and duplicate asterisk keys provide no extra bits).
-Accounting for the most necessary bits of information, we need all of them:
+(and duplicate asterisk keys provide no extra bits),
+all of which are needed after accounting for the most necessary bits of information:
 
 Feature | Number | Bits required
 -|-|-
@@ -182,7 +182,7 @@ Contraction | 2    | 1
 Verbs       | 64+  | 6+
 Extra word  | 2    | 1</td></tr><tr><td colspan="2">Redundancy for<br>ergonomic pinky shapes</td><td>1</td></tr></tbody><tfoot><tr><th colspan="2">Total</th><th>20+ (but free only among 23 keys)
 
-There are also 8+ relativizers (4+ bits),
+There are also 8+ relativizers (3+ bits),
 but the bits from modal, aspect, and negation are cannibalized.
 
 <!-- 
@@ -265,8 +265,8 @@ Symbol | Keys | Usage (oversimplified)
 🚻 | <kbd>STKPWHR</kbd>  | subject pronoun
 Ⓜ️ | <kbd>AO</kbd>       | modal
 ⛔ | <kbd>*</kbd>        | negation
-🏧 | <kbd>E</kbd>        | perfect aspect (have)
-⛎ | <kbd>U</kbd>        | progressive aspect (be)
+🏧 | <kbd>E</kbd>        | perfect aspect (<samp>have</samp>)
+⛎ | <kbd>U</kbd>        | progressive aspect (<samp>be</samp>)
 🔙 | <kbd>D</kbd>        | tense
 🗜 | <kbd>+</kbd>        | contraction
 ❓ | <kbd>^</kbd>        | inversion
@@ -382,8 +382,8 @@ and progressive aspect indicates continuous actions.
 
 ### Modality
 
-The modality (or mood) can be <samp>will</samp>, <samp>can</samp>, <samp>shall</samp>, or null.
-The forms <samp>would</samp>, <samp>could</samp>, <samp>should</samp> are selected by past tense.
+The modality (or mood) can be <samp>can</samp>, <samp>will</samp>, <samp>shall</samp>, or null.
+The forms <samp>could</samp>, <samp>would</samp>, <samp>should</samp> are selected by past tense.
 (Other modals in English include <samp>may</samp>/<samp>might</samp>, <samp>must</samp>, <samp>need to</samp>, etc.,
 but these are not available as phrase-level modals, only as ad-hoc enders.)
 
@@ -391,7 +391,7 @@ Modals are defective verbs (so cannot inflect, except possibly for tense).
 
 > [!NOTE]
 > The so-called “future tense” is treated here as a <samp>will</samp> modal, not a tense,
-as seen in many English grammars.
+which is consistent with the approach taken in many English grammars.
 
 || Modal
 -|-
@@ -408,7 +408,7 @@ Interrogatives are contrasted with declarative (or indicative) statements.
 
 || Inversion
 -|-
-<kbd> </kbd> | No inversion
+<kbd> </kbd> | Declarative (no inversion)
 <kbd>^</kbd> | Subject–auxiliary inversion
 
 ### Polarity
@@ -491,6 +491,7 @@ However, a drill on [Steno Jig](https://joshuagrams.github.io/steno-jig/) often 
 many sentences with high-frequency phrases:
 [Markov-chain (randomly) generated sentences](https://joshuagrams.github.io/steno-jig/markov.html?word_count=100&seed=0.99831923480476&hints=1&show_timer=1).
 
+The phrasing system should be relatively straightforward to pick up; just read this documentation, then start using it.
 It is recommended to make liberal use of the suggestions window
 and [tapey-tape](https://github.com/rabbitgrowth/plover-tapey-tape).
 
@@ -508,12 +509,15 @@ TODO
 	* If multiple options, must yield all of them
 	* As early as possible, must not yield any impossible options
 * Mention <samp>have you got, did you get; got/gotten</samp>
-* Consider dropping the terms starter/medial/ender
+* Consider dropping the terms starter/medial/ender entirely
+* Add examples in readme
+* Testing instructions
 
 ### Long-term
 
 * Create better resources
 * Handle unwanted suffix keys
+* Fix conflicts with my dictionaries
 * Singular/plural distinction in relativizers
 * Irrealis (so-called “past subjunctive”) with <samp>if</samp>
 	* Could repurpose <samp>if</samp> + past tense
