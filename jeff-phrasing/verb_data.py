@@ -160,7 +160,7 @@ verb_ender_data = {
 	'forget':     ('FRG',    'to'  ), # was RG
 	'mean':       ('FR',     'to'  ), # was PBL
 	'learn':      ('RPBL',   'to'  ), # was RPBS
-	'seem':       ('PLS',    'to'  ), # TODO remap FPL?
+	'seem':       ('PLS',    'to'  ),
 	'expect':     ('FPGT',   'that'), # was PGS. could be FPBG
 	'realize':    ('RLZ',    'that'), # was RLS
 	'mind':       ('FRPB',   None  ), # was PBLS

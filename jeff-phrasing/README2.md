@@ -514,7 +514,7 @@ Table is a work in progress
 <tr><td><samp>forget    </samp></td><td><samp>to  </samp></td><td><kbd>FRG</kbd>   </td><td><kbd><del>RG  </del></kbd></td><td><b>F</b>o<b>RG</b>et</td><td></td></tr>
 <tr><td><samp>mean      </samp></td><td><samp>to  </samp></td><td><kbd>FR</kbd>    </td><td><kbd><del>PBL </del></kbd></td><td><b>M</b><sup><var>FR</var></sup>ean</td><td></td></tr>
 <tr><td><samp>learn     </samp></td><td><samp>to  </samp></td><td><kbd>RPBL</kbd>  </td><td><kbd><del>RPBS</del></kbd></td><td><b>L</b>ea<b>↶RN</b></td><td></td></tr>
-<tr><td><samp>seem      </samp></td><td><samp>to  </samp></td><td><kbd>PLS</kbd>   </td><td>=                         </td><td><b>S</b>ee<b>↶M</b></td><td>TODO remap <kbd>FPL</kbd>?</td></tr>
+<tr><td><samp>seem      </samp></td><td><samp>to  </samp></td><td><kbd>PLS</kbd>   </td><td>=                         </td><td><b>S</b>ee<b>↶M</b></td><td></td></tr>
 <tr><td><samp>expect    </samp></td><td><samp>that</samp></td><td><kbd>FPGT</kbd>  </td><td><kbd><del>PGS </del></kbd></td><td>e<b>XP</b>e<b>C</b><sup><var>G</var></sup><b>T</b></td><td></td></tr>
 <tr><td><samp>realize   </samp></td><td><samp>that</samp></td><td><kbd>RLZ</kbd>   </td><td><kbd><del>RLS </del></kbd></td><td><b>R</b>ea<b>L</b>i<b>Z</b>e</td><td></td></tr>
 <tr><td><samp>mind      </samp></td><td>                 </td><td><kbd>FRPB</kbd>  </td><td><kbd><del>PBLS</del></kbd></td><td><b>M</b>i<b>N</b>d</td><td></td></tr>
