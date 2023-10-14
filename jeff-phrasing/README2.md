@@ -170,7 +170,7 @@ Remember, a stenographic keyboard typically has only 23–28 keys
 (and duplicate asterisk keys provide no extra bits),
 all of which are needed after accounting for the most necessary bits of information:
 
-Feature | Number | Bits required
+Feature | Number | Bits required (log₂ N)
 -|-|-
 Subject     | 8–15 | 3–4 (but free only among 7 keys)
 Modal       | 4+   | 2+
@@ -262,16 +262,16 @@ Nuances are discussed in later sections.
 Symbol | Keys | Usage (oversimplified)
 -|-|-
 <del>#️⃣</del> | <kbd><del>#</del></kbd> | <del>number key</del> (unused)
-🚻 | <kbd>STKPWHR</kbd>  | subject pronoun
-Ⓜ️ | <kbd>AO</kbd>       | modal
-⛔ | <kbd>*</kbd>        | negation
-🏧 | <kbd>E</kbd>        | perfect aspect (<samp>have</samp>)
-⛎ | <kbd>U</kbd>        | progressive aspect (<samp>be</samp>)
-🔙 | <kbd>D</kbd>        | tense
-🗜 | <kbd>+</kbd>        | contraction
-❓ | <kbd>^</kbd>        | inversion
-🆚 | <kbd>FRPBLGSZ</kbd> | main verb
-🆙 | <kbd>T</kbd>        | extra word
+🚻 | <kbd>STKPWHR</kbd>  | [subject pronoun](#subject-pronoun)
+Ⓜ️ | <kbd>AO</kbd>       | [modal](#modality)
+⛔ | <kbd>*</kbd>        | [negation](#negation)
+🏧 | <kbd>E</kbd>        | [perfect aspect](#aspect) (<samp>have</samp>)
+⛎ | <kbd>U</kbd>        | [progressive aspect](#aspect) (<samp>be</samp>)
+🔙 | <kbd>D</kbd>        | [tense](#tense)
+🗜 | <kbd>+</kbd>        | [contraction](#contraction)
+❓ | <kbd>^</kbd>        | [inversion](#inversion)
+🆚 | <kbd>FRPBLGSZ</kbd> | [main verb](#main-verb-or-other-ender)
+🆙 | <kbd>T</kbd>        | [extra word](#extra-word)
 </td>
 <td>
 
@@ -288,8 +288,8 @@ Symbol | Keys | Usage (oversimplified)
 <thead><tr><th>Symbol</th><th>Keys</th><th>Usage (oversimplified)</th></tr></thead>
 <tbody valign="center">
 <tr><td  align="center" colspan="3">Ⓜ️, ⛔, 🏧, ⛎ are invalid</td></tr>
-<tr height="74"><td>🚾</td><td><kbd>STKPWHRAO</kbd></td><td>relativizer</td></tr>
-<tr height="111"><td>🚹</td><td><kbd>*EU</kbd></td><td>simple subject pronoun</td></tr>
+<tr height="74"><td>🚾</td><td><kbd>STKPWHRAO</kbd></td><td><a href="#relativizer">relativizer</a></td></tr>
+<tr height="111"><td>🚹</td><td><kbd>*EU</kbd></td><td><a href="#user-content-simple-subject">simple subject pronoun</a></td></tr>
 <tr><td colspan="3" height="185" align="center">same</td></tr>
 </tbody></table>
 </tbody></table>
@@ -343,6 +343,7 @@ Two third-person null subjects exist in “full form”:
 <tr><td><kbd>STKPWHR</kbd></td><td>(null)</td><td><kbd>STWR</kbd></td><td>(null)₂</td></tr>
 </tbody></table>
 
+<a name="simple-subject"></a>
 Only eight subjects total exist in “simple form”:
 
 <table>
