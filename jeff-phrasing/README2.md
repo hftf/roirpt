@@ -117,22 +117,29 @@ and <kbd>-FR</kbd> as another M (in many theories, <kbd>-FR</kbd> is already an 
 particularly in the right-bank compounds MB and MP).
 Some verb enders that benefit are:
 
-Verb | Ender | Jeff’s | Explanation
--|-|-|-
-|||| </tbody><tbody><tr><td colspan="4" align="center"><kbd>-F</kbd> as F or V</td></tr><tr><td><samp>feel</samp>   </td><td> <kbd>FL</kbd>    </td><td> <kbd><del>LT</del></kbd>    </td><td> **F**ee**L**
-<samp>find</samp>   | <kbd>FPB</kbd>   | <kbd><del>PBLG</del></kbd>  | **F**i**N**d
-<samp>forget</samp> | <kbd>FRG</kbd>   | <kbd><del>RG</del></kbd>    | **F**o**RG**et
-<samp>have</samp>   | <kbd>F</kbd>     | <kbd><del>T</del></kbd>     | ha**V**e</td></tr></tbody><tbody><tr><td colspan="4" align="center"><kbd>-FR</kbd> as M</td>
-<samp>mean</samp>   | <kbd>FR</kbd>    | <kbd><del>PBL</del></kbd>   | **M**ean
-<samp>mind</samp>   | <kbd>FRPB</kbd>  | <kbd><del>PBLS</del></kbd>  | **M**i**N**d</td></tr></tbody><tbody><tr><td colspan="4" align="center"><kbd>-F</kbd> as early fricative (S, H, CH, X)</td>
-<samp>ask</samp>    | <kbd>FBG</kbd>   | <kbd><del>RB</del></kbd>    | a**SK**
-<samp>set</samp>    | <kbd>FT</kbd>    | <kbd><del>BLS</del></kbd>   | **S**e**T**
-<samp>seem</samp>   | <kbd>FPL</kbd>   | <kbd><del>PLS</del></kbd>   | **S**ee**M**
-<samp>change</samp> | <kbd>FPG</kbd>   | <kbd><del>PBGZ</del></kbd>  | **CH**an**G**e
-<samp>expect</samp> | <kbd>FPGT</kbd>  | <kbd><del>PGS</del></kbd>   | ek**SP**e**CT**
-<samp>hope</samp>   | <kbd>FP</kbd>    | <kbd><del>RPS</del></kbd>   | **H**o**P**e
-<samp>help</samp>   | <kbd><del>FPL</del></kbd>   | <kbd><del>PLGS</del></kbd>  | <del>**H**e**L↶P**</del> oops
-<samp>leave</samp>  | <kbd>FLZ</kbd>   | <kbd><del>LGZ</del></kbd>   | **L**ea**↶V**e + <kbd>-Z</kbd></td></tr></tbody><tfoot><tr><td colspan="4" align="right">↶ = inversion</td>
+<table>
+<thead><tr><th>Verb</th><th>Ender</th><th>Jeff’s</th><th>Explanation</th></tr></thead>
+<tbody><tr><th colspan="4"><kbd>-F</kbd> as F or V</th></tr>
+<tr><td><samp>feel</samp>  </td><td><kbd>FL</kbd>   </td><td><kbd><del>LT</del></kbd>   </td><td><b>F</b>ee<b>L</b></td></tr>
+<tr><td><samp>find</samp>  </td><td><kbd>FPB</kbd>  </td><td><kbd><del>PBLG</del></kbd> </td><td><b>F</b>i<b>N</b>d</td></tr>
+<tr><td><samp>forget</samp></td><td><kbd>FRG</kbd>  </td><td><kbd><del>RG</del></kbd>   </td><td><b>F</b>o<b>RG</b>et</td></tr>
+<tr><td><samp>have</samp>  </td><td><kbd>F</kbd>    </td><td><kbd><del>T</del></kbd>    </td><td>ha<b>V</b>e</td></tr>
+</tbody>
+<tbody><tr><th colspan="4"><kbd>-FR</kbd> as M</th></tr>
+<tr><td><samp>mean</samp>  </td><td><kbd>FR</kbd>   </td><td><kbd><del>PBL</del></kbd>  </td><td><b>M</b>ean</td></tr>
+<tr><td><samp>mind</samp>  </td><td><kbd>FRPB</kbd> </td><td><kbd><del>PBLS</del></kbd> </td><td><b>M</b>i<b>N</b>d</td></tr>
+</tbody>
+<tbody><tr><th colspan="4"><kbd>-F</kbd> as early fricative (S, H, CH, X)</th></tr>
+<tr><td><samp>ask</samp>   </td><td><kbd>FBG</kbd>  </td><td><kbd><del>RB</del></kbd>   </td><td>a<b>SK</b></td></tr>
+<tr><td><samp>set</samp>   </td><td><kbd>FT</kbd>   </td><td><kbd><del>BLS</del></kbd>  </td><td><b>S</b>e<b>T</b></td></tr>
+<tr><td><samp>seem</samp>  </td><td><kbd>FPL</kbd>  </td><td><kbd><del>PLS</del></kbd>  </td><td><b>S</b>ee<b>M</b></td></tr>
+<tr><td><samp>change</samp></td><td><kbd>FPG</kbd>  </td><td><kbd><del>PBGZ</del></kbd> </td><td><b>CH</b>an<b>G</b>e</td></tr>
+<tr><td><samp>expect</samp></td><td><kbd>FPGT</kbd> </td><td><kbd><del>PGS</del></kbd>  </td><td>e<b>XP</b>e<b>CT</b></td></tr>
+<tr><td><samp>hope</samp>  </td><td><kbd>FP</kbd>   </td><td><kbd><del>RPS</del></kbd>  </td><td><b>H</b>o<b>P</b>e</td></tr>
+<tr><td><samp>help</samp>  </td><td><kbd><del>FPL</del></kbd>  </td><td><kbd><del>PLGS</del></kbd> </td><td><del><b>H</b>e<b>L↶P</b></del> oops</td></tr>
+<tr><td><samp>leave</samp> </td><td><kbd>FLZ</kbd>  </td><td><kbd><del>LGZ</del></kbd>  </td><td><b>L</b>ea<b>↶V</b>e + <kbd>-Z</kbd></td></tr></tbody>
+<tfoot><tr><td colspan="4" align="right">↶ = inversion</td></tr></tfoot>
+</table>
 
 While this change may not make optimal use of keyboard space,
 as there aren’t too many more enders to include,
@@ -228,11 +235,11 @@ The system is designed for the key layout below.
 (The <kbd>^</kbd> and <kbd>+</kbd> keys require the
 [`plover-stenotype-extended`](https://github.com/sammdot/plover-stenotype-extended) plugin.)
 
-<table>
+<pre><code><table><tbody align="center">
 <tr><td>^</td><td>T</td><td>P</td><td>H</td><td>*</td><td>F</td><td>P</td><td>L</td><td>T</td><td>D</td></tr>
 <tr><td>S</td><td>K</td><td>W</td><td>R</td><td>*</td><td>R</td><td>B</td><td>G</td><td>S</td><td>Z</td></tr>
 <tr><td></td><td>#</td><td>A</td><td>O</td><td></td><td>E</td><td>U</td><td>+</td><td></td><td></td></tr>
-</table>
+</tbody></table></code></pre>
 
 Unless otherwise stated, assume that most design aspects are identical to Jeff phrasing.
 At the moment, while documentation is incomplete, it may be more useful to read the code.
