@@ -199,7 +199,6 @@ verb_ender_data = {
 	'show':       ('RB',     None  ), # was RBZ
 	'ask':        ('FBG',    None  ), # was RB
 	'tell':       ('LT',     None  ), # was RLT
-	# 'talk':     ('BLGT',   None  ), # conflicts with like to. maybe FLG? T?
 	# sensory, perception
 	'feel':       ('FL',     'like'), # was LT
 	'hear':       ('PG',     'that'), # TODO remap FRP?
@@ -209,6 +208,7 @@ verb_ender_data = {
 	'help':       ('FPL',    None  ), # was PLGS
 	'recognize':  ('RGZ',    'that'),
 	'notice':     ('PBS',    'that'),
+	'talk':       ('T',      'to'  ), # was BLGT
 	# play
 }
 

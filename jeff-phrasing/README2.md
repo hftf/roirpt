@@ -476,7 +476,7 @@ Table is a work in progress
 <table>
 <thead><tr><th>Verb</th><th>Extra word</th><th>Ender</th><th>Jeff’s</th><th>Explanation</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td>(null)                 </td><td>                 </td><td><kbd> </kbd></td><td></td><td></td><td></td></tr>
+<tr><td>(null)                 </td><td align="right">→ <var>talk</var></td><td><kbd> </kbd></td><td></td><td></td><td></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="6">Auxiliary verbs</th></tr>
@@ -567,7 +567,7 @@ Table is a work in progress
 <tr><th align="left" colspan="6">Verbs of perception</th></tr>
 <tr><td><samp>feel      </samp></td><td><samp>like</samp></td><td><kbd>FL</kbd>    </td><td><kbd><del>LT  </del></kbd></td><td><b>F</b>ee<b>L</b></td><td></td></tr>
 <tr><td><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.</td><td></td></tr>
-<tr><td><samp>see       </samp></td><td>                 </td><td><kbd>S</kbd>     </td><td>=                         </td><td><b>S</b>ee</td><td></td></tr>
+<tr><td><samp>see       </samp></td><td align="right">→ <var>talk to</var></td><td><kbd>S</kbd>     </td><td>=                         </td><td><b>S</b>ee</td><td></td></tr>
 <tr><td><samp>look      </samp></td><td align="right">→ <var>tell</var></td><td><kbd>L</kbd>     </td><td>=                         </td><td><b>L</b>ook</td><td></td></tr>
 </tbody>
 <tbody>
@@ -575,6 +575,7 @@ Table is a work in progress
 <tr><td><samp>help      </samp></td><td>                 </td><td><kbd>FPL</kbd>   </td><td><kbd><del>PLGS</del></kbd></td><td><b>H</b>e<b>L↶P</b></td><td></td></tr>
 <tr><td><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>=                         </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
 <tr><td><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>=                         </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>
+<tr><td><samp>talk      </samp></td><td><samp>to  </samp></td><td><kbd>T</kbd>     </td><td><kbd><del>BLGT</del></kbd></td><td><b>T</b>alk</td><td></td></tr>
 </tbody>
 </table>
 
