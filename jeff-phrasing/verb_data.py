@@ -138,7 +138,7 @@ verb_ender_data = {
 
 	# common
 	'be':         ('B',      'a'   ),
-	'have':       ('T',      'to'  ), # TODO remap F
+	'have':       ('F',      'to'  ), # was T
 	'do':         ('RP',     'it'  ),
 	'go':         ('G',      'to'  ),
 	'get':        ('GS',     'to'  ), # he had gotten (obtain); he had got to (obligation)
@@ -148,7 +148,7 @@ verb_ender_data = {
 	# desire
 	'want':       ('P',      'to'  ),
 	'wish':       ('RBS',    'to'  ),
-	'need':       ('RPG',    'to'  ), # TODO remap
+	'need':       ('PBL',    'to'  ), # was RPG
 
 	# mind, cognition
 	'know':       ('PB',     'that'),
@@ -161,18 +161,18 @@ verb_ender_data = {
 	'mean':       ('FR',     'to'  ), # was PBL
 	'learn':      ('RPBL',   'to'  ), # was RPBS
 	'seem':       ('PLS',    'to'  ), # TODO remap FPL?
-	'expect':     ('PGS',    'that'), # TODO remap FP(G)T?
-	'realize':    ('RLS',    'that'), # TODO remap RLZ
+	'expect':     ('FPGT',   'that'), # was PGS
+	'realize':    ('RLZ',    'that'), # was RLS
 	'mind':       ('FRPB',   None  ), # was PBLS
 
-	'hope':       ('RPS',    'to'  ), # TODO remap FP?
+	'hope':       ('FP',     'to'  ), # was RPS
 	'like':       ('LG',     'to'  ), # was BLG
 	'love':       ('LGZ',    'to'  ), # was LG
 	'care':       ('RG',     None  ), # was RZ
 
 	'become':     ('BGS',    'a'   ), # was RPBG
 	'change':     ('FPG',    None  ), # was PBGZ
-	'consider':   ('RBGZ',   None  ), # TODO remap RBGS?
+	'consider':   ('RBGS',   None  ), # was RBGZ
 	'find':       ('FPB',    'that'), # was PBLG
 	'happen':     ('PZ',     'to'  ), # TRYING 'to'
 	'try':        ('RT',     'to'  ),
@@ -192,12 +192,12 @@ verb_ender_data = {
 	'move':       ('PLZ',    None  ),
 	'leave':      ('FLZ',    None  ), # was LGZ
 	'remain':     ('RPLS',   None  ),
-	'call':       ('RBLG',   None  ), # TODO remap BLG
+	'call':       ('BLG',    None  ), # was RBLG
 	'recall':     ('RL',     None  ),
 	'read':       ('RS',     None  ),
 	'run':        ('R',      None  ),
-	'show':       ('RBZ',    None  ), # TODO remap RB
-	'ask':        ('RB',     None  ), # TODO remap FBG
+	'show':       ('RB',     None  ), # was RBZ
+	'ask':        ('FBG',    None  ), # was RB
 	'tell':       ('LT',     None  ), # was RLT
 	# 'talk':     ('BLGT',   None  ), # conflicts with like to. maybe FLG?
 	# sensory, perception
