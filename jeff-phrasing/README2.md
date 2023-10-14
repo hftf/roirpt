@@ -574,10 +574,10 @@ Table is a work in progress
 </tbody>
 <tbody>
 <tr><th align="left" colspan="6">New verbs (absent in Jeff’s)</th></tr>
-<tr><td><samp>help      </samp></td><td>                 </td><td><kbd>FPL</kbd>   </td><td><kbd><del>PLGS</del></kbd></td><td><b>H</b>e<b>L↶P</b></td><td></td></tr>
-<tr><td><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>=                         </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
-<tr><td><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>=                         </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>
-<tr><td><samp>talk      </samp></td><td><samp>to  </samp></td><td><kbd>T</kbd>     </td><td><kbd><del>BLGT</del></kbd></td><td><b>T</b>alk</td><td></td></tr>
+<tr><td><samp>help      </samp></td><td>                 </td><td><kbd>FPL</kbd>   </td><td>🆕                        </td><td><b>H</b>e<b>L↶P</b></td><td></td></tr>
+<tr><td><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>🆕                        </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
+<tr><td><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>🆕                        </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>
+<tr><td><samp>talk      </samp></td><td><samp>to  </samp></td><td><kbd>T</kbd>     </td><td>🆕                        </td><td><b>T</b>alk</td><td></td></tr>
 </tbody>
 <tfoot><tr><td colspan="3">→ = no extra word due to another ender</td><td>= same</td><td>↶ = inversion</td><td><b>X</b><sup><var>Y</var></sup> = <kbd>Y</kbd> key represents variant of X sound</td></tr></tfoot>
 </table>
