@@ -495,6 +495,19 @@ The phrasing system should be relatively straightforward to pick up; just read t
 It is recommended to make liberal use of the suggestions window
 and [tapey-tape](https://github.com/rabbitgrowth/plover-tapey-tape).
 
+
+## Summary of differences with Jeff phrasing
+
+Feature | Jeff | Dope
+-|-|-
+Perfect     aspect | <kbd>F</kbd> | <kbd>E</kbd>
+Progressive aspect | <kbd>E</kbd> | <kbd>U</kbd>
+Subject–auxiliary inversion | <kbd>U</kbd> | <kbd>^</kbd>
+Past tense of ender containing <kbd>-S</kbd> | <kbd>-SZ</kbd> | Both <kbd>-SZ</kbd> or <kbd>-SD</kbd>
+Contraction        | Hard-coded only | Controlled by <kbd>+</kbd>
+Adverbs (<samp>just</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>) | Overloaded <kbd>*EUF</kbd> | Not implemented
+Reverse lookup     | Ready | Partly implemented </td></tr><tr><td>Chord assignments</td><td colspan="2" align="center">May differ variously</td>
+
 ## Installation
 
 TODO
