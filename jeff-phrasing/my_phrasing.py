@@ -418,7 +418,7 @@ def reverse_lookup(text):
 	avm.update({'verb': verb_, 'extra_word': None})
 
 	# 6. Extra word
-	if words and (words[-1] in ['a', 'be', 'it', 'on', 'that', 'the', 'to'] or words[-1] == 'like' and words[-2] in reverse_verb_forms and reverse_verb_forms[words[-2]][1] == 'feel'):
+	if words and (words[-1] in ['a', 'be', 'it', 'on', 'that', 'the', 'to'] or words[-1] == 'like' and len(words) >= 2 and words[-2] in reverse_verb_forms and reverse_verb_forms[words[-2]][1] == 'feel'):
 		# print(verb_ender_data[verb], words[-1])
 		if verb_ and verb_ender_data[verb_][1] == words[-1]:
 			avm['extra_word'] = words.pop()
@@ -434,6 +434,10 @@ def reverse_lookup(text):
 	# print(words)
 	# print(avm)
 	outline = avm_to_outline(avm)
-	if not outline or not text or lookup(outline, raise_grammar_errors=False) != text:
+	looked_up = ''
+	if outline:
+		looked_up = lookup(outline, raise_grammar_errors=False)
+	if not outline or not text or looked_up.strip('*') != text:
+		print('##', [outline, text, looked_up])
 		return []
 	return [outline]
