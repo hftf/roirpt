@@ -182,7 +182,10 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 
 	# inversion
 	if subject:
-		if contract and finite and not question and phrase and phrase[0] in contractions:
+		if contract and finite and modal and tense and len(phrase) >= 2 and phrase[1] in contractions:
+			if not "'" in phrase[0]: # to allow two contractions (shouldn't've), change here
+				phrase[0] += contractions[phrase.pop(1)]
+		elif contract and finite and not question and phrase and phrase[0] in contractions:
 			subject += contractions[phrase.pop(0)]
 		elif contract and phrase and "'" not in phrase[0]:
 			# contract was enabled, but there was nothing found to contract

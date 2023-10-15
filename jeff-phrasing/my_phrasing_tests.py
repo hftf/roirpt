@@ -97,6 +97,8 @@ tests = {
 	"^+SWRO*EUD":      "shouldn't I have been",
 	"^+SWRO*EUFD":     "shouldn't I have been having",
 	"^+SWRO*EURPD":    "shouldn't I have been doing",
+	"+SWROFD":         "I should've",
+	"+SWRAOFD":        "I would've", # * I'd have
 # }
 # tests2 = {
 	"":               None,
@@ -161,6 +163,8 @@ tests = {
 	"SWHAUFPB":       "what you find",
 	"SWROERPD":       "I should have done",
 	"SWRO*ERPD":      "I should not have done",
+	"+SWROERPD":      "I should've done",
+	"+SWRO*ERPD":     "I shouldn't have done",
 	#                 "SKPEUBGSZ":   "and I could",
 	"SKPEUBGSZ":      "and I became",
 	"TWRA*G":         "we cannot go",
@@ -203,8 +207,6 @@ tests = {
 	"^+KWHR*":        "doesn't he",
 	"+SWRAO*RP":      "I won't do",
 	"+SWHAUFPB":      "what you find",
-	"+SWROERPD":      "I should have done",
-	"+SWRO*ERPD":     "I shouldn't have done",
 	#                 "+SKPEUBGSZ":   "and I could",
 	"+SKPEUBGSZ":     "and I became",
 	"+TWRA*G":        "we can't go",
