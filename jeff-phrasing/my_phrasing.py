@@ -253,7 +253,7 @@ def avm_to_outline(avm):
 
 	if 'cosubordinator' in avm and avm['cosubordinator']:
 		lookups['subject'] = reverse_SIMPLE_PRONOUNS
-		del lookups['modal'], lookups['have'], lookups['be']
+		del lookups['modal'], lookups['have'], lookups['be'], lookups['negation']
 
 	outline = ''
 	for feature in lookups:
