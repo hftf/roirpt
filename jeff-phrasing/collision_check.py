@@ -14,6 +14,8 @@ def sortkey(key):
 def sort(l):
 	return sorted(l, key=sortkey)
 
+# idea: go thru all dictionaries and find obsolete entries
+
 # These are strokes that are okay to remove, typically because they are mis-stroke entries
 # spellchecker: disable
 AUDITED_STROKES = {
@@ -54,7 +56,7 @@ AUDITED_STROKES = {
 	"SWHEPB": True,        # "when is" -- "WH-S" seems easier
 	"SKPET": True,         # "and the" -- probably a typo entry for "SKP-T"
 
-	# Things that are superceded by this phrasing system.
+	# Things that are superseded by this phrasing system.
 	"KPWROEU": True,    # "I don't"
 	"KWHROEPB": True,   # "I don't know"
 	"SWRAOE": True,     # "we have"
@@ -167,7 +169,12 @@ for dict_filename in dict_filenames:
 						# 	continue
 						print(f"{conflict:18} ", end='')
 						phrase = r(phrasing.lookup((conflict,), raise_grammar_errors=False))
-						print(f"{phrase:35} {translation}")
+						print(f"{phrase:35} {translation:25}", end='')
+						if ' ' in translation:
+							rev = phrasing.reverse_lookup(translation)
+							if rev:
+								print(f'use phrase instead: {rev}', end='')
+						print()
 					print('')
 					increment_collision_counter(
 						starter_collisions, starter, collision_count)
@@ -187,7 +194,13 @@ for dict_filename in dict_filenames:
 
 					for conflict, translation in simple_defined_strokes[key].items():
 						phrase = r(phrasing.lookup((conflict,), raise_grammar_errors=False))
-						print(f"{conflict:18} {phrase:35} {translation}")
+						print(f"{conflict:18} {phrase:35} {translation:25}", end='')
+						if ' ' in translation:
+							rev = phrasing.reverse_lookup(translation)
+							if rev:
+								print(f'use phrase instead: {rev}', end='')
+						print()
+
 					print('')
 					increment_collision_counter(
 						simple_starter_collisions, starter, collision_count)
