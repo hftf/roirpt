@@ -68,6 +68,7 @@ SIMPLE_STARTERS = {
 	# SKPR   or ?
 }
 
+# TODO: consistent order
 SIMPLE_PRONOUNS = {
 	'E':   'he',
 	'*E':  'she',

@@ -13,8 +13,13 @@ def reverse_dicts_with_repeats(ds):
 	r = defaultdict(list)
 	for d in ds:
 		for k, v in d.items():
-			if k not in r[v]:
+			if k not in r[v]: # unique (i.e. ordered set)
 				r[v].append(k)
+	return dict(r)
+def reverse_keymap_via_data(map, data, key):
+	r = defaultdict(list)
+	for k, v in map.items():
+		r[data[v][key]].append(data[v])
 	return dict(r)
 
 reverse_STARTERS        = {tuple(noun_data[v].values()): k for k, v in STARTERS.items()}
@@ -22,7 +27,8 @@ reverse_SIMPLE_STARTERS = {v: k for k, v in SIMPLE_STARTERS.items()}
 reverse_SIMPLE_PRONOUNS = {tuple(noun_data[v].values()): k for k, v in SIMPLE_PRONOUNS.items()}
 reverse_contractions = reverse_dicts_with_repeats(
 	[contractions, negative_contractions, interrogative_contractions])
-print(reverse_SIMPLE_STARTERS, reverse_STARTERS)
+reverse_STARTERS        = reverse_keymap_via_data(STARTERS,        noun_data, 'subject')
+reverse_SIMPLE_PRONOUNS = reverse_keymap_via_data(SIMPLE_PRONOUNS, noun_data, 'subject')
 
 errors = False
 def reverse_lookup(text):
@@ -64,7 +70,7 @@ def parse_cosubordinator(avm, words):
 		yield from parse_subject(dict(avm, cosubordinator=word), words[1:])
 
 		# Some words (currently, only 'that') are both cosubordinators and full subjects
-		if word == 'that':
+		if word in reverse_STARTERS:
 			yield from parse_subject(avm, words)
 	else:
 		yield from parse_subject(avm, words)
@@ -76,16 +82,15 @@ def parse_subject(avm, words):
 	else:
 		reverse_subjects = reverse_STARTERS
 
-	for (subject, person, number) in reverse_subjects:
+	for subject, subject_datas in reverse_subjects.items():
 		if subject in words:
 			words[words.index(subject)] = '_'
-			avm.update(noun_data[subject])
-			yield from parse_negation(avm, words)
-			return
+			for subject_data in subject_datas:
+				yield from parse_negation({**avm, **subject_data}, words)
+			return # break due to for-else
 	else:
-		for subject in ['', '2'][:1 + ('cosubordinator' not in avm)]:
-			avm.update(noun_data[subject])
-			yield from parse_negation(avm, words)
+		for subject_data in reverse_subjects['']:
+			yield from parse_negation({**avm, **subject_data}, words)
 
 def parse_negation(avm, words):
 	# Negation
@@ -124,6 +129,7 @@ texts = [
 	"to not go",
 	"hello",
 	"why to go",
+	"there are",
 ]
 for text in texts:
 	print(f'\n{text}')
