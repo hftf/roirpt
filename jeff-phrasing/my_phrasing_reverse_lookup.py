@@ -19,6 +19,7 @@ reverse_contractions = reverse_dicts_with_repeats(
 	[contractions, negative_contractions, interrogative_contractions])
 print(reverse_contractions)
 
+errors = False
 def reverse_lookup(text):
 	avm = {}
 	words = text.split(' ')
@@ -26,24 +27,30 @@ def reverse_lookup(text):
 	for parse in parse_contractions(avm, words, 0):
 		print(parse)
 
+def insert(words, i, parts):
+	return words[:i] + parts + words [i+1:]
+
 def parse_contractions(avm, words, i):
 	if i >= len(words):
 		yield (avm, words)
+		return
 
-	else:
-		word = words[i]
-		parts = re.split(r"(?=\Bn't\b)|(?='[^t])", word)
+	word = words[i]
+	parts = re.split(r"(?=\Bn't\b)|(?='[^t])", word)
 
-		if word in reverse_contractions:
-			for uncontracted in reverse_contractions[word]:
-				yield from parse_contractions(avm, words[:i] + [uncontracted] + words[i+1:], i + 1)
-			# return
-		elif 'cannot' == word:
-			yield from parse_contractions(avm, words[:i] + ['can', 'not'] + words[i+1:], i + 2)
-		elif "'" in word and any(part in reverse_contractions for part in parts):
-			yield from parse_contractions(dict(avm, contract=True), words[:i] + parts + words [i+1:], i)
+	if word in reverse_contractions:
+		for uncontracted in reverse_contractions[word]:
+			yield from parse_contractions(avm, insert(words, i, [uncontracted]), i + 1)
+	elif 'cannot' == word:
+			yield from parse_contractions(avm, insert(words, i, ['can', 'not']), i + 2)
+	elif "'" in word:
+		if any(part in reverse_contractions for part in parts):
+			yield from parse_contractions(dict(avm, contract=True), insert(words, i, parts), i)
 		else:
-			yield from parse_contractions(avm, words, i + 1)
+			if errors:
+				raise KeyError(f'Invalid contraction: {word}')
+	else:
+		yield from parse_contractions(avm, words, i + 1)
 
-text = "I'd like to go, but I can't cannot shouldn't've za'q."
+text = "I'd like to go, but I can't cannot shouldn't've"
 reverse_lookup(text)
