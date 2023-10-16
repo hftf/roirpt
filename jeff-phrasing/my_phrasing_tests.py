@@ -474,4 +474,9 @@ tests3 = {
 
 for (phrase, outlines) in tests3.items():
 	result_outlines = my_phrasing.reverse_lookup(phrase)
-	print(phrase, outlines, ['/'.join(o) for o in result_outlines], all(o in result_outlines for o in outlines) if outlines else None)
+	result_outlines_s = ["/".join(o) for o in result_outlines]
+	if outlines is None:
+		passed = not result_outlines
+	else:
+		passed = all(o in result_outlines_s for o in outlines)
+	print(f'{phrase:24} {str(outlines):24} {str(result_outlines_s):24} {passed}')
