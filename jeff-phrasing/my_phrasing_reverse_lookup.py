@@ -8,10 +8,11 @@ contractions = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 interrogative_contractions = {'did': "'d", "does": "'s"}
 
 def reverse_dicts_with_repeats(ds):
-	r = defaultdict(set)
+	r = defaultdict(list)
 	for d in ds:
 		for k, v in d.items():
-			r[v].add(k)
+			if k not in r[v]:
+				r[v].append(k)
 	return dict(r)
 
 reverse_contractions = reverse_dicts_with_repeats(
