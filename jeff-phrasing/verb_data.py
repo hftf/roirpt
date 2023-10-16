@@ -5,7 +5,7 @@ import sys
 
 negative_contractions = {'can': 'ca', 'will': 'wo', 'shall': 'sha'}
 contractions = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
-	'will': "'ll", 'would': "'d", 'had': "'d", 'have': "'ve",
+	'had': "'d", 'have': "'ve", 'will': "'ll", 'would': "'d",
 	'not': "n't"} # n't is only for reversing purposes
 interrogative_contractions = {'did': "'d", "does": "'s"}
 
@@ -203,13 +203,14 @@ verb_ender_data = {
 	'feel':       ('FL',     'like'), # was LT
 	'hear':       ('PG',     'that'), # TODO remap FRP?
 	'see':        ('S',      None  ),
-	'look':       ('L',      None  ),
+	'look':       ('L',      None  ), # TODO remap LGS?
 
 	'help':       ('FPL',    None  ), # was PLGS
 	'recognize':  ('RGZ',    'that'),
 	'notice':     ('PBS',    'that'),
 	'talk':       ('T',      'to'  ), # was BLGT
 	# play
+	# suppose: FPS
 }
 
 # Part Ib: Generate all verb forms

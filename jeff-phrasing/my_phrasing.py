@@ -375,7 +375,7 @@ def reverse_lookup(text):
 					break
 
 		verbs_remaining = any(w in reverse_verb_forms for w in words[i+1:])
-		if verb in reverse_MODALS:
+		if verb in reverse_MODALS and 'cosubordinator' not in avm:
 			avm['modal'] = verb
 			if verbs_remaining or do_support:
 				if do_support:
@@ -383,20 +383,20 @@ def reverse_lookup(text):
 					do_support = False
 				selects.append('')
 		elif verb == 'do':
-			if verbs_remaining or do_support:
+			if (verbs_remaining or do_support) and 'cosubordinator' not in avm:
 				selects.append('') # do-support
 				if do_support:
 					verb = ''
 					do_support = False
 		elif verb == 'have':
-			if verbs_remaining or do_support:
+			if (verbs_remaining or do_support) and 'cosubordinator' not in avm:
 				avm['have'] = True
 				if do_support:
 					verb = ''
 					do_support = False
 			selects.append('en')
 		elif verb == 'be':
-			if verbs_remaining or do_support:
+			if (verbs_remaining or do_support) and 'cosubordinator' not in avm:
 				if verbs_remaining and words[i+1] in reverse_verb_forms and reverse_verb_forms[words[i+1]][0].startswith('e'):
 					avm['passive'] = True
 				else:
@@ -404,7 +404,7 @@ def reverse_lookup(text):
 				if do_support:
 					verb = ''
 					do_support = False
-			elif not words[i+1:]: # DO NOT KEEP THIS WAY
+			elif not words[i+1:] and 'cosubordinator' not in avm: # DO NOT KEEP THIS WAY
 				# yield
 				avm['be'] = True
 				verb = ''

@@ -460,3 +460,18 @@ for (outline, avm, phrase) in avm_tests:
 	assert phrase  == result_phrase
 	assert avm     == result_avm
 	assert outline == '/'.join(result_outline)
+
+tests3 = {
+	'found she':     None,
+	'she found':     ['SKWHR-FPBD'],
+	'like':          ['STWR-LG'],
+	'feel like':     ['STWR-FLT'],
+	"and I haven't": None,
+	"and you'd":     ["+SKPUFD"],
+	"and you were":  ["SKPUBD"],
+	"and it's":      ["+SKP*B"],
+}
+
+for (phrase, outlines) in tests3.items():
+	result_outlines = my_phrasing.reverse_lookup(phrase)
+	print(phrase, outlines, ['/'.join(o) for o in result_outlines], all(o in result_outlines for o in outlines) if outlines else None)
