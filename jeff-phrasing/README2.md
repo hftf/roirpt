@@ -610,19 +610,20 @@ There is extra complexity because adverbs may exhibit free positioning.
 ### Summary of differences with other phrasing systems
 
 <table>
-<thead><tr><th>Feature</th><th width="88">Jeff</th><th width="88">Josiah</th><th>Dope</th></tr></thead>
+<thead><tr><th>Feature</th><th width="88">Jeff</th><th width="88">Josiah</th><th colspan="2">Dope</th></tr></thead>
 <tbody align="left">
-<tr><td>Perfect     aspect</td><td colspan="2"><kbd>F</kbd></td><td><kbd>E</kbd></td></tr>
-<tr><td>Progressive aspect</td><td colspan="2"><kbd>E</kbd></td><td><kbd>U</kbd></td></tr>
-<tr><td>Subject–auxiliary inversion</td><td colspan="2"><kbd>U</kbd></td><td><kbd>^</kbd></td></tr>
-<tr><td>Past tense of ender containing <kbd>-S</kbd></td><td colspan="2"><kbd>-SZ</kbd></td><td>Both <kbd>-SZ</kbd> or <kbd>-SD</kbd></td></tr>
-<tr><td>Contraction       </td><td colspan="2">Hard-coded only</td><td>Controlled by <kbd>+</kbd></td></tr>
-<tr><td>Adverbs (<samp>just</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>)</td><td colspan="2">Overloaded <kbd>*EUF</kbd></td><td>Not implemented</td></tr>
-<tr><td>Reverse lookup    </td><td colspan="2">Ready</td><td>Partly implemented </td></tr>
-<tr><td>Chord assignments</td><td colspan="3" align="center">May differ variously</td></tr>
-<tr><td>“Simple form” subject keys</td><td><kbd>*EU</kbd></td><td><kbd>^EU</kbd></td><td><kbd>*EU</kbd></td></tr>
-<tr><td>“Simple form” negation    </td><td>n/a    </td><td><kbd>*</kbd>  </td><td>n/a</td></tr>
-<tr><td>“Simple form” inversion   </td><td>n/a    </td><td>n/a   </td><td><kbd>^</kbd></td></tr>
+<tr><td>Perfect     aspect</td><td colspan="2"><kbd>F</kbd></td><td colspan="2"><kbd>E</kbd></td></tr>
+<tr><td>Progressive aspect</td><td colspan="2"><kbd>E</kbd></td><td colspan="2"><kbd>U</kbd></td></tr>
+<tr><td>Subject–auxiliary inversion</td><td colspan="2"><kbd>U</kbd></td><td colspan="2"><kbd>^</kbd></td></tr>
+<tr><td>Past tense of ender containing <kbd>-S</kbd></td><td colspan="2"><kbd>-SZ</kbd></td><td colspan="2">Both <kbd>-SZ</kbd> or <kbd>-SD</kbd></td></tr>
+<tr><td>Contraction       </td><td colspan="2">Hard-coded only</td><td colspan="2">Controlled by <kbd>+</kbd></td></tr>
+<tr><td>Adverbs (<samp>just</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>)</td>
+	<td colspan="2">Overloaded <kbd>*EUF</kbd></td><td colspan="2">Not implemented</td></tr>
+<tr><td>Reverse lookup    </td><td colspan="2">Ready</td><td colspan="2">Partly implemented </td></tr>
+<tr><td>Chord assignments</td><td colspan="3" align="center">May differ variously</td><td width="112">Can use <kbd>F</kbd></td></tr>
+<tr><td>“Simple form” subject keys</td><td><kbd>*EU</kbd></td><td><kbd>^EU</kbd></td><td colspan="2"><kbd>*EU</kbd></td></tr>
+<tr><td>“Simple form” negation    </td><td>n/a    </td><td><kbd>*</kbd>  </td><td colspan="2">n/a</td></tr>
+<tr><td>“Simple form” inversion   </td><td>n/a    </td><td>n/a   </td><td colspan="2"><kbd>^</kbd></td></tr>
 </tbody></table>
 
 ## Learning and practice
