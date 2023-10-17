@@ -669,7 +669,7 @@ but do not add them to Plover as they are not dictionaries themselves.)
 If the module resolution at the top of `my_phrasing.py` is not working
 (errors like `No module named 'noun_data'` appear),
 
-https://github.com/hftf/roirpt/blob/38adfd827fed6e5df50f9a9580334401c865a948/jeff-phrasing/my_phrasing.py#L1-L13
+https://github.com/hftf/roirpt/blob/38adfd827fed6e5df50f9a9580334401c865a948/jeff-phrasing/my_phrasing.py#L1-L10
 
 then, for now, you can try to replace it with a hard-coded path:
 
