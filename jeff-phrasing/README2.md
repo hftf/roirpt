@@ -607,9 +607,9 @@ Not yet implemented.
 Adverbs can include medial <samp>just</samp>, <samp>really</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>, etc.
 There is extra complexity because adverbs may exhibit free positioning.
 
-### Summary of differences with Jeff phrasing
+### Summary of differences with other phrasing systems
 
-Feature | Jeff | Dope
+Feature | Jeff/Josiah | Dope
 -|-|-
 Perfect     aspect | <kbd>F</kbd> | <kbd>E</kbd>
 Progressive aspect | <kbd>E</kbd> | <kbd>U</kbd>
@@ -618,6 +618,12 @@ Past tense of ender containing <kbd>-S</kbd> | <kbd>-SZ</kbd> | Both <kbd>-SZ</k
 Contraction        | Hard-coded only | Controlled by <kbd>+</kbd>
 Adverbs (<samp>just</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>) | Overloaded <kbd>*EUF</kbd> | Not implemented
 Reverse lookup     | Ready | Partly implemented </td></tr><tr><td>Chord assignments</td><td colspan="2" align="center">May differ variously</td>
+
+Feature | Jeff | Josiah | Dope
+-|-|-|-
+“Simple form” subject keys | <kbd>\*EU</kbd> | <kbd>^EU</kbd> | <kbd>\*EU</kbd>
+“Simple form” negation     | Unavailable     | <kbd>*</kbd>   | Unavailable
+“Simple form” inversion    | Unavailable     | Unavailable    | <kbd>^</kbd>
 
 ## Learning and practice
 
