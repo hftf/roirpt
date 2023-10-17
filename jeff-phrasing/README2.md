@@ -245,6 +245,11 @@ Unless otherwise stated, assume that most design aspects are identical to Jeff p
 At the moment, while documentation is incomplete, it may be more useful to read the code.
 Look for dicts in files named `*_data.py`.
 
+> [!WARNING]
+> At this time, the key layout above is assumed,
+> so chords may not have comfortable shapes for everyone.
+> This will be made more customizable at some point.
+
 ### Pictographic key layout
 
 There are two types of phrase:
@@ -351,6 +356,11 @@ Two third-person null subjects exist in “full form”:
 <tr><td><kbd>STKPWHR</kbd></td><td>(null)</td><td><kbd>STWR</kbd></td><td>(null)₂</td></tr>
 </tbody></table>
 
+> [!NOTE]
+> 💡 Memorization tip:
+Both of the first-person subjects <samp>I</samp> <kbd>SWR</kbd> and <samp>we</samp> <kbd>TWR</kbd>
+contain the keys <kbd>WR</kbd>.
+
 <a name="simple-subject"></a>
 Only eight subjects total exist in “simple form”:
 
@@ -442,6 +452,8 @@ while <samp>\*he could have not gone</samp> is not.
 ### Contraction
 
 TODO/Self-explanatory.
+Multiple contractions (e.g. <samp>couldn’t’ve</samp>) can technically be supported by the engine,
+but no interface exists for applying them yet.
 
 > [!NOTE]
 > <samp>aren’t</samp> is the exceptional contracted form of <samp>am</samp> + <samp>not</samp>
@@ -681,6 +693,8 @@ then, for now, you can try to replace it with a hard-coded path:
 	* If multiple options, must yield all of them
 	* As early as possible, must not yield any impossible options
 * Consider dropping the terms starter/medial/ender entirely
+	* For “chord”?
+* Add some Josiah extensions
 * Add examples in readme
 * Testing instructions
 
