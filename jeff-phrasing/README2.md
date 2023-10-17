@@ -475,106 +475,110 @@ Some examples of extra words:
 Table is a work in progress
 
 <table>
-<thead><tr><th>Verb</th><th>Extra word</th><th>Ender</th><th>Jeff’s</th><th>Explanation</th><th>Notes</th></tr></thead>
+<thead><tr><th>Verb</th><th colspan="2">Extra word</th><th>Ender</th><th>Jeff’s</th><th>Explanation</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td>(null)                 </td><td align="right">→ <var>talk</var></td><td><kbd> </kbd></td><td></td><td></td><td></td></tr>
+<tr><td width="1">(null)                 </td><td align="right" colspan="2">→ <var>talk</var> <kbd>T</kbd><br></td><td><kbd> </kbd></td><td></td><td></td><td></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Modal verbs (auxiliary verbs)</th></tr>
-<tr><td><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion</td></tr>
-<tr><td><samp>will      </samp></td><td>                 </td>                          <td><kbd><del>RBGS</del></kbd></td><td></td></tr>
-<tr><td><samp>shall     </samp></td><td>                 </td>                          <td><kbd><del>RBL </del></kbd></td><td></td></tr>
-<tr><td><samp>may       </samp></td><td><samp>be  </samp></td><td><kbd>PL</kbd>    </td><td>=                         </td><td><b>M</b>ay</td><td>past tense: <samp>might</samp></td></tr>
-<tr><td><samp>must      </samp></td><td><samp>be  </samp></td><td><kbd>PBLGS</kbd> </td><td>=                         </td><td><b>M</b>u<b>S</b>t + just’s <kbd>BG</kbd></td><td>defective (no past tense): taken by <samp>just</samp></td></tr>
+<tr><th align="left" colspan="7">Modal verbs (auxiliary verbs)</th></tr>
+<tr><td colspan="2"><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion</td></tr>
+<tr><td colspan="2"><samp>will      </samp></td><td>                 </td>                          <td><kbd><del>RBGS</del></kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>shall     </samp></td><td>                 </td>                          <td><kbd><del>RBL </del></kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>may       </samp></td><td><samp>be  </samp></td><td><kbd>PL</kbd>    </td><td>=                         </td><td><b>M</b>ay</td><td>past tense: <samp>might</samp></td></tr>
+<tr><td colspan="2"><samp>must      </samp></td><td><samp>be  </samp></td><td><kbd>PBLGS</kbd> </td><td>=                         </td><td><b>M</b>u<b>S</b>t + just’s <b>J</b></td><td>defective (no past tense): taken by <samp>just</samp></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Adverbs (non-verbs)</th></tr>
-<tr><td><samp>just      </samp></td><td>                 </td><td><kbd>PBLGSZ</kbd></td><td>=                         </td><td><b>J</b>u<b>SZ</b>t</td><td>listed after <samp>must</samp> to override its past tense</td></tr>
-<tr><td><samp>really    </samp></td><td>                 </td><td><kbd>RLG</kbd>   </td><td>=                         </td><td><b>R</b>eal<b>LY</b><sup><var>LG (i.e. -liȝ)</var></sup></td><td></td></tr>
+<tr><th align="left" colspan="7">Adverbs (non-verbs)</th></tr>
+<tr><td colspan="2"><samp>just      </samp></td><td>                 </td><td><kbd>PBLGSZ</kbd></td><td>=                         </td><td><b>J</b>u<b>SZ</b>t</td><td>listed after <samp>must</samp>: overrides its past tense</td></tr>
+<tr><td colspan="2"><samp>really    </samp></td><td>                 </td><td><kbd>RLG</kbd>   </td><td>=                         </td><td><b>R</b>eal<b>LY</b><sup><var>LG (i.e. -liȝ)</var></sup></td><td></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Common verbs</th></tr>
-<tr><td><samp>be        </samp></td><td><samp>a   </samp></td><td><kbd>B</kbd>     </td><td>=                         </td><td><b>B</b>e</td><td></td></tr>
-<tr><td><samp>have      </samp></td><td><samp>to  </samp></td><td><kbd>F</kbd>     </td><td><kbd><del>T   </del></kbd></td><td>ha<b>V</b>e</td><td></td></tr>
-<tr><td><samp>do        </samp></td><td><samp>it  </samp></td><td><kbd>RP</kbd>    </td><td>=                         </td><td>arb.</td><td></td></tr>
-<tr><td><samp>go        </samp></td><td><samp>to  </samp></td><td><kbd>G</kbd>     </td><td>=                         </td><td><b>G</b>o</td></tr>
-<tr><td><samp>get       </samp></td><td><samp>to  </samp></td><td><kbd>GS</kbd>    </td><td>=                         </td><td><b>G</b>et + <kbd>S</kbd></td><td>past participle: <samp>got</samp>; passive voice: <samp>gotten</samp><br><samp>he had gotten</samp> (obtained) unavailable;<br><samp>he had got to</samp> (obligation) available</td></tr>
-<tr><td><samp>say       </samp></td><td><samp>that</samp></td><td><kbd>BS</kbd>    </td><td>=                         </td><td>commonly <kbd>BS</kbd></td></tr>
-<tr><td><samp>use       </samp></td><td align="right">→ <var>used to</var></td><td><kbd>Z</kbd></td><td>=             </td><td>u<b>Z</b>e</td><td></td></tr>
-<tr><td><samp>used to   </samp></td><td>                 </td><td><kbd>TZ</kbd>    </td><td>=                         </td><td>u<b>Z</b>ed <b>T</b>o</td><td>special case, but really acts as <samp>use</samp> + <samp>to</samp> <kbd>T</kbd></td></tr>
+<tr><th align="left" colspan="7">Common verbs</th></tr>
+<tr><td colspan="2"><samp>be        </samp></td><td><samp>a   </samp></td><td><kbd>B</kbd>     </td><td>=                         </td><td><b>B</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>have      </samp></td><td><samp>to  </samp></td><td><kbd>F</kbd>     </td><td><kbd><del>T   </del></kbd></td><td>ha<b>V</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>do        </samp></td><td><samp>it  </samp></td><td><kbd>RP</kbd>    </td><td>=                         </td><td>arb.</td><td></td></tr>
+<tr><td colspan="2"><samp>go        </samp></td><td><samp>to  </samp></td><td><kbd>G</kbd>     </td><td>=                         </td><td><b>G</b>o</td></tr>
+<tr><td colspan="2"><samp>get       </samp></td><td><samp>to  </samp></td><td><kbd>GS</kbd>    </td><td>=                         </td><td><b>G</b>et + <kbd>S</kbd></td><td>past participle: <samp>got</samp>; passive voice: <samp>gotten</samp><br><samp>he had got to</samp> (obligation) available<br><samp>he had gotten</samp> (obtained) unavailable</td></tr>
+<tr><td colspan="2"><samp>say       </samp></td><td><samp>that</samp></td><td><kbd>BS</kbd>    </td><td>=                         </td><td>from common <kbd>BS</kbd>*</td></tr>
+<tr><td><samp>use       </samp></td><td align="right" colspan="2">→ <var>used to</var> <kbd>TZ</kbd><br></td><td><kbd>Z</kbd></td><td>=             </td><td>u<b>Z</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>used to   </samp></td><td>                 </td><td><kbd>TZ</kbd>    </td><td>=                         </td><td>u<b>Z</b>ed <b>T</b>o</td><td>special case: really acts as <samp>use</samp> + <samp>to</samp> <kbd>T</kbd></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Verbs of cognition</th></tr>
-<tr><td><samp>know      </samp></td><td><samp>that</samp></td><td><kbd>PB</kbd>    </td><td>=                         </td><td>k<b>N</b>ow</td><td></td></tr>
-<tr><td><samp>think     </samp></td><td><samp>that</samp></td><td><kbd>PBG</kbd>   </td><td>=                         </td><td>thi<b>NG</b>k</td><td></td></tr>
-<tr><td><samp>remember  </samp></td><td><samp>that</samp></td><td><kbd>RPL</kbd>   </td><td>=                         </td><td><b>R</b>e<b>M</b>ember</td><td></td></tr>
-<tr><td><samp>understand</samp></td><td><samp>the </samp></td><td><kbd>RPB</kbd>   </td><td>=                         </td><td>unde<b>R</b>sta<b>N</b>d</td><td></td></tr>
-<tr><td><samp>believe   </samp></td><td><samp>that</samp></td><td><kbd>BL</kbd>    </td><td>=                         </td><td><b>B</b>e<b>L</b>ieve</td><td></td></tr>
-<tr><td><samp>imagine   </samp></td><td><samp>that</samp></td><td><kbd>PLG</kbd>   </td><td>=                         </td><td>i<b>M</b>a<b>G</b>ine</td><td></td></tr>
-<tr><td><samp>forget    </samp></td><td><samp>to  </samp></td><td><kbd>FRG</kbd>   </td><td><kbd><del>RG  </del></kbd></td><td><b>F</b>o<b>RG</b>et</td><td></td></tr>
-<tr><td><samp>mean      </samp></td><td><samp>to  </samp></td><td><kbd>FR</kbd>    </td><td><kbd><del>PBL </del></kbd></td><td><b>M</b><sup><var>FR</var></sup>ean</td><td></td></tr>
-<tr><td><samp>learn     </samp></td><td><samp>to  </samp></td><td><kbd>RPBL</kbd>  </td><td><kbd><del>RPBS</del></kbd></td><td><b>L</b>ea<b>↶RN</b></td><td></td></tr>
-<tr><td><samp>seem      </samp></td><td><samp>to  </samp></td><td><kbd>PLS</kbd>   </td><td>=                         </td><td><b>S</b>ee<b>↶M</b></td><td></td></tr>
-<tr><td><samp>expect    </samp></td><td><samp>that</samp></td><td><kbd>FPGT</kbd>  </td><td><kbd><del>PGS </del></kbd></td><td>e<b>XP</b>e<b>C</b><sup><var>G</var></sup><b>T</b></td><td></td></tr>
-<tr><td><samp>realize   </samp></td><td><samp>that</samp></td><td><kbd>RLZ</kbd>   </td><td><kbd><del>RLS </del></kbd></td><td><b>R</b>ea<b>L</b>i<b>Z</b>e</td><td></td></tr>
-<tr><td><samp>mind      </samp></td><td>                 </td><td><kbd>FRPB</kbd>  </td><td><kbd><del>PBLS</del></kbd></td><td><b>M</b>i<b>N</b>d</td><td></td></tr>
+<tr><th align="left" colspan="7">Verbs of cognition</th></tr>
+<tr><td colspan="2"><samp>know      </samp></td><td><samp>that</samp></td><td><kbd>PB</kbd>    </td><td>=                         </td><td>k<b>N</b>ow</td><td></td></tr>
+<tr><td colspan="2"><samp>think     </samp></td><td><samp>that</samp></td><td><kbd>PBG</kbd>   </td><td>=                         </td><td>thi<b>NG</b>k</td><td></td></tr>
+<tr><td colspan="2"><samp>remember  </samp></td><td><samp>that</samp></td><td><kbd>RPL</kbd>   </td><td>=                         </td><td><b>R</b>e<b>M</b>ember</td><td></td></tr>
+<tr><td colspan="2"><samp>understand</samp></td><td><samp>the </samp></td><td><kbd>RPB</kbd>   </td><td>=                         </td><td>unde<b>R</b>sta<b>N</b>d</td><td></td></tr>
+<tr><td colspan="2"><samp>believe   </samp></td><td><samp>that</samp></td><td><kbd>BL</kbd>    </td><td>=                         </td><td><b>B</b>e<b>L</b>ieve</td><td></td></tr>
+<tr><td colspan="2"><samp>imagine   </samp></td><td><samp>that</samp></td><td><kbd>PLG</kbd>   </td><td>=                         </td><td>i<b>M</b>a<b>G</b>ine</td><td></td></tr>
+<tr><td colspan="2"><samp>forget    </samp></td><td><samp>to  </samp></td><td><kbd>FRG</kbd>   </td><td><kbd><del>RG  </del></kbd></td><td><b>F</b>o<b>RG</b>et</td><td></td></tr>
+<tr><td colspan="2"><samp>mean      </samp></td><td><samp>to  </samp></td><td><kbd>FR</kbd>    </td><td><kbd><del>PBL </del></kbd></td><td><b>M</b><sup><var>FR</var></sup>ean</td><td></td></tr>
+<tr><td colspan="2"><samp>learn     </samp></td><td><samp>to  </samp></td><td><kbd>RPBL</kbd>  </td><td><kbd><del>RPBS</del></kbd></td><td><b>L</b>ea<b>↶RN</b></td><td></td></tr>
+<tr><td colspan="2"><samp>seem      </samp></td><td><samp>to  </samp></td><td><kbd>PLS</kbd>   </td><td>=                         </td><td><b>S</b>ee<b>↶M</b></td><td></td></tr>
+<tr><td colspan="2"><samp>expect    </samp></td><td><samp>that</samp></td><td><kbd>FPGT</kbd>  </td><td><kbd><del>PGS </del></kbd></td><td>e<b>XP</b>e<b>C</b><sup><var>G</var></sup><b>T</b></td><td></td></tr>
+<tr><td colspan="2"><samp>realize   </samp></td><td><samp>that</samp></td><td><kbd>RLZ</kbd>   </td><td><kbd><del>RLS </del></kbd></td><td><b>R</b>ea<b>L</b>i<b>Z</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>mind      </samp></td><td>                 </td><td><kbd>FRPB</kbd>  </td><td><kbd><del>PBLS</del></kbd></td><td><b>M</b>i<b>N</b>d</td><td></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Verbs of desire</th></tr>
-<tr><td><samp>want      </samp></td><td><samp>to  </samp></td><td><kbd>P</kbd>     </td><td>=                         </td><td>commonly <kbd>PT</kbd></td><td></td></tr>
-<tr><td><samp>wish      </samp></td><td><samp>to  </samp></td><td><kbd>RBS</kbd>   </td><td>=                         </td><td>wi<b>SH</b> + <kbd>S</kbd></td><td></td></tr>
-<tr><td><samp>need      </samp></td><td><samp>to  </samp></td><td><kbd>PBL</kbd>   </td><td><kbd><del>RPG </del></kbd></td><td><b>N</b>eed + dental <kbd>L</kbd></var></sup></td><td></td></tr>
-<tr><td><samp>hope      </samp></td><td><samp>to  </samp></td><td><kbd>FP</kbd>    </td><td><kbd><del>RPS </del></kbd></td><td><b>H</b>o<b>P</b>e</td><td></td></tr>
-<tr><td><samp>like      </samp></td><td><samp>to  </samp></td><td><kbd>LG</kbd>    </td><td><kbd><del>BLG </del></kbd></td><td><b>L</b>i<b>K</b><sup><var>G</var></sup>e</td><td></td></tr>
-<tr><td><samp>love      </samp></td><td><samp>to  </samp></td><td><kbd>LGZ</kbd>   </td><td><kbd><del>LG  </del></kbd></td><td><b>L</b>o<b>V</b><sup><var>Z</var></sup>e + like’s <kbd>G</kbd></td><td></td></tr>
-<tr><td><samp>care      </samp></td><td>                 </td><td><kbd>RG</kbd>    </td><td><kbd><del>RZ  </del></kbd></td><td><b>C</b><sup><var>G</var></sup>a<b>↶R</b>e</td><td></td></tr>
+<tr><th align="left" colspan="7">Verbs of desire</th></tr>
+<tr><td colspan="2"><samp>want      </samp></td><td><samp>to  </samp></td><td><kbd>P</kbd>     </td><td>=                         </td><td>from common <kbd>PT</kbd>*</td><td></td></tr>
+<tr><td colspan="2"><samp>wish      </samp></td><td><samp>to  </samp></td><td><kbd>RBS</kbd>   </td><td>=                         </td><td>wi<b>SH</b> + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>need      </samp></td><td><samp>to  </samp></td><td><kbd>PBL</kbd>   </td><td><kbd><del>RPG </del></kbd></td><td><b>N</b>eed + dental <kbd>L</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>hope      </samp></td><td><samp>to  </samp></td><td><kbd>FP</kbd>    </td><td><kbd><del>RPS </del></kbd></td><td><b>H</b>o<b>P</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>like      </samp></td><td><samp>to  </samp></td><td><kbd>LG</kbd>    </td><td><kbd><del>BLG </del></kbd></td><td><b>L</b>i<b>K</b><sup><var>G</var></sup>e</td><td></td></tr>
+<tr><td colspan="2"><samp>love      </samp></td><td><samp>to  </samp></td><td><kbd>LGZ</kbd>   </td><td><kbd><del>LG  </del></kbd></td><td><b>L</b>o<b>V</b><sup><var>Z</var></sup>e + like’s <kbd>G</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>care      </samp></td><td>                 </td><td><kbd>RG</kbd>    </td><td><kbd><del>RZ  </del></kbd></td><td><b>C</b><sup><var>G</var></sup>a<b>↶R</b>e</td><td></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">More verbs</th></tr>
-<tr><td><samp>become    </samp></td><td><samp>a   </samp></td><td><kbd>BGS</kbd>   </td><td><kbd><del>RPBG</del></kbd></td><td>be<b>K</b>ome + <kbd>S</kbd></td><td></td></tr>
-<tr><td><samp>change    </samp></td><td align="right">→ <var>expect</var></td><td><kbd>FPG</kbd>   </td><td><kbd><del>PBGZ</del></kbd></td><td><b>CH</b>an<b>G</b>e</td><td></td></tr>
-<tr><td><samp>consider  </samp></td><td>                 </td><td><kbd>RBGS</kbd>  </td><td><kbd><del>RBGZ</del></kbd></td><td><b>K</b>on<b>S</b>ide↶<b>R</b></td><td></td></tr>
-<tr><td><samp>find      </samp></td><td><samp>that</samp></td><td><kbd>FPB</kbd>   </td><td><kbd><del>PBLG</del></kbd></td><td><b>F</b>i<b>N</b>d</td><td></td></tr>
-<tr><td><samp>happen    </samp></td><td><samp>to  </samp></td><td><kbd>PZ</kbd>    </td><td>=                         </td><td>ha<b>PP</b>en + <kbd>Z</kbd></td><td></td></tr>
-<tr><td><samp>try       </samp></td><td><samp>to  </samp></td><td><kbd>RT</kbd>    </td><td>=                         </td><td><b>T↶R</b>y</td><td></td></tr>
-<tr><td><samp>make      </samp></td><td><samp>a   </samp></td><td><kbd>PBLG</kbd>  </td><td><kbd><del>RPBL</del></kbd></td><td><b>M</b>a<b>K</b>e</td><td></td></tr>
-<tr><td><samp>work      </samp></td><td><samp>on  </samp></td><td><kbd>RBG</kbd>   </td><td>=                         </td><td>wo<b>RK</b></td><td></td></tr>
+<tr><th align="left" colspan="7">More verbs</th></tr>
+<tr><td colspan="2"><samp>become    </samp></td><td><samp>a   </samp></td><td><kbd>BGS</kbd>   </td><td><kbd><del>RPBG</del></kbd></td><td>be<b>K</b>ome + <kbd>S</kbd></td><td></td></tr>
+<tr><td><samp>change    </samp></td><td align="right" colspan="2">→ <var>expect</var> <kbd>FPGT</kbd><br></td><td><kbd>FPG</kbd>   </td><td><kbd><del>PBGZ</del></kbd></td><td><b>CH</b>an<b>G</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>consider  </samp></td><td>                 </td><td><kbd>RBGS</kbd>  </td><td><kbd><del>RBGZ</del></kbd></td><td><b>K</b>on<b>S</b>ide↶<b>R</b></td><td></td></tr>
+<tr><td colspan="2"><samp>find      </samp></td><td><samp>that</samp></td><td><kbd>FPB</kbd>   </td><td><kbd><del>PBLG</del></kbd></td><td><b>F</b>i<b>N</b>d</td><td></td></tr>
+<tr><td colspan="2"><samp>happen    </samp></td><td><samp>to  </samp></td><td><kbd>PZ</kbd>    </td><td>=                         </td><td>ha<b>PP</b>en + <kbd>Z</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>try       </samp></td><td><samp>to  </samp></td><td><kbd>RT</kbd>    </td><td>=                         </td><td><b>T↶R</b>y</td><td></td></tr>
+<tr><td colspan="2"><samp>make      </samp></td><td><samp>a   </samp></td><td><kbd>PBLG</kbd>  </td><td><kbd><del>RPBL</del></kbd></td><td><b>M</b>a<b>K</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>work      </samp></td><td><samp>on  </samp></td><td><kbd>RBG</kbd>   </td><td>=                         </td><td>wo<b>RK</b></td><td></td></tr>
 </tbody>
 <tbody>
-<tr><td><samp>put       </samp></td><td><samp>it  </samp></td><td><kbd>PS</kbd>    </td><td>=                         </td><td><b>P</b>ut + <kbd>S</kbd></td><td></td></tr>
-<tr><td><samp>set       </samp></td><td>                 </td><td><kbd>FS</kbd>    </td><td><kbd><del>BLS </del></kbd></td><td><b>S</b>et + <kbd>S</kbd></td><td></td></tr>
-<tr><td><samp>let       </samp></td><td>                 </td><td><kbd>LS</kbd>    </td><td>=                         </td><td><b>L</b>et + <kbd>S</kbd></td><td></td></tr>
-<tr><td><samp>give      </samp></td><td>                 </td><td><kbd>GZ</kbd>    </td><td>=                         </td><td><b>G</b>i<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
-<tr><td><samp>take      </samp></td><td>                 </td><td><kbd>RBT</kbd>   </td><td>=                         </td><td>arb.</td><td></td></tr>
-<tr><td><samp>keep      </samp></td><td>                 </td><td><kbd>PBGS</kbd>  </td><td>=                         </td><td><b>K</b>ee<b>↶P</b> + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>put       </samp></td><td><samp>it  </samp></td><td><kbd>PS</kbd>    </td><td>=                         </td><td><b>P</b>ut + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>set       </samp></td><td>                 </td><td><kbd>FS</kbd>    </td><td><kbd><del>BLS </del></kbd></td><td><b>S</b>et + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>let       </samp></td><td>                 </td><td><kbd>LS</kbd>    </td><td>=                         </td><td><b>L</b>et + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>give      </samp></td><td>                 </td><td><kbd>GZ</kbd>    </td><td>=                         </td><td><b>G</b>i<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
+<tr><td colspan="2"><samp>take      </samp></td><td>                 </td><td><kbd>RBT</kbd>   </td><td>=                         </td><td>arb.</td><td></td></tr>
+<tr><td colspan="2"><samp>keep      </samp></td><td>                 </td><td><kbd>PBGS</kbd>  </td><td>=                         </td><td><b>K</b>ee<b>↶P</b> + <kbd>S</kbd></td><td></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Verbs of action, communication</th></tr>
-<tr><td><samp>come      </samp></td><td><samp>to  </samp></td><td><kbd>BG</kbd>    </td><td>=                         </td><td><b>K</b>ome</td><td></td></tr>
-<tr><td><samp>live      </samp></td><td>                 </td><td><kbd>LZ</kbd>    </td><td>=                         </td><td><b>L</b>i<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
-<tr><td><samp>move      </samp></td><td>                 </td><td><kbd>PLZ</kbd>   </td><td>=                         </td><td><b>M</b>o<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
-<tr><td><samp>leave     </samp></td><td>                 </td><td><kbd>FLZ</kbd>   </td><td><kbd><del>LGZ </del></kbd></td><td><b>L</b>ea<b>↶V<sup><var>Z</var></sup></b>e</td><td></td></tr>
-<tr><td><samp>remain    </samp></td><td>                 </td><td><kbd>RPLS</kbd>  </td><td>=                         </td><td><b>R</b>e<b>M</b>ain + <kbd>S</kbd></td><td></td></tr>
-<tr><td><samp>call      </samp></td><td>                 </td><td><kbd>BLG</kbd>   </td><td><kbd><del>RBLG</del></kbd></td><td><b>K</b>a<b>LL</b></td><td></td></tr>
-<tr><td><samp>recall    </samp></td><td>                 </td><td><kbd>RL</kbd>    </td><td>=                         </td><td><b>R</b>eca<b>LL</b></td><td></td></tr>
-<tr><td><samp>read      </samp></td><td>                 </td><td><kbd>RS</kbd>    </td><td>=                         </td><td><b>R</b>ead + <kbd>S</kbd></td><td></td></tr>
-<tr><td><samp>run       </samp></td><td align="right">→ <var>try</var></td><td><kbd>R</kbd>     </td><td>=                         </td><td><b>R</b>un</td><td></td></tr>
-<tr><td><samp>show      </samp></td><td>                 </td><td><kbd>RB</kbd>    </td><td><kbd><del>RBZ </del></kbd></td><td><b>SH</b>ow</td><td></td></tr>
-<tr><td><samp>ask       </samp></td><td>                 </td><td><kbd>FBG</kbd>   </td><td><kbd><del>RB  </del></kbd></td><td>a<b>SK</b></td><td></td></tr>
-<tr><td><samp>tell      </samp></td><td>                 </td><td><kbd>LT</kbd>    </td><td><kbd><del>RLT </del></kbd></td><td><b>T</b>e<b>↶LL</b></td><td></td></tr>
-<tr><td><samp>talk      </samp></td><td><samp>to  </samp></td><td><kbd>T</kbd>     </td><td>🆕                        </td><td><b>T</b>alk</td><td></td></tr>
-<tr><td><samp>help      </samp></td><td>                 </td><td><kbd>FPL</kbd>   </td><td>🆕                        </td><td><b>H</b>e<b>L↶P</b></td><td></td></tr>
+<tr><th align="left" colspan="7">Verbs of action, communication</th></tr>
+<tr><td colspan="2"><samp>come      </samp></td><td><samp>to  </samp></td><td><kbd>BG</kbd>    </td><td>=                         </td><td><b>K</b>ome</td><td></td></tr>
+<tr><td colspan="2"><samp>live      </samp></td><td>                 </td><td><kbd>LZ</kbd>    </td><td>=                         </td><td><b>L</b>i<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
+<tr><td colspan="2"><samp>move      </samp></td><td>                 </td><td><kbd>PLZ</kbd>   </td><td>=                         </td><td><b>M</b>o<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
+<tr><td colspan="2"><samp>leave     </samp></td><td>                 </td><td><kbd>FLZ</kbd>   </td><td><kbd><del>LGZ </del></kbd></td><td><b>L</b>ea<b>↶V<sup><var>Z</var></sup></b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>remain    </samp></td><td>                 </td><td><kbd>RPLS</kbd>  </td><td>=                         </td><td><b>R</b>e<b>M</b>ain + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>call      </samp></td><td>                 </td><td><kbd>BLG</kbd>   </td><td><kbd><del>RBLG</del></kbd></td><td><b>K</b>a<b>LL</b></td><td></td></tr>
+<tr><td colspan="2"><samp>recall    </samp></td><td>                 </td><td><kbd>RL</kbd>    </td><td>=                         </td><td><b>R</b>eca<b>LL</b></td><td></td></tr>
+<tr><td colspan="2"><samp>read      </samp></td><td>                 </td><td><kbd>RS</kbd>    </td><td>=                         </td><td><b>R</b>ead + <kbd>S</kbd></td><td></td></tr>
+<tr><td><samp>run       </samp></td><td align="right" colspan="2">→ <var>try</var> <kbd>RT</kbd><br></td><td><kbd>R</kbd>     </td><td>=                         </td><td><b>R</b>un</td><td></td></tr>
+<tr><td colspan="2"><samp>show      </samp></td><td>                 </td><td><kbd>RB</kbd>    </td><td><kbd><del>RBZ </del></kbd></td><td><b>SH</b>ow</td><td></td></tr>
+<tr><td colspan="2"><samp>ask       </samp></td><td>                 </td><td><kbd>FBG</kbd>   </td><td><kbd><del>RB  </del></kbd></td><td>a<b>SK</b></td><td></td></tr>
+<tr><td colspan="2"><samp>tell      </samp></td><td>                 </td><td><kbd>LT</kbd>    </td><td><kbd><del>RLT </del></kbd></td><td><b>T</b>e<b>↶LL</b></td><td></td></tr>
+<tr><td colspan="2"><samp>talk      </samp></td><td><samp>to  </samp></td><td><kbd>T</kbd>     </td><td>🆕                        </td><td><b>T</b>alk</td><td></td></tr>
+<tr><td colspan="2"><samp>help      </samp></td><td>                 </td><td><kbd>FPL</kbd>   </td><td>🆕                        </td><td><b>H</b>e<b>L↶P</b></td><td></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="6">Verbs of perception</th></tr>
-<tr><td><samp>feel      </samp></td><td><samp>like</samp></td><td><kbd>FL</kbd>    </td><td><kbd><del>LT  </del></kbd></td><td><b>F</b>ee<b>L</b></td><td></td></tr>
-<tr><td><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.</td><td>TODO remap <kbd>FRP</kbd>?</td></tr>
-<tr><td><samp>see       </samp></td><td align="right">→ <var>talk to</var></td><td><kbd>S</kbd>     </td><td>=                         </td><td><b>S</b>ee</td><td></td></tr>
-<tr><td><samp>look      </samp></td><td align="right">→ <var>tell</var></td><td><kbd>L</kbd>     </td><td>=                         </td><td><b>L</b>ook</td><td></td></tr>
-<tr><td><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>🆕                        </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>
-<tr><td><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>🆕                        </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
+<tr><th align="left" colspan="7">Verbs of perception</th></tr>
+<tr><td colspan="2"><samp>feel      </samp></td><td><samp>like</samp></td><td><kbd>FL</kbd>    </td><td><kbd><del>LT  </del></kbd></td><td><b>F</b>ee<b>L</b></td><td></td></tr>
+<tr><td colspan="2"><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.</td><td>TODO remap <kbd>FRP</kbd>?</td></tr>
+<tr><td><samp>see       </samp></td><td align="right" colspan="2">→ <var>talk to</var> <kbd>TS</kbd><br></td><td><kbd>S</kbd>     </td><td>=                         </td><td><b>S</b>ee</td><td></td></tr>
+<tr><td><samp>look      </samp></td><td align="right" colspan="2">→ <var>tell</var> <kbd>LT</kbd><br></td><td><kbd>L</kbd>     </td><td>=                         </td><td><b>L</b>ook</td><td></td></tr>
+<tr><td colspan="2"><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>🆕                        </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>🆕                        </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
 </tbody>
-<tfoot><tr><td colspan="3">→ = no extra word due to another ender</td><td>= same</td><td>↶ = inversion</td><td><b>X</b><sup><var>Y</var></sup> = <kbd>Y</kbd> key represents variant of X sound</td></tr></tfoot>
+<tfoot>
+<tr><td colspan="4">→ no extra word due to another ender</td><td>= same</td><td>↶ inversion</td><td><b>X</b><sup><var>Y</var></sup>: <kbd>Y</kbd> key represents variant of X sound</td></tr>
+<tr/>
+<tr><td colspan="5"></td><td colspan="2">* right-bank abbreviation common in stenography</td></tr>
+</tfoot>
 </table>
 
 ### Infinitive
