@@ -508,7 +508,7 @@ Table is a work in progress
 <tr><th align="left" colspan="7">Common verbs</th></tr>
 <tr><td colspan="2"><samp>be        </samp></td><td><samp>a   </samp></td><td><kbd>B</kbd>     </td><td>=                         </td><td><b>B</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>have      </samp></td><td><samp>to  </samp></td><td><kbd>F</kbd>     </td><td><kbd><del>T   </del></kbd></td><td>ha<b>V</b>e</td><td></td></tr>
-<tr><td colspan="2"><samp>do        </samp></td><td><samp>it  </samp></td><td><kbd>RP</kbd>    </td><td>=                         </td><td>arb.</td><td></td></tr>
+<tr><td colspan="2"><samp>do        </samp></td><td><samp>it  </samp></td><td><kbd>RP</kbd>    </td><td>=                         </td><td>arb.†</td><td></td></tr>
 <tr><td colspan="2"><samp>go        </samp></td><td><samp>to  </samp></td><td><kbd>G</kbd>     </td><td>=                         </td><td><b>G</b>o</td><td></td></tr>
 <tr><td colspan="2"><samp>get       </samp></td><td><samp>to  </samp></td><td><kbd>GS</kbd>    </td><td>=                         </td><td><b>G</b>et + <kbd>S</kbd></td><td>past participle: <samp>got</samp>; passive voice: <samp>gotten</samp><br><samp>he had got to</samp> (obligation) available<br><samp>he had gotten</samp> (obtained) unavailable</td></tr>
 <tr><td colspan="2"><samp>say       </samp></td><td><samp>that</samp></td><td><kbd>BS</kbd>    </td><td>=                         </td><td>from common <kbd>BS</kbd>*</td><td></td></tr>
@@ -558,7 +558,7 @@ Table is a work in progress
 <tr><td colspan="2"><samp>set       </samp></td><td>                 </td><td><kbd>FS</kbd>    </td><td><kbd><del>BLS </del></kbd></td><td><b>S</b>et + <kbd>S</kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>let       </samp></td><td>                 </td><td><kbd>LS</kbd>    </td><td>=                         </td><td><b>L</b>et + <kbd>S</kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>give      </samp></td><td>                 </td><td><kbd>GZ</kbd>    </td><td>=                         </td><td><b>G</b>i<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
-<tr><td colspan="2"><samp>take      </samp></td><td>                 </td><td><kbd>RBT</kbd>   </td><td>=                         </td><td>arb.</td><td></td></tr>
+<tr><td colspan="2"><samp>take      </samp></td><td>                 </td><td><kbd>RBT</kbd>   </td><td>=                         </td><td>arb.†</td><td></td></tr>
 <tr><td colspan="2"><samp>keep      </samp></td><td>                 </td><td><kbd>PBGS</kbd>  </td><td>=                         </td><td><b>K</b>ee<b>↶P</b> + <kbd>S</kbd></td><td></td></tr>
 </tbody>
 <tbody>
@@ -581,16 +581,16 @@ Table is a work in progress
 <tbody>
 <tr><th align="left" colspan="7">Verbs of perception</th></tr>
 <tr><td colspan="2"><samp>feel      </samp></td><td><samp>like</samp></td><td><kbd>FL</kbd>    </td><td><kbd><del>LT  </del></kbd></td><td><b>F</b>ee<b>L</b></td><td></td></tr>
-<tr><td colspan="2"><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.</td><td>TODO remap <kbd>FRP</kbd>?</td></tr>
+<tr><td colspan="2"><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.†</td><td>TODO remap <kbd>FRP</kbd>?</td></tr>
 <tr><td><samp>see       </samp></td><td align="right" colspan="2">→ <var>talk to</var> <kbd>TS</kbd><br></td><td><kbd>S</kbd>     </td><td>=                         </td><td><b>S</b>ee</td><td></td></tr>
 <tr><td><samp>look      </samp></td><td align="right" colspan="2">→ <var>tell</var> <kbd>LT</kbd><br></td><td><kbd>L</kbd>     </td><td>=                         </td><td><b>L</b>ook</td><td></td></tr>
 <tr><td colspan="2"><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>🆕                        </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>🆕                        </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
 </tbody>
 <tfoot>
-<tr><th rowspan="3">Key</th><td colspan="3"></td><td>= same</td><td>↶ inversion</td><td><b>X</b><sup><var>Y</var></sup>: <kbd>Y</kbd> key represents variant of X sound</td></tr>
+<tr><th rowspan="3">Key</th><td colspan="3">† arbitrarily assigned chord</td><td>= same</td><td>↶ inversion</td><td><b>X</b><sup><var>Y</var></sup>: <kbd>Y</kbd> key represents variant of X sound</td></tr>
 <tr/>
-<tr><td colspan="4" align="right">→ <var>no extra word due to other ender</var></td><td colspan="2">* right-bank abbreviation already widely used in stenography</td></tr>
+<tr><td colspan="4">→ <var>no extra word due to other ender</var></td><td colspan="2">* right-bank abbreviation already widely used in stenography</td></tr>
 </tfoot>
 </table>
 
