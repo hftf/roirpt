@@ -578,7 +578,7 @@ Table is a work in progress
 <tfoot>
 <tr><th rowspan="3">Key</th><td colspan="3"></td><td>= same</td><td>↶ inversion</td><td><b>X</b><sup><var>Y</var></sup>: <kbd>Y</kbd> key represents variant of X sound</td></tr>
 <tr/>
-<tr><td colspan="4" align="right">→ <var>no extra word due to other ender</var></td><td colspan="2">* right-bank abbreviation widely used in stenography</td></tr>
+<tr><td colspan="4" align="right">→ <var>no extra word due to other ender</var></td><td colspan="2">* right-bank abbreviation already widely used in stenography</td></tr>
 </tfoot>
 </table>
 
@@ -612,11 +612,12 @@ There is extra complexity because adverbs may exhibit free positioning.
 <table>
 <thead><tr><th>Feature</th><th width="88">Jeff</th><th width="88">Josiah</th><th>Dope</th></tr></thead>
 <tbody align="left">
-<tr><td>Perfect     aspect</td><td colspan="2"><kbd>F</kbd></td><td><kbd>E</kbd></td></tr>
-<tr><td>Progressive aspect</td><td colspan="2"><kbd>E</kbd></td><td><kbd>U</kbd></td></tr>
+<tr><td>Perfect     aspect (<samp>have</samp>)</td><td colspan="2"><kbd>F</kbd></td><td><kbd>E</kbd></td></tr>
+<tr><td>Progressive aspect (<samp>be</samp>)  </td><td colspan="2"><kbd>E</kbd></td><td><kbd>U</kbd></td></tr>
 <tr><td>Subject–auxiliary inversion</td><td colspan="2"><kbd>U</kbd></td><td><kbd>^</kbd></td></tr>
 <tr><td>Past tense of ender containing <kbd>-S</kbd></td><td colspan="2"><kbd>-SZ</kbd></td><td>Both <kbd>-SZ</kbd> or <kbd>-SD</kbd></td></tr>
 <tr><td>Contraction       </td><td colspan="2">Hard-coded only</td><td>Controlled by <kbd>+</kbd></td></tr>
+<tr><td>Passive voice     </td><td colspan="2">Not implemented</td><td>Second stroke <kbd>+-P</kbd></td></tr>
 <tr><td>Adverbs (<samp>just</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>)</td><td colspan="2">Overloaded <kbd>*EUF</kbd></td><td>Not implemented</td></tr>
 <tr><td>Reverse lookup    </td><td colspan="2">Ready</td><td>Partly implemented </td></tr>
 <tr><td>Chord assignments</td><td colspan="3" align="center">May differ variously</td></tr>
@@ -639,7 +640,36 @@ and [tapey-tape](https://github.com/rabbitgrowth/plover-tapey-tape).
 
 ## Installation
 
-TODO
+At this time, the project is still in very early development
+and is not quite ready to work out of the box.
+However, you are welcome to try it if you can get it to work.
+
+1. Ensure all dependencies are installed:
+`plover_python_dictionary`, `plover-stenotype-extended`, `appdirs`.
+2. Clone or download this folder (currently called `jeff-phrasing`)
+and put it as a subdirectory inside `plover`.
+3. Open Plover and add `jeff-phrasing/my_phrasing.py` as a dictionary.
+(The other `.py` files need to be in the same folder as `my_phrasing.py`,
+but do not add them to Plover as they are not dictionaries themselves.)
+
+### Troubleshooting
+
+If the module resolution at the top of `my_phrasing.py` is not working
+(errors like `No module named 'noun_data'` appear),
+
+https://github.com/hftf/roirpt/blob/38adfd827fed6e5df50f9a9580334401c865a948/jeff-phrasing/my_phrasing.py#L1-L13
+
+then, for now, you can try to replace it with a hard-coded path:
+
+```diff
+-try:
+-	import plover
+-	plover_dir = plover.oslayer.config.CONFIG_DIR
+-except:
+-	import appdirs
+-	plover_dir = appdirs.user_data_dir('plover', 'plover')
++plover_dir = '/home/path/to/my/plover/appdir'
+```
 
 ## To-do list
 
