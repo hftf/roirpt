@@ -203,9 +203,10 @@ EU + /+-P -> having been run - passive present participle, perfect aspect
 In my opinion, phrasing resources suffer from two key issues, aside from practice materials:
 organization and terminology.
 
-I find many existing resources confusingly organized and too shape-focused;
+I find many existing phrasing resources confusingly organized and too shape-focused;
 many infographic explainers [omit key labels](https://steno.sammdot.ca/aerick-phrasing.png)!
-Learning resources should distinguish iconic from [arbitrary](https://discord.com/channels/136953735426473984/827241377020379186/1134593088287936602) chords.
+Learning resources should distinguish iconic from [arbitrary](https://discord.com/channels/136953735426473984/827241377020379186/1134593088287936602) chords,
+and prefer meaningful over alphabetical ordering.
 It should also be possible to generate documentation and learning resources from code (code-as-data).
 
 Phrasing resources often misuse linguistic terminology
