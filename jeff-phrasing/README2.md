@@ -497,9 +497,9 @@ Table is a work in progress
 <tr><td colspan="2"><samp>be        </samp></td><td><samp>a   </samp></td><td><kbd>B</kbd>     </td><td>=                         </td><td><b>B</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>have      </samp></td><td><samp>to  </samp></td><td><kbd>F</kbd>     </td><td><kbd><del>T   </del></kbd></td><td>ha<b>V</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>do        </samp></td><td><samp>it  </samp></td><td><kbd>RP</kbd>    </td><td>=                         </td><td>arb.</td><td></td></tr>
-<tr><td colspan="2"><samp>go        </samp></td><td><samp>to  </samp></td><td><kbd>G</kbd>     </td><td>=                         </td><td><b>G</b>o</td></tr>
+<tr><td colspan="2"><samp>go        </samp></td><td><samp>to  </samp></td><td><kbd>G</kbd>     </td><td>=                         </td><td><b>G</b>o</td><td></td></tr>
 <tr><td colspan="2"><samp>get       </samp></td><td><samp>to  </samp></td><td><kbd>GS</kbd>    </td><td>=                         </td><td><b>G</b>et + <kbd>S</kbd></td><td>past participle: <samp>got</samp>; passive voice: <samp>gotten</samp><br><samp>he had got to</samp> (obligation) available<br><samp>he had gotten</samp> (obtained) unavailable</td></tr>
-<tr><td colspan="2"><samp>say       </samp></td><td><samp>that</samp></td><td><kbd>BS</kbd>    </td><td>=                         </td><td>from common <kbd>BS</kbd>*</td></tr>
+<tr><td colspan="2"><samp>say       </samp></td><td><samp>that</samp></td><td><kbd>BS</kbd>    </td><td>=                         </td><td>from common <kbd>BS</kbd>*</td><td></td></tr>
 <tr><td><samp>use       </samp></td><td align="right" colspan="2">→ <var>used to</var> <kbd>TZ</kbd><br></td><td><kbd>Z</kbd></td><td>=             </td><td>u<b>Z</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>used to   </samp></td><td>                 </td><td><kbd>TZ</kbd>    </td><td>=                         </td><td>u<b>Z</b>ed <b>T</b>o</td><td>special case: really acts as <samp>use</samp> + <samp>to</samp> <kbd>T</kbd></td></tr>
 </tbody>
@@ -541,6 +541,7 @@ Table is a work in progress
 <tr><td colspan="2"><samp>work      </samp></td><td><samp>on  </samp></td><td><kbd>RBG</kbd>   </td><td>=                         </td><td>wo<b>RK</b></td><td></td></tr>
 </tbody>
 <tbody>
+<tr><th align="left" colspan="7">More verbs</th></tr>
 <tr><td colspan="2"><samp>put       </samp></td><td><samp>it  </samp></td><td><kbd>PS</kbd>    </td><td>=                         </td><td><b>P</b>ut + <kbd>S</kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>set       </samp></td><td>                 </td><td><kbd>FS</kbd>    </td><td><kbd><del>BLS </del></kbd></td><td><b>S</b>et + <kbd>S</kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>let       </samp></td><td>                 </td><td><kbd>LS</kbd>    </td><td>=                         </td><td><b>L</b>et + <kbd>S</kbd></td><td></td></tr>
