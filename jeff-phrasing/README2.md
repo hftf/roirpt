@@ -477,7 +477,7 @@ Table is a work in progress
 <table>
 <thead><tr><th>Verb</th><th colspan="2">Extra word</th><th>Ender</th><th>Jeff’s</th><th>Explanation</th><th>Notes</th></tr></thead>
 <tbody>
-<tr><td width="1">(null)                 </td><td align="right" colspan="2">→ <var>talk</var> <kbd>T</kbd><br></td><td><kbd> </kbd></td><td></td><td></td><td></td></tr>
+<tr><td width="1">(null)                 </td><td align="right" colspan="2">→ <var>talk</var> <kbd>T</kbd></td><td><kbd> </kbd></td><td>=</td><td></td><td></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">Modal verbs (auxiliary verbs)</th></tr>
@@ -541,7 +541,7 @@ Table is a work in progress
 <tr><td colspan="2"><samp>work      </samp></td><td><samp>on  </samp></td><td><kbd>RBG</kbd>   </td><td>=                         </td><td>wo<b>RK</b></td><td></td></tr>
 </tbody>
 <tbody>
-<tr><th align="left" colspan="7">More verbs</th></tr>
+<tr><th align="left" colspan="7">Verbs of placement</th></tr>
 <tr><td colspan="2"><samp>put       </samp></td><td><samp>it  </samp></td><td><kbd>PS</kbd>    </td><td>=                         </td><td><b>P</b>ut + <kbd>S</kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>set       </samp></td><td>                 </td><td><kbd>FS</kbd>    </td><td><kbd><del>BLS </del></kbd></td><td><b>S</b>et + <kbd>S</kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>let       </samp></td><td>                 </td><td><kbd>LS</kbd>    </td><td>=                         </td><td><b>L</b>et + <kbd>S</kbd></td><td></td></tr>
@@ -576,9 +576,9 @@ Table is a work in progress
 <tr><td colspan="2"><samp>recognize </samp></td><td><samp>that</samp></td><td><kbd>RGZ</kbd>   </td><td>🆕                        </td><td><b>R</b>eco<b>G</b>ni<b>Z</b>e</td><td></td></tr>
 </tbody>
 <tfoot>
-<tr><td colspan="4">→ no extra word due to another ender</td><td>= same</td><td>↶ inversion</td><td><b>X</b><sup><var>Y</var></sup>: <kbd>Y</kbd> key represents variant of X sound</td></tr>
+<tr><th rowspan="3">Key</th><td colspan="3"></td><td>= same</td><td>↶ inversion</td><td><b>X</b><sup><var>Y</var></sup>: <kbd>Y</kbd> key represents variant of X sound</td></tr>
 <tr/>
-<tr><td colspan="5"></td><td colspan="2">* right-bank abbreviation common in stenography</td></tr>
+<tr><td colspan="4" align="right">→ <var>no extra word due to other ender</var></td><td colspan="2">* right-bank abbreviation widely used in stenography</td></tr>
 </tfoot>
 </table>
 
