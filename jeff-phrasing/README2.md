@@ -46,7 +46,8 @@ The distinction between a system and an engine lies mainly in the separation of 
 In a system, practically any code that gets the job done will do; 
 an engine, however, is a backbone layer and allows for
 tweaking individual modules that live apart in the source code
-(key mappings are independent of conjugation data, for example)
+(for example, key mappings are independent of conjugation data,
+which are decoupled from grammatical rules and the lookup algorithm),
 with the expectation that changing one part won’t break anything else.
 
 The distinction is not a concrete one, so it is really more about progress in relative terms,
@@ -475,8 +476,6 @@ Some defective verbs and non-verbs (common adverbs) are also available.
 > Main-verb <samp>have</samp> can rarely take do-support (e.g. <samp>have you no shame</samp>),
 but this is archaic in most English dialects.
 
-For the full verb ender chart, see the definition of `verb_ender_data` in [`verb_data.py:127`](./verb_data.py#L127).
-
 ### Extra word
 
 The extra word depends entirely on the main verb.
@@ -485,7 +484,8 @@ It tries to be the most frequent collocation or most useful otherwise.
 Some examples of extra words:
 <samp>a</samp>, <samp>it</samp>, <samp>to</samp>, <samp>the</samp>, <samp>that</samp>, <samp>like</samp>, <samp>on</samp>.
 
-Table is a work in progress
+The verb enders are defined in [`verb_data.py:127`](./verb_data.py#L127).
+The following table shows the defaults.
 
 <table>
 <thead><tr><th>Verb</th><th colspan="2">Extra word</th><th>Ender</th><th>Jeff’s</th><th>Explanation</th><th>Notes</th></tr></thead>
@@ -619,6 +619,14 @@ A test implementation currently uses a retroactive second stroke <kbd>+-P</kbd>
 Not yet implemented.
 Adverbs can include medial <samp>just</samp>, <samp>really</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>, etc.
 There is extra complexity because adverbs may exhibit free positioning.
+
+### Fallback second stroke for conflicts
+
+If a higher-priority dictionary overrides the phrasing system,
+then adding the second stroke <kbd>+</kbd> is available as a fallback.
+For example, <kbd>SKP-LD</kbd> is defined as <samp>and would</samp> in `main.json`,
+so <kbd>SKP-LD</kbd> would not available for phrasing <samp>and looked</samp>,
+but <kbd>SKP-LD/+</kbd> is available as a fallback for <samp>and looked</samp>.
 
 ### Summary of differences with other phrasing systems
 
