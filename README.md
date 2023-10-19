@@ -295,36 +295,36 @@ The vowels follow the convention of
 </tbody>
 <tbody>
 <tr><th colspan="4">Consonants</th></tr>
-<tr><td><samp>ɸ</samp>   </td><td><kbd>^TP*</kbd>     </td><td><kbd>TP</kbd> <code>(F)</code>     </td><td><kbd>^PH*</kbd> is used for <samp>ɱ</samp></tr>
-<tr><td><samp>β</samp>   </td><td><kbd>^PWH*</kbd>    </td><td><kbd>PW</kbd> <code>(B)</code>     </td><td>+ fricative <code>H</code></td></tr>
-<tr><td><samp>θ</samp>   </td><td><kbd>^TH*</kbd>     </td><td><kbd>T</kbd> <code>(T)</code>      </td><td>+ fricative <code>H</code></td></tr>
-<tr><td><samp>ʈ</samp>   </td><td><kbd>^TR*</kbd>     </td><td><kbd>T</kbd> <code>(T)</code>      </td><td>+ retroflex <code>R</code></td></tr>
-<tr><td><samp>ɬ</samp>   </td><td><kbd>^THR*</kbd>    </td><td><kbd>T</kbd> <code>(T)</code>      </td><td>+ <kbd>HR</kbd> <code>(L)</code></td></tr>
-<tr><td><samp>ð</samp>   </td><td><kbd>^TKH*</kbd>    </td><td><kbd>TK</kbd> <code>(D)</code>     </td><td>+ fricative <code>H</code></td></tr>
-<tr><td><samp>ɖ</samp>   </td><td><kbd>^TKR*</kbd>    </td><td><kbd>TK</kbd> <code>(D)</code>     </td><td>+ retroflex <code>R</code></td></tr>
-<tr><td><samp>ɟ</samp>   </td><td><kbd>^TKHR*</kbd>   </td><td><kbd>TK</kbd> <code>(D)</code>     </td><td>+ palatal   <code>HR</code></td></tr>
-<tr><td><samp>dʒ</samp>  </td><td><kbd>^SKWR*</kbd>   </td><td><kbd>SKWR</kbd> <code>(J)</code>   </td><td>shorter <kbd>TK*</kbd> <samp>d</samp>  + <samp>ʒ</samp></tr>
-<tr><td><samp>ʃ</samp>   </td><td><kbd>^SH*</kbd>     </td><td><kbd>S</kbd> <code>(S)</code>      </td><td>+ fricative <code>H</code></td></tr>
-<tr><td><samp>ʂ</samp>   </td><td><kbd>^SR*</kbd>     </td><td><kbd>S</kbd> <code>(S)</code>      </td><td>+ retroflex <code>R</code></td></tr>
-<tr><td><samp>ɕ</samp>   </td><td><kbd>^SHR*</kbd>    </td><td><kbd>S</kbd> <code>(S)</code>      </td><td>+ palatal   <code>HR</code></td></tr>
-<tr><td><samp>ʒ</samp>   </td><td><kbd>^STKPWH*</kbd> </td><td><kbd>STKPW</kbd> <code>(Z)</code>  </td><td>+ fricative <code>H</code></td></tr>
-<tr><td><samp>ʐ</samp>   </td><td><kbd>^STKPWR*</kbd> </td><td><kbd>STKPW</kbd> <code>(Z)</code>  </td><td>+ retroflex <code>R</code></td></tr>
-<tr><td><samp>ʑ</samp>   </td><td><kbd>^STKPWHR*</kbd></td><td><kbd>STKPW</kbd> <code>(Z)</code>  </td><td>+ palatal   <code>HR</code></td></tr>
-<tr><td><samp>χ</samp>   </td><td><kbd>^KH*</kbd>     </td><td><kbd>K</kbd> <code>(K)</code>      </td><td>+ fricative <code>H</code></td></tr>
-<tr><td><samp>ç</samp>   </td><td><kbd>^KHR*</kbd>    </td><td><kbd>K</kbd> <code>(K)</code>      </td><td>+ palatal   <code>HR</code></td></tr>
+<tr><td><samp>ɸ</samp>   </td><td><kbd>^TP*</kbd>     </td><td><kbd>TP</kbd> <code>(F)</code>     </td><td>F, since <kbd>^PH*</kbd> is used for <samp>ɱ</samp></tr>
+<tr><td><samp>β</samp>   </td><td><kbd>^PWH*</kbd>    </td><td><kbd>PW</kbd> <code>(B)</code>     </td><td>B + fricative <code>H</code></td></tr>
+<tr><td><samp>θ</samp>   </td><td><kbd>^TH*</kbd>     </td><td><kbd>T</kbd> <code>(T)</code>      </td><td>T + fricative <code>H</code></td></tr>
+<tr><td><samp>ʈ</samp>   </td><td><kbd>^TR*</kbd>     </td><td><kbd>T</kbd> <code>(T)</code>      </td><td>T + retroflex <code>R</code></td></tr>
+<tr><td><samp>ɬ</samp>   </td><td><kbd>^THR*</kbd>    </td><td><kbd>T</kbd> <code>(T)</code>      </td><td>T + <kbd>HR</kbd> <code>(L)</code></td></tr>
+<tr><td><samp>ð</samp>   </td><td><kbd>^TKH*</kbd>    </td><td><kbd>TK</kbd> <code>(D)</code>     </td><td>D + fricative <code>H</code></td></tr>
+<tr><td><samp>ɖ</samp>   </td><td><kbd>^TKR*</kbd>    </td><td><kbd>TK</kbd> <code>(D)</code>     </td><td>D + retroflex <code>R</code></td></tr>
+<tr><td><samp>ɟ</samp>   </td><td><kbd>^TKHR*</kbd>   </td><td><kbd>TK</kbd> <code>(D)</code>     </td><td>D + palatal   <code>HR</code></td></tr>
+<tr><td><samp>dʒ</samp>  </td><td><kbd>^SKWR*</kbd>   </td><td><kbd>SKWR</kbd> <code>(J)</code>   </td><td>convenient for <samp>d</samp> <kbd>TK*</kbd> + <samp>ʒ</samp></tr>
+<tr><td><samp>ʃ</samp>   </td><td><kbd>^SH*</kbd>     </td><td><kbd>S</kbd> <code>(S)</code>      </td><td>S + fricative <code>H</code></td></tr>
+<tr><td><samp>ʂ</samp>   </td><td><kbd>^SR*</kbd>     </td><td><kbd>S</kbd> <code>(S)</code>      </td><td>S + retroflex <code>R</code></td></tr>
+<tr><td><samp>ɕ</samp>   </td><td><kbd>^SHR*</kbd>    </td><td><kbd>S</kbd> <code>(S)</code>      </td><td>S + palatal   <code>HR</code></td></tr>
+<tr><td><samp>ʒ</samp>   </td><td><kbd>^STKPWH*</kbd> </td><td><kbd>STKPW</kbd> <code>(Z)</code>  </td><td>Z + fricative <code>H</code></td></tr>
+<tr><td><samp>ʐ</samp>   </td><td><kbd>^STKPWR*</kbd> </td><td><kbd>STKPW</kbd> <code>(Z)</code>  </td><td>Z + retroflex <code>R</code></td></tr>
+<tr><td><samp>ʑ</samp>   </td><td><kbd>^STKPWHR*</kbd></td><td><kbd>STKPW</kbd> <code>(Z)</code>  </td><td>Z + palatal   <code>HR</code></td></tr>
+<tr><td><samp>χ</samp>   </td><td><kbd>^KH*</kbd>     </td><td><kbd>K</kbd> <code>(K)</code>      </td><td>K + fricative <code>H</code></td></tr>
+<tr><td><samp>ç</samp>   </td><td><kbd>^KHR*</kbd>    </td><td><kbd>K</kbd> <code>(K)</code>      </td><td>K + palatal   <code>HR</code></td></tr>
 <tr><td><samp>ɡ</samp>   </td><td><kbd>^TKPW*</kbd>   </td><td><kbd>TKPW</kbd> <code>(G)</code>   </td><td></tr>
-<tr><td><samp>ɣ</samp>   </td><td><kbd>^TKPWH*</kbd>  </td><td><kbd>TKPW</kbd> <code>(G)</code>   </td><td>+ fricative <code>H</code></td></tr>
-<tr><td><samp>ʁ</samp>   </td><td><kbd>^TKPWR*</kbd>  </td><td><kbd>TKPW</kbd> <code>(G)</code>   </td><td>+ rhotic R</td></tr>
-<tr><td><samp>ʔ</samp>   </td><td><kbd>^TKPWHR*</kbd> </td><td><kbd>TKPWHR</kbd> <code>(GL)</code></td><td>i.e. <b>GL</b>ottal</td></tr>
+<tr><td><samp>ɣ</samp>   </td><td><kbd>^TKPWH*</kbd>  </td><td><kbd>TKPW</kbd> <code>(G)</code>   </td><td>G + fricative <code>H</code></td></tr>
+<tr><td><samp>ʁ</samp>   </td><td><kbd>^TKPWR*</kbd>  </td><td><kbd>TKPW</kbd> <code>(G)</code>   </td><td>ɢ’s uvularity + rhotic R</td></tr>
+<tr><td><samp>ʔ</samp>   </td><td><kbd>^TKPWHR*</kbd> </td><td><kbd>TKPWHR</kbd> <code>(GL)</code></td><td><b>GL</b>ottal</td></tr>
 <tr><td><samp>ɱ</samp>   </td><td><kbd>^PH*</kbd>     </td><td><kbd>PH</kbd> <code>(M)</code>     </td><td></tr>
 <tr><td><samp>ŋ</samp>   </td><td><kbd>^TPH*</kbd>    </td><td><kbd>TPH</kbd> <code>(N)</code>    </td><td></tr>
-<tr><td><samp>ɳ</samp>   </td><td><kbd>^TPHR*</kbd>   </td><td><kbd>TPH</kbd> <code>(N)</code>    </td><td>retroflex <code>R</code></td></tr>
+<tr><td><samp>ɳ</samp>   </td><td><kbd>^TPHR*</kbd>   </td><td><kbd>TPH</kbd> <code>(N)</code>    </td><td>N + retroflex <code>R</code></td></tr>
 <tr><td><samp>ɹ</samp>   </td><td><kbd>^R*</kbd>      </td><td><kbd>R</kbd> <code>(R)</code>      </td><td></tr>
 </tbody>
 <tbody>
 <tr><th colspan="4">Semivowels</th></tr>
 <tr><td><samp>ʍ</samp>   </td><td><kbd>^WH*</kbd>      </td><td><kbd>WH</kbd> <code>(WH)</code>    </td><td></tr>
-<tr><td><samp>ɥ</samp>   </td><td><kbd>^WHR*</kbd>     </td><td><kbd>W</kbd> <code>(W)</code>      </td><td>palatal <code>HR</code></td></tr>
+<tr><td><samp>ɥ</samp>   </td><td><kbd>^WHR*</kbd>     </td><td><kbd>W</kbd> <code>(W)</code>      </td><td>W + palatal <code>HR</code></td></tr>
 <tr><td><samp>ɰ</samp>   </td><td><kbd>^WR*</kbd>      </td><td><kbd>WR</kbd>           </td><td></tr>
 </tbody>
 <tbody>
