@@ -197,6 +197,10 @@ def parse_subject(avm, words, d):
 def parse_negation(avm, words, d):
 	# Negation
 	if 'not' in words:
+		# TODO refactor to abstract out list of features not allowed by cosubordinator
+		if 'cosubordinator' in avm:
+			raise_grammar_error(avm, f'Invalid negation with cosubordinator', d)
+			return
 		avm['negation'] = True
 		not_index = words.index('not')
 		if 'to' in words[:not_index]:
