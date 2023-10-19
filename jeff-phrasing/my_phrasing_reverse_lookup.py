@@ -68,12 +68,12 @@ reverse_contractions = reverse_dicts_with_repeats(
 	[contractions, negative_contractions, interrogative_contractions])
 # del reverse_STARTERS[''][1] # remove later
 
-def reverse_lookup(text):
-	for avm in phrase_to_avms(text):
+def reverse_lookup(text, debug=False):
+	for avm in phrase_to_avms(text, debug=debug):
 		yield from avm_to_outlines(avm)
 
-def phrase_to_avms(text):
-	avm = {'extra_word': None, 'tense': None}
+def phrase_to_avms(text, debug=False):
+	avm = {'extra_word': None, 'tense': None, 'debug': debug}
 	# split words at space, except do not split the word "used to"
 	words = re.split(r'(?<!used(?= to)) ', text)
 	# words = text.split(' ')
@@ -91,7 +91,8 @@ def insert(words, i, parts):
 	return words[:i] + parts + words [i+1:]
 
 def debug(avm, words, f, i, d, message):
-	return
+	if not avm['debug']:
+		return
 	print('├     '*d + f, str(message), end='')
 	if any(x in message for x in ["Finish", "Branch", "Found"]):
 		print(f'  \033[37mwords queue: {words}\033[0m')
@@ -395,7 +396,7 @@ tests = {
 if __name__ == "__main__":
 	for text, expected_outlines in tests.items():
 		print(f'\n{text}')
-		outlines = reverse_lookup(text)
+		outlines = reverse_lookup(text, debug=True)
 		outlines = ['/'.join(outline) for outline in outlines]
 
 		# if all outlines are in expected_outlines and no others:
