@@ -157,6 +157,9 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 	if be:
 		phrase.append('be'),   selects.append('ing')
 	if passive:
+		# stative verbs cannot take progressive aspect?
+		# if verb is be:
+
 		phrase.append('be'),   selects.append('enP')
 	if verb:
 		phrase.append(verb)
@@ -214,9 +217,15 @@ def lookup(outline, raise_grammar_errors=True):
 	if phrase:
 		return phrase
 	else:
-		raise KeyError
+		# raise KeyError(outline, phrase)
+		return ''
 
 def reverse_dict_with_repeats(ds):
+	# reversed_dict = defaultdict(tuple)
+	# for key, value in d.items():
+	# 	reversed_dict[value] += (key,)
+	# return reversed_dict
+	
 	r = {}
 	for d in ds:
 		for k, v in d.items():
@@ -259,6 +268,8 @@ def avm_to_outlines(avm):
 
 	if 'cosubordinator' in avm and avm['cosubordinator']:
 		lookups['subject'] = reverse_SIMPLE_PRONOUNS
+		# print(avm['modal'], avm['have'], avm['be'])
+		# assert not avm['modal'] and not avm['have'] and not avm['be']
 		del lookups['modal'], lookups['have'], lookups['be'], lookups['negation']
 
 	outline = ''
@@ -307,12 +318,17 @@ def reverse_lookup(text):
 	if len(words) > 8:
 		return []
 
+	import my_phrasing_reverse_lookup
+	outlines = my_phrasing_reverse_lookup.reverse_lookup(text)
+	return outlines
+
 	# Should probably memoize a lookup table for 1-word-long phrases
 
 	# 1. Undo contractions
 	try:
 		for i, word in enumerate(words):
 			if "'" in word or word == 'cannot':
+				# print(word, reverse_contractions)
 				parts = re.split(r"(?=\Bn't\b)|(?<=\bcan)(?=not\b)|(?='[^t])", word)
 				if parts[1] in reverse_contractions:
 					parts[1] = reverse_contractions[parts[1]]
@@ -325,9 +341,15 @@ def reverse_lookup(text):
 	except IndexError:
 		# raise KeyError(f'Failed at contractions: {text}')
 		return []
+	# print(text, words)
 
 	# 2. Cosubordinator
 	if words[0] in reverse_SIMPLE_STARTERS:
+		# Some words (currently, only 'that') are both cosubordinators and full subjects
+		if words[0] in reverse_STARTERS:
+			# TODO implement: need to yield two possible results:
+			# one with avm['cosubordinator'] = words.pop(0) and one with no avm['cosubordinator']
+			pass
 		avm['cosubordinator'] = words.pop(0)
 		reverse_subjects = reverse_SIMPLE_PRONOUNS
 	else:
@@ -341,6 +363,9 @@ def reverse_lookup(text):
 	else:
 		subject = '2'[:'cosubordinator' not in avm] # or first verb is 3ps
 	avm.update(noun_data[subject])
+	# avm['subject'] = subject
+	# avm['person'] = noun_data[subject]['person']
+	# avm['number'] = noun_data[subject]['number']
 
 	do_support = False
 	# 4. Negation
@@ -396,7 +421,7 @@ def reverse_lookup(text):
 					do_support = False
 				selects.append('')
 		elif verb == 'do':
-			if (verbs_remaining or do_support) and 'cosubordinator' not in avm:
+			if (verbs_remaining or do_support): # and 'cosubordinator' not in avm:
 				selects.append('') # do-support
 				if do_support:
 					verb = ''
@@ -451,6 +476,6 @@ def reverse_lookup(text):
 	if outline:
 		looked_up = lookup(outline, raise_grammar_errors=False)
 	if not outline or not text or looked_up.strip('*') != text:
-		print('##', [outline, text, looked_up])
+		# print('##', [outline, text, looked_up])
 		return []
 	return [outline]
