@@ -292,12 +292,14 @@ Suprasegmentals
 <samp>ː</samp>    | <kbd>^-PDZ</kbd>      | <kbd>-P</kbd> | <kbd>-DZ</kbd> top and bottom
 <samp>ˌ</samp>    | <kbd>^-PZ</kbd>       | <kbd>-P</kbd> | <kbd>-Z</kbd> bottom
 Consonants
-<samp>ɸ</samp>    | <kbd>^TP\*</kbd>      | <kbd>TP</kbd> `(F)`      | 
+<samp>ɸ</samp>    | <kbd>^TP\*</kbd>      | <kbd>TP</kbd> `(F)`      | <kbd>^PH*</kbd> is used for <samp>ɱ</samp>
 <samp>β</samp>    | <kbd>^PWH\*</kbd>     | <kbd>PW</kbd> `(B)`      | + fricative `H`
 <samp>θ</samp>    | <kbd>^TH\*</kbd>      | <kbd>T</kbd> `(T)`       | + fricative `H`
 <samp>ʈ</samp>    | <kbd>^TR\*</kbd>      | <kbd>T</kbd> `(T)`       | + retroflex `R`
+<samp>ɬ</samp>    | <kbd>^THR\*</kbd>     | <kbd>T</kbd> `(T)`       | + <kbd>HR</kbd> `(L)`
 <samp>ð</samp>    | <kbd>^TKH\*</kbd>     | <kbd>TK</kbd> `(D)`      | + fricative `H`
 <samp>ɖ</samp>    | <kbd>^TKR\*</kbd>     | <kbd>TK</kbd> `(D)`      | + retroflex `R`
+<samp>ɟ</samp>    | <kbd>^TKHR\*</kbd>    | <kbd>TK</kbd> `(D)`      | + palatal   `HR`
 <samp>dʒ</samp>   | <kbd>^SKWR\*</kbd>    | <kbd>SKWR</kbd> `(J)`    | shorter <kbd>TK*</kbd> <samp>d</samp>  + <samp>ʒ</samp>
 <samp>ʃ</samp>    | <kbd>^SH\*</kbd>      | <kbd>S</kbd> `(S)`       | + fricative `H`
 <samp>ʂ</samp>    | <kbd>^SR\*</kbd>      | <kbd>S</kbd> `(S)`       | + retroflex `R`
@@ -306,12 +308,19 @@ Consonants
 <samp>ʐ</samp>    | <kbd>^STKPWR\*</kbd>  | <kbd>STKPW</kbd> `(Z)`   | + retroflex `R`
 <samp>ʑ</samp>    | <kbd>^STKPWHR\*</kbd> | <kbd>STKPW</kbd> `(Z)`   | + palatal   `HR`
 <samp>χ</samp>    | <kbd>^KH\*</kbd>      | <kbd>K</kbd> `(K)`       | + fricative `H`
+<samp>ç</samp>    | <kbd>^KHR\*</kbd>     | <kbd>K</kbd> `(K)`       | + palatal   `HR`
 <samp>ɡ</samp>    | <kbd>^TKPW\*</kbd>    | <kbd>TKPW</kbd> `(G)`    |
 <samp>ɣ</samp>    | <kbd>^TKPWH\*</kbd>   | <kbd>TKPW</kbd> `(G)`    | + fricative `H`
+<samp>ʁ</samp>    | <kbd>^TKPWR\*</kbd>   | <kbd>TKPW</kbd> `(G)`    | + rhotic R
 <samp>ʔ</samp>    | <kbd>^TKPWHR\*</kbd>  | <kbd>TKPWHR</kbd> `(GL)` | i.e. **GL**ottal
+<samp>ɱ</samp>    | <kbd>^PH\*</kbd>      | <kbd>PH</kbd> `(M)`      |
 <samp>ŋ</samp>    | <kbd>^TPH\*</kbd>     | <kbd>TPH</kbd> `(N)`     |
 <samp>ɳ</samp>    | <kbd>^TPHR\*</kbd>    | <kbd>TPH</kbd> `(N)`     | retroflex `R`
 <samp>ɹ</samp>    | <kbd>^R\*</kbd>       | <kbd>R</kbd> `(R)`       |
+Semivowels
+<samp>ʍ</samp>    | <kbd>^WH*</kbd>       | <kbd>WH</kbd> `(WH)`     |
+<samp>ɥ</samp>    | <kbd>^WHR*</kbd>      | <kbd>W</kbd> `(W)`       | palatal `HR`
+<samp>ɰ</samp>    | <kbd>^WR*</kbd>       | <kbd>WR</kbd>            |
 Tense vowels and diphthongs
 <samp>iː</samp>   | <kbd>^AO\*E</kbd>     | <kbd>AOE</kbd> `(EE)`  |
 <samp>ɪəɹ</samp>  | <kbd>^AO\*ER</kbd>    | <kbd>AOE</kbd> `(EE)`  | + `R`
@@ -335,9 +344,10 @@ Lax vowels
 <samp>ə</samp>    | <kbd>^\*EF</kbd>      | <kbd>E</kbd> `(E)`     | + `F` for turned
 <samp>æ</samp>    | <kbd>^A\*</kbd>       | <kbd>A</kbd> `(A)`     |
 <samp>æ</samp>    | <kbd>^A\*E</kbd>      | <kbd>AE</kbd> `(AE)`   | (redundant)
-<samp>ɑɹ</samp>   | <kbd>^A\*R</kbd>      | <kbd>A</kbd> `(A)`     | + `R`
+<samp>ɑɹ</samp>   | <kbd>^A\*R</kbd>      | <kbd>A</kbd> `(A)`     | + `R` (redundant)
 <samp>ɐ</samp>    | <kbd>^A\*F</kbd>      | <kbd>A</kbd> `(A)`     | + `F` for turned
 <samp>ɑ</samp>    | <kbd>^A\*U</kbd>      | <kbd>AU</kbd> `(AU)`   |
+<samp>ɑɹ</samp>   | <kbd>^A\*UR</kbd>     | <kbd>AU</kbd> `(AU)`   | + `R`
 <samp>ɒ</samp>    | <kbd>^A\*UF</kbd>     | <kbd>AU</kbd> `(AU)`   | + `F` for turned
 <samp>ɔ</samp>    | <kbd>^O\*</kbd>       | <kbd>O</kbd> `(O)`     |
 <samp>ɔɹ</samp>   | <kbd>^O\*R</kbd>      | <kbd>O</kbd> `(O)`     | + `R`
@@ -347,6 +357,7 @@ Lax vowels
 <samp>ʌ</samp>    | <kbd>^\*U</kbd>       | <kbd>U</kbd> `(U)`     |
 <samp>ɜːɹ</samp>  | <kbd>^\*UR</kbd>      | <kbd>U</kbd> `(U)`     | + `R`
 <samp>ʉ</samp>    | <kbd>^\*UF</kbd>      | <kbd>U</kbd> `(U)`     | + `F` for barred
+<samp>ɯ</samp>    | <kbd>^PH\*F</kbd>     | <kbd>PH</kbd> `(M)`    | + `F` for turned
 
 ### `user-*.json`
 
