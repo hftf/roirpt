@@ -266,7 +266,7 @@ Testing ground for some guys I’m trying out, will see how it feels
 
 Fingerspelling dictionary for IPA symbols used in (American) English
 as well as a selection of commonly used IPA symbols in general.
-Omits IPA symbols that are already ordinary letters, like <samp>s</samp>,
+Omits ordinary letters, like <samp>s</samp>,
 as they can be fingerspelled normally.
 Intended to be iconic and useful, rather than comprehensive.
 
@@ -276,12 +276,12 @@ but the right bank is used for some vowel variants and suprasegmentals as well.
 
 <kbd>^\*-</kbd> is used for IPA fingerspelling, and
 <kbd>^\*-P</kbd> for suprasegmental symbols.
-The consonant series follows the convention of
+The consonants follow the convention of
 `H` for fricative (if the base is plosive)
 or palato-alveolar (if the base is already fricative),
 `R` for retroflex, and
 `HR` for palatal (i.e. alveolo-palatal).
-The vowel series follows the convention of
+The vowels follow the convention of
 `-F` for turned or barred variants.
 
 <table>
@@ -328,7 +328,7 @@ The vowel series follows the convention of
 <tr><td><samp>ɰ</samp>   </td><td><kbd>^WR*</kbd>      </td><td><kbd>WR</kbd>           </td><td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="4">Tense vowels and diphthongs</th></tr>
+<tr><th colspan="4">Long vowels and diphthongs</th></tr>
 <tr><td><samp>iː</samp>  </td><td><kbd>^AO*E</kbd>    </td><td><kbd>AOE</kbd> <code>(EE)</code> </td><td></tr>
 <tr><td><samp>ɪəɹ</samp> </td><td><kbd>^AO*ER</kbd>   </td><td><kbd>AOE</kbd> <code>(EE)</code> </td><td>+ <code>R</code></td></tr>
 <tr><td><samp>eɪ</samp>  </td><td><kbd>^A*EU</kbd>    </td><td><kbd>AEU</kbd> <code>(AI)</code> </td><td></tr>
@@ -344,7 +344,7 @@ The vowel series follows the convention of
 <tr><td><samp>ɔɪ</samp>  </td><td><kbd>^O*EU</kbd>    </td><td><kbd>OEU</kbd> <code>(OI)</code> </td><td></tr>
 </tbody>
 <tbody>
-<tr><th colspan="4">Lax vowels</th></tr>
+<tr><th colspan="4">Short vowels</th></tr>
 <tr><td><samp>ɪ</samp>   </td><td><kbd>^*EU</kbd>     </td><td><kbd>EU</kbd> <code>(I)</code>   </td><td></tr>
 <tr><td><samp>ɪəɹ</samp> </td><td><kbd>^*EUR</kbd>    </td><td><kbd>EU</kbd> <code>(I)</code>   </td><td>+ <code>R</code></td></tr>
 <tr><td><samp>ɨ</samp>   </td><td><kbd>^*EUF</kbd>    </td><td><kbd>EU</kbd> <code>(I)</code>   </td><td>+ <code>F</code> for barred</td></tr>
