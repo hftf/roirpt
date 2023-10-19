@@ -4,6 +4,7 @@ import glob
 
 import my_phrasing as phrasing
 import noun_data, verb_data
+from my_phrasing_reverse_lookup import reverse_lookup
 
 PARTS_MATCHER = re.compile(
 	r'(\#?\^?\+?)(S?T?K?P?W?H?R?)(A?O?)-?(\*?)(E?U?)(F?R?P?B?L?G?T?S?D?Z?)'
@@ -13,8 +14,6 @@ def sortkey(key):
 	return [ALPHABET.index(c) for c in re.sub('[-*].*$', lambda m: m[0].lower(), key)]
 def sort(l):
 	return sorted(l, key=sortkey)
-
-# idea: go thru all dictionaries and find obsolete entries
 
 # These are strokes that are okay to remove, typically because they are mis-stroke entries
 # spellchecker: disable
@@ -94,6 +93,7 @@ def increment_collision_counter(d, key, collision_count):
 starter_collisions = {}
 ender_collisions = {}
 simple_starter_collisions = {}
+obsolete_translations = {}
 
 count = 0
 
@@ -107,6 +107,14 @@ for dict_filename in dict_filenames:
 		simple_defined_strokes = {}
 
 		for strokes in dict_data:
+			# 1. Go through all dictionaries and find obsolete entries superseded by the phrasing system:
+			translation = dict_data[strokes]
+			if ' ' in translation:
+				outlines = ['/'.join(outline) for outline in list(reverse_lookup(translation))]
+				if outlines:
+					obsolete_translations[strokes] = (dict_filename, translation, outlines)
+
+			# 2. Go through all dictionaries and find conflicts with the phrasing system:
 			if strokes in AUDITED_STROKES:
 				continue
 
@@ -225,3 +233,6 @@ if len(ender_collisions):
 
 if count:
 	print('Total collisions: %d\n' % count)
+
+for strokes, (dict_filename, translation, outlines) in obsolete_translations.items():
+	print(f'{strokes:20} {dict_filename:40} {translation:20} {str(outlines)}')
