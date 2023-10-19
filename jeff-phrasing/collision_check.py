@@ -97,7 +97,18 @@ obsolete_translations = {}
 
 count = 0
 
-dict_filenames = sorted(glob.glob("*.json"))
+def get_dicts_in_order():
+	# plover.cfg lives above the directory this script is in
+	plover_cfg_path = __file__.replace('collision_check.py', '../plover.cfg')
+	with open(plover_cfg_path) as config:
+		flag = False
+		for line in config:
+			if line.startswith('[System: Stenotype Extended]'):
+				flag = True
+			if line.startswith('dictionaries = ') and flag:
+				return [d['path'] for d in json.loads(line.split('=')[1].strip()) if d['enabled'] and d['path'].endswith('.json') and d['path'] != 'tapey_tape.json']
+
+dict_filenames = reversed(get_dicts_in_order())
 for dict_filename in dict_filenames:
 	with open(dict_filename) as dict_json:
 		dict_data = json.load(dict_json)
