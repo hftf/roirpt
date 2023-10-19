@@ -250,7 +250,8 @@ def parse_verbs(avm, words, i, d):
 		debug(avm, words, f, i, d, '  No words left')
 		if avm['_select'] is not None and 'verb' not in avm:
 			debug(avm, words, f, i, d, '= No verb; trying with empty verb')
-			yield from parse_extra_word(dict(avm, verb='', tense=avm['tense'] or '', _select=None), words, i, d)
+			yield from parse_extra_word(dict(avm, verb='', tense='',   _select=None), words, i, d)
+			yield from parse_extra_word(dict(avm, verb='', tense='ed', _select=None), words, i, d)
 			# raise_grammar_error(avm, f'Invalid select: 1')
 			return
 		# if '_do_support' in avm and avm['_do_support']:
