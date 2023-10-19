@@ -698,14 +698,11 @@ then, for now, you can try to replace it with a hard-coded path:
 
 * Write installation instructions
 	* Mention dictionary priority
-* Finish implementing reverse lookup
-	* If multiple options, must yield all of them
-	* As early as possible, must not yield any impossible options
+* Write testing instructions
 * Consider dropping the terms starter/medial/ender entirely
 	* For “chord”?
 * Add some Josiah extensions
 * Add examples in readme
-* Testing instructions
 
 ### Long-term
 
@@ -715,7 +712,7 @@ then, for now, you can try to replace it with a hard-coded path:
 * Singular/plural distinction in relativizers
 * Irrealis (so-called “past subjunctive”) with <samp>if</samp>
 	* Could repurpose <samp>if</samp> + past tense
-* Adverbs (<samp>just</samp>, <samp>really</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>)
+* Adverb medials (<samp>just</samp>, <samp>really</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>)
 * Consider reprioritizing low-frequency combos to make fingerwork more convenient
 (<samp>can have</samp>, <samp>shall have</samp> are less common than
 <samp>could have</samp>, <samp>should have</samp>,
