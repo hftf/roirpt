@@ -16,6 +16,7 @@ from verb_data import verb_forms, verb_ender_data, MODALS, ENDERS, \
 	verbs_without_do_support, verbs_forbidding_existential_there, verbs_forbidding_passive
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
+from collections import defaultdict
 
 LONGEST_KEY = 2
 
@@ -227,19 +228,24 @@ def reverse_dict_with_repeats(ds):
 			else:
 				r[v] = k
 	return r
+def reverse_keymap_via_data(map, keyf):
+	r = defaultdict(list)
+	for k, v in map.items():
+		r[keyf(v)].append(k)
+	return dict(r)
 
 reverse_STARTERS        = {tuple(noun_data[v].values()): k for k, v in STARTERS.items()}
 reverse_SIMPLE_STARTERS = {v: k for k, v in SIMPLE_STARTERS.items()}
 reverse_SIMPLE_PRONOUNS = {tuple(noun_data[v].values()): k for k, v in SIMPLE_PRONOUNS.items()}
 reverse_MODALS          = {v: k for k, v in MODALS.items()}
-reverse_ENDERS          = {tuple(v.values()): k for k, v in ENDERS.items()}
+reverse_ENDERS          = reverse_keymap_via_data(ENDERS, lambda d: (d['tense'], d['verb'], d['extra_word']))
 reverse_contractions    = reverse_dict_with_repeats([contractions, negative_contractions, interrogative_contractions])
 reverse_verb_forms = {form: (inflection, verb) for verb, forms in verb_forms.items() for inflection, form in forms.items()}
 
 POSSIBLE_REVERSE_MATCH = re.compile(r"[a-zI ']+")
 
 
-def avm_to_outline(avm):
+def avm_to_outlines(avm):
 	lookups = {
 		'question':       '^',
 		'contract':       '+',
@@ -270,16 +276,23 @@ def avm_to_outline(avm):
 	if outline[-1] not in 'A5O0*EU':
 		outline += '-'
 
-	# try:
-	outline += reverse_ENDERS[(avm['tense'], avm['verb'], avm['extra_word'])]
+	k = (avm['tense'], avm['verb'], avm['extra_word'])
+	if k not in reverse_ENDERS:
+		print(f"Not in reverse_ENDERS: {(avm['tense'], avm['verb'], avm['extra_word'])}")
+		return
+	else:
+		# Branch because one form can have multiple enders (e.g. 'saw' = -SD and -SZ)
+		for ender in reverse_ENDERS[k]:
+			yield from avm_to_outline_aux(avm, outline + ender)
 
+def avm_to_outline_aux(avm, outline):
 	if outline[-1] == '-':
 		outline = outline[:-1]
 
 	if 'passive' in avm and avm['passive']:
 		outline += '/+-P'
 
-	return tuple(outline.split('/'))
+	yield tuple(outline.split('/'))
 
 def reverse_lookup(text):
 	if not text or not POSSIBLE_REVERSE_MATCH.fullmatch(text):
