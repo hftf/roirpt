@@ -99,8 +99,6 @@ tests = {
 	"^+SWRO*EURPD":    "shouldn't I have been doing",
 	"+SWROFD":         "I should've",
 	"+SWRAOFD":        "I would've", # * I'd have
-# }
-# tests2 = {
 	"":               None,
 	"HR-FR":          None,
 	"^KPWRAO*EBT":    "will you not have been a",
@@ -165,7 +163,8 @@ tests = {
 	"SWRO*ERPD":      "I should not have done",
 	"+SWROERPD":      "I should've done",
 	"+SWRO*ERPD":     "I shouldn't have done",
-	#                 "SKPEUBGSZ":   "and I could",
+	# "SKPEUBGSZ":      "and I could",
+	# "+SKPEUBGSZ":     "and I could",
 	"SKPEUBGSZ":      "and I became",
 	"TWRA*G":         "we cannot go",
 	"^KPWRALTD":      "could you tell",
@@ -174,7 +173,6 @@ tests = {
 	"TWHA*":          "they cannot",
 	"TWH-RPD":        "they did",
 	"SKWHR*D":        "she did not",
-
 	"^+KPWRAO*EBT":   "won't you have been a",
 	"+KPWR*B":        "you aren't",
 	"^+KPWR*B":       "aren't you",
@@ -207,7 +205,6 @@ tests = {
 	"^+KWHR*":        "doesn't he",
 	"+SWRAO*RP":      "I won't do",
 	"+SWHAUFPB":      "what you find",
-	#                 "+SKPEUBGSZ":   "and I could",
 	"+SKPEUBGSZ":     "and I became",
 	"+TWRA*G":        "we can't go",
 	"^+KPWRALTD":     "could you tell",
@@ -310,6 +307,7 @@ tests = {
 	"+SWHAO*E":       "why she",
 	"SWR-PLS/+-P":    "*I am seemed",
 	"SWR-RGS":        None, # *I cares - TODO: add something to prevent auto suffixation
+	"SWR-SDZ":        None, # *I saws
 	"^SWHAO*EFT":     "why does she have to",
 	"^+SWHAO*EFT":    "why's she have to",
 	"^SWHAO*EFTD":    "why did she have to",
@@ -334,6 +332,8 @@ tests = {
 	"+KPWH-B":        "it's",
 	"+KPWHU":         "it's",
 	"+KPWHE":         "it's",
+	"+STHAB":         "that's",
+	"+STHA*B":        "that it's",
 	"+KPWR-B/+-P":    "*you're been",
 	"+KPWREBD":       "you'd been",
 	"+KPWRAOUD":      "you'd be",
@@ -360,6 +360,7 @@ tests = {
 	"STKPWHREU":      "has been",
 	"SWR-FLT":        "I feel like",
 	"+STWR*PLT":      "mayn't be",
+	"SWRURLG":        "I am really",
 }
 
 t = p = q = 0
@@ -372,12 +373,13 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 
 	error = ''
 	try:
-		result_phrase = my_phrasing.lookup(outline, False)
+		result_phrase = my_phrasing.lookup(outline, raise_grammar_errors=False)
 	except KeyError as e:
 		result_phrase = None
 		error = f' ({e})'
 		if expected_phrase != result_phrase:
-			raise e
+			# raise e
+			pass
 	emoji = "❌✅"[expected_phrase == result_phrase]
 	t += 1
 	q += expected_phrase == result_phrase
@@ -389,7 +391,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 
 	error = ''
 	try:
-		reversed_outlines = my_phrasing.reverse_lookup(result_phrase.strip('*'))
+		reversed_outlines = list(my_phrasing.reverse_lookup(result_phrase.strip('*')))
 	except KeyError as e:
 		reversed_outlines = [(None,)]
 		error = f' ({e})'
@@ -402,10 +404,11 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 	if reversed_outlines and outline not in reversed_outlines and phrase == expected_phrase:
 		p += 1j
 		emoji = "🉑"
-	print(f'\033[4m    {str("/".join(reversed_outlines[0]) if reversed_outlines else None) + error:52}← {phrase:32} {emoji}\033[0m⎠')
+	reversed_outlines_j = ', '.join("/".join(o) for o in reversed_outlines)
+	print(f'\033[4m    {str(reversed_outlines_j or []) + error:52}← {phrase:32} {emoji}\033[0m⎠')
 	# print(f'{str(reversed_outlines) + error} {emoji}')
 
-print(f'{q}/{t} and {p}/{t} tests passed')
+print(f'{q}/{t} and {p}/{t} tests passed\n')
 	# assert expected == result
 
 test_avm_1 = {
@@ -453,30 +456,112 @@ avm_tests = [
 	("^SWRA*EUPTD/+-P", test_avm_2, "could I not have been being wanted to"),
 ]
 for (outline, avm, phrase) in avm_tests:
-	result_phrase  = my_phrasing.avm_to_phrase (avm,     raise_grammar_errors=True)
-	result_avm     = my_phrasing.outline_to_avm(outline, raise_grammar_errors=True)
-	result_outline = my_phrasing.avm_to_outline(avm)
-	print(result_phrase, '/'.join(result_outline))
+	result_phrase   = my_phrasing.avm_to_phrase (avm,     raise_grammar_errors=True)
+	result_avm      = my_phrasing.outline_to_avm(outline, raise_grammar_errors=True)
+	result_outlines = my_phrasing.avm_to_outlines(avm)
+	result_outlines_j = ['/'.join(result_outline) for result_outline in result_outlines]
 	assert phrase  == result_phrase
 	assert avm     == result_avm
-	assert outline == '/'.join(result_outline)
+	assert outline in result_outlines_j
+print()
 
 tests3 = {
-	'found she':     None,
-	'she found':     ['SKWHR-FPBD'],
-	'like':          ['STWR-LG'],
-	'feel like':     ['STWR-FLT'],
-	"and I haven't": None,
-	"and you'd":     ["+SKPUFD"],
-	"and you were":  ["SKPUBD"],
-	"and it's":      ["+SKP*B"],
+	'found she':       [],
+	'she found':       ['SKWHR-FPBD'],
+	'like':            ['STWR-LG'],
+	'feel like':       ['STWR-FLT'],
+	"and I haven't":   [],
+	"and you'd":       ['+SKPUFD'],
+	"and you were":    ['SKPUBD'],
+	"and it's":        ['+SKP*B', '+SKP*F'],
+	"that is":         ['STHAB', 'STWHU', 'STWH-B'],
+	"that has":        ['STHAF', 'STWHE', 'STWH-F'],
+	"that's":          ['+STHAB', '+STWHU', '+STWH-B', '+STHAF', '+STWHE', '+STWH-F'],
+	"that":            ['STHA', 'STWH'],
+	"aren't I":        ['^+SWR*U', '^+SWR*B'],
+	"I do":            ['SWR-RP'],
+	"I does":          [],
+	"I did":           ['SWR-RPD'],
+	"I do not":        ['SWR*'],
+	"I don't":         ['+SWR*'],
+	"I did not":       ['SWR*D'],
+	"I didn't":        ['+SWR*D'],
+	"I did not go":    ['SWR*GD'],
+	"I didn't go":     ['+SWR*GD'],
+	"I didn't went":   [],
+	"I do not do":     ['SWR*RP'],
+	"I did not do":    ['SWR*RPD'],
+	"I do not did":    [],
+	"I do not must":   [],
+	"I am not must":   [],
+	"I have not must": [],
+	"I will not must": [],
+	"I must not":      ['SWR*PBLGS'],
+	"I not must":      [],
+	"I do not will":   [],
+	"I am not will":   [],
+	"I have not will": [],
+	"I will not":      ['SWRAO*'],
+	"I not will":      [],
+	"did I not go":    ['^SWR*GD'],
+	"did not I go":    [],
+	"didn't I go":     ['^+SWR*GD'],
+	"didn't go I":     [],
+	"did go I":        [],
+	"did go foo I":    [],
+	"go foo I":        [],
+	"did":             ['STKPWHR-RPD', 'STWR-RPD'],
+	"not to go":       ['^STKPWHR*G', '^STWR*G'],
+	"to not go":       [],
+	"hello":           [],
+	"why to go":       ['^SWHAOG'],
+	"there are":       ['STPHRU', 'STPHR-B'],
+	"there must":      ['STHR-PBLGS', 'STPHR-PBLGS'],
+	"there must be":   ['STHR-PBLGTS', 'STPHR-PBLGTS'],
+	"there be must":   [],
+	"there are must":  [],
+	"there just":      ['STHR-PBLGSZ', 'STPHR-PBLGSZ'],
+	"you can":         ['KPWRA'],
+	"you could":       ['KPWRAD'],
+	"you can go":      ['KPWRAG'],
+	"you can goes":    [],
+	"I am":            ['SWRU', 'SWR-B'],
+	"I are":           [],
+	"be to":           [],
+	"to be":           ['^STKPWHRU', '^STKPWHR-B', '^STWRU', '^STWR-B'],
+	"to is":           [],
+	"to are":          [],
+	"to go to":        ['^STKPWHR-GT', '^STWR-GT'],
+	"I like":          ['SWR-LG'],
+	"I like on":       [],
+	"I feel":          ['SWR-FL'],
+	"I feel like":     ['SWR-FLT'],
+	"I go like":       [],
+	"I feel like like":[],
+	"I do not be":     [],
+	"where":           ['SWHR'],
+	"I have not":      ['SWR*E'],
+	"I have not had":  ['SWR*EF'],
+	"aren't you":      ['^+KPWR*U', '^+KPWR*B'],
+	"I aren't":        [],
+	"I am taken":      ['SWR-RBT/+-P'],
+	"I am taking":     ['SWRURBT'],
+	"can do":          ['STWRARP', 'STKPWHRARP'],
+	"cannot I know":   [],
+	"I used to":       ['SWR-TZ', 'SWR-TDZ'],
+	"I use to":        [],
+	"I using to":      [],
+	"he uses to":      [],
+	"did I use to":    [],
+	"did I used to":   ['^SWR-TDZ'],
+	"what to do it":   ['^SWHARPT'],
+	"and looked":      ['SKP-LD', 'SKP-LD/+'],
+	"that's not a":    [],
+	"that isn't a":    ['+STWH*BT'],
 }
 
 for (phrase, outlines) in tests3.items():
 	result_outlines = my_phrasing.reverse_lookup(phrase)
 	result_outlines_s = ["/".join(o) for o in result_outlines]
-	if outlines is None:
-		passed = not result_outlines
-	else:
-		passed = all(o in result_outlines_s for o in outlines)
-	print(f'{phrase:24} {str(outlines):24} {str(result_outlines_s):24} {passed}')
+	passed = all(o in result_outlines_s for o in outlines) and all(o in outlines for o in result_outlines_s)
+	print(f'\033[1m{phrase:24}\033[0m {str(outlines):36} {str(result_outlines_s):36} {"❌✅"[passed]}')
