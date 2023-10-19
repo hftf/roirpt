@@ -20,6 +20,10 @@ from collections import defaultdict
 
 LONGEST_KEY = 2
 
+NON_PHRASE_STROKES = {
+	'SKP-LD': 'and looked',
+}
+
 STROKE_PARTS = re.compile(r'''^\#?
 	(?P<question> \^?)
 	(?P<contract> \+?)
@@ -302,6 +306,9 @@ def avm_to_outline_aux(avm, outline):
 
 	if 'passive' in avm and avm['passive']:
 		outline += '/+-P'
+	elif outline in NON_PHRASE_STROKES:
+		print(f'Adding fallback {outline}/+ due to "{NON_PHRASE_STROKES[outline]}" in NON_PHRASE_STROKES')
+		yield (outline, '+')
 
 	yield tuple(outline.split('/'))
 
