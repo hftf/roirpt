@@ -262,6 +262,92 @@ have been redefined with <kbd>^</kbd> in place of <kbd>S</kbd>
 
 Testing ground for some guys I’m trying out, will see how it feels
 
+### `caret-ipa-fingerspelling.json`
+
+Fingerspelling dictionary for IPA symbols used in (American) English
+as well as a selection of commonly used IPA symbols in general.
+Omits IPA symbols that are already ordinary letters, like <samp>s</samp>,
+as they can be fingerspelled normally.
+Intended to be iconic and useful, rather than comprehensive.
+
+Like ordinary fingerspelling, the left bank is used for consonants
+and the vowel bank is used for vowels,
+but the right bank is used for some vowel variants and suprasegmentals as well.
+
+<kbd>^\*-</kbd> is used for IPA fingerspelling, and
+<kbd>^\*-P</kbd> for suprasegmental symbols.
+The consonant series follows the convention of
+`H` for fricative (if the base is plosive)
+or palato-alveolar (if the base is already fricative),
+`R` for retroflex, and
+`HR` for palatal (i.e. alveolo-palatal).
+The vowel series follows the convention of
+`-F` for turned or barred variants.
+
+IPA               | Chord                 | Base | Explanation
+-|-|-|-
+Suprasegmentals
+<samp>ʰ</samp>    | <kbd>^-FPD</kbd>      | <kbd>-P</kbd> | <kbd>-FD</kbd> `(-H)`
+<samp>ˈ</samp>    | <kbd>^-PD</kbd>       | <kbd>-P</kbd> | <kbd>-D</kbd> top
+<samp>ː</samp>    | <kbd>^-PDZ</kbd>      | <kbd>-P</kbd> | <kbd>-DZ</kbd> top and bottom
+<samp>ˌ</samp>    | <kbd>^-PZ</kbd>       | <kbd>-P</kbd> | <kbd>-Z</kbd> bottom
+Consonants
+<samp>ɸ</samp>    | <kbd>^TP\*</kbd>      | <kbd>TP</kbd> `(F)`      | 
+<samp>β</samp>    | <kbd>^PWH\*</kbd>     | <kbd>PW</kbd> `(B)`      | + fricative `H`
+<samp>θ</samp>    | <kbd>^TH\*</kbd>      | <kbd>T</kbd> `(T)`       | + fricative `H`
+<samp>ʈ</samp>    | <kbd>^TR\*</kbd>      | <kbd>T</kbd> `(T)`       | + retroflex `R`
+<samp>ð</samp>    | <kbd>^TKH\*</kbd>     | <kbd>TK</kbd> `(D)`      | + fricative `H`
+<samp>ɖ</samp>    | <kbd>^TKR\*</kbd>     | <kbd>TK</kbd> `(D)`      | + retroflex `R`
+<samp>dʒ</samp>   | <kbd>^SKWR\*</kbd>    | <kbd>SKWR</kbd> `(J)`    | shorter <kbd>TK*</kbd> <samp>d</samp>  + <samp>ʒ</samp>
+<samp>ʃ</samp>    | <kbd>^SH\*</kbd>      | <kbd>S</kbd> `(S)`       | + fricative `H`
+<samp>ʂ</samp>    | <kbd>^SR\*</kbd>      | <kbd>S</kbd> `(S)`       | + retroflex `R`
+<samp>ɕ</samp>    | <kbd>^SHR\*</kbd>     | <kbd>S</kbd> `(S)`       | + palatal   `HR`
+<samp>ʒ</samp>    | <kbd>^STKPWH\*</kbd>  | <kbd>STKPW</kbd> `(Z)`   | + fricative `H`
+<samp>ʐ</samp>    | <kbd>^STKPWR\*</kbd>  | <kbd>STKPW</kbd> `(Z)`   | + retroflex `R`
+<samp>ʑ</samp>    | <kbd>^STKPWHR\*</kbd> | <kbd>STKPW</kbd> `(Z)`   | + palatal   `HR`
+<samp>χ</samp>    | <kbd>^KH\*</kbd>      | <kbd>K</kbd> `(K)`       | + fricative `H`
+<samp>ɡ</samp>    | <kbd>^TKPW\*</kbd>    | <kbd>TKPW</kbd> `(G)`    |
+<samp>ɣ</samp>    | <kbd>^TKPWH\*</kbd>   | <kbd>TKPW</kbd> `(G)`    | + fricative `H`
+<samp>ʔ</samp>    | <kbd>^TKPWHR\*</kbd>  | <kbd>TKPWHR</kbd> `(GL)` | i.e. **GL**ottal
+<samp>ŋ</samp>    | <kbd>^TPH\*</kbd>     | <kbd>TPH</kbd> `(N)`     |
+<samp>ɳ</samp>    | <kbd>^TPHR\*</kbd>    | <kbd>TPH</kbd> `(N)`     | retroflex `R`
+<samp>ɹ</samp>    | <kbd>^R\*</kbd>       | <kbd>R</kbd> `(R)`       |
+Tense vowels and diphthongs
+<samp>iː</samp>   | <kbd>^AO\*E</kbd>     | <kbd>AOE</kbd> `(EE)`  |
+<samp>ɪəɹ</samp>  | <kbd>^AO\*ER</kbd>    | <kbd>AOE</kbd> `(EE)`  | + `R`
+<samp>eɪ</samp>   | <kbd>^A\*EU</kbd>     | <kbd>AEU</kbd> `(AI)`  |
+<samp>ɛəɹ</samp>  | <kbd>^A\*EUR</kbd>    | <kbd>AEU</kbd> `(AI)`  | + `R`
+<samp>aɪ</samp>   | <kbd>^AO\*EU</kbd>    | <kbd>AOEU</kbd> `(II)` |
+<samp>aɪəɹ</samp> | <kbd>^AO\*EUR</kbd>   | <kbd>AOEU</kbd> `(II)` | + `R`
+<samp>uː</samp>   | <kbd>^AO\*U</kbd>     | <kbd>AOU</kbd> `(UU)`  |
+<samp>ʊəɹ</samp>  | <kbd>^AO\*UR</kbd>    | <kbd>AOU</kbd> `(UU)`  | + `R`
+<samp>oʊ</samp>   | <kbd>^O\*E</kbd>      | <kbd>OE</kbd> `(OE)`   |
+<samp>ɔəɹ</samp>  | <kbd>^O\*ER</kbd>     | <kbd>OE</kbd> `(OE)`   | + `R`
+<samp>aʊ</samp>   | <kbd>^O\*U</kbd>      | <kbd>OU</kbd> `(OU)`   |
+<samp>aʊɹ</samp>  | <kbd>^O\*UR</kbd>     | <kbd>OU</kbd> `(OU)`   | + `R`
+<samp>ɔɪ</samp>   | <kbd>^O\*EU</kbd>     | <kbd>OEU</kbd> `(OI)`  |
+Lax vowels
+<samp>ɪ</samp>    | <kbd>^\*EU</kbd>      | <kbd>EU</kbd> `(I)`    |
+<samp>ɪəɹ</samp>  | <kbd>^\*EUR</kbd>     | <kbd>EU</kbd> `(I)`    | + `R`
+<samp>ɨ</samp>    | <kbd>^\*EUF</kbd>     | <kbd>EU</kbd> `(I)`    | + `F` for barred
+<samp>ɛ</samp>    | <kbd>^\*E</kbd>       | <kbd>E</kbd> `(E)`     |
+<samp>əɹ</samp>   | <kbd>^\*ER</kbd>      | <kbd>E</kbd> `(E)`     | + `R`
+<samp>ə</samp>    | <kbd>^\*EF</kbd>      | <kbd>E</kbd> `(E)`     | + `F` for turned
+<samp>æ</samp>    | <kbd>^A\*</kbd>       | <kbd>A</kbd> `(A)`     |
+<samp>æ</samp>    | <kbd>^A\*E</kbd>      | <kbd>AE</kbd> `(AE)`   | (redundant)
+<samp>ɑɹ</samp>   | <kbd>^A\*R</kbd>      | <kbd>A</kbd> `(A)`     | + `R`
+<samp>ɐ</samp>    | <kbd>^A\*F</kbd>      | <kbd>A</kbd> `(A)`     | + `F` for turned
+<samp>ɑ</samp>    | <kbd>^A\*U</kbd>      | <kbd>AU</kbd> `(AU)`   |
+<samp>ɒ</samp>    | <kbd>^A\*UF</kbd>     | <kbd>AU</kbd> `(AU)`   | + `F` for turned
+<samp>ɔ</samp>    | <kbd>^O\*</kbd>       | <kbd>O</kbd> `(O)`     |
+<samp>ɔɹ</samp>   | <kbd>^O\*R</kbd>      | <kbd>O</kbd> `(O)`     | + `R`
+<samp>ɵ</samp>    | <kbd>^O\*F</kbd>      | <kbd>O</kbd> `(O)`     | + `F` for barred
+<samp>œ</samp>    | <kbd>^O\*EF</kbd>     | <kbd>OE</kbd> `(OE)`   | + `F` for ligature
+<samp>ʊ</samp>    | <kbd>^AO\*</kbd>      | <kbd>AO</kbd> `(OO)`   |
+<samp>ʌ</samp>    | <kbd>^\*U</kbd>       | <kbd>U</kbd> `(U)`     |
+<samp>ɜːɹ</samp>  | <kbd>^\*UR</kbd>      | <kbd>U</kbd> `(U)`     | + `R`
+<samp>ʉ</samp>    | <kbd>^\*UF</kbd>      | <kbd>U</kbd> `(U)`     | + `F` for barred
+
 ### `user-*.json`
 
 I mean sure? but probably of little interest until [Chordial](https://chordial.app/) exists
