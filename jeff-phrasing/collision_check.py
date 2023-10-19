@@ -186,13 +186,13 @@ for dict_filename in dict_filenames:
 						# if v2 and verb in verb_data.DEFECTIVE_VERBS:
 						# 	print(f'Skipping {conflict} (illegal inflection of {verb})')
 						# 	continue
-						print(f"{conflict:18} ", end='')
 						phrase = r(phrasing.lookup((conflict,), raise_grammar_errors=False))
-						print(f"{phrase:35} {translation:25}", end='')
+						print(f"{conflict:18} {phrase:35}", end=' ')
+						print(f"{translation:25}", end=' ')
 						if ' ' in translation:
-							rev = phrasing.reverse_lookup(translation)
-							if rev:
-								print(f'use phrase instead: {rev}', end='')
+							outlines = ['/'.join(outline) for outline in list(reverse_lookup(translation))]
+							if outlines:
+								print(f'use phrasing instead: {outlines}', end='')
 						print()
 					print('')
 					increment_collision_counter(
@@ -213,11 +213,12 @@ for dict_filename in dict_filenames:
 
 					for conflict, translation in simple_defined_strokes[key].items():
 						phrase = r(phrasing.lookup((conflict,), raise_grammar_errors=False))
-						print(f"{conflict:18} {phrase:35} {translation:25}", end='')
+						print(f"{conflict:18} {phrase:35}", end=' ')
+						print(f"{translation:25}", end=' ')
 						if ' ' in translation:
-							rev = phrasing.reverse_lookup(translation)
-							if rev:
-								print(f'use phrase instead: {rev}', end='')
+							outlines = ['/'.join(outline) for outline in list(reverse_lookup(translation))]
+							if outlines:
+								print(f'use phrasing instead: {outlines}', end='')
 						print()
 
 					print('')
