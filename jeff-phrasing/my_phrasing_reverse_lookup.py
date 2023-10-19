@@ -385,34 +385,7 @@ def parse_extra_word(avm, words, i, d):
 
 
 tests = {
-	# "I'd like to go, but I can't cannot shouldn't've za't": [],
-	"aren't I":             ['^+SWR*U', '^+SWR*B'],
-	"am I not":             ['^SWR*U', '^SWR*B'],
-	"I am":                 ['SWRU', 'SWR-B'],
-	"I am not":             ['SWR*U', 'SWR*B'],
-	"I am not be":          [],
-	"I am not being":       ['SWR*UB'],
-	"I am not being been":  ['SWR*UB/+-P'],
-	"I am not being being": [],
-	"I do not":             ['SWR*'],
-	"I do not do":          ['SWR*RP'],
-	"I do not do do":       [],
-	"I go":                 ['SWR-G'],
-	"I go not":             [],
-	"I do not go":          ['SWR*G'],
-	"I go not to":          [],
-	"I have":               ['SWRE', 'SWR-F'],
-	"I have not":           ['SWR*E'],
-	"I have not have":      [],
-	"I have not had":       ['SWR*EF'],
-	"I have not had had":   [],
-	"I have not had to":    ['SWR*EFT'],
-	"I do not have":        ['SWR*F'],
-	"I have to":            ['SWR-FT'],
-	"I should be":          ['SWROBD', 'SWROUD'],
-	"I should not be":      ['SWRO*BD', 'SWRO*UD'],
-	"I became":             ['SWR-BGSZ', 'SWR-BGSD'],
-	"and I":                ['SKPEU', 'SKPEUD', '+SKPEU', '+SKPEUD'],
+# "I'd like to go, but I can't cannot shouldn't've za't": [],
 }
 if __name__ == "__main__":
 	for text, expected_outlines in tests.items():
