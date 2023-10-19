@@ -195,7 +195,7 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 		phrase.insert(question, subject)
 
 	if cosubordinator:
-		if contract and 'w' in cosubordinator and phrase and phrase[0] in (contractions | interrogative_contractions):
+		if contract and (cosubordinator[0] in 'wht' and cosubordinator != 'whether') and phrase and phrase[0] in (contractions | interrogative_contractions):
 			cosubordinator += (contractions | interrogative_contractions)[phrase.pop(0)]
 		phrase.insert(0, cosubordinator)
 
