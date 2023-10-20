@@ -309,8 +309,8 @@ def avm_to_outline_aux(avm, outline):
 
 	if 'passive' in avm and avm['passive']:
 		outline += '/+-P'
-	elif outline in NON_PHRASE_STROKES:
-		print(f'Adding fallback {outline}/+ due to "{NON_PHRASE_STROKES[outline]}" in NON_PHRASE_STROKES')
+	elif outline.replace('+', '') in NON_PHRASE_STROKES:
+		print(f'Adding fallback {outline}/+ due to entry in NON_PHRASE_STROKES')
 		yield (outline, '+')
 
 	yield tuple(outline.split('/'))
