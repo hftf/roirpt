@@ -83,7 +83,11 @@ def phrase_to_avms(text, debug=False):
 
 	for parse in parse_contractions(avm, words, 0, 0):
 		# print(' \033[32mPARSE:', parse, '\033[0m')
-		phrase = avm_to_phrase(parse)
+		try:
+			phrase = avm_to_phrase(parse)
+		except KeyError as e:
+			raise_grammar_error(avm, e)
+			continue
 		# print(' \033[34mPHRASE:', phrase, '\033[0m', end='')
 		# print("❌✅"[phrase == text], end=' ')
 		# print('/'.join(avm_to_outline(parse)))
@@ -269,6 +273,7 @@ def parse_verbs(avm, words, i, d):
 		if avm['_select'] is not None and 'verb' not in avm:
 			debug(avm, words, f, i, d, '= No verb; trying with empty verb')
 			yield from parse_extra_word(dict(avm, verb='', tense='',   _select=None), words, i, d)
+			# maybe should only yield if would be different
 			yield from parse_extra_word(dict(avm, verb='', tense='ed', _select=None), words, i, d)
 			# raise_grammar_error(avm, f'Invalid select: 1')
 			return

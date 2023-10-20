@@ -172,6 +172,9 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 	# At this point, selects should have same length as phrase.
 	assert len(phrase) == len(selects)
 
+	if tense and not phrase:
+		raise_grammar_error(f'No verb found but tense "{tense}" given', avm, raise_grammar_errors)
+
 	# Loop through verbs in phrase and apply the verb form selected by the previous verb/subject
 	for i, verb in enumerate(phrase):
 		phrase[i] = select(verb, selects[i], avm, raise_grammar_errors)
@@ -198,7 +201,7 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 		elif contract and phrase and "'" not in phrase[0]:
 			# contract was enabled, but there was nothing found to contract
 			pass
-			# raise_grammar_error('There was nothing to contract', avm, raise_grammar_errors)
+			raise_grammar_error('There was nothing to contract', avm, raise_grammar_errors)
 		phrase.insert(question, subject)
 
 	if cosubordinator:
