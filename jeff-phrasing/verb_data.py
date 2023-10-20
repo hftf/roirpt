@@ -9,6 +9,9 @@ contractions = {'am': "'m", 'are': "'re", 'is': "'s", 'has': "'s",
 	'not': "n't"} # n't is only for reversing purposes
 interrogative_contractions = {'did': "'d", "does": "'s"}
 
+# Note: suffixes here do not use the same notation as keys in verb_forms
+# because they are appended to the end of the verb to give the verb form.
+# For example, 's' is a suffix here, but the key '3' is used in verb_forms.
 irregular_verb_data = {
 	# Irregular verbs with 5+ forms (unpredictable -s forms, predictable -ing form)
 	'be':         {'en': 'been', 'ed': 'were', 'ed13': 'was', 's': 'are', 's1': 'am', 's3': 'is'},
@@ -60,7 +63,8 @@ irregular_verb_data = {
 verbs_forbidding_existential_there = [
 	'',
 	# modals
-	'can', 'shall', 'will', 'may', 'must', 'need', 'used to',
+	'can', 'will', 'shall', 'may', 'must',
+	'need', 'used to',
 	# presentational verbs (like 'exist', 'occur', 'appear', 'follow')
 	'be',
 	'have', # only as 'have to' main verb
@@ -76,12 +80,15 @@ verbs_forbidding_existential_there = [
 ]
 # verbs not used in passive voice
 verbs_forbidding_passive = [
-	'can', 'shall', 'will', 'may', 'must',
+	'can', 'will', 'shall', 'may', 'must',
 	'be',
 	'happen', 'seem',
 	'mind',
 	'remain', 'live',
 ]
+defective_verbs = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
+verbs_without_infinitive = defective_verbs[:5] # can, will, shall, may, must; used to is defective but has infinitive; adverbs (just, really) do not conjugate
+verbs_without_do_support = [None, 'be'] + verbs_without_infinitive
 
 # For regular verb, exceptions is None or {}
 def inflect(verb, suffix, exceptions=None):
@@ -249,9 +256,6 @@ for verb in verb_ender_data.keys():
 			})
 
 	verb_forms[verb] = forms
-
-defective_verbs = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
-verbs_without_do_support = [None, 'be'] + defective_verbs[:5]
 
 # Part 2b: Generate all ender variants
 

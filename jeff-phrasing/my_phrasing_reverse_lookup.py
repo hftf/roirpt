@@ -1,12 +1,14 @@
 import re
 from collections import defaultdict
 from my_phrasing import avm_to_phrase, avm_to_outlines
-from verb_data import verbs_without_do_support, defective_verbs
+from verb_data import verbs_without_do_support, defective_verbs, verbs_without_infinitive
 
 # from my_phrasing import select
 def select(verb, select, avm, raise_grammar_errors=True):
 	forms = verb_forms[verb]
 	suffix = ''
+	if select == 'infinitive':
+		select = ''
 	if not select in forms:
 		# Only be/have/get have irregular forms; most others are stripped here
 		select = select.rstrip('123Pp')
@@ -239,7 +241,8 @@ def parse_negation(avm, words, d):
 		avm['_do_support'] = True
 	if 'to' in words[:1]: # why not [:0]?
 		avm['question'] = True
-		avm['_finite'] = False
+		avm['_infinitive'] = True
+		avm['_select'] = 'infinitive'
 		# words.pop(words.index('to')) but do not mutate
 		words = insert(words, words.index('to'), [])
 	if words and '_' == words[0]:
@@ -291,10 +294,9 @@ def parse_verbs(avm, words, i, d):
 		return
 	verb, inflection = reverse_verb_forms[inflected_verb]
 
-	if '_finite' in avm and not avm['_finite']:
-		debug(avm, words, f, i, d, f'! Non-finite base form required')
+	if '_infinitive' in avm:
+		debug(avm, words, f, i, d, f'! Non-finite base form required by "to"')
 		avm['tense'] = ''
-		avm['_select'] = ''
 	elif 'tense' not in avm or avm['tense'] is None:
 		debug(avm, words, f, i, d, f'! Agreement required: {avm["_select"]}')
 		tense_found = False
@@ -338,12 +340,12 @@ def parse_verbs(avm, words, i, d):
 	if verb in reverse_MODALS:
 		if 'cosubordinator' not in avm and 'modal' not in avm:
 			debug(avm, words[i+1:], f, i, d, f'> Branch for modal: {inflected_verb}')
-			yield from parse_verbs(dict(avm, modal=verb, _do_support=False, _select=''), words[i+1:], i, d+1)
+			yield from parse_verbs(dict(avm, modal=verb, _do_support=False, _select='infinitive'), words[i+1:], i, d+1)
 	elif verb == 'do':
 		# need to check not verbs_without_do_support
 		if '_do_support' in avm and avm['_do_support']: # should we del from avm?
 			debug(avm, words[i+1:], f, i, d, f'> Branch for do-support: {inflected_verb}')
-			yield from parse_verbs(dict(avm, _do_support=False, _do_support_do=True, _select=''), words[i+1:], i, d+1)
+			yield from parse_verbs(dict(avm, _do_support=False, _do_support_do=True, _select='infinitive'), words[i+1:], i, d+1)
 	elif verb == 'have':
 		# if avm['_do_support'] and
 		if 'cosubordinator' not in avm and 'have' not in avm:

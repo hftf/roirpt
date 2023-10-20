@@ -12,7 +12,7 @@ sys.path.append(jeff_dir)
 from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, \
 	simple_starters_requiring_subject, simple_starters_forbidding_inversion
 from verb_data import verb_forms, verb_ender_data, MODALS, ENDERS, \
-	contractions, negative_contractions, interrogative_contractions, defective_verbs, \
+	contractions, negative_contractions, interrogative_contractions, \
 	verbs_without_do_support, verbs_forbidding_existential_there, verbs_forbidding_passive
 from jeff_phrasing import NON_PHRASE_STROKES
 import re
