@@ -193,12 +193,14 @@ def parse_subject(avm, words, d):
 
 	for subject, subject_datas in reverse_subjects.items():
 		if subject in words[:2 + ('not' in words[:1 + ('contract' in avm)])]:
-			words[words.index(subject)] = '_'
+			# words[words.index(subject)] = '_'
+			words = insert(words, words.index(subject), ['_'])
 			for subject_data in subject_datas:
 				debug(avm, words, f, '', d, f'> Branch for subject: {subject}')
 				yield from parse_negation({**avm, **subject_data}, words, d+1)
 				# debug(avm, words, f, '', d, f'< Resuming: {subject}')
 			return # break due to for-else
+	# No subject was found
 	else:
 		for subject_data in reverse_subjects['']:
 			debug(avm, words, f, '', d, f'> Branch for empty subject with number {subject_data["number"]}')
@@ -223,16 +225,17 @@ def parse_negation(avm, words, d):
 		# words.pop(not_index) but do not mutate
 		words = insert(words, not_index, [])
 		if not_index > 1:
-			debug(avm, words, 'NEG  ', '', d, '! Do-support required')
+			debug(avm, words, 'NEG  ', '', d, f'! Do-support required: negation found {not_index} words in')
 			avm['_do_support'] = True
 
 	# Question
 	# need smarter: subject can't actually be far in
 	if '_' in words[1:]:
 		# words.pop(words.index('_')) but do not mutate
-		words = insert(words, words.index('_'), [])
+		subject_index = words.index('_')
+		words = insert(words, subject_index, [])
 		avm['question'] = True
-		debug(avm, words, 'QUEST', '', d, '! Do-support required')
+		debug(avm, words, 'QUEST', '', d, f'! Do-support required: subject found {subject_index} words in')
 		avm['_do_support'] = True
 	if 'to' in words[:1]: # why not [:0]?
 		avm['question'] = True
@@ -240,7 +243,8 @@ def parse_negation(avm, words, d):
 		# words.pop(words.index('to')) but do not mutate
 		words = insert(words, words.index('to'), [])
 	if words and '_' == words[0]:
-		words.pop(0)
+		# words.pop(0)
+		words = words[1:]
 
 	if '_question_required' in avm:
 		if avm['_question_required'] is True and 'question' not in avm:
