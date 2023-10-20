@@ -66,6 +66,7 @@ reverse_MODALS          = {v: k for k, v in MODALS.items()}
 reverse_verb_forms = {form: (verb, inflection) for verb, forms in verb_forms.items() for inflection, form in forms.items()}
 reverse_contractions = reverse_dicts_with_repeats(
 	[contractions, negative_contractions, interrogative_contractions])
+all_contractions = [*contractions, *negative_contractions, *interrogative_contractions]
 # del reverse_STARTERS[''][1] # remove later
 
 def reverse_lookup(text, debug=False):
@@ -102,6 +103,7 @@ def debug(avm, words, f, i, d, message):
 
 def parse_contractions(avm, words, i, d):
 	f = 'CONTR'
+	contraction_has_no_effect = True
 
 	while i < len(words):
 		word = words[i]
@@ -143,11 +145,19 @@ def parse_contractions(avm, words, i, d):
 			else:
 				raise_grammar_error(avm, f'Invalid contraction: {word}', d)
 				break
+		# Found a word that could have been a contraction, but wasn't
+		elif word in all_contractions:
+			contraction_has_no_effect = False
+			debug(avm, words, f, i, d, f'= Contraction has an effect, since "{word}" could have been a contraction')
+			i += 1
 		else:
 			# word is not a contraction, so continue
 			# debug(avm, words, f, i, d, f'= Skip non-contraction: {word}')
 			i += 1
 	else:
+		if contraction_has_no_effect and 'contract' not in avm:
+			debug(avm, words, f, i, d, '> Branch since contraction has no effect')
+			yield from parse_cosubordinator(dict(avm, contract=True), words, d)
 		debug(avm, words, f, i, d, 'v Finished parsing contractions')
 		yield from parse_cosubordinator(avm, words, d)
 	
