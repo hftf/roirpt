@@ -574,6 +574,7 @@ tests3 = {
 	"he uses to":           [],
 	"did I use to":         [],
 	"did I used to":        ['^SWR-TDZ'],
+	"and they'll":          [],
 }
 
 for (phrase, outlines) in tests3.items():

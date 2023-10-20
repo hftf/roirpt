@@ -413,6 +413,15 @@ def parse_extra_word(avm, words, i, d):
 
 tests = {
 # "I'd like to go, but I can't cannot shouldn't've za't": [],
+"and looked":      ['SKP-LD', 'SKP-LD/+'],
+"and I":           ['SKPEU', 'SKPEUD', '+SKPEU', '+SKPEUD'],
+"that isn't a":    ['+STWH*BT'],
+"I will not must": [],
+"I must not":      ['SWR*PBLGS'], # SWR*PBLGSD not supposed to work
+"there must":      ['STHR-PBLGS',                   'STHR-PBLGSD',  'STPHR-PBLGS',                    'STPHR-PBLGSD'],
+"there must be":   ['STHR-PBLGTS', 'STHR-PBLGTSZ',  'STHR-PBLGTSD', 'STPHR-PBLGTS', 'STPHR-PBLGTSZ',  'STPHR-PBLGTSD'],
+"there just":      ['STHR-PBLGSZ', 'STHR-PBLGTSDZ', 'STHR-PBLGSDZ', 'STPHR-PBLGSZ', 'STPHR-PBLGTSDZ', 'STPHR-PBLGSDZ'],
+"I should not do": ['SWRO*RPD'],
 }
 if __name__ == "__main__":
 	for text, expected_outlines in tests.items():
