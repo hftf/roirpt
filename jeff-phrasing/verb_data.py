@@ -153,10 +153,6 @@ verb_ender_data = {
 	'say':        ('BS',     'that'),
 	'use':        ('Z',      None  ), # consider as having extra word 'to' rather than None
 	'used to':    ('TZ',     None  ), # special case, but really acts as use + to (=T)
-	# desire
-	'want':       ('P',      'to'  ),
-	'wish':       ('RBS',    'to'  ),
-	'need':       ('PBL',    'to'  ), # was RPG
 
 	# mind, cognition
 	'know':       ('PB',     'that'),
@@ -173,6 +169,10 @@ verb_ender_data = {
 	'realize':    ('RLZ',    'that'), # was RLS
 	'mind':       ('FRPB',   None  ), # was PBLS
 
+	# desire
+	'want':       ('P',      'to'  ),
+	'wish':       ('RBS',    'to'  ),
+	'need':       ('PBL',    'to'  ), # was RPG
 	'hope':       ('FP',     'to'  ), # was RPS
 	'like':       ('LG',     'to'  ), # was BLG
 	'love':       ('LGZ',    'to'  ), # was LG
@@ -209,16 +209,16 @@ verb_ender_data = {
 	'show':       ('RB',     None  ), # was RBZ
 	'ask':        ('FBG',    None  ), # was RB
 	'tell':       ('LT',     None  ), # was RLT
+	'talk':       ('T',      'to'  ), # was BLGT
+	'help':       ('FPL',    None  ), # was PLGS
+
 	# sensory, perception
 	'feel':       ('FL',     'like'), # was LT
 	'hear':       ('FRP',    'that'), # was PG
 	'see':        ('S',      None  ),
 	'look':       ('L',      None  ), # TODO remap LGS?
-
-	'help':       ('FPL',    None  ), # was PLGS
 	'recognize':  ('RGZ',    'that'),
 	'notice':     ('PBS',    'that'),
-	'talk':       ('T',      'to'  ), # was BLGT
 
 	# play:    PLGS
 	# suppose: FPS
