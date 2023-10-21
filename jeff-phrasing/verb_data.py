@@ -219,6 +219,15 @@ verb_ender_data = {
 	# play
 	# suppose: FPS
 }
+# Generates the all key combinations that are not used for verbs.
+# import itertools
+# keys = 'FRPBLGSZ'
+# combinations = [''.join(combination) for i in range(len(keys) + 1) for combination in itertools.combinations(keys, i) if not ('S' in combination and 'Z' in combination)]
+# combinations should have 2^8 - 2^6 = 192 elements
+# enders_used = [ender for ender, _ in verb_ender_data.values()]
+# for combination in combinations:
+# 	if combination not in enders_used:
+# 		print(combination)
 
 # Part Ib: Generate all verb forms
 # (after Part 2a because it depends on verb_ender_data.keys() for the list of verbs)
