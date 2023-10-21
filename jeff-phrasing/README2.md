@@ -533,6 +533,7 @@ The following table shows the defaults.
 <tr><td colspan="2"><samp>expect    </samp></td><td><samp>that</samp></td><td><kbd>FPGT</kbd>  </td><td><kbd><del>PGS </del></kbd></td><td>e<b>XP</b>e<b>C</b><sup><var>G</var></sup><b>T</b></td><td></td></tr>
 <tr><td colspan="2"><samp>realize   </samp></td><td><samp>that</samp></td><td><kbd>RLZ</kbd>   </td><td><kbd><del>RLS </del></kbd></td><td><b>R</b>ea<b>L</b>i<b>Z</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>mind      </samp></td><td>                 </td><td><kbd>FRPB</kbd>  </td><td><kbd><del>PBLS</del></kbd></td><td><b>M</b>i<b>N</b>d</td><td></td></tr>
+<tr><td colspan="2"><samp>suppose   </samp></td><td><samp>that</samp></td><td><kbd>FPZ</kbd>   </td><td>🆕                        </td><td><b>S</b>u<b>P</b>po<b>Z</b>e</td><td></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">Verbs of desire</th></tr>
@@ -554,6 +555,9 @@ The following table shows the defaults.
 <tr><td colspan="2"><samp>try       </samp></td><td><samp>to  </samp></td><td><kbd>RT</kbd>    </td><td>=                         </td><td><b>T↶R</b>y</td><td></td></tr>
 <tr><td colspan="2"><samp>make      </samp></td><td><samp>a   </samp></td><td><kbd>PBLG</kbd>  </td><td><kbd><del>RPBL</del></kbd></td><td><b>M</b>a<b>K</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>work      </samp></td><td><samp>on  </samp></td><td><kbd>RBG</kbd>   </td><td>=                         </td><td>wo<b>RK</b></td><td></td></tr>
+<tr><td colspan="2"><samp>play      </samp></td><td><samp>with</samp></td><td><kbd>PLGS</kbd>  </td><td>🆕                        </td><td><b>PL</b>a<b>Y</b><sup><var>G</var></sup> + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>start     </samp></td><td><samp>to  </samp></td><td><kbd>FRS</kbd>   </td><td>🆕                        </td><td><b>S</b><sup><var>F</var></sup>ta<b>R</b>t + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>choose    </samp></td><td><samp>to  </samp></td><td><kbd>FPS</kbd>   </td><td>🆕                        </td><td><b>CH</b>oo<b>S</b>e</td><td></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">Verbs of placement</th></tr>
@@ -564,6 +568,7 @@ The following table shows the defaults.
 <tr><td colspan="2"><samp>take      </samp></td><td>                 </td><td><kbd>RBT</kbd>   </td><td>=                         </td><td>arb.†</td><td></td></tr>
 <tr><td colspan="2"><samp>keep      </samp></td><td>                 </td><td><kbd>PG</kbd>    </td><td>=                         </td><td><b>K</b><sup><var>G</var></sup>ee<b>↶P</b></td><td></td></tr>
 <tr><td colspan="2"><samp>bring     </samp></td><td>                 </td><td><kbd>RPBG</kbd>  </td><td>=                         </td><td><b>↶BR</b>i<b>NG</b></td><td></td></tr>
+<tr><td colspan="2"><samp>provide   </samp></td><td>                 </td><td><kbd>RPZ</kbd>   </td><td>=                         </td><td><b>P↶R</b>o<b>V</b><sup><var>Z</var></sup>ide</td><td></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">Verbs of action, communication</th></tr>

@@ -168,6 +168,7 @@ verb_ender_data = {
 	'expect':     ('FPGT',   'that'), # was PGS. could be FPBG
 	'realize':    ('RLZ',    'that'), # was RLS
 	'mind':       ('FRPB',   None  ), # was PBLS
+	'suppose':    ('FPZ',    'that'),
 
 	# desire
 	'want':       ('P',      'to'  ),
@@ -186,6 +187,9 @@ verb_ender_data = {
 	'try':        ('RT',     'to'  ),
 	'make':       ('PBLG',   'a'   ), # was RPBL
 	'work':       ('RBG',    'on'  ),
+	'play':       ('PLGS',   'with'),
+	'start':      ('FRS',    'to'  ),
+	'choose':     ('FPS',    'to'  ),
 
 	# placement
 	'put':        ('PS',     'it'  ),
@@ -195,6 +199,7 @@ verb_ender_data = {
 	'take':       ('RBT',    None  ),
 	'keep':       ('PG',     None  ), # was PBGS
 	'bring':      ('RPBG',   None  ),
+	'provide':    ('RPZ',    None  ),
 
 	# action, communication
 	'come':       ('BG',     'to'  ),
@@ -220,12 +225,8 @@ verb_ender_data = {
 	'recognize':  ('RGZ',    'that'),
 	'notice':     ('PBS',    'that'),
 
-	# play:    PLGS
-	# suppose: FPS
-	# choose:  FPZ
-	# provide: FRPZ, RPZ
-	# start:   FRS
 	# be able: BLZ
+	# hold:    FLS?
 	
 	# List of unused combinations and unassigned verbs that might go well with them:
 	# 2 keys: FB FG FZ RZ BZ
