@@ -90,7 +90,7 @@ def phrase_to_avms(text, debug=False, strict=True):
 		elif debug:
 			print(' \033[32mPARSE:', parse, '\033[0m')
 			print(' \033[34mPHRASE:', phrase, '\033[0m', end=' ')
-			print('/'.join(avm_to_outlines(parse)))
+			print(['/'.join(o) for o in avm_to_outlines(parse)])
 
 def insert(words, i, parts):
 	return words[:i] + parts + words [i+1:]
@@ -273,9 +273,12 @@ def parse_verbs(avm, words, i, d):
 		debug(avm, words, f, i, d, '  No words left')
 		if avm['_select'] is not None and 'verb' not in avm:
 			debug(avm, words, f, i, d, '= No verb; trying with empty verb')
-			yield from parse_extra_word(dict(avm, verb='', tense='',   _select=None), words, i, d)
+			tense = ''
+			if avm['tense'] is not None:
+				tense = avm['tense']
+			yield from parse_extra_word(dict(avm, verb='', tense=tense,   _select=None), words, i, d)
 			# maybe should only yield if would be different? for now, just yield in strict mode
-			if not avm['strict']:
+			if not avm['strict'] and tense != 'ed':
 				yield from parse_extra_word(dict(avm, verb='', tense='ed', _select=None, _overgenerated=True), words, i, d)
 			else:
 				debug(avm, words, f, i, d, '§ Did not branch empty verb with past tense, as strict mode is on')
@@ -303,15 +306,16 @@ def parse_verbs(avm, words, i, d):
 		return
 	verb, inflection = reverse_verb_forms[inflected_verb]
 
+	tenses = ['', 'ed']
 	if '_infinitive' in avm:
 		debug(avm, words, f, i, d, f'! Non-finite base form required by "to"')
-		if 'strict' in avm and avm['strict']:
-			avm['tense'] = ''
+		if 'negation' in avm or 'strict' in avm and avm['strict']:
+			tenses = ['']
 	if 'tense' not in avm or avm['tense'] is None:
 		debug(avm, words, f, i, d, f'! Agreement required: {avm["_select"]}')
 		tense_found = False
-		for tense in ['', 'ed']:
-			# this check isn't't strictly necessary but saves overhead/space in debug
+		for tense in tenses:
+			# this check isn't strictly necessary but saves overhead/space in debug
 			selected_verb = select(verb, tense + avm['_select'], avm)
 			if selected_verb == inflected_verb:
 				debug(avm, words, f, i, d, f'> Branch for tense "{tense}" because found agreement {avm["_select"]}: {inflected_verb} == {verb}[{tense}{avm["_select"]}]')
@@ -434,6 +438,7 @@ tests = {
                   '§+STHR-PBLGTS', '§+STHR-PBLGTSD',  '§+STHR-PBLGTSZ', '§+STPHR-PBLGTS', '§+STPHR-PBLGTSD', '§+STPHR-PBLGTSZ'],
 "there just":      ['STHR-PBLGSZ',   'STHR-PBLGTSDZ',   'STHR-PBLGSDZ',   'STPHR-PBLGSZ',   'STPHR-PBLGTSDZ',  'STPHR-PBLGSDZ',
                   '§+STHR-PBLGSZ', '§+STHR-PBLGSDZ', '§+STHR-PBLGTSDZ', '§+STPHR-PBLGSZ', '§+STPHR-PBLGSDZ', '§+STPHR-PBLGTSDZ'],
+"I should not":    ['SWRO*D'],
 "I should not do": ['SWRO*RPD'],
 "to remember":     ['^STWR-RPL',   '^STWR-RPLD',   '^STKPWHR-RPL',   '^STKPWHR-RPLD',
                   '§^+STWR-RPL', '§^+STWR-RPLD', '§^+STKPWHR-RPL', '§^+STKPWHR-RPLD'],
@@ -441,7 +446,7 @@ tests = {
 if __name__ == "__main__":
 	for text, expected_outlines in tests.items():
 		print(f'\n{text}')
-		outlines = reverse_lookup(text, debug=False, strict=False)
+		outlines = reverse_lookup(text, debug=True, strict=False)
 		outlines = ['/'.join(outline) for outline in outlines]
 
 		# if all outlines are in expected_outlines and no others:
@@ -449,8 +454,8 @@ if __name__ == "__main__":
 		partially_passed = any(outline in expected_outlines for outline in outlines) or \
 			any(expected_outline in outlines for expected_outline in expected_outlines)
 		if passed:
-			print(f'✅ {outlines} == {expected_outlines}')
+			print(f'✅ {outlines} == {expected_outlines} (expected)')
 		elif partially_passed:
-			print(f'🉑 {outlines} <> {expected_outlines}')
+			print(f'🉑 {outlines} <> {expected_outlines} (expected)')
 		else:
-			print(f'❌ {outlines} != {expected_outlines}')
+			print(f'❌ {outlines} != {expected_outlines} (expected)')
