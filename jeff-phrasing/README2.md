@@ -68,6 +68,10 @@ and allow for typos to easily creep in.
 This means far greater use of declarative programming, unbundling control flow,
 passing state via objects, and code that is basically self-documenting.
 
+Let's say you wanted to modify Jeff phrasing to remove contractions:
+it requires editing strings in dozens of places, which is error-prone.
+In contrast, you would only need to change one rule to do so in the engine.
+
 Admittedly, hardcoding as a strategy can make a reverse lookup algorithm easier to write,
 and replacing hard-coded data with routines that generate the same data may add lines of code.
 But I believe the readability and extensibility trade-off is worth it.
