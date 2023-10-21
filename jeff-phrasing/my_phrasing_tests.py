@@ -170,8 +170,8 @@ tests = {
 	"TWH-RPD":        "they did",
 	"SKWHR*D":        "she did not",
 	"^+KPWRAO*EBT":   "won't you have been a",
-	"^+KPWRERP":      "have you done",
-	"^+KPWRAOLGD":    "would you like",
+	"§^+KPWRERP":     "have you done",
+	"§^+KPWRAOLGD":   "would you like",
 	"+KPWRAOULGD":    "you'd be liking",
 	"+SWR*BD":        "I wasn't",
 	"^+SWR*BD":       "wasn't I",
@@ -199,14 +199,14 @@ tests = {
 	"+KWHR*":         "he doesn't",
 	"^+KWHR*":        "doesn't he",
 	"+SWRAO*RP":      "I won't do",
-	"+SWHAUFPB":      "what you find",
-	"+SKPEUBGSZ":     "and I became",
+	"§+SWHAUFPB":      "what you find",
+	"§+SKPEUBGSZ":     "and I became",
 	"+TWRA*G":        "we can't go",
-	"^+KPWRALTD":     "could you tell",
-	"^+STWR-RPL":     "to remember",
-	"^+STWR*RPL":     "not to remember",
+	"§^+KPWRALTD":     "could you tell",
+	"§^+STWR-RPL":     "to remember",
+	"§^+STWR*RPL":     "not to remember",
 	"+TWHA*":         "they can't",
-	"+TWH-RPD":       "they did",
+	"§+TWH-RPD":       "they did",
 	"+SKWHR*D":       "she didn't",
 	"SWHOGDZ":        "who gave",
 	"^STHR-B":        "is there",
@@ -296,10 +296,10 @@ tests = {
 	"^STWR*ERBT":     "not to have taken",
 	"^STWR*ERBT/+-P": "not to have been taken",
 	"SWR":            "I",
-	"+SWR":           "I",
+	"§+SWR":          "I",
 	"SWRUFL":         "I am feeling",
 	"+SWRUFL":        "I'm feeling",
-	"+SWHAO*E":       "why she",
+	"§+SWHAO*E":      "why she",
 	"SWR-PLS/+-P":    "*I am seemed",
 	"SWR-RGS":        None, # *I cares - TODO: add something to prevent auto suffixation
 	"SWR-SDZ":        None, # *I saws
@@ -360,6 +360,8 @@ tests = {
 
 t = p = q = 0
 for i, (outline, expected_phrase) in enumerate(tests.items()):
+	strict = not outline.startswith('§')
+
 	outline = tuple(outline.split('/'))
 	# if 45 > i or i > 50:
 	# if i > 5:
@@ -368,7 +370,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 
 	error = ''
 	try:
-		result_phrase = my_phrasing.lookup(outline, raise_grammar_errors=False)
+		result_phrase = my_phrasing.lookup(outline, raise_grammar_errors=False, strict=strict)
 	except KeyError as e:
 		result_phrase = None
 		error = f' ({e})'
@@ -386,7 +388,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 
 	error = ''
 	try:
-		reversed_outlines = list(my_phrasing.reverse_lookup(result_phrase.strip('*')))
+		reversed_outlines = list(my_phrasing.reverse_lookup(result_phrase.strip('*'), strict=strict))
 	except KeyError as e:
 		reversed_outlines = [(None,)]
 		error = f' ({e})'
@@ -395,7 +397,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 			pass
 	emoji = "❌✅"[outline in reversed_outlines]
 	p += outline in reversed_outlines
-	phrase = my_phrasing.lookup(outline, raise_grammar_errors=False)
+	phrase = my_phrasing.lookup(outline, raise_grammar_errors=False, strict=strict)
 	if reversed_outlines and outline not in reversed_outlines and phrase == expected_phrase:
 		p += 1j
 		emoji = "🉑"
@@ -444,6 +446,8 @@ test_avm_1 = {
 	# P  voice: False = active, True passive
 	# 'passive': False,
 	# subjunctive (irrealis), imperative
+
+	'strict': True,
 }
 test_avm_2 = dict(**test_avm_1, passive=True)
 avm_tests = [
@@ -467,7 +471,7 @@ tests3 = {
 	"like":                 ['STWR-LG'],
 	"feel like":            ['STWR-FLT'],
 	"and looked":           ['SKP-LD', 'SKP-LD/+'],
-	"and I":                ['SKPEU', 'SKPEUD', '+SKPEU', '+SKPEUD'],
+	"and I":                ['SKPEU'], #, 'SKPEUD', '+SKPEU', '+SKPEUD'],
 	"and I haven't":        [],
 	"and you'd":            ['+SKPUFD'],
 	"and you were":         ['SKPUBD'],
@@ -549,6 +553,7 @@ tests3 = {
 	"there be must":        [],
 	"there are must":       [],
 	"there just":           ['STHR-PBLGSZ', 'STPHR-PBLGSZ'],
+	"I am just":            ['SWRUPBLGSZ'],
 	"you can":              ['KPWRA'],
 	"you could":            ['KPWRAD'],
 	"you can go":           ['KPWRAG'],

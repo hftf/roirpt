@@ -41,14 +41,17 @@ def raise_grammar_error(message, avm, raise_grammar_errors=True):
 	else:
 		avm['grammar'] = message
 
-def outline_to_avm(outline, raise_grammar_errors=True):
+def outline_to_avm(outline, raise_grammar_errors=True, strict=True):
 	if not outline:
 		raise KeyError('Outline argument empty')
 
 	if type(outline) == str:
+		if not strict:
+			outline = outline.replace('§', '')
+
 		outline = tuple(outline.split('/'))
 
-	avm = {}
+	avm = {'strict': strict}
 	# parse second stroke and add features to avm
 	if len(outline) > 1:
 		# naive conflict workaround
@@ -64,6 +67,8 @@ def outline_to_avm(outline, raise_grammar_errors=True):
 	return stroke_to_avm(outline[0], avm, raise_grammar_errors)
 
 def stroke_to_avm(stroke, avm={}, raise_grammar_errors=True):
+	if not avm['strict']:
+		stroke = stroke.replace('§', '')
 	stroke_parts = STROKE_PARTS.match(stroke)
 	if not stroke_parts:
 		raise KeyError(f'Stroke "{stroke}" does not match STROKE_PARTS regex')
@@ -221,7 +226,7 @@ def avm_to_phrase(avm, raise_grammar_errors=True, strict=True):
 	return result
 
 def lookup(outline, raise_grammar_errors=True, strict=True):
-	phrase = avm_to_phrase(outline_to_avm(outline, raise_grammar_errors), raise_grammar_errors, strict)
+	phrase = avm_to_phrase(outline_to_avm(outline, raise_grammar_errors, strict), raise_grammar_errors, strict)
 	if phrase:
 		return phrase
 	else:
@@ -322,7 +327,7 @@ def avm_to_outline_aux(avm, outline):
 
 	yield tuple(outline.split('/'))
 
-def reverse_lookup(text):
+def reverse_lookup(text, strict=True):
 	if not text or not POSSIBLE_REVERSE_MATCH.fullmatch(text):
 		return []
 
@@ -336,7 +341,7 @@ def reverse_lookup(text):
 		return []
 
 	import my_phrasing_reverse_lookup
-	outlines = my_phrasing_reverse_lookup.reverse_lookup(text)
+	outlines = my_phrasing_reverse_lookup.reverse_lookup(text, strict=strict)
 	return outlines
 
 	# Should probably memoize a lookup table for 1-word-long phrases
