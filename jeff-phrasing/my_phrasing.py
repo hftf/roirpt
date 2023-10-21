@@ -134,7 +134,8 @@ def select(verb, select, avm, raise_grammar_errors=True):
 		select = ''
 	return forms[select] + suffix
 
-def avm_to_phrase(avm, raise_grammar_errors=True):
+# strict=False should only be used for testing
+def avm_to_phrase(avm, raise_grammar_errors=True, strict=True):
 	if not avm:
 		return
 
@@ -172,7 +173,7 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 	# At this point, selects should have same length as phrase.
 	assert len(phrase) == len(selects)
 
-	if tense and not phrase:
+	if tense and not phrase and strict:
 		raise_grammar_error(f'No verb found but tense "{tense}" given', avm, raise_grammar_errors)
 
 	# Loop through verbs in phrase and apply the verb form selected by the previous verb/subject
@@ -200,8 +201,8 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 			subject += contractions[phrase.pop(0)]
 		elif contract and phrase and "'" not in phrase[0]:
 			# contract was enabled, but there was nothing found to contract
-			pass
-			raise_grammar_error('There was nothing to contract', avm, raise_grammar_errors)
+			if strict:
+				raise_grammar_error('There was nothing to contract', avm, raise_grammar_errors)
 		phrase.insert(question, subject)
 
 	if cosubordinator:
@@ -219,8 +220,8 @@ def avm_to_phrase(avm, raise_grammar_errors=True):
 
 	return result
 
-def lookup(outline, raise_grammar_errors=True):
-	phrase = avm_to_phrase(outline_to_avm(outline, raise_grammar_errors), raise_grammar_errors)
+def lookup(outline, raise_grammar_errors=True, strict=True):
+	phrase = avm_to_phrase(outline_to_avm(outline, raise_grammar_errors), raise_grammar_errors, strict)
 	if phrase:
 		return phrase
 	else:
@@ -306,6 +307,12 @@ def avm_to_outlines(avm):
 def avm_to_outline_aux(avm, outline):
 	if outline[-1] == '-':
 		outline = outline[:-1]
+	
+	# Overgenerated means a redundant, or non-canonical way to input.
+	# e.g. 'I do' is canonically SWR-RP, but +SWR-RP yields the same phrase since contraction has no effect.
+	# Non-strict mode is completionist and will return overgenerated forms in reverse lookup.
+	if '_overgenerated' in avm and not avm['strict']:
+		outline = '§' + outline
 
 	if 'passive' in avm and avm['passive']:
 		outline += '/+-P'

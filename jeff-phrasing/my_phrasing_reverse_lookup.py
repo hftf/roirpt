@@ -33,10 +33,7 @@ def raise_grammar_error(avm, message, d=None):
 		raise KeyError(message)
 	else:
 		if d:
-			# replace following line with debug() equivalent:
 			debug(avm, '', '', '', d, f'\033[31m× Bailing: \033[0m{message}')
-			# print('\t'*d + '\033[31m× Bailing: \033[0m', end='')
-		# print(message)
 		# avm['grammar'] = message
 		pass
 
@@ -69,30 +66,31 @@ reverse_verb_forms = {form: (verb, inflection) for verb, forms in verb_forms.ite
 reverse_contractions = reverse_dicts_with_repeats(
 	[contractions, negative_contractions, interrogative_contractions])
 all_contractions = [*contractions, *negative_contractions, *interrogative_contractions]
-# del reverse_STARTERS[''][1] # remove later
 
-def reverse_lookup(text, debug=False):
-	for avm in phrase_to_avms(text, debug=debug):
+def reverse_lookup(text, debug=False, strict=True):
+	for avm in phrase_to_avms(text, debug=debug, strict=strict):
 		yield from avm_to_outlines(avm)
 
-def phrase_to_avms(text, debug=False):
-	avm = {'extra_word': None, 'tense': None, 'debug': debug}
+def phrase_to_avms(text, debug=False, strict=True):
+	avm = {'extra_word': None, 'tense': None, 'debug': debug, 'strict': strict}
+
+	# words = text.split(' ')
 	# split words at space, except do not split the word "used to"
 	words = re.split(r'(?<!used(?= to)) ', text)
-	# words = text.split(' ')
 
 	for parse in parse_contractions(avm, words, 0, 0):
-		# print(' \033[32mPARSE:', parse, '\033[0m')
+		# Roundtrip check
 		try:
-			phrase = avm_to_phrase(parse)
+			phrase = avm_to_phrase(parse, strict=strict)
 		except KeyError as e:
 			raise_grammar_error(avm, e)
 			continue
-		# print(' \033[34mPHRASE:', phrase, '\033[0m', end='')
-		# print("❌✅"[phrase == text], end=' ')
-		# print('/'.join(avm_to_outline(parse)))
 		if phrase == text:
 			yield parse
+		elif debug:
+			print(' \033[32mPARSE:', parse, '\033[0m')
+			print(' \033[34mPHRASE:', phrase, '\033[0m', end=' ')
+			print('/'.join(avm_to_outlines(parse)))
 
 def insert(words, i, parts):
 	return words[:i] + parts + words [i+1:]
@@ -131,7 +129,7 @@ def parse_contractions(avm, words, i, d):
 		# Split "cannot" → "can not"
 		elif 'cannot' == word:
 				# debug(avm, words, f, i, d, f'= Found cannot: {word} → can not')
-				# Resolve "not" anyway and skip an iteration
+				# Resolve "not" here to skip an iteration
 				words = insert(words, i, ['can', 'not'])
 				avm['_question_required'] = False
 				i += 1
@@ -139,7 +137,7 @@ def parse_contractions(avm, words, i, d):
 		elif "'" in word:
 			if "aren't" == word:
 				debug(avm, words, f, i, d, f'> Branch for ambiguous aren\'t: {word} → am not')
-				# Resolve "not" anyway and skip an iteration
+				# Resolve "not" here to skip an iteration
 				yield from parse_contractions(dict(avm, contract=True, _question_required=True), insert(words, i, ['am', 'not']), i + 2, d+1)
 				debug(avm, words, f, i, d, f'< Resuming: {word} → am not')
 
@@ -161,11 +159,14 @@ def parse_contractions(avm, words, i, d):
 			# debug(avm, words, f, i, d, f'= Skip non-contraction: {word}')
 			i += 1
 	else:
-		if contraction_has_no_effect and 'contract' not in avm:
-			debug(avm, words, f, i, d, '> Branch since contraction has no effect')
-			yield from parse_cosubordinator(dict(avm, contract=True), words, d)
 		debug(avm, words, f, i, d, 'v Finished parsing contractions')
 		yield from parse_cosubordinator(avm, words, d)
+		if contraction_has_no_effect and 'contract' not in avm:
+			if not avm['strict']:
+				debug(avm, words, f, i, d, '> Branch since contraction has no effect')
+				yield from parse_cosubordinator(dict(avm, contract=True, _overgenerated=True), words, d)
+			else:
+				debug(avm, words, f, i, d, '§ Contraction has no effect, but strict mode is on')
 	
 def parse_cosubordinator(avm, words, d):
 	f = 'COSUB'
@@ -273,8 +274,11 @@ def parse_verbs(avm, words, i, d):
 		if avm['_select'] is not None and 'verb' not in avm:
 			debug(avm, words, f, i, d, '= No verb; trying with empty verb')
 			yield from parse_extra_word(dict(avm, verb='', tense='',   _select=None), words, i, d)
-			# maybe should only yield if would be different
-			yield from parse_extra_word(dict(avm, verb='', tense='ed', _select=None), words, i, d)
+			# maybe should only yield if would be different? for now, just yield in strict mode
+			if not avm['strict']:
+				yield from parse_extra_word(dict(avm, verb='', tense='ed', _select=None, _overgenerated=True), words, i, d)
+			else:
+				debug(avm, words, f, i, d, '§ Did not branch empty verb with past tense, as strict mode is on')
 			# raise_grammar_error(avm, f'Invalid select: 1')
 			return
 		# if '_do_support' in avm and avm['_do_support']:
@@ -301,17 +305,20 @@ def parse_verbs(avm, words, i, d):
 
 	if '_infinitive' in avm:
 		debug(avm, words, f, i, d, f'! Non-finite base form required by "to"')
-		avm['tense'] = ''
-	elif 'tense' not in avm or avm['tense'] is None:
+		if 'strict' in avm and avm['strict']:
+			avm['tense'] = ''
+	if 'tense' not in avm or avm['tense'] is None:
 		debug(avm, words, f, i, d, f'! Agreement required: {avm["_select"]}')
 		tense_found = False
 		for tense in ['', 'ed']:
-			# next to lines aren't strictly necessary but save space in debug
+			# this check isn't't strictly necessary but saves overhead/space in debug
 			selected_verb = select(verb, tense + avm['_select'], avm)
 			if selected_verb == inflected_verb:
 				debug(avm, words, f, i, d, f'> Branch for tense "{tense}" because found agreement {avm["_select"]}: {inflected_verb} == {verb}[{tense}{avm["_select"]}]')
 				yield from parse_verbs(dict(avm, tense=tense, _select=tense + avm['_select']), words, i, d+1)
-				# Some verbs (e.g. "", "used to") have the same form in both tenses, so flag to return instead of returning here
+				# Some verbs (e.g. "", "used to") have the same form in both tenses.
+				# Don't add §/_overgenerated since this is more coincidence than overgeneration/canonic issue.
+				# Flag to return later instead of returning here.
 				tense_found = True
 		if tense_found:
 			return
@@ -413,20 +420,28 @@ def parse_extra_word(avm, words, i, d):
 
 tests = {
 # "I'd like to go, but I can't cannot shouldn't've za't": [],
-"and looked":      ['SKP-LD', 'SKP-LD/+'],
-"and I":           ['SKPEU', 'SKPEUD', '+SKPEU', '+SKPEUD'],
+"and looked":      ['SKP-LD', 'SKP-LD/+',
+                  '§+SKP-LD'],
+"and not looked":  [],
+"and I":           ['SKPEU',  '§SKPEUD',
+                  '§+SKPEU', '§+SKPEUD'],
 "that isn't a":    ['+STWH*BT'],
 "I will not must": [],
-"I must not":      ['SWR*PBLGS'], # SWR*PBLGSD not supposed to work
-"there must":      ['STHR-PBLGS',                   'STHR-PBLGSD',  'STPHR-PBLGS',                    'STPHR-PBLGSD'],
-"there must be":   ['STHR-PBLGTS', 'STHR-PBLGTSZ',  'STHR-PBLGTSD', 'STPHR-PBLGTS', 'STPHR-PBLGTSZ',  'STPHR-PBLGTSD'],
-"there just":      ['STHR-PBLGSZ', 'STHR-PBLGTSDZ', 'STHR-PBLGSDZ', 'STPHR-PBLGSZ', 'STPHR-PBLGTSDZ', 'STPHR-PBLGSDZ'],
+"I must not":      ['SWR*PBLGS', 'SWR*PBLGSD'],
+"there must":      ['STHR-PBLGS',                       'STHR-PBLGSD',    'STPHR-PBLGS',                       'STPHR-PBLGSD',
+                  '§+STHR-PBLGS',                     '§+STHR-PBLGSD',  '§+STPHR-PBLGS',                     '§+STPHR-PBLGSD'],
+"there must be":   ['STHR-PBLGTS',   'STHR-PBLGTSZ',    'STHR-PBLGTSD',   'STPHR-PBLGTS',   'STPHR-PBLGTSZ',   'STPHR-PBLGTSD',
+                  '§+STHR-PBLGTS', '§+STHR-PBLGTSD',  '§+STHR-PBLGTSZ', '§+STPHR-PBLGTS', '§+STPHR-PBLGTSD', '§+STPHR-PBLGTSZ'],
+"there just":      ['STHR-PBLGSZ',   'STHR-PBLGTSDZ',   'STHR-PBLGSDZ',   'STPHR-PBLGSZ',   'STPHR-PBLGTSDZ',  'STPHR-PBLGSDZ',
+                  '§+STHR-PBLGSZ', '§+STHR-PBLGSDZ', '§+STHR-PBLGTSDZ', '§+STPHR-PBLGSZ', '§+STPHR-PBLGSDZ', '§+STPHR-PBLGTSDZ'],
 "I should not do": ['SWRO*RPD'],
+"to remember":     ['^STWR-RPL',   '^STWR-RPLD',   '^STKPWHR-RPL',   '^STKPWHR-RPLD',
+                  '§^+STWR-RPL', '§^+STWR-RPLD', '§^+STKPWHR-RPL', '§^+STKPWHR-RPLD'],
 }
 if __name__ == "__main__":
 	for text, expected_outlines in tests.items():
 		print(f'\n{text}')
-		outlines = reverse_lookup(text, debug=True)
+		outlines = reverse_lookup(text, debug=False, strict=False)
 		outlines = ['/'.join(outline) for outline in outlines]
 
 		# if all outlines are in expected_outlines and no others:
