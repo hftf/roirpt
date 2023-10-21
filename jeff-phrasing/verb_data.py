@@ -18,6 +18,7 @@ irregular_verb_data = {
 	'have':       {'en': 'had',  'ed': 'had',                 's': 'has'                        },
 	# Irregular verbs with 5 forms (2 different irregular past forms; predictable -s, -ing forms)
 	'become':     {'en': 'become',    'ed': 'became'},
+	'choose':     {'en': 'chosen',    'ed': 'chose' },
 	'come':       {'en': 'come',      'ed': 'came'  },
 	'do':         {'en': 'done',      'ed': 'did'   },
 	'forget':     {'en': 'forgotten', 'ed': 'forgot'},
@@ -168,7 +169,7 @@ verb_ender_data = {
 	'expect':     ('FPGT',   'that'), # was PGS. could be FPBG
 	'realize':    ('RLZ',    'that'), # was RLS
 	'mind':       ('FRPB',   None  ), # was PBLS
-	'suppose':    ('FPZ',    'that'),
+	'suppose':    ('FPZ',    'that'), # passive voice should use 'to'
 
 	# desire
 	'want':       ('P',      'to'  ),

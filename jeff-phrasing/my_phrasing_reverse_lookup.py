@@ -407,7 +407,7 @@ def parse_extra_word(avm, words, i, d):
 
 	if 'verb' in avm and avm['verb'] and \
 		not ('extra_word' in avm and avm['extra_word']) and \
-		words and words[i] in ['a', 'be', 'it', 'on', 'that', 'the', 'to', 'like']:
+		words and words[i] in ['a', 'be', 'it', 'on', 'that', 'the', 'to', 'like', 'with']:
 		if verb_ender_data[avm['verb']][1] == words[i]:
 			debug(avm, words, f, i, d, f'= Found extra word: {words[i]}')
 			yield from parse_extra_word(dict(avm, extra_word=words[i]), words[i+1:], i, d)
