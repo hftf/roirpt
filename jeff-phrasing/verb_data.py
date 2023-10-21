@@ -30,6 +30,7 @@ irregular_verb_data = {
 	'show':       {'en': 'shown',     'ed': 'showed'},
 	'take':       {'en': 'taken',     'ed': 'took'  },
 	# Irregular verbs with 4 forms (same irregular past and past participle form)
+	'bring':      {'en': 'brought'    },
 	'feel':       {'en': 'felt'       },
 	'find':       {'en': 'found'      },
 	'hear':       {'en': 'heard'      },
@@ -186,12 +187,14 @@ verb_ender_data = {
 	'make':       ('PBLG',   'a'   ), # was RPBL
 	'work':       ('RBG',    'on'  ),
 
+	# placement
 	'put':        ('PS',     'it'  ),
 	'set':        ('FS',     None  ), # was BLS
 	'let':        ('LS',     None  ),
 	'give':       ('GZ',     None  ),
 	'take':       ('RBT',    None  ),
-	'keep':       ('PBGS',   None  ),
+	'keep':       ('PG',     None  ), # was PBGS
+	'bring':      ('RPBG',   None  ),
 
 	# action, communication
 	'come':       ('BG',     'to'  ),
@@ -216,8 +219,12 @@ verb_ender_data = {
 	'recognize':  ('RGZ',    'that'),
 	'notice':     ('PBS',    'that'),
 	'talk':       ('T',      'to'  ), # was BLGT
-	# play
+
+	# play:    PLGS
 	# suppose: FPS
+	# choose:  FPZ
+	# provide: FRPZ
+	# start:   FRS
 }
 # Generates the all key combinations that are not used for verbs.
 # import itertools

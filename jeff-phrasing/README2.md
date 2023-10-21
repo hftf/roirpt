@@ -560,7 +560,8 @@ The following table shows the defaults.
 <tr><td colspan="2"><samp>let       </samp></td><td>                 </td><td><kbd>LS</kbd>    </td><td>=                         </td><td><b>L</b>et + <kbd>S</kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>give      </samp></td><td>                 </td><td><kbd>GZ</kbd>    </td><td>=                         </td><td><b>G</b>i<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
 <tr><td colspan="2"><samp>take      </samp></td><td>                 </td><td><kbd>RBT</kbd>   </td><td>=                         </td><td>arb.†</td><td></td></tr>
-<tr><td colspan="2"><samp>keep      </samp></td><td>                 </td><td><kbd>PBGS</kbd>  </td><td>=                         </td><td><b>K</b>ee<b>↶P</b> + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>keep      </samp></td><td>                 </td><td><kbd>PG</kbd>    </td><td>=                         </td><td><b>K</b><sup><var>G</var></sup>ee<b>↶P</b></td><td></td></tr>
+<tr><td colspan="2"><samp>bring     </samp></td><td>                 </td><td><kbd>RPBG</kbd>  </td><td>=                         </td><td><b>↶BR</b>i<b>NG</b></td><td></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">Verbs of action, communication</th></tr>
@@ -631,7 +632,7 @@ but <kbd>SKP-LD/+</kbd> is available as a fallback for <samp>and looked</samp>.
 ### Summary of differences with other phrasing systems
 
 <table>
-<thead><tr><th>Feature</th><th width="88">Jeff</th><th width="88">Josiah</th><th>Dope</th></tr></thead>
+<thead><tr><th>Feature</th><th width="88">Jeff</th><th width="88">Josiah</th><th>Default</th></tr></thead>
 <tbody align="left">
 <tr><td>Perfect     aspect (<samp>have</samp>)</td><td colspan="2"><kbd>F</kbd></td><td><kbd>E</kbd></td></tr>
 <tr><td>Progressive aspect (<samp>be</samp>)  </td><td colspan="2"><kbd>E</kbd></td><td><kbd>U</kbd></td></tr>
