@@ -484,8 +484,10 @@ It tries to be the most frequent collocation or most useful otherwise.
 Some examples of extra words:
 <samp>a</samp>, <samp>it</samp>, <samp>to</samp>, <samp>the</samp>, <samp>that</samp>, <samp>like</samp>, <samp>on</samp>.
 
-The verb enders are defined in [`verb_data.py:127`](./verb_data.py#L127).
+The verb enders are defined in [`verb_data.py:135`](./verb_data.py#L135).
 The following table shows the defaults.
+
+### Verb ender table
 
 <table>
 <thead><tr><th>Verb</th><th colspan="2">Extra word</th><th>Ender</th><th>Jeff’s</th><th>Explanation</th><th>Notes</th></tr></thead>
@@ -544,7 +546,7 @@ The following table shows the defaults.
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">More verbs</th></tr>
-<tr><td colspan="2"><samp>become    </samp></td><td><samp>a   </samp></td><td><kbd>BGS</kbd>   </td><td><kbd><del>RPBG</del></kbd></td><td>be<b>K</b>ome + <kbd>S</kbd></td><td></td></tr>
+<tr><td colspan="2"><samp>become    </samp></td><td><samp>a   </samp></td><td><kbd>BGS</kbd>   </td><td><kbd><del>RPBG</del></kbd></td><td><b>B</b>e<b>K</b>ome + <kbd>S</kbd></td><td></td></tr>
 <tr><td><samp>change    </samp></td><td align="right" colspan="2">→ <var>expect</var> <kbd>FPGT</kbd><br></td><td><kbd>FPG</kbd>   </td><td><kbd><del>PBGZ</del></kbd></td><td><b>CH</b>an<b>G</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>consider  </samp></td><td>                 </td><td><kbd>RBGS</kbd>  </td><td><kbd><del>RBGZ</del></kbd></td><td><b>K</b>on<b>S</b>ide↶<b>R</b></td><td></td></tr>
 <tr><td colspan="2"><samp>find      </samp></td><td><samp>that</samp></td><td><kbd>FPB</kbd>   </td><td><kbd><del>PBLG</del></kbd></td><td><b>F</b>i<b>N</b>d</td><td></td></tr>
@@ -583,7 +585,7 @@ The following table shows the defaults.
 <tbody>
 <tr><th align="left" colspan="7">Verbs of perception</th></tr>
 <tr><td colspan="2"><samp>feel      </samp></td><td><samp>like</samp></td><td><kbd>FL</kbd>    </td><td><kbd><del>LT  </del></kbd></td><td><b>F</b>ee<b>L</b></td><td></td></tr>
-<tr><td colspan="2"><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>PG</kbd>    </td><td>=                         </td><td>arb.†</td><td>TODO remap <kbd>FRP</kbd>?</td></tr>
+<tr><td colspan="2"><samp>hear      </samp></td><td><samp>that</samp></td><td><kbd>FRP</kbd>   </td><td>=                         </td><td><b>H</b>ea<b>R</b> + <kbd>P</kbd></td><td></td></tr>
 <tr><td><samp>see       </samp></td><td align="right" colspan="2">→ <var>talk to</var> <kbd>TS</kbd><br></td><td><kbd>S</kbd>     </td><td>=                         </td><td><b>S</b>ee</td><td></td></tr>
 <tr><td><samp>look      </samp></td><td align="right" colspan="2">→ <var>tell</var> <kbd>LT</kbd><br></td><td><kbd>L</kbd>     </td><td>=                         </td><td><b>L</b>ook</td><td></td></tr>
 <tr><td colspan="2"><samp>notice    </samp></td><td><samp>that</samp></td><td><kbd>PBS</kbd>   </td><td>🆕                        </td><td><b>N</b>oti<b>S</b>e</td><td></td></tr>

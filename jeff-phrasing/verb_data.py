@@ -130,7 +130,7 @@ def inflect(verb, suffix, exceptions=None):
 
 # Theory design guidelines:
 # 1. verbs with T in present ender should pair with another verb that doesn't have an extra word
-# 2. verbs with Z in present ender should not have extra word (only due to finger gymnastics)
+# 2. verbs with Z in present ender should not have extra word (only due to finger gymnastics of -TZ)
 # but maybe use S for extra word?
 verb_ender_data = {
 	'':           ('',       None  ),
@@ -211,7 +211,7 @@ verb_ender_data = {
 	'tell':       ('LT',     None  ), # was RLT
 	# sensory, perception
 	'feel':       ('FL',     'like'), # was LT
-	'hear':       ('PG',     'that'), # TODO remap FRP?
+	'hear':       ('FRP',    'that'), # was PG
 	'see':        ('S',      None  ),
 	'look':       ('L',      None  ), # TODO remap LGS?
 
@@ -223,8 +223,14 @@ verb_ender_data = {
 	# play:    PLGS
 	# suppose: FPS
 	# choose:  FPZ
-	# provide: FRPZ
+	# provide: FRPZ, RPZ
 	# start:   FRS
+	# be able: BLZ
+	
+	# List of unused combinations and unassigned verbs that might go well with them:
+	# 2 keys: FB FG FZ RZ BZ
+	# 3 keys: FRP FRB FRL FRS FRZ FPS FPZ FBL FBS FBZ FLG FLS FGS FGZ RPG RPS RPZ RBL RBZ RLS RGS PBZ PGS PGZ BLS BLZ BGZ LGS
+	# 4 keys: FRPL FRPG FRPS FRPZ FRBL FRBG FRBS FRBZ FRLG FRLS FRLZ FRGS FRGZ FPBL FPBG FPBS FPBZ FPLG FPLS FPLZ FPGS FPGZ FBLG FBLS FBLZ FBGS FBGZ FLGS FLGZ RPBG RPBS RPBZ RPLG RPLZ RPGS RPGZ RBLG RBLS RBLZ RBGZ RLGS RLGZ PBLS PBLZ PBGZ PLGS PLGZ BLGS BLGZ
 }
 # Generates the all key combinations that are not used for verbs.
 # import itertools
