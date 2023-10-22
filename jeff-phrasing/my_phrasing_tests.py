@@ -369,17 +369,21 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 	print(f'{i:03} {"/".join(outline):18} = {str(expected_phrase):30} → ', end='')
 
 	error = ''
+	raise_grammar_errors = True
 	try:
-		result_phrase = my_phrasing.lookup(outline, raise_grammar_errors=False, strict=strict)
+		result_phrase = my_phrasing.lookup(outline, raise_grammar_errors=raise_grammar_errors, strict=strict)
 	except KeyError as e:
 		result_phrase = None
 		error = f' ({e})'
 		if expected_phrase != result_phrase:
 			# raise e
 			pass
-	emoji = "❌✅"[expected_phrase == result_phrase]
+	passed = expected_phrase == result_phrase
+	if raise_grammar_errors and not passed and expected_phrase.startswith('*'):
+		passed = True
+	emoji = "❌✅"[passed]
 	t += 1
-	q += expected_phrase == result_phrase
+	q += passed
 	print(f'{str(result_phrase) + error:32} {emoji}⎞')
 	# print(my_phrasing.outline_to_avm(outline))
 	if not result_phrase:

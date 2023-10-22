@@ -89,7 +89,7 @@ def stroke_to_avm(stroke, avm={}, raise_grammar_errors=True):
 	if not valid_ender:
 		raise KeyError(f'Ender "{ender}" not found')
 	if 'passive' in avm and avm['passive'] and ENDERS[ender]['verb'] in verbs_forbidding_passive:
-		raise_grammar_error(f'Passive voice does not apply to ender "{ENDERS[ender]}"', avm, raise_grammar_errors)
+		raise_grammar_error(f'Passive voice does not apply to verb "{ENDERS[ender]["verb"]}"', avm, raise_grammar_errors)
 
 	if valid_simple:
 		avm['cosubordinator'] = SIMPLE_STARTERS[simple_starter]
