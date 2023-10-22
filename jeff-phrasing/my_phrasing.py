@@ -11,7 +11,7 @@ sys.path.append(jeff_dir)
 
 from noun_data import noun_data,  STARTERS, SIMPLE_STARTERS, SIMPLE_PRONOUNS, \
 	simple_starters_requiring_subject, simple_starters_forbidding_inversion
-from verb_data import verb_forms, verb_ender_data, MODALS, ENDERS, \
+from verb_data import verb_forms, verb_ender_data, MODALS, ENDERS, adverbs, \
 	contractions, negative_contractions, interrogative_contractions, \
 	verbs_without_do_support, verbs_forbidding_existential_there, verbs_forbidding_passive
 from jeff_phrasing import NON_PHRASE_STROKES
@@ -131,6 +131,8 @@ def select(verb, select, avm, raise_grammar_errors=True):
 		# Only be/have/get have irregular forms; most others are stripped here
 		select = select.rstrip('123Pp')
 	if verb == 'used to':
+		select = ''
+	elif verb in adverbs:
 		select = ''
 	if not select in forms:
 		# likely an illegal inflection of a modal ('to may', 'we maying')

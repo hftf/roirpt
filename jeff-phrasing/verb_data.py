@@ -91,6 +91,7 @@ verbs_forbidding_passive = [
 defective_verbs = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
 verbs_without_infinitive = defective_verbs[:5] # can, will, shall, may, must; used to is defective but has infinitive; adverbs (just, really) do not conjugate
 verbs_without_do_support = [None, 'be'] + verbs_without_infinitive
+adverbs = defective_verbs[5:] # just, really
 
 # For regular verb, exceptions is None or {}
 def inflect(verb, suffix, exceptions=None):

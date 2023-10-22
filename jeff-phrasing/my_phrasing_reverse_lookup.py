@@ -1,7 +1,7 @@
 import re
 from collections import defaultdict
 from my_phrasing import avm_to_phrase, avm_to_outlines
-from verb_data import verbs_without_do_support, defective_verbs, verbs_without_infinitive
+from verb_data import verbs_without_do_support, defective_verbs, verbs_without_infinitive, adverbs
 
 # from my_phrasing import select
 def select(verb, select, avm, raise_grammar_errors=True):
@@ -14,9 +14,9 @@ def select(verb, select, avm, raise_grammar_errors=True):
 		select = select.rstrip('123Pp')
 	if verb == 'used to':
 		select = ''
+	elif verb in adverbs:
+		select = ''
 	if not select in forms:
-		if verb in ['just', 'really']:
-			select = ''
 		# likely an illegal inflection of a modal ('to may', 'we maying')
 		# raise_grammar_error(f'No inflection "{select}" of (defective) verb "{verb}"', avm, raise_grammar_errors)
 		raise_grammar_error(avm, f'No inflection "{select}" of (defective) verb "{verb}"')
@@ -330,7 +330,11 @@ def parse_verbs(avm, words, i, d):
 			raise_grammar_error(avm, f'Invalid inflection: {inflected_verb}', d)
 			return
 	
-	if verb in defective_verbs and avm['_select'] in ['en', 'enP', 'ing']:
+	if verb in adverbs:
+		if 'passive' in avm and avm['passive']:
+			raise_grammar_error(avm, f'Invalid passive with adverb: {inflected_verb}', d)
+			return
+	elif verb in defective_verbs and avm['_select'] in ['en', 'enP', 'ing']:
 		raise_grammar_error(avm, f'Invalid selection of defective verb: {verb}[{avm["_select"]}]', d)
 		return
 	if verb in verbs_without_do_support and '_do_support' in avm and '_do_support_do' in avm:
@@ -442,6 +446,8 @@ tests = {
 "I should not do": ['SWRO*RPD'],
 "to remember":     ['^STWR-RPL',   '^STWR-RPLD',   '^STKPWHR-RPL',   '^STKPWHR-RPLD',
                   '§^+STWR-RPL', '§^+STWR-RPLD', '§^+STKPWHR-RPL', '§^+STKPWHR-RPLD'],
+"I really":        ['SWR-RLG', 'SWR-RLGD'],
+"I am really":     ['SWRURLG'],
 }
 if __name__ == "__main__":
 	for text, expected_outlines in tests.items():
