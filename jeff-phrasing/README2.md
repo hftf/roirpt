@@ -3,7 +3,7 @@
 ## Background
 
 A stenographic phrasing system allows for systematically writing commonly-encountered phrases,
-and especially ones that combine a starter (pronoun, optional relativizer),
+and especially ones that combine a starter (subject pronoun, optional relativizer),
 a medial (auxiliary, modal, negation, adverb, etc.),
 and an ender (verb and tense).
 For example, the phrase “<samp>who could it have been happening to</samp>” has
@@ -31,6 +31,9 @@ the ender <kbd>PZ</kbd> specifies the main verb <samp>happen</samp>
 and paired with <kbd>T</kbd> specifies the extra word <samp>to</samp>,
 and the ender <kbd>D</kbd> specifies past tense.
 So altogether, pressing <kbd>^KPWHAEUPTDZ</kbd> gives the phrase <samp>could it have been happening to</samp>.
+Since relativizers and modals are mutually exclusive (they share the same keyspace) –
+that is, <samp>who</samp> cannot be used with <samp>can</samp> in the same phrase –
+the earlier example requires two strokes: e.g. <kbd>WHO/^KPWHAEUPTDZ</kbd>.
 
 Important precursors of this project include the phrasing systems of
 [Aerick](https://github.com/aerickt/aerick-phrasing),
