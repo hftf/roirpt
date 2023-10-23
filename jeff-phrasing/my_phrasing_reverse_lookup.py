@@ -312,13 +312,13 @@ def parse_verbs(avm, words, i, d):
 		if 'negation' in avm or 'strict' in avm and avm['strict']:
 			tenses = ['']
 	if 'tense' not in avm or avm['tense'] is None:
-		debug(avm, words, f, i, d, f'! Agreement required: {avm["_select"]}')
+		debug(avm, words, f, i, d, f'! Agreement required: [{avm["_select"]}]')
 		tense_found = False
 		for tense in tenses:
 			# this check isn't strictly necessary but saves overhead/space in debug
 			selected_verb = select(verb, tense + avm['_select'], avm)
 			if selected_verb == inflected_verb:
-				debug(avm, words, f, i, d, f'> Branch for tense "{tense}" because found agreement {avm["_select"]}: {inflected_verb} == {verb}[{tense}{avm["_select"]}]')
+				debug(avm, words, f, i, d, f'> Branch for tense "{tense}" because found agreement [{avm["_select"]}]: "{inflected_verb}" == {verb}[{tense}{avm["_select"]}]')
 				yield from parse_verbs(dict(avm, tense=tense, _select=tense + avm['_select']), words, i, d+1)
 				# Some verbs (e.g. "", "used to") have the same form in both tenses.
 				# Don't add §/_overgenerated since this is more coincidence than overgeneration/canonic issue.
@@ -354,7 +354,7 @@ def parse_verbs(avm, words, i, d):
 			f'but "{inflected_verb}" is {verb}[{inflection}]', d)
 		return
 
-	debug(avm, words, f, i, d, f'  Agreement {avm["_select"]} matched by: {inflected_verb} == {verb}[{avm["_select"]}]')
+	debug(avm, words, f, i, d, f'  Agreement [{avm["_select"]}] matched by: "{inflected_verb}" == {verb}[{avm["_select"]}]')
 
 	# verbs_remaining = any(w in reverse_verb_forms for w in words[i+1:])
 	if verb in reverse_MODALS:
