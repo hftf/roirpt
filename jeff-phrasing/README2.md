@@ -22,7 +22,8 @@ rather than static JSON dictionaries as the latter would be unnecessarily large 
 
 The user presses a combination of keys to specify all the starters, medials, and enders,
 and the phrasing system handles conjugation, word ordering, and so on.
-The starter <kbd>KPWH</kbd> specifies the pronoun <samp>it</samp>;
+For example,
+the starter <kbd>KPWH</kbd> specifies the pronoun <samp>it</samp>;
 the medial <kbd>A</kbd> specifies the modal <samp>can</samp>,
 the medial <kbd>EU</kbd> specifies the perfect progressive aspect,
 the medial <kbd>^</kbd> specifies subject–auxiliary inversion;
@@ -259,7 +260,7 @@ Look for dicts in files named `*_data.py`.
 ### Pictographic key layout
 
 There are two types of phrase:
-phrases without a relativizer (just a subject), and phrases with a relativizer (and a subject).
+phrases without a relativizer, and phrases with a relativizer.
 In Jeff phrasing, these are called “full form” and “simple form” respectively.
 
 Each region of the keyboard controls a different feature of the phrase.
@@ -413,10 +414,11 @@ and progressive aspect indicates continuous actions.
 
 The modality (or mood) can be <samp>can</samp>, <samp>will</samp>, <samp>shall</samp>, or null.
 The forms <samp>could</samp>, <samp>would</samp>, <samp>should</samp> are selected by past tense.
-(Other modals in English include <samp>may</samp>/<samp>might</samp>, <samp>must</samp>, <samp>need to</samp>, etc.,
+(Other modals in English include <samp>may</samp>/<samp>might</samp>, <samp>must</samp>,
+<samp>need to</samp>, <samp>be able to</samp>, etc.,
 but these are not available as phrase-level modals, only as ad-hoc enders.)
 
-Modals are defective verbs (so cannot inflect, except possibly for tense).
+Modals are usually defective verbs (so can only be finite, inflecting for tense).
 
 > [!NOTE]
 > The so-called “future tense” is treated here as a <samp>will</samp> modal, not a tense,
@@ -450,6 +452,9 @@ and so it is governed by (attaches after) the first verb.
 This means that e.g. <samp>he could not have gone</samp> is possible in the phrasing system,
 while <samp>\*he could have not gone</samp> is not.
 
+A similar rule applies to negated infinitives:
+<samp>not to go</samp> is possible, but <samp>\*to not go</samp> is not.
+
 || Polarity
 -|-
 <kbd> </kbd> | Positive
@@ -478,7 +483,7 @@ Some defective verbs and non-verbs (common adverbs) are also available.
 
 > [!NOTE]
 > Main-verb <samp>have</samp> can rarely take do-support (e.g. <samp>have you no shame</samp>),
-but this is archaic in most English dialects.
+but this is archaic in most English dialects, so is not supported.
 
 ### Extra word
 
@@ -537,7 +542,7 @@ The following table shows the defaults.
 <tr><td colspan="2"><samp>expect    </samp></td><td><samp>that</samp></td><td><kbd>FPGT</kbd>  </td><td><kbd><del>PGS </del></kbd></td><td>e<b>XP</b>e<b>C</b><sup><var>G</var></sup><b>T</b></td><td></td></tr>
 <tr><td colspan="2"><samp>realize   </samp></td><td><samp>that</samp></td><td><kbd>RLZ</kbd>   </td><td><kbd><del>RLS </del></kbd></td><td><b>R</b>ea<b>L</b>i<b>Z</b>e</td><td></td></tr>
 <tr><td colspan="2"><samp>mind      </samp></td><td>                 </td><td><kbd>FRPB</kbd>  </td><td><kbd><del>PBLS</del></kbd></td><td><b>M</b>i<b>N</b>d</td><td></td></tr>
-<tr><td colspan="2"><samp>suppose   </samp></td><td><samp>that</samp></td><td><kbd>FPZ</kbd>   </td><td>🆕                        </td><td><b>S</b>u<b>P</b>po<b>Z</b>e</td><td></td></tr>
+<tr><td colspan="2"><samp>suppose   </samp></td><td><samp>that</samp></td><td><kbd>FPZ</kbd>   </td><td>🆕                        </td><td><b>S</b>u<b>PP</b>o<b>Z</b>e</td><td></td></tr>
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">Verbs of desire</th></tr>
@@ -658,6 +663,7 @@ but <kbd>SKP-LD/+</kbd> is available as a fallback for <samp>and looked</samp>.
 <tr><td>“Simple form” subject keys</td><td><kbd>*EU</kbd></td><td><kbd>^EU</kbd></td><td><kbd>*EU</kbd></td></tr>
 <tr><td>“Simple form” negation    </td><td>n/a    </td><td><kbd>*</kbd>  </td><td>n/a</td></tr>
 <tr><td>“Simple form” inversion   </td><td>n/a    </td><td>n/a   </td><td><kbd>^</kbd></td></tr>
+<tr><td>“Simple form” allows empty subject</td><td>no    </td><td>yes   </td><td>yes</td></tr>
 </tbody></table>
 
 ## Learning and practice
@@ -713,6 +719,7 @@ then, for now, you can try to replace it with a hard-coded path:
 * Write testing instructions
 * Consider dropping the terms starter/medial/ender entirely
 	* For “chord”?
+* Consider grouping verbs by arbitrary added key (e.g. <kbd>S</kbd>, <kbd>Z</kbd>)
 * Add some Josiah extensions
 * Add examples in readme
 
