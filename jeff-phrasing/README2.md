@@ -508,7 +508,7 @@ The following table shows the defaults.
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">Modal verbs (auxiliary verbs)</th></tr>
-<tr><td colspan="2"><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion</td></tr>
+<tr><td colspan="2"><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion; only useful in “simple form”</td></tr>
 <tr><td colspan="2"><samp>will      </samp></td><td>                 </td>                          <td><kbd><del>RBGS</del></kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>shall     </samp></td><td>                 </td>                          <td><kbd><del>RBL </del></kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>may       </samp></td><td><samp>be  </samp></td><td><kbd>PL</kbd>    </td><td>=                         </td><td><b>M</b>ay</td><td>past tense: <samp>might</samp></td></tr>
@@ -579,7 +579,7 @@ The following table shows the defaults.
 <tr><td colspan="2"><samp>give      </samp></td><td>                 </td><td><kbd>GZ</kbd>    </td><td>=                         </td><td><b>G</b>i<b>V</b><sup><var>Z</var></sup>e</td><td></td></tr>
 <tr><td colspan="2"><samp>take      </samp></td><td>                 </td><td><kbd>RBT</kbd>   </td><td>=                         </td><td>arb.†</td><td></td></tr>
 <tr><td colspan="2"><samp>keep      </samp></td><td>                 </td><td><kbd>PG</kbd>    </td><td>=                         </td><td><b>K</b><sup><var>G</var></sup>ee<b>↶P</b></td><td></td></tr>
-<tr><td colspan="2"><samp>bring     </samp></td><td>                 </td><td><kbd>RPBG</kbd>  </td><td>=                         </td><td><b>↶BR</b>i<b>NG</b></td><td></td></tr>
+<tr><td colspan="2"><samp>bring     </samp></td><td>                 </td><td><kbd>RPBG</kbd>  </td><td>=                         </td><td><b>B↶R</b>i<b>NG</b></td><td></td></tr>
 <tr><td colspan="2"><samp>provide   </samp></td><td>                 </td><td><kbd>RPZ</kbd>   </td><td>=                         </td><td><b>P↶R</b>o<b>V</b><sup><var>Z</var></sup>ide</td><td></td></tr>
 </tbody>
 <tbody>
@@ -676,9 +676,24 @@ However, a drill on [Steno Jig](https://joshuagrams.github.io/steno-jig/) often 
 many sentences with high-frequency phrases:
 [Markov-chain (randomly) generated sentences](https://joshuagrams.github.io/steno-jig/markov.html?word_count=100&seed=0.99831923480476&hints=1&show_timer=1).
 
-The phrasing system should be relatively straightforward to pick up; just read this documentation, then start using it.
+The phrasing system should be relatively straightforward to pick up;
+just read this documentation, then start using it.
 It is recommended to make liberal use of the suggestions window
 and [tapey-tape](https://github.com/rabbitgrowth/plover-tapey-tape).
+
+### How to learn a phrasing system
+
+1. Read/skim the documentation once. (20 minutes)
+2. Go back over the documentation and pick out some of the examples.
+Break up the outlines into their constituent parts to confirm you understand them. (20 minutes)
+3. Read/skim the code once. (optional)
+4. Come up with some pictographics or mnemonics, or create a cheat sheet,
+to arrange some of what you learned from the above in your head. (20 minutes)
+5. Write some text while consulting any of Plover’s lookup panels and stroke-saving suggestions in `tapey_tape.txt`.
+6. Practice on the Steno Jig drill linked above.
+7. Repeat any of the above steps as desired.
+
+You can probably get acquainted with a phrasing system to a basic level in as little as one day this way.
 
 ## Installation
 
