@@ -326,7 +326,7 @@ Relativizers are so named because they introduce a relative (or subordinate) cla
 also called a wh-clause as it often begins with a wh-word (what, who, which, when, where, why, how).
 
 **Relativizers cannot be used with modality, aspect, or negation,**
-as they overload the keyspace used by both “full form” subjects and modals,
+as they overload the keyspace used by both “full form” subject pronouns and modals,
 and are used in conjunction with a limited set of subject pronouns that overload aspect and negation.
 This limitation may be why it is counterintuitively called “simple form” in Jeff phrasing,
 despite adding an extra initial word.
@@ -347,7 +347,8 @@ despite adding an extra initial word.
 ### Subject pronoun
 
 Subjects specify the person (first, second, third) and number (singular, plural) of the phrase.
-These features surface as inflections on the tensed (finite) verb.
+These features surface as inflections on the tensed (finite) verb,
+which is a phenomenon called subject–verb agreement (concord).
 
 Two third-person null subjects exist in “full form”:
 <kbd>STWR</kbd> (singular) and <kbd>STKPWHR</kbd> (plural).
@@ -692,6 +693,8 @@ to arrange some of what you learned from the above in your head. (20 minutes)
 5. Write some text while consulting any of Plover’s lookup panels and stroke-saving suggestions in `tapey_tape.txt`.
 6. Practice on the Steno Jig drill linked above.
 7. Repeat any of the above steps as desired.
+<!-- Brush up on linguistic concepts and terminology if needed;
+	the internet abounds with resources for this -->
 
 You can probably get acquainted with a phrasing system to a basic level in as little as one day this way.
 
@@ -744,6 +747,7 @@ then, for now, you can try to replace it with a hard-coded path:
 ### Long-term
 
 * Create better resources
+	* Video lessons? Interactive lessons?
 * Handle unwanted suffix keys
 * Fix conflicts with my dictionaries
 * Singular/plural distinction in relativizers
