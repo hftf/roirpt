@@ -199,6 +199,7 @@
 "TAOEUPL/STAFRP": "timestamp",
 "TAOEUPL/SPA*PB": "timespan",
 "TAOEUPL/KAOERP": "timekeeper",
+"TAOEUPL/KAOEPG": "timekeeping",
 "TAOL/KEUT": "toolkit",
 "TAOL/PWOBGS": "toolbox",
 "TA*PBG/TOP": "tanktop",
