@@ -1,5 +1,6 @@
 {
 "STK-PB": "discontinue",
+"STK-PBGS": "discontinuation",
 "STK-PBT": "discontinuity",
 "STK-PBS": "discontinuous",
 "STHR-PLT": "settlement",
@@ -37,6 +38,7 @@
 "TPH-RPBT": "underneath",
 "TPH-LGS": "nationally",
 "TPR-FT": "forfeit",
+"TP-RB": "finish",
 "TP-RBLT": "efficiently",
 "TP-LG": "typical",
 "THR-PBL": "continually",
