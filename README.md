@@ -149,7 +149,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><kbd>^TKP</kbd></td>
 <td><code>(INK)</code></td>
 <td><samp>conc-</samp><br><samp>conk-</samp></td>
-<td><kbd>K</kbd></td>
+<td><kbd>K</kbd> or<br><kbd>K*</kbd></td>
 <td><code>(K)</code></td>
 </tr>
 <tr>
@@ -158,7 +158,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><kbd>^STKPW</kbd></td>
 <td><code>(ING)</code></td>
 <td><samp>cong-</samp></td>
-<td><kbd>K</kbd></td>
+<td><kbd>K</kbd> or<br><kbd>K*</kbd></td>
 <td><code>(K)</code></td>
 </tr>
 </tbody>
@@ -166,7 +166,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <tr><td colspan="7"><strong>Nasal + affricate</strong></td></tr>
 <tr>
 <td>NJ</td>
-<td><samp>    </samp> <samp>enj-</samp> <samp>inj-</samp><br><samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp>³</td>
+<td><samp>    </samp> <samp>enj-</samp> <samp>inj-</samp><br><samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp>³</td>
 <td><kbd>^SKWHR</kbd></td>
 <td><code>(INJ)</code></td>
 <td><samp>conj-</samp><br><samp>cong-</samp>³</td>
@@ -178,7 +178,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <tr><td colspan="7"><strong>Nasal + fricative</strong></td></tr>
 <tr>
 <td>NF</td>
-<td><samp>    </samp> <samp>enf-</samp> <samp>inf-</samp></td>
+<td><samp>    </samp> <samp>enf-</samp> <samp>inf-</samp></td>
 <td><kbd>TPW</kbd></td>
 <td><code>(INF)</code></td>
 <td><samp>comf-</samp><br><samp>conf-</samp></td>
@@ -187,7 +187,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 </tr>
 <tr>
 <td>NV</td>
-<td><samp>    </samp> <samp>env-</samp> <samp>inv-</samp></td>
+<td><samp>    </samp> <samp>env-</samp> <samp>inv-</samp></td>
 <td><kbd>TPWH</kbd></td>
 <td><code>(NW)</code></td>
 <td><samp>conv-</samp></td>
@@ -208,7 +208,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <tr><td colspan="7"><strong>Nasal + fricative + stop</strong></td></tr>
 <tr>
 <td>NST</td>
-<td><samp>    </samp><samp>    </samp> <samp>inst-</samp></td>
+<td><samp>    </samp><samp>    </samp> <samp>inst-</samp></td>
 <td><kbd>STPH</kbd></td>
 <td><code>(SN)</code></td>
 <td><samp>const-</samp></td>
