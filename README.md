@@ -103,7 +103,7 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 
 #### More complex compound starters?
 
-Recently thinking about adding a few more starters, inspired by [wooningeire](https://github.com/wooningeire/plover-dicts.pub/tree/pub). Most seem rare though (not counting productive prefixes like <samp>in-</samp>). My dictionary already contains some ad-hoc solutions (like <samp>anthology</samp> <kbd>SPWO\*LG</kbd> `(INT*OLG)`) that try to get away with dropping consonants (<samp>enthusiast</samp> <kbd>^THAOUFT</kbd>), which I mostly dislike.
+Recently thinking about adding a few more starters, inspired by [wooningeire](https://github.com/wooningeire/plover-dicts.pub/tree/pub). Most seem rare though (not counting productive prefixes like <samp>in-</samp>). My dictionary contains some ad-hoc solutions, e.g. <samp>anthology</samp> <kbd>SPWO\*LG</kbd> `(INT*OLG)` that try to get away with dropping consonants, e.g. <samp>enthusiast</samp> <kbd>^THAOUFT</kbd> `(^THUUſT)`, which I mostly dislike.
 
 Type | Starter | Steno | Explanation | Example
 -|-|-|-|-
