@@ -78,10 +78,11 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 </tr>
 </thead>
 <tbody>
+<tr></tr>
 <tr>
 <td></td>
-<td colspan="3" align="center"><strong>no prefix</strong></td>
-<td colspan="3" align="center"><strong>with <samp>com-</samp> <samp>con-</samp> <kbd>K-</kbd></strong></td>
+<th colspan="3"><strong>no prefix</strong></td>
+<th colspan="3"><strong>with <samp>com-</samp> <samp>con-</samp> <kbd>K-</kbd> prefix</strong></td>
 </tr></tbody>
 <tbody>
 <tr><td colspan="7"><strong>Nasal + nasal</strong></td></tr>
@@ -101,8 +102,11 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><code>(^N)</code></td>
 <td><samp>conn-</samp></td>
 <td><kbd>K</kbd></td>
-<td><code>(K)</code></td></tr></tbody><tbody><tr><td colspan="7"><strong>Nasal + stop</strong></td>
+<td><code>(K)</code></td>
 </tr>
+</tbody>
+<tbody>
+<tr><td colspan="7"><strong>Nasal + stop</strong></td></tr>
 <tr>
 <td>MP</td>
 <td><samp>amp-</samp> <samp>emp-</samp> <samp>imp-</samp></td>
@@ -155,8 +159,11 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><code>(ING)</code></td>
 <td><samp>cong-</samp></td>
 <td><kbd>K</kbd></td>
-<td><code>(K)</code></td></tr></tbody><tbody><tr><td colspan="7"><strong>Nasal + affricate</strong></td>
+<td><code>(K)</code></td>
 </tr>
+</tbody>
+<tbody>
+<tr><td colspan="7"><strong>Nasal + affricate</strong></td></tr>
 <tr>
 <td>NJ</td>
 <td><samp>    </samp> <samp>enj-</samp> <samp>inj-</samp><br><samp>ang-</samp> <samp>eng-</samp> <samp>ing-</samp>³</td>
@@ -164,8 +171,11 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><code>(INJ)</code></td>
 <td><samp>conj-</samp><br><samp>cong-</samp>³</td>
 <td>?</td>
-<td></td></tr></tbody><tbody><tr><td colspan="7"><strong>Nasal + fricative</strong></td>
+<td></td>
 </tr>
+</tbody>
+<tbody>
+<tr><td colspan="7"><strong>Nasal + fricative</strong></td></tr>
 <tr>
 <td>NF</td>
 <td><samp>    </samp> <samp>enf-</samp> <samp>inf-</samp></td>
@@ -191,8 +201,11 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><code>(SN)</code></td>
 <td><samp>cons-</samp><br><samp>conc-</samp>³</td>
 <td><kbd>SK</kbd></td>
-<td><code>(SK)</code></td></tr></tbody><tbody><tr><td colspan="7"><strong>Nasal + fricative + stop</strong></td>
+<td><code>(SK)</code></td>
 </tr>
+</tbody>
+<tbody>
+<tr><td colspan="7"><strong>Nasal + fricative + stop</strong></td></tr>
 <tr>
 <td>NST</td>
 <td><samp>    </samp><samp>    </samp> <samp>inst-</samp></td>
@@ -200,68 +213,58 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><code>(SN)</code></td>
 <td><samp>const-</samp></td>
 <td>?</td>
-<td></td></tr></tbody><tbody><tr><td colspan="7"><strong>Stop + fricative</strong></td>
+<td></td>
 </tr>
+</tbody>
+<tbody>
+<tr><td colspan="7"><strong>Stop + fricative</strong></td></tr>
 <tr>
 <td>BS</td>
 <td><samp>abs-</samp> <samp>obs-</samp></td>
 <td><kbd>SPW</kbd> or<br><kbd>^SPW</kbd>²</td>
 <td><code>(SB)</code> or<br><code>(^SB)</code>²</td>
-<td></td>
-<td></td>
-<td></td>
+<td rowspan="4" colspan="3">n/a</td>
 </tr>
 <tr>
 <td>DF</td>
 <td><samp>def-</samp> <samp>dif-</samp></td>
 <td><kbd>TKP</kbd> or<br><kbd>TKW</kbd>¹</td>
 <td><code>(DF)</code> or<br><code>(DW)</code>¹</td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>DV</td>
 <td><samp>dev-</samp> <samp>div-</samp></td>
 <td><kbd>TKW</kbd></td>
 <td><code>(DW)</code></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 <tr>
 <td>DS</td>
 <td><samp>des-</samp> <samp>dis-</samp><br><samp>dec-</samp>³<br><samp>desc-</samp> <samp>disc-</samp>³</td>
 <td><kbd>STK</kbd></td>
 <td><code>(DS)</code></td>
-<td></td>
-<td></td>
-<td></td></tr></tbody><tbody><tr><td colspan="7"><strong>Fricative + fricative</strong></td>
 </tr>
+</tbody>
+<tbody>
+<tr><td colspan="7"><strong>Fricative + fricative</strong></td></tr>
 <tr>
 <td>SF</td>
 <td><samp>suff-</samp> <samp>surf-</samp></td>
 <td><kbd>STP</kbd></td>
 <td><code>(SF)</code></td>
-<td></td>
-<td></td>
-<td></td>
+<td rowspan="2" colspan="3">n/a</td>
 </tr>
 <tr>
 <td>SV</td>
 <td><samp>subv-</samp> <samp>surv-</samp></td>
 <td><kbd>SW</kbd></td>
 <td><code>(SW)</code></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
 
 1. when it conflicts with <samp>dep-</samp> <kbd>TKP</kbd> `(DP)`
 2. when it conflicts with <samp>int-</samp> <kbd>SPW</kbd> `(INT)`
-3. followed by a front vowel (<samp>e</samp>, <samp>i</samp>, <samp>y</samp>) only, i.e. “soft” <samp>c</samp> or <samp>g</samp>
+3. followed by a front vowel (<samp>e</samp>, <samp>i</samp>, <samp>y</samp>) only, i.e. “soft” pronunciations of <samp>c</samp> or <samp>g</samp>
 
 <!-- consequence cons- vs. sequence -->
 <!-- shr- simp- sus- dist- disg- -->
