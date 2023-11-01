@@ -58,7 +58,7 @@ no prefix | prefixed with <kbd>S</kbd> | prefixed with <kbd>^</kbd> | prefixed w
 <kbd>KP</kbd> <samp>comp-</samp> or <samp>ex-</samp> | <kbd>SKP</kbd> <samp>and-</samp> | <kbd>^KP</kbd> <samp>ex-</samp> or <samp>exC-</samp>² | <kbd>^SKP</kbd>           
 
 Note that this table is designed to be mnemonic, not comprehensive. For example:
-1. <kbd>^ST</kbd>: “<samp>est-</samp>” is shorthand for “<samp>ast-</samp>, <samp>aust-</samp>, <samp>est-</samp>, <samp>ist-</samp>, <samp>ost-</samp> etc.”
+1. <kbd>^ST</kbd>: “<samp>est-</samp>” is shorthand for “<samp>ast-</samp>, <samp>aust-</samp>, <samp>est-</samp>, <samp>ist-</samp>, <samp>ost-</samp>, etc.”
 (as in <samp><b>ast</b>ute</samp>, <samp><b>aust</b>ere</samp>, <samp><b>est</b>ate</samp>, <samp><b>Ist</b>anbul</samp>, <samp><b>ost</b>ensible</samp>)
 2. <kbd>^KP</kbd>: is <samp>ext-</samp> or <samp>exp-</samp> or <samp>exc-</samp> when used with <kbd>R</kbd> (as in <samp><b>ext</b>ra</samp> <kbd>^KPRA</kbd>, <samp><b>exp</b>ress</samp> <kbd>^KPRES</kbd>)
 
@@ -103,7 +103,7 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 
 #### More complex compound starters?
 
-Recently thinking about adding a few more starters, inspired by [wooningeire](https://github.com/wooningeire/plover-dicts.pub/tree/pub). Most seem rare though (not counting productive prefixes like <samp>in-</samp>). My dictionary already contains some ad-hoc solutions (like <samp>anthology</samp> <kbd>SPWO\*LG</kbd> `(INT*OLG)`) that try to get away with dropping consonants (<samp>enthusiast</samp> <kbd>^THAOUFT</kbd> `(^THUUſT)`), which I mostly dislike.
+Recently thinking about adding a few more starters, inspired by [wooningeire](https://github.com/wooningeire/plover-dicts.pub/tree/pub). Most seem rare though (not counting productive prefixes like <samp>in-</samp>). My dictionary already contains some ad-hoc solutions (like <samp>anthology</samp> <kbd>SPWO\*LG</kbd> `(INT*OLG)`) that try to get away with dropping consonants (<samp>enthusiast</samp> <kbd>^THAOUFT</kbd>), which I mostly dislike.
 
 Type | Starter | Steno | Explanation | Example
 -|-|-|-|-
