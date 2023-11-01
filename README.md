@@ -94,7 +94,7 @@ SV |                  <samp>subv-</samp> <samp>surv-</samp>| <kbd>SW</kbd>      
 
 1. when it conflicts with <samp>dep-</samp> <kbd>TKP</kbd> `(DP)`
 2. when it conflicts with <samp>int-</samp> <kbd>SPW</kbd> `(INT)`
-3. followed by a front vowel (<samp>e</samp>, <samp>i</samp>, <samp>y</samp>) only
+3. followed by a front vowel (<samp>e</samp>, <samp>i</samp>, <samp>y</samp>) only, i.e. “soft” <samp>c</samp> or <samp>g</samp>
 
 <!-- consequence cons- vs. sequence -->
 <!-- shr- simp- sus- dist- disg- -->
