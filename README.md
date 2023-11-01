@@ -150,7 +150,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><code>(INK)</code></td>
 <td><samp>conc-</samp><br><samp>conk-</samp></td>
 <td><kbd>K</kbd> or<br><kbd>K*</kbd></td>
-<td><code>(K)</code></td>
+<td><code>(K)</code> or<br><code>(K*)</code></td>
 </tr>
 <tr>
 <td>NG</td>
@@ -159,7 +159,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><code>(ING)</code></td>
 <td><samp>cong-</samp></td>
 <td><kbd>K</kbd> or<br><kbd>K*</kbd></td>
-<td><code>(K)</code></td>
+<td><code>(K)</code> or<br><code>(K*)</code></td>
 </tr>
 </tbody>
 <tbody>
