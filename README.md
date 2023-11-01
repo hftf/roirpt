@@ -82,7 +82,7 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <tr>
 <td></td>
 <th colspan="3"><strong>no prefix</strong></td>
-<th colspan="3"><strong>with <samp>com-</samp> <samp>con-</samp> <kbd>K-</kbd> prefix</strong></td>
+<th colspan="3"><strong>prefixed with <samp>com-</samp> <samp>con-</samp> <kbd>K-</kbd></strong></td>
 </tr></tbody>
 <tbody>
 <tr><td colspan="7"><strong>Nasal + nasal</strong></td></tr>
@@ -327,6 +327,9 @@ Similarly, words with ambiguous initial stress are kept in core,
 such as <samp>apparatus</samp>.
 
 #### Word family starters
+
+Note that word family starters usually contain the primary stress (e.g. <samp>elèctr</samp>).
+This is different from most other caret entries, which conventionally have unstressed starters.
 
 Starter | Steno | Pseudosteno | Example
 -|-|-|-
