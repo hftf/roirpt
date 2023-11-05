@@ -289,10 +289,10 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <!-- constr- SKR vs. const- ST? -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
 
-The pattern for the prefix <samp>con-</samp> can be thought of as
-<kbd>K</kbd> alone when the following consonant is a non-labial non-continuant, but
-<kbd>K</kbd> overlapped with the following consonant otherwise.
-This is because the former consonants already overlap with <kbd>K</kbd>.
+The pattern for the prefix <samp>con-</samp> plus a consonant can be thought of as
+<kbd>K</kbd> alone when the consonant is a non-labial non-continuant, but
+<kbd>K</kbd> overlapped with the consonant otherwise.
+This is because in the former case, consonant chords already overlap with <kbd>K</kbd>.
 
 <table>
 <thead><tr><td colspan="2"></td>
