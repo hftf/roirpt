@@ -207,11 +207,29 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <tbody>
 <tr><td colspan="7"><strong>Nasal + fricative + stop</strong></td></tr>
 <tr>
+<td>NSP</td>
+<td><samp>    </samp><samp>    </samp> <samp>insp-</samp></td>
+<td><kbd>STPH</kbd></td>
+<td><code>(SN)</code></td>
+<td><samp>consp-</samp></td>
+<td><kbd>SKP</kbd></td>
+<td><code>(KSP)</code></td>
+</tr>
+<tr>
 <td>NST</td>
 <td><samp>    </samp><samp>    </samp> <samp>inst-</samp></td>
 <td><kbd>STPH</kbd></td>
 <td><code>(SN)</code></td>
 <td><samp>const-</samp></td>
+<td>?</td>
+<td></td>
+</tr>
+<tr>
+<td>NSK</td>
+<td><samp>    </samp><samp>    </samp> <samp>insc-</samp></td>
+<td><kbd>STPH</kbd></td>
+<td><code>(SN)</code></td>
+<td><samp>consc-</samp></td>
 <td>?</td>
 <td></td>
 </tr>
