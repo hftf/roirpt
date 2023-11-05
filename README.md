@@ -149,8 +149,8 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><kbd>^TKP</kbd></td>
 <td><code>(INK)</code></td>
 <td><samp>conc-</samp><br><samp>conk-</samp></td>
-<td><kbd>K</kbd> or<br><kbd>K*</kbd></td>
-<td><code>(K)</code> or<br><code>(K*)</code></td>
+<td><kbd>K</kbd></td>
+<td><code>(K)</code></td>
 </tr>
 <tr>
 <td>NG</td>
@@ -158,8 +158,8 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <td><kbd>^STKPW</kbd></td>
 <td><code>(ING)</code></td>
 <td><samp>cong-</samp></td>
-<td><kbd>K</kbd> or<br><kbd>K*</kbd></td>
-<td><code>(K)</code> or<br><code>(K*)</code></td>
+<td><kbd>K</kbd></td>
+<td><code>(K)</code></td>
 </tr>
 </tbody>
 <tbody>
@@ -270,6 +270,29 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <!-- shr- simp- sus- dist- disg- -->
 <!-- constr- SKR vs. const- ST? -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
+
+The pattern for the prefix <samp>con-</samp> can be thought of as
+<kbd>K</kbd> alone when the following consonant is a non-labial non-continuant, but
+<kbd>K</kbd> overlapped with the following consonant otherwise.
+This is because the former consonants already overlap with <kbd>K</kbd>.
+
+<table>
+<thead><tr><td colspan="2"></td>
+<th colspan="2">Labial</th><th colspan="2">Coronal</th><th colspan="2">Velar</th>
+</tr></thead>
+<tbody align="center" valign="top">
+<tr><th align="left" valign="middle" bgcolor="blue" rowspan="3">Non-continuants</th>
+    <th align="left" valign="middle">Nasal</th><td></td><td><kbd>KPH</kbd><br><samp>comm-</samp></td><td></td><td><kbd>K</kbd><br><samp>conn-</samp></td><td></td><td></td></tr>
+<tr><th align="left" valign="middle">Stop</th><td><kbd>KP</kbd><br><samp>comp-</samp></td><td><kbd>KPW</kbd><br><samp>comb-</samp></td><td><kbd>K</kbd><br><samp>cont-</samp></td><td><kbd>K</kbd><br><samp>cond-</samp></td><td><kbd>K</kbd><br><samp>conc-</samp><br><samp>conk-</samp></td><td><kbd>K</kbd><br><samp>cong-</samp></td></tr>
+<tr><th align="left" valign="middle">Affricate</th>
+<td></td><td></td><td></td><td><kbd>K</kbd><br><samp>conj-</samp><br><samp>cong-</samp>³</td><td></td><td></td></tr>
+<tr><th align="left" valign="middle" rowspan="2">Continuants</th>
+    <th align="left" valign="middle">Fricative</th>
+<td><kbd>TKP</kbd><br><samp>comf-</samp><br><samp>conf-</samp></td><td><kbd>KW</kbd><br><samp>conv-</samp></td><td><kbd>SK</kbd><br><samp>cons-</samp><br><samp>conc-</samp>³</td><td></td><td></td><td></td></tr>
+<tr><th align="left" valign="middle">Liquid</th>
+<td></td><td></td><td><kbd>KHR</kbd><br><samp>coll-</samp></td><td><kbd>KR</kbd><br><samp>corr-</samp></td><td></td><td></td></tr>
+</tbody>
+</table>
 
 #### More complex compound starters?
 
