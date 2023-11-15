@@ -175,7 +175,11 @@ in the same stroke should be prevented from having an unwanted effect (see also 
 
 ### Reserve keys for single function (instead of overload with select adverbs)
 
-We still have a need to write phrases in perfect and progressive aspects with question inversion.
+In order to include select adverbs,
+Jeff phrasing overloads certain combinations of perfect and progressive aspects with question inversion,
+but we still have a need to write these phrases.
+
+Adverbs are to be implemented as a second stroke with dedicated key space.
 
 ### Use a retroactive second stroke for other features (adverbs, passive voice)
 
@@ -743,6 +747,7 @@ then, for now, you can try to replace it with a hard-coded path:
 * Consider grouping verbs by arbitrary added key (e.g. <kbd>S</kbd>, <kbd>Z</kbd>)
 * Add some Josiah extensions
 * Add examples in readme
+* Change extra word in passive to <samp>supposed to</samp>
 
 ### Long-term
 
