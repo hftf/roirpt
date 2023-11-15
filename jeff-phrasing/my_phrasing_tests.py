@@ -1,6 +1,24 @@
 import my_phrasing
 
 tests = {
+	"+STWRAOFD":      "would've",
+	"^+SWHOUD":       "who'd you",
+	"^+SWHAEB":       "what's he",
+	"^+SWHAE":        "what's he",
+	"^SWHAB":         "what to be",
+	"SWHAB":          "what is",
+	"+SWHAB":         "what's",
+	"^+SWHAUB":       "what're you",
+	"^+STWRE":        "to have",
+	"^+STWREU":       "to have been",
+	"SWRURLG":        "I am really",
+	"STWRUFL":        "are feeling",
+	"+STWRUFL":       None, # * 're feeling
+	"STWREFL":        "have felt",
+	"+STWREFL":       None, # * 've felt
+	"+STKPWHREUFL":   None, # * 's been feeling,
+# }
+# foo = {
 	"SWR*":           "I do not",
 	"SWR*F":          "I do not have",
 	"SWR*RP":         "I do not do",
@@ -101,6 +119,7 @@ tests = {
 	"+SWROERPD":      "I should've done",
 	"+SWROFD":        "I should've",
 	"+SWRAOFD":       "I would've", # * I'd have
+	"+STWRAOFD":      "would've",
 	"":               None,
 	"HR-FR":          None,
 	"^KPWRAO*EBT":    "will you not have been a",
@@ -303,6 +322,8 @@ tests = {
 	"SWR-PLS/+-P":    "*I am seemed",
 	"SWR-RGS":        None, # *I cares - TODO: add something to prevent auto suffixation
 	"SWR-SDZ":        None, # *I saws
+	"^STWR-D":        "to", # *toed
+	"^STWR*D":        "not to", # *not toed
 	"^SWHAO*EFT":     "why does she have to",
 	"^+SWHAO*EFT":    "why's she have to",
 	"^SWHAO*EFTD":    "why did she have to",
@@ -344,11 +365,11 @@ tests = {
 	"STWR-RBGT":      "work on",
 	"^STWR-RBGT":     "to work on",
 	"STWRARBGT":      "can work on",
-	"^STWRARBGT":     "can work on",
+	"§^STWRARBGT":     "can work on",
 	"STWRA*RBGT":     "cannot work on",
-	"^STWRA*RBGT":    "cannot work on",
+	"§^STWRA*RBGT":    "cannot work on",
 	"+STWRA*RBGT":    "can't work on",
-	"^+STWRA*RBGT":   "can't work on",
+	"§^+STWRA*RBGT":   "can't work on",
 	"^+STWRE":        "to have", # *to've
 	"^+STWREU":       "to have been", # *to've been
 	"STWREU":         "have been",
@@ -379,7 +400,7 @@ for i, (outline, expected_phrase) in enumerate(tests.items()):
 			# raise e
 			pass
 	passed = expected_phrase == result_phrase
-	if raise_grammar_errors and not passed and expected_phrase.startswith('*'):
+	if raise_grammar_errors and not passed and (expected_phrase is None or expected_phrase.startswith('*')):
 		passed = True
 	emoji = "❌✅"[passed]
 	t += 1
@@ -584,6 +605,11 @@ tests3 = {
 	"did I use to":         [],
 	"did I used to":        ['^SWR-TDZ'],
 	"and they'll":          [],
+	"would've":             ['+STKPWHRAOED', '+STKPWHRAOFD', '+STWRAOED', '+STWRAOFD'],
+	"to":                   ['^STKPWHR', '^STWR'],
+	"to really":            ['^STKPWHR-RLG', '^STWR-RLG'],
+	"are feeling":          ['STWRUFL', '+STWRUFL'],
+	"have felt":            ['STWREFL', '+STWREFL'],
 }
 
 for (phrase, outlines) in tests3.items():

@@ -448,6 +448,16 @@ tests = {
                   '§^+STWR-RPL', '§^+STWR-RPLD', '§^+STKPWHR-RPL', '§^+STKPWHR-RPLD'],
 "I really":        ['SWR-RLG', 'SWR-RLGD'],
 "I am really":     ['SWRURLG'],
+"I didn't do":     ['+SWR*RPD'],
+"I didn't":        ['+SWR*D'],
+"did not believe": ['STWR*BLD', 'STKPWHR*BLD'],
+"didn't believe":  ['+STWR*BLD', '+STKPWHR*BLD'],
+"didn't do":       ['+STWR*RPD', '+STKPWHR*RPD'],
+"didn't":          ['+STWR*D', '+STKPWHR*D'],
+"couldn't believe":['+STWRA*BLD', '+STKPWHRA*BLD'],
+"couldn't do":     ['+STWRA*RPD', '+STKPWHRA*RPD'],
+"couldn't":        ['+STWRA*D', '+STKPWHRA*D'],
+"isn't":           ['+STKPWHR*B', '+STKPWHR*U'],
 }
 if __name__ == "__main__":
 	for text, expected_outlines in tests.items():
