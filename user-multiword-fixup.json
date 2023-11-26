@@ -1,5 +1,6 @@
 {
 "^SOETD/PRES": "Associated Press",
+"^THRA*PBG/STEU": "Atlantic City",
 "^THRAPBG/OEGS": "Atlantic Ocean",
 "^KP-FRD/TKPWHREURB/TKEURBGS": "Oxford English Dictionary",
 "STPHOE/TPALG": "snow falling",
@@ -29,6 +30,7 @@
 "TKPWRAET/HRAEUBGS": "Great Lakes",
 "TKPWAOG/-L/PHAPS": "Google Maps",
 "TKPWA*/TEFP": "Georgia Tech",
+"TKPWUFL/-F/PHEBGS/KOE": "Gulf of Mexico",
 "TKROP/TKOUPB/PHAOUPB": "dropdown menu",
 "TKO*PBG/KWREU/KOPBG": "Donkey Kong",
 "TKOPBLD/TKUBG": "Donald Duck",
@@ -103,6 +105,7 @@
 "PAEUFBG/OEGS": "Pacific Ocean",
 "POEPL/-F/EBGS/TAES": "Poem of Ecstasy",
 "PEPBT/TKPWOPB/PAEURPS": "Pentagon Papers",
+"WRARB/TKRAOEUR": "washer-dryer",
 "WREURS/PWHROBG": "writer's block",
 "WAUL/STRAOET/SKWROURPBL": "Wall Street Journal",
 "WORL/SAOERZ": "World Series",
