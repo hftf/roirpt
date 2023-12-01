@@ -289,6 +289,16 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <!-- constr- SKR vs. const- ST? -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
 
+Example mnemonics for a few starters:
+
+Starter | Steno | Explanation | Shape | Resembles
+-|-|-|-|-
+NK | <kbd>^TKP</kbd>   | `(K)` + <kbd>^TP</kbd>, like `(N)` shifted left | ▜▘ | ⚓️ **anc**hor 
+NG | <kbd>^STKPW</kbd> | `(G)` + <kbd>^S</kbd> | █▌ | 🔳 quadr**ang**le 
+NJ | <kbd>^SKWHR</kbd> | `(J)` + <kbd>^H</kbd> | ▙▟ | 🌉 **eng**ineer’s suspension bridge 
+NF | <kbd>TPW</kbd>    | `(F)` + <kbd>W</kbd>  | <samp> </samp>▜ | ꟻ  an inverted F
+NV | <kbd>TPWH</kbd>   | `(NW)`                | ▝▛ | ✉️ **env**elope
+
 The pattern for the prefix <samp>con-</samp> plus a consonant can be thought of as
 <kbd>K</kbd> alone when the consonant is a non-labial non-continuant, and
 <kbd>K</kbd> overlapped with the consonant otherwise.
