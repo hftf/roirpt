@@ -8,6 +8,34 @@ This README is better viewed [in full width](https://github.com/hftf/roirpt/blob
 
 ## Contents
 
+### A hundred dictionary files? Why so many?
+
+File formats available for stenography dictionaries are extremely limited:
+JSON is the default, while a few plugins allow for
+Python scripts (dynamic dictionaries) or [Markdown documents](https://github.com/antistic/plover_markdown_dictionary)
+(entries embedded in code blocks interweave with verbose comments
+in [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming) style)
+to behave as dictionaries.
+There is no systematic capability for well-structured dictionary data
+with annotations, tags, or metadata
+holding explanatory comments, multiple categories (such as domain or context of use), cross-references,
+creation/modification dates, usage or misstroke statistics, review or conflict status,
+preferred/prescribed outlines, or any other elaborating information.
+This is not conducive to learning or communicating.
+
+The only option is to maintain separate dictionaries.
+
+There are many advantages:
+Each dictionary’s filename labels its purpose.
+It is easier to manually inspect and manipulate entries, since similar entries tend to be closer to each other.
+Separate dictionaries can be reordered, enabled, or disabled at will.
+Entries demonstrating one concept are found in a single file easily shared with others
+(“here are all of, and only, the entries that follow the <kbd>AE</kbd> → <samp>ject</samp> pattern”)
+that can be borrowed without worrying about massive conflicts.
+
+Indeed, it is unwieldy to maintain a large number of dictionaries in Plover’s interface,
+and not all entries cleanly fit within a single dictionary (but choosing one is not a science).
+
 ### `caret-*.json`
 
 Introduces <kbd>^</kbd> to represent a pre-initial schwa.\*
