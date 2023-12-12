@@ -72,6 +72,38 @@ because I like the ability to easily grep for steno strokes as strings of only u
 and because in general-purpose search engines I can search for strokes and it will return results that ignore the symbol
 (although that could eventually be a footgun).
 
+> [!TIP]
+>
+> ### Crash-course glossary of phonetic terms used
+>
+> It is not necessary to know these terms,
+> as their meaning can still be understood in context and through the examples.
+>
+> #### Manners of articulation
+>
+> <dl>
+> <dt>Stop<dd>Consonant with sudden release after blocked airflow.
+> (<samp>p</samp>, <samp>b</samp>, <samp>t</samp>, <samp>d</samp>, <samp>k</samp>, <samp>g</samp>)
+> <dt>Nasal<dd>Consonant with continuous release and airflow through nose.
+> (<samp>m</samp>, <samp>n</samp>)
+> <dt>Fricative<dd>Consonant with continuous release and turbulent airflow.
+> (<samp>f</samp>, <samp>v</samp>, <samp>s</samp>, <samp>z</samp>, <samp>sh</samp>, <samp>th</samp>, <samp>h</samp>)
+> <dt>Affricate<dd>Consonant that combines stop followed by fricative.
+> (<samp>ch</samp>, <samp>j</samp>)
+> <dt>Liquid<dd>Consonant with continuous release and non-turbulent airflow.
+> (<samp>l</samp>, <samp>r</samp>)
+> </dl>
+>
+> #### Syllable parts
+>
+> <dl>
+> <dt>Initial<dd>Consonant (or consonant cluster) forming the <a href="https://en.wikipedia.org/wiki/Syllable#Onset">onset</a> (beginning part) of a syllable.
+> <dt>Pre-initial<dd><a href="https://en.wikipedia.org/wiki/Minor_syllable">Minor syllable</a> before main syllable part.
+> Usually limited to weak, unstressed <a href="https://en.wikipedia.org/wiki/Syllable_weight">light syllables</a>
+> (e.g. <samp><ins>a</ins>bout</samp>, <samp><ins>em</ins>bed</samp>).
+> <dt>Schwa<dd>Neutral vowel “uh” (ə) common in English unstressed syllables.
+> </dl>
+
 #### The <samp>ex-</samp>/<samp>comp-</samp> conflict, etc.
 
 These dictionaries do not claim to solve the <samp>ex-</samp>/<samp>comp-</samp> conflict systematically or completely,
