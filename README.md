@@ -10,22 +10,27 @@ This README is better viewed [in full width](https://github.com/hftf/roirpt/blob
 
 ### A hundred dictionary files? Why so many?
 
-File formats available for stenography dictionaries are extremely limited:
-JSON is the default, while a few plugins allow for
+File formats for storing stenography dictionaries are extremely limited:
+JSON is the default (among other interchangeable rudimentary key–value formats), while a few plugins allow for
 Python scripts (dynamic dictionaries) or [Markdown documents](https://github.com/antistic/plover_markdown_dictionary)
 (entries embedded in code blocks interweave with verbose comments
 in [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming) style)
 to behave as dictionaries.
-There is no systematic capability for well-structured dictionary data
+
+There is no systematic capability available for rich, well-structured dictionary data
 with annotations, tags, or metadata
-holding explanatory comments, multiple categories (such as domain or context of use), cross-references,
+holding explanatory comments, multiple categories (such as domain or context of use), interlinking cross-references,
 creation/modification dates, usage or misstroke statistics, review or conflict status,
-preferred/prescribed outlines, or any other elaborating information.
-This is not conducive to learning or communicating.
+preferred/prescribed outlines, or any other elaborating information or methodology.
+There is no preprocessor or advanced abstraction to factor common entries in terms of other entries,
+like affixes, constituents, compounds (e.g. “always capitalize any combination of
+<samp>united</samp> followed by <samp>kingdom</samp>”).
+This is not conducive to learning or communicating,
+since dictionaries often function as first references in the absence of adequate pedagogic material.
 
-The only option is to maintain separate dictionaries.
+The only option is to maintain many separate dictionaries.
 
-There are many advantages:
+There are many advantages to splitting:
 Each dictionary’s filename labels its purpose.
 It is easier to manually inspect and manipulate entries, since similar entries tend to be closer to each other.
 Separate dictionaries can be reordered, enabled, or disabled at will.
