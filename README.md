@@ -19,7 +19,8 @@ to behave as dictionaries.
 
 There is no systematic capability available for rich, well-structured dictionary data
 with annotations, tags, or metadata
-holding explanatory comments, multiple categories (such as domain or context of use), interlinking cross-references,
+holding explanatory comments, part of speech, multiple categories (such as domain or context of use),
+interlinking cross-references,
 creation/modification dates, usage or misstroke statistics, review or conflict status,
 preferred/prescribed outlines, or any other elaborating information or methodology.
 There is no preprocessor or advanced abstraction to factor common entries in terms of other entries,
