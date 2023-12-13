@@ -18,6 +18,8 @@
 "^TPWHORBG/SEU": "autocracy",
 "^TPWHOPB": "automaton",
 "^TPWHOPL": "autom",
+"^TPWHOPL/TA": "automata",
+"^TPWHOPL/TOPB": "automaton",
 "^TPWHOPL/EUBG": "autonomic",
 "^TPWHOPLS": "autonomous",
 "^TPWHOBG/SEU": "autocracy",
