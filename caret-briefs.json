@@ -54,5 +54,7 @@
 "^HOE": "Ohio",
 "^RA*BG": "Arabic",
 "^RUG": "Uruguay",
-"SAUD/^RAEUB": "Saudi Arabia"
+"SAUD/^RAEUB": "Saudi Arabia",
+"SAUD/^RAEUB/KWRA": "Saudi Arabia",
+"SAUD/^RAEUB/KWRAPB": "Saudi Arabian"
 }
