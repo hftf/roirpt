@@ -196,6 +196,8 @@
 "^SKWHR-R": "injury",
 "^TKPWAO*EUR": "enquire",
 "^TKPWAOEUR": "inquire",
+"^TKPWAOEPBT": "inconvenient",
+"^TKPWAOEPBS": "inconvenience",
 "^TKPWAFL": "unqualify",
 "^TKPWABGT": "in contact with",
 "^TKPWALT": "inequality",
