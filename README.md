@@ -78,6 +78,32 @@ because I like the ability to easily grep for steno strokes as strings of only u
 and because in general-purpose search engines I can search for strokes and it will return results that ignore the symbol
 (although that could eventually be a footgun).
 
+Sample of other groups of words that <kbd>^</kbd> trivially or neatly solves:
+
+Group | Word | Steno | Pseudosteno | Plover default entries
+-|-|-|-|-
+1 | <samp>way</samp>       |  <kbd>WAEU</kbd>     |  `(WAI)`     | <kbd>WAEU</kbd>
+| | <samp>away</samp>      | <kbd>^WAEU</kbd>     | `(^WAI)`     | <kbd>W*AEU</kbd>
+| | <samp>ware</samp>      |  <kbd>WAEUR</kbd>    |  `(WAIR)`    | <kbd>WAEUR</kbd>
+| | <samp>aware</samp>     | <kbd>^WAEUR</kbd>    | `(^WAIR)`    | <kbd>A/WAEUR</kbd>
+| | <samp>long</samp>      |  <kbd>HROPBG</kbd>   |  `(LONG)`    | <kbd>HROPBG</kbd>
+| | <samp>along</samp>     | <kbd>^HROPBG</kbd>   | `(^LONG)`    | <kbd>AOLG</kbd>
+2 | <samp>lesson</samp>    |  <kbd>HREFPB</kbd>   |  `(LEFN)`    | <kbd>HR*EFPB</kbd> or <kbd>HR-FPB</kbd>
+| | <samp>eleven</samp>    | <kbd>^HREFPB</kbd>   | `(^LEFN)`    | <kbd>HREFPB</kbd>
+3 | <samp>limit</samp>     |  <kbd>HREUPLT</kbd>  |  `(LIMT)`    | <kbd>HREUPL/TPHAEUT</kbd>
+| | <samp>eliminate</samp> | <kbd>^HREUPLT</kbd>  | `(^LIMT)`    | <kbd>HREUPLT</kbd>
+4 | <samp>least</samp>     |  <kbd>HRAOEFT</kbd>  |  `(LEEFT)`   | <kbd>HRAOEFT</kbd>
+| | <samp>alleviate</samp> | <kbd>^HRAOEFT</kbd>  | `(^LEEFT)`   | <kbd>A/HRAOEFT</kbd> or <kbd>HRAOEF/KWRAEUT</kbd>
+5 | <samp>motion</samp>    |  <kbd>PHOEGS</kbd>   |  `(MOESHUN)` | <kbd>PHOEGS</kbd>
+| | <samp>emotion</samp>   | <kbd>^PHOEGS</kbd>   | `(^MOESHUN)` | <kbd>AOEGS</kbd> or <kbd>AOE/PHOEGS</kbd>
+6 | <samp>norms</samp>     |  <kbd>TPHORPLS</kbd> |  `(NORMS)`   | <kbd>TPHORPLS</kbd>
+| | <samp>enormous</samp>  | <kbd>^TPHORPLS</kbd> | `(^NORMS)`   | <kbd>TPHO*RPLS</kbd> or <kbd>TPHOERPLS</kbd>
+7 | <samp>involve</samp>   |  <kbd>SROFL</kbd>    |  `(VOFL)`    | <kbd>SROFL</kbd>
+| | <samp>evolve</samp>    | <kbd>^SROFL</kbd>    | `(^VOFL)`    | <kbd>SRO*FL</kbd> etc.
+8 | <samp>stipulate</samp> |  <kbd>STEUPLT</kbd>  |  `(STIPLT)`  | <kbd>STEUP/HRAEUT</kbd>
+| | <samp>stimulate</samp> |  <kbd>STEUFRLT</kbd> |  `(STImLT)`  | <kbd>ST*EUPLT</kbd>
+| | <samp>estimate</samp>  | <kbd>^STEUPLT</kbd>  | `(^STIMT)`   | <kbd>STEUPLT</kbd>
+
 > [!TIP]
 >
 > ### Crash-course glossary of phonetic terms used
