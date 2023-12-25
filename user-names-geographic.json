@@ -1,6 +1,8 @@
 {
 "^STOEPB/KWRAPB": "Estonian",
+"^STOEPBGS": "Estonian",
 "^S*ERB/SKWRAPB": "Azerbaijan",
+"^KRAEUPBGS": "Ukrainian",
 "^PWRAOU/SO*E": "Abruzzo",
 "^PHOEU": "Amoy",
 "^RAG/TPHAOEZ": "Aragonese",
@@ -597,6 +599,7 @@
 "PAP/KWRA/PHEPB/TOE": "Papiamento",
 "PAP/WA": "Papua",
 "PABG/STAPB/KWREU": "Pakistani",
+"PAL/STEUPBGS": "Palestinian",
 "PAS/PHA/KWOD/TKEU": "Passamaquoddy",
 "PO/TOE/PHABG": "Potomac",
 "PO*L/TPHAOEGS": "Polynesian",
