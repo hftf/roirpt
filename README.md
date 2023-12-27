@@ -115,9 +115,9 @@ upon <kbd>^POPB</kbd> the <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>
 without <ruby>un<rt>`^TPH`<rb>necessary<rt>`TPHES`</ruby> <kbd>^TPHES</kbd> memorization.
 Its <ruby>om<rt>`^*PH`<rb>ission<rt>`EUGS`</ruby> <kbd>^PH\*EUGS</kbd> by Ward Stone Ireland seems
 unusual <kbd>^TPHAOURBL</kbd> <ruby>in <rt>`^TPH`<rb>retrospect<rt>`RERPT`</ruby> <kbd>^TPHRERPT</kbd>.
-Thankfully, it is easy to acquire <kbd>^KWAOEUR</kbd> and accessible <kbd>^SEBL, ^KPES/-BL</kbd>
-to exploit <kbd>^SPHROEUT</kbd> on most hobbyist steno keyboards by customizing a few <kbd>^TPAOU</kbd> things
-<ruby>as<rt>`^S`<rb> need<rt>`TPHAOED`<rb>ed<rt>`-T`</ruby> <kbd>^STPHAOETD</kbd>.
+Thankfully, it is easy to acquire <kbd>^KWAOEUR</kbd> and accessible <kbd>^SEBL, ^KPES/-BL, etc.</kbd>
+to exploit <kbd>^SPHROEUT</kbd> on most hobbyist steno keyboards by customizing a few <kbd>^TPAOU</kbd> essential
+<kbd>^SERBL</kbd> things <ruby>as<rt>`^S`<rb> need<rt>`TPHAOED`<rb>ed<rt>`-T`</ruby> <kbd>^STPHAOETD</kbd>.
 
 Sorry, just <ruby>a<rt>`^`<rb> little<rt>`HREUL`<rb> bit<rt>`BT`<rb> of<rt>`F`</ruby> <kbd>^HREUFBLT</kbd>
 innocuous <kbd>^TPHOBGS</kbd> fun.
