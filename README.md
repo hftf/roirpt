@@ -120,10 +120,10 @@ to exploit <kbd>^SPHROEUT</kbd> on most hobbyist steno keyboards by customizing 
 <kbd>^SERBL</kbd> things <ruby>as<rt>`^S`<rb> need<rt>`TPHAOED`<rb>ed<rt>`-T`</ruby> <kbd>^STPHAOETD</kbd>.
 
 Apologies <kbd>^POLGS</kbd> for <ruby>a<rt>`^`<rb> little<rt>`HREUL`<rb> bit<rt>`BT`<rb> of<rt>`F`</ruby>
-<kbd>^HREUFBLT</kbd> innocuous <kbd>^TPHOBGS</kbd> fun. This extra <kbd>^KPRA</kbd> key makes me want to
+<kbd>^HREUFBLT</kbd> innocuous <kbd>^TPHOBGS</kbd> fun. This extra <kbd>^KPRA</kbd> key just makes me want to
 express <kbd>^KPRES</kbd> emotions <kbd>^PHOEGSZ</kbd> about how I feel so
 alive <kbd>^HRAOEUF</kbd> and <ruby>as<rt>`^S`<rb> free<rt>`TPRAOE`<rb> as<rt>`S`</ruby> <kbd>^STPRAOES</kbd>
-an avian <kbd>^SRAOEPB</kbd> <ruby>ani<rt>`^TPHEU`<rb>m<rt>`FR`<rb>al<rt>`L`</ruby> <kbd>^TPHEUFRL</kbd>.
+an avian <kbd>^SRAOEPB</kbd><ruby> ani<rt>`^TPHEU`<rb>m<rt>`FR`<rb>al<rt>`L`</ruby> <kbd>^TPHEUFRL</kbd>!
 Join the avant <kbd>^SRAPBT</kbd> garde! You’re not alone <kbd>^HROEPB</kbd> and can learn it in a day <kbd>^TKAEU</kbd>
 or within a <kbd>^W-PB</kbd> week. I welcome you to opine <kbd>^PAOEUPB</kbd> with your approach <kbd>^PROEFP</kbd>
 to writing <ruby>all<rt>`^HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
