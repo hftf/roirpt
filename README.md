@@ -111,9 +111,9 @@ IDK <kbd>^TK-BG</kbd> why one would avoid <kbd>^SROEUD</kbd> using pre-initial <
 It's the easiest and most consistent available <kbd>^SRAEUBL</kbd> iteration <kbd>^TRAEUGS</kbd>
 upon <kbd>^POPB</kbd> the <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout 
 that one can <ruby>inc<rt>`^TKP`<rb>‍orporate<rt>`ORPT`</ruby> <kbd>^TKPORPT</kbd> to advance <kbd>^TKWAPBS</kbd> efficiency <kbd>^TPEURBS</kbd> without <ruby>un<rt>`^TPH`<rb>necessary<rt>`TPHES`</ruby> <kbd>^TPHES</kbd> memorization.
-So much so that its <ruby>om<rt>`^*PH`<rb>ission<rt>`EUGS`</ruby> <kbd>^PH\*EUGS</kbd> by Ward Stone Ireland seems very
+So much so that its <ruby>om<rt>`^*PH`<rb>ission<rt>`EUGS`</ruby> <kbd>^PH\*EUGS</kbd> by Ward Stone Ireland seems
 unusual <kbd>^TPHAOURBL</kbd> <ruby>in<rt>`^TPH`<rb> retrospect<rt>`RERPT`</ruby> <kbd>^TPHRERPT</kbd>.
-Thankfully it is easy to acquire <kbd>^KWAOEUR</kbd> and accessible <kbd>^SEBL, ^KPES/-BL</kbd>
+Thankfully, it is easy to acquire <kbd>^KWAOEUR</kbd> and accessible <kbd>^SEBL, ^KPES/-BL</kbd>
 to exploit <kbd>^SPHROEUT</kbd> on most hobbyist keyboards by customizing a few <kbd>^TPAOU</kbd> things
 <ruby>as<rt>`^S`<rb> need<rt>`TPHAOED`<rb>ed<rt>`-T`</ruby> <kbd>^STPHAOETD</kbd>.
 
@@ -123,7 +123,7 @@ This extra <kbd>^KPRA</kbd> key makes me want to express <kbd>^KPRES</kbd> emoti
 alive <kbd>^HRAOEUF</kbd> and <ruby>as<rt>`^S`<rb> free<rt>`TPRAOE`<rb> as<rt>`S`</ruby> <kbd>^STPRAOES</kbd>
 an avian <kbd>^SRAOEPB</kbd> <ruby>ani<rt>`^TPHEU`<rb>m<rt>`FR`<rb>al<rt>`L`</ruby> <kbd>^TPHEUFRL</kbd>.
 Join the avant <kbd>^SRAPBT</kbd> garde! You're not alone <kbd>^HROEPB</kbd> and can learn it in a day <kbd>^TKAEU</kbd>.
-I welcome anyone who doesn't use it to opine <kbd>^PAOEUPB</kbd> with their approach <kbd>^PROEFP</kbd>
+I welcome anyone to opine <kbd>^PAOEUPB</kbd> with their approach <kbd>^PROEFP</kbd>
 to writing <ruby>all<rt>`HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
 highlighted words. Hoping I don't annoy <kbd>^TPHOEU</kbd> or offend <kbd>^TPEPBD</kbd> a ton of <kbd>^TOFPB</kbd> people
 by evangelizing <kbd>^SRAPBLGZ/-G</kbd> it.
