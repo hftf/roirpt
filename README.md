@@ -891,3 +891,8 @@ KR-BGS WELG
 * Dictionary generator/preprocessor
 to define e.g. `accustom` in terms of <kbd>^</kbd> + `{custom}`
 * If I ever do all that I’ll name my ~~baby~~ theory <s>plonkver</s> thoeur (pronounced /θwɑːɹ/)
+
+## See also
+
+* [Declarative open phrasing engine](https://github.com/hftf/roirpt/blob/master/jeff-phrasing/README2.md),
+my WIP rewrite of Jeff phrasing
