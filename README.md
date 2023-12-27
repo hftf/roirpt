@@ -111,10 +111,10 @@ IDK <kbd>^TK-BG</kbd> why one would avoid <kbd>^SROEUD</kbd> using pre-initial <
 It's the easiest and most consistent available <kbd>^SRAEUBL</kbd> iteration <kbd>^TRAEUGS</kbd>
 upon <kbd>^POPB</kbd> the <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout that one can
 <ruby>inc<rt>`^TKP`<rb>orporate<rt>`ORPT`</ruby> <kbd>^TKPORPT</kbd> to <ruby>adv<rt>`^TKW`<rb>ance<rt>`APBS`</ruby>
-<kbd>^TKWAPBS</kbd> <ruby>e<rt>`^`<rb>ffici<rt>`TPEURB`<rb>ency<rt>`S`</ruby> <kbd>^TPEURBS</kbd>
+<kbd>^TKWAPBS</kbd> <ruby>e<rt>`^`<rb>fficie<rt>`TPEURB`<rb>ncy<rt>`S`</ruby> <kbd>^TPEURBS</kbd>
 without <ruby>un<rt>`^TPH`<rb>necessary<rt>`TPHES`</ruby> <kbd>^TPHES</kbd> memorization.
 So much so that its <ruby>om<rt>`^*PH`<rb>ission<rt>`EUGS`</ruby> <kbd>^PH\*EUGS</kbd> by Ward Stone Ireland seems
-unusual <kbd>^TPHAOURBL</kbd> <ruby>in<rt>`^TPH`<rb> retrospect<rt>`RERPT`</ruby> <kbd>^TPHRERPT</kbd>.
+unusual <kbd>^TPHAOURBL</kbd> <ruby>in <rt>`^TPH`<rb>retrospect<rt>`RERPT`</ruby> <kbd>^TPHRERPT</kbd>.
 Thankfully, it is easy to acquire <kbd>^KWAOEUR</kbd> and accessible <kbd>^SEBL, ^KPES/-BL</kbd>
 to exploit <kbd>^SPHROEUT</kbd> on most hobbyist keyboards by customizing a few <kbd>^TPAOU</kbd> things
 <ruby>as<rt>`^S`<rb> need<rt>`TPHAOED`<rb>ed<rt>`-T`</ruby> <kbd>^STPHAOETD</kbd>.
