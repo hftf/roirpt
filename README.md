@@ -109,12 +109,12 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 IDK <kbd>^TK-BG</kbd> why you would avoid <kbd>^SROEUD</kbd> using pre-initial <kbd>^TPHEURBL</kbd> schwa
 <ruby>at<rt>`^T`<rb> this<rt>`THEU`<rb> point<rt>`PT`</ruby> <kbd>^THEUPT</kbd>.
 It’s the easiest and most consistent available <kbd>^SRAEUBL</kbd> iteration <kbd>^TRAEUGS</kbd>
-upon the <kbd>^POPBT</kbd> <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout that you can
+upon the <kbd>^POPBT</kbd><ruby> Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout that you can
 <ruby>inc<rt>`^TKP`<rb>orporate<rt>`ORPT`</ruby> <kbd>^TKPORPT</kbd> to <ruby>adv<rt>`^TKW`<rb>ance<rt>`APBS`</ruby>
 <kbd>^TKWAPBS</kbd> <ruby>e<rt>`^`<rb>fficie<rt>`TPEURB`<rb>ncy<rt>`S`</ruby> <kbd>^TPEURBS</kbd>
 without <ruby>un<rt>`^TPH`<rb>necessary<rt>`TPHES`</ruby> <kbd>^TPHES</kbd> memorization.
 Its <ruby>om<rt>`^*PH`<rb>ission<rt>`EUGS`</ruby> <kbd>^PH\*EUGS</kbd> by Ward Stone Ireland seems
-unusual <kbd>^TPHAOURBL</kbd> <ruby>in <rt>`^TPH`<rb>retrospect<rt>`RERPT`</ruby> <kbd>^TPHRERPT</kbd>.
+unusual <kbd>^TPHAOURBL</kbd><ruby> in <rt>`^TPH`<rb>retrospect<rt>`RERPT`</ruby> <kbd>^TPHRERPT</kbd>.
 Thankfully, it is easy to acquire <kbd>^KWAOEUR</kbd> and accessible <kbd>^SEBL, ^KPES/-BL, etc.</kbd>
 to exploit <kbd>^SPHROEUT</kbd> on most hobbyist steno keyboards by customizing a few <kbd>^TPAOU</kbd> essential
 <kbd>^SERBL</kbd> things <ruby>as<rt>`^S`<rb> need<rt>`TPHAOED`<rb>ed<rt>`-T`</ruby> <kbd>^STPHAOETD</kbd>.
@@ -125,7 +125,7 @@ express <kbd>^KPRES</kbd> emotions <kbd>^PHOEGSZ</kbd> about how I feel so
 alive <kbd>^HRAOEUF</kbd> and <ruby>as<rt>`^S`<rb> free<rt>`TPRAOE`<rb> as<rt>`S`</ruby> <kbd>^STPRAOES</kbd>
 an avian <kbd>^SRAOEPB</kbd><ruby> ani<rt>`^TPHEU`<rb>m<rt>`FR`<rb>al<rt>`L`</ruby> <kbd>^TPHEUFRL</kbd>!
 Join the avant <kbd>^SRAPBT</kbd> garde! You’re not alone <kbd>^HROEPB</kbd> and can learn it in a day <kbd>^TKAEU</kbd>
-or within a <kbd>^W-PB</kbd> week. I welcome you to opine <kbd>^PAOEUPB</kbd> with your approach <kbd>^PROEFP</kbd>
+or only within a <kbd>^W-PB</kbd> week. I welcome you to opine <kbd>^PAOEUPB</kbd> with your approach <kbd>^PROEFP</kbd>
 to writing <ruby>all<rt>`^HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
 marked words. Hoping I don’t annoy <kbd>^TPHOEU</kbd> or offend <kbd>^TPEPBD</kbd> a ton of <kbd>^TOFPB</kbd> people
 by <ruby>evange<rt>`^SRAPBG`<rb>liz<rt>`LZ`<rb>ing<rt>`/-G`</ruby> <kbd>^SRAPBLGZ/-G</kbd> it.
