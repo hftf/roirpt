@@ -126,9 +126,9 @@ alive <kbd>^HRAOEUF</kbd> and <ruby>as<rt>`^S`<rb> free<rt>`TPRAOE`<rb> as<rt>
 an avian <kbd>^SRAOEPB</kbd> <ruby>ani<rt>`^TPHEU`<rb>m<rt>`FR`<rb>al<rt>`L`</ruby> <kbd>^TPHEUFRL</kbd>.
 Join the avant <kbd>^SRAPBT</kbd> garde! You're not alone <kbd>^HROEPB</kbd> and can learn it in a day <kbd>^TKAEU</kbd>.
 I welcome anyone to opine <kbd>^PAOEUPB</kbd> with their approach <kbd>^PROEFP</kbd>
-to writing <ruby>all<rt>`HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
+to writing <ruby>all<rt>`^HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
 highlighted words. Hoping I don't annoy <kbd>^TPHOEU</kbd> or offend <kbd>^TPEPBD</kbd> a ton of <kbd>^TOFPB</kbd> people
-by evangelizing <kbd>^SRAPBLGZ/-G</kbd> it.
+by <ruby>evange<rt>`^SRAPBG`<rb>liz<rt>`LZ`<rb>ing<rt>`/-G`</ruby> <kbd>^SRAPBLGZ/-G</kbd> it.
 
 > [!TIP]
 >
