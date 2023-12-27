@@ -385,11 +385,11 @@ Example mnemonics for a few starters:
 
 Starter | Steno | Explanation | Shape | Resembles
 -|-|-|-|-
-NK | <kbd>^TKP</kbd>   | `(K)` + <kbd>^TP</kbd>, like `(N)` shifted left | ▜▘ | ⚓️ **anc**hor 
-NG | <kbd>^STKPW</kbd> | `(G)` + <kbd>^S</kbd> | █▌ | 🔳 quadr**ang**le 
-NJ | <kbd>^SKWHR</kbd> | `(J)` + <kbd>^H</kbd> | ▙▟ | 🌉 **eng**ineer’s suspension bridge 
-NF | <kbd>TPW</kbd>    | `(F)` + <kbd>W</kbd>  | <samp> </samp>▜ | ꟻ  an inverted F
-NV | <kbd>TPWH</kbd>   | `(NW)`                | ▝▛ | ✉️ **env**elope
+NK | <kbd>^TKP</kbd>   | `(K)` + <kbd>^TP</kbd>,<br >like `(N)` shifted left | ▜▘ | ⚓️ **anc**hor<br>💂🏿‍♂️ Mr. **T**, who **enc**ouraged kids to stay **in** **c**lass
+NG | <kbd>^STKPW</kbd> | `(G)` + <kbd>^S</kbd> | █▌ | 🔳 quadr**ang**le **ing**ot
+NJ | <kbd>^SKWHR</kbd> | `(J)` + <kbd>^H</kbd> | ▙▟ | 🌉 **eng**ineer’s suspension bridge<br>🚂 train **eng**ine
+NF | <kbd>TPW</kbd>    | `(F)` + <kbd>W</kbd>  | <samp> </samp>▜ | ꟻ  an **in**verted **F**<br>7️⃣ **inf**amous **f**avorite **n**umber
+NV | <kbd>TPWH</kbd>   | `(NW)`                | ▝▛ | ✉️ **env**elope **inv**itation
 
 The pattern for the prefix <samp>con-</samp> plus a consonant can be thought of as
 <kbd>K</kbd> alone when the consonant is a non-labial non-continuant, and
