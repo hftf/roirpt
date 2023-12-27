@@ -109,8 +109,10 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 IDK <kbd>^TK-BG</kbd> why one would avoid <kbd>^SROEUD</kbd> using pre-initial <kbd>^TPHEURBL</kbd> schwa
 <ruby>at<rt>`^T`<rb> this<rt>`THEU`<rb> point<rt>`PT`</ruby> <kbd>^THEUPT</kbd>.
 It's the easiest and most consistent available <kbd>^SRAEUBL</kbd> iteration <kbd>^TRAEUGS</kbd>
-upon <kbd>^POPB</kbd> the <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout 
-that one can <ruby>inc<rt>`^TKP`<rb>‍orporate<rt>`ORPT`</ruby> <kbd>^TKPORPT</kbd> to advance <kbd>^TKWAPBS</kbd> efficiency <kbd>^TPEURBS</kbd> without <ruby>un<rt>`^TPH`<rb>necessary<rt>`TPHES`</ruby> <kbd>^TPHES</kbd> memorization.
+upon <kbd>^POPB</kbd> the <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout that one can
+<ruby>inc<rt>`^TKP`<rb>orporate<rt>`ORPT`</ruby> <kbd>^TKPORPT</kbd> to <ruby>adv<rt>`^TKW`<rb>ance<rt>`APBS`</ruby>
+<kbd>^TKWAPBS</kbd> <ruby>e<rt>`^`<rb>ffici<rt>`TPEURB`<rb>ency<rt>`S`</ruby> <kbd>^TPEURBS</kbd>
+without <ruby>un<rt>`^TPH`<rb>necessary<rt>`TPHES`</ruby> <kbd>^TPHES</kbd> memorization.
 So much so that its <ruby>om<rt>`^*PH`<rb>ission<rt>`EUGS`</ruby> <kbd>^PH\*EUGS</kbd> by Ward Stone Ireland seems
 unusual <kbd>^TPHAOURBL</kbd> <ruby>in<rt>`^TPH`<rb> retrospect<rt>`RERPT`</ruby> <kbd>^TPHRERPT</kbd>.
 Thankfully, it is easy to acquire <kbd>^KWAOEUR</kbd> and accessible <kbd>^SEBL, ^KPES/-BL</kbd>
