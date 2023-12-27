@@ -112,16 +112,16 @@ It's the easiest and most consistent available <kbd>^SRAEUBL</kbd> iteration <kb
 upon <kbd>^POPB</kbd> the <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout 
 that one can <ruby>inc<rt>`^TKP`<rb>‍orporate<rt>`ORPT`</ruby> <kbd>^TKPORPT</kbd> to advance <kbd>^TKWAPBS</kbd> efficiency <kbd>^TPEURBS</kbd> without <ruby>un<rt>`^TPH`<rb>necessary<rt>`TPHES`</ruby> <kbd>^TPHES</kbd> memorization.
 So much so that its <ruby>o<rt>`^*`<rb>mission<rt>`PHEUGS`</ruby> <kbd>^PH\*EUGS</kbd> by Ward Stone Ireland seems very
-<ruby>un<rt>`^TPH`<rb>usual<rt>`AOURBL`</ruby> <kbd>^TPHAOURBL</kbd> in retrospect <kbd>^TPHRERPT</kbd>.
+unusual <kbd>^TPHAOURBL</kbd> in retrospect <kbd>^TPHRERPT</kbd>.
 Thankfully it is easy to acquire <kbd>^KWAOEUR</kbd> and accessible <kbd>^SEBL, ^KPES/-BL</kbd>
 to exploit <kbd>^SPHROEUT</kbd> on most hobbyist keyboards by customizing a few <kbd>^TPAOU</kbd> things
 <ruby>as<rt>`^S`<rb> need<rt>`TPHAOED`<rb>ed<rt>`-T`</ruby> <kbd>^STPHAOETD</kbd>.
 
-Sorry, having <ruby>a<rt>`^`<rb> little<rt>`HREUL`<rb> bit<rt>`BT`<rb> of<rt>`F`</ruby> <kbd>^HREUFBLT</kbd>
+Sorry, just <ruby>a<rt>`^`<rb> little<rt>`HREUL`<rb> bit<rt>`BT`<rb> of<rt>`F`</ruby> <kbd>^HREUFBLT</kbd>
 innocuous <kbd>^TPHOBGS</kbd> fun.
 This extra <kbd>^KPRA</kbd> key makes me want to express <kbd>^KPRES</kbd> emotions <kbd>^PHOEGSZ</kbd> of how I feel so
 alive <kbd>^HRAOEUF</kbd> and <ruby>as<rt>`^S`<rb> free<rt>`TPRAOE`<rb> as<rt>`S`</ruby> <kbd>^STPRAOES</kbd>
-an avian <kbd>^SRAOEPB</kbd> <ruby>ani<rt>`^TPHEU`<rb>mal<rt>`FRL`</ruby> <kbd>^TPHEUFRL</kbd>.
+an avian <kbd>^SRAOEPB</kbd> <ruby>ani<rt>`^TPHEU`<rb>m<rt>`FR`<rb>al<rt>`L`</ruby> <kbd>^TPHEUFRL</kbd>.
 Join the avant <kbd>^SRAPBT</kbd> garde! You're not alone <kbd>^HROEPB</kbd> and can learn it in a day <kbd>^TKAEU</kbd>.
 I welcome anyone who doesn't use it to opine <kbd>^PAOEUPB</kbd> with their approach <kbd>^PROEFP</kbd>
 to writing <ruby>all<rt>`HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
