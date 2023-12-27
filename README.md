@@ -108,7 +108,7 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 
 IDK <kbd>^TK-BG</kbd> why one would avoid <kbd>^SROEUD</kbd> using pre-initial <kbd>^TPHEURBL</kbd> schwa
 <ruby>at<rt>`^T`<rb> this<rt>`THEU`<rb> point<rt>`PT`</ruby> <kbd>^THEUPT</kbd>.
-It's the easiest and most consistent available <kbd>^SRAEUBL</kbd> iteration <kbd>^TRAEUGS</kbd>
+It’s the easiest and most consistent available <kbd>^SRAEUBL</kbd> iteration <kbd>^TRAEUGS</kbd>
 upon <kbd>^POPB</kbd> the <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout that one can
 <ruby>inc<rt>`^TKP`<rb>orporate<rt>`ORPT`</ruby> <kbd>^TKPORPT</kbd> to <ruby>adv<rt>`^TKW`<rb>ance<rt>`APBS`</ruby>
 <kbd>^TKWAPBS</kbd> <ruby>e<rt>`^`<rb>fficie<rt>`TPEURB`<rb>ncy<rt>`S`</ruby> <kbd>^TPEURBS</kbd>
@@ -124,10 +124,10 @@ innocuous <kbd>^TPHOBGS</kbd> fun.
 This extra <kbd>^KPRA</kbd> key makes me want to express <kbd>^KPRES</kbd> emotions <kbd>^PHOEGSZ</kbd> of how I feel so
 alive <kbd>^HRAOEUF</kbd> and <ruby>as<rt>`^S`<rb> free<rt>`TPRAOE`<rb> as<rt>`S`</ruby> <kbd>^STPRAOES</kbd>
 an avian <kbd>^SRAOEPB</kbd> <ruby>ani<rt>`^TPHEU`<rb>m<rt>`FR`<rb>al<rt>`L`</ruby> <kbd>^TPHEUFRL</kbd>.
-Join the avant <kbd>^SRAPBT</kbd> garde! You're not alone <kbd>^HROEPB</kbd> and can learn it in a day <kbd>^TKAEU</kbd>
-or within a <kbd>^W-PB</kbd> week. I welcome anyone to opine <kbd>^PAOEUPB</kbd> with their approach <kbd>^PROEFP</kbd>
+Join the avant <kbd>^SRAPBT</kbd> garde! You’re not alone <kbd>^HROEPB</kbd> and can learn it in a day <kbd>^TKAEU</kbd>
+or within a <kbd>^W-PB</kbd> week. I welcome you to opine <kbd>^PAOEUPB</kbd> with your approach <kbd>^PROEFP</kbd>
 to writing <ruby>all<rt>`^HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
-highlighted words. Hoping I don't annoy <kbd>^TPHOEU</kbd> or offend <kbd>^TPEPBD</kbd> a ton of <kbd>^TOFPB</kbd> people
+marked words. Hoping I don’t annoy <kbd>^TPHOEU</kbd> or offend <kbd>^TPEPBD</kbd> a ton of <kbd>^TOFPB</kbd> people
 by <ruby>evange<rt>`^SRAPBG`<rb>liz<rt>`LZ`<rb>ing<rt>`/-G`</ruby> <kbd>^SRAPBLGZ/-G</kbd> it.
 
 > [!TIP]
