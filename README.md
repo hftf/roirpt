@@ -109,7 +109,7 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 IDK <kbd>^TK-BG</kbd> why you would avoid <kbd>^SROEUD</kbd> using pre-initial <kbd>^TPHEURBL</kbd> schwa
 <ruby>at<rt>`^T`<rb> this<rt>`THEU`<rb> point<rt>`PT`</ruby> <kbd>^THEUPT</kbd>.
 It’s the easiest and most consistent available <kbd>^SRAEUBL</kbd> iteration <kbd>^TRAEUGS</kbd>
-upon <kbd>^POPB</kbd> the <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout that you can
+upon the <kbd>^POPBT</kbd> <ruby>Eng<rt>`^STKPW`<rb>lish<rt>`HREURB`</ruby> <kbd>^STKPWHREURB</kbd> layout that you can
 <ruby>inc<rt>`^TKP`<rb>orporate<rt>`ORPT`</ruby> <kbd>^TKPORPT</kbd> to <ruby>adv<rt>`^TKW`<rb>ance<rt>`APBS`</ruby>
 <kbd>^TKWAPBS</kbd> <ruby>e<rt>`^`<rb>fficie<rt>`TPEURB`<rb>ncy<rt>`S`</ruby> <kbd>^TPEURBS</kbd>
 without <ruby>un<rt>`^TPH`<rb>necessary<rt>`TPHES`</ruby> <kbd>^TPHES</kbd> memorization.
