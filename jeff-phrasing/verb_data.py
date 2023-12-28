@@ -90,6 +90,7 @@ verbs_forbidding_passive = [
 ]
 defective_verbs = [v for v, d in irregular_verb_data.items() if type(d) in [str, bool] and v]
 verbs_without_infinitive = defective_verbs[:5] # can, will, shall, may, must; used to is defective but has infinitive; adverbs (just, really) do not conjugate
+# add 'used to'
 verbs_without_do_support = [None, 'be'] + verbs_without_infinitive
 adverbs = defective_verbs[5:] # just, really
 
@@ -229,6 +230,9 @@ verb_ender_data = {
 
 	# be able: BLZ
 	# hold:    FLS?
+	# finish:  FRB
+	# please
+	# walk:    FRPLG or FRPBLG
 	
 	# List of unused combinations and unassigned verbs that might go well with them:
 	# 2 keys: FB FG FZ RZ BZ
@@ -330,7 +334,7 @@ for verb, (verb_ender, extra_word) in verb_ender_data.items():
 		for ender in enders if type(enders) is list else [enders]:
 			# sys.stderr.write(f'{verb:10} {ender:10} {tense}\n')
 			if ender in ENDERS:
-				sys.stderr.write(f'{verb}, {ender} already in ENDERS as {ENDERS[ender]}\n')
+				sys.stderr.write(f'({tense}, {verb}, {extra_word_}), {ender}, already in ENDERS as {ENDERS[ender]}\n')
 			ENDERS[ender] = {'tense': tense, 'verb': verb, 'extra_word': extra_word_}
 
 # Part 2c: Key mapping for modals

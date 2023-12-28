@@ -611,6 +611,8 @@ tests3 = {
 	"are feeling":          ['STWRUFL', '+STWRUFL'],
 	"have felt":            ['STWREFL', '+STWREFL'],
 }
+# +STWH-BSZ that said
+# +STWH*BSZ that didn't say
 
 for (phrase, outlines) in tests3.items():
 	result_outlines = my_phrasing.reverse_lookup(phrase)
