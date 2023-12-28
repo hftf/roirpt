@@ -129,7 +129,7 @@ or only within a <kbd>^W-PB</kbd> week. I welcome you to opine <kbd>^PAOEUPB</kb
 to writing <ruby>all<rt>`^HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
 marked words. Hoping I don’t annoy <kbd>^TPHOEU</kbd> or offend <kbd>^TPEPBD</kbd> a ton of <kbd>^TOFPB</kbd> people
 by <ruby>evange<rt>`^SRAPBG`<rb>liz<rt>`LZ`<rb>ing<rt>`/-G`</ruby> <kbd>^SRAPBLGZ/-G</kbd> its appeal <kbd>^PAOEL</kbd>,
-but I actually <kbd>^TWAEUL</kbd> believe its existence <kbd>^KPEUFPBS</kbd> is a huge asset <kbd>^SET</kbd>.
+but its existence <kbd>^KPEUFPBS</kbd> is actually <kbd>^TWAEUL</kbd> a huge asset <kbd>^SET</kbd>.
 
 > [!TIP]
 >
