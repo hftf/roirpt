@@ -128,7 +128,7 @@ Join the avant <kbd>^SRAPBT</kbd> garde! You’re not alone <kbd>^HROEPB</kbd> a
 or only within a <kbd>^W-PB</kbd> week. I welcome you to opine <kbd>^PAOEUPB</kbd> with your approach <kbd>^PROEFP</kbd>
 to writing <ruby>all<rt>`^HR`<rb> of<rt>`F`<rb> the<rt>`T`</ruby> <kbd>^HR-FT</kbd> assorted <kbd>^SORTD</kbd>
 marked words. Hoping I don’t annoy <kbd>^TPHOEU</kbd> or offend <kbd>^TPEPBD</kbd> a ton of <kbd>^TOFPB</kbd> people
-by <ruby>evange<rt>`^SRAPBG`<rb>liz<rt>`LZ`<rb>ing<rt>`/-G`</ruby> <kbd>^SRAPBLGZ/-G</kbd> it.
+by <ruby>evange<rt>`^SRAPBG`<rb>liz<rt>`LZ`<rb>ing<rt>`/-G`</ruby> <kbd>^SRAPBLGZ/-G</kbd> its appeal <kbd>^PAOEL</kbd>.
 
 > [!TIP]
 >
