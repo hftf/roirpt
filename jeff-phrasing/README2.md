@@ -750,6 +750,8 @@ then, for now, you can try to replace it with a hard-coded path:
 * Add some Josiah extensions
 * Add examples in readme
 * Change extra word in passive to <samp>supposed to</samp>
+* Allow `why are`, `how are`, etc. (those starters are now treated as singular only)
+* Automatically fix double `to`, e.g. `I am going to` followed by `to be a`
 
 ### Long-term
 
