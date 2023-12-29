@@ -100,7 +100,7 @@ Tabular code is also space-aligned for readability.
 ### Centralize
 
 Despite the ease of making a GitHub repository,
-patches to phrasing systems (or even to dictionaries more generally)
+patches to phrasing systems (or even to dictionaries generally)
 have often been distributed as file uploads that lack provenance.
 It should be easier to share modifications (and documentations of conflicts)
 in the form of a separate “userspace” config file or even file footer,
@@ -752,7 +752,7 @@ then, for now, you can try to replace it with a hard-coded path:
 * Add some Josiah extensions
 * Add examples in readme
 * Change extra word in passive to <samp>supposed to</samp>
-* Allow `why are`, `how are`, etc. (those starters are now treated as singular only)
+* Allow `why are`, `how are`, etc. (only singular null simple subject is available)
 * Automatically fix double `to`, e.g. `I am going to` followed by `to be a`
 
 ### Long-term
