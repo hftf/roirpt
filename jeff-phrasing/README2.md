@@ -616,7 +616,7 @@ The following table shows the defaults.
 <tfoot>
 <tr><th rowspan="3">Key</th><td colspan="3">† arbitrarily assigned chord</td><td>= same</td><td>↶ inversion</td><td><b>X</b><sup><var>Y</var></sup>: <kbd>Y</kbd> key represents variant of X sound</td></tr>
 <tr/>
-<tr><td colspan="4">→ <var>no extra word due to other ender</var></td><td colspan="2">* right-bank abbreviation already widely used in stenography</td></tr>
+<tr><td colspan="4">→ <var>no <kbd>T</kbd> extra word due to other ender</var></td><td colspan="2">* right-bank abbreviation already widely used in stenography</td></tr>
 </tfoot>
 </table>
 
