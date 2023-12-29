@@ -665,6 +665,7 @@ so <kbd>KPWRES/+</kbd> can be used to access the phrase <samp>you have seen</sam
 <tr><td>Subject–auxiliary inversion</td><td colspan="2"><kbd>U</kbd></td><td><kbd>^</kbd></td></tr>
 <tr><td>Past tense of ender containing <kbd>-S</kbd></td><td colspan="2"><kbd>-SZ</kbd></td><td>Both <kbd>-SZ</kbd> or <kbd>-SD</kbd></td></tr>
 <tr><td>Contraction       </td><td colspan="2">Hard-coded only</td><td>Controlled by <kbd>+</kbd></td></tr>
+<tr><td>Fallback for conflicts</td><td colspan="2">Not implemented</td><td>Second stroke <kbd>+</kbd></td></tr>
 <tr><td>Passive voice     </td><td colspan="2">Not implemented</td><td>Second stroke <kbd>+-P</kbd></td></tr>
 <tr><td>Adverbs (<samp>just</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>)</td><td colspan="2">Overloaded <kbd>*EUF</kbd></td><td>Not implemented</td></tr>
 <tr><td>Reverse lookup    </td><td colspan="2">Ready</td><td>Partly implemented </td></tr>
