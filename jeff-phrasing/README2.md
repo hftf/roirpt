@@ -513,7 +513,7 @@ The following table shows the defaults.
 </tbody>
 <tbody>
 <tr><th align="left" colspan="7">Modal verbs (auxiliary verbs)</th></tr>
-<tr><td colspan="2"><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion; only useful in “simple form”</td></tr>
+<tr><td colspan="2"><samp>can       </samp></td><td>                 </td><td rowspan="3">n/a  </td><td><kbd><del>BGS </del></kbd></td><td></td><td rowspan="3">unavailable but listed here for completion;<br>only useful in “simple form”</td></tr>
 <tr><td colspan="2"><samp>will      </samp></td><td>                 </td>                          <td><kbd><del>RBGS</del></kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>shall     </samp></td><td>                 </td>                          <td><kbd><del>RBL </del></kbd></td><td></td></tr>
 <tr><td colspan="2"><samp>may       </samp></td><td><samp>be  </samp></td><td><kbd>PL</kbd>    </td><td>=                         </td><td><b>M</b>ay</td><td>past tense: <samp>might</samp></td></tr>
