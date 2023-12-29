@@ -100,7 +100,8 @@ Tabular code is also space-aligned for readability.
 ### Centralize
 
 Despite the ease of making a GitHub repository,
-patches to phrasing systems have often been distributed as file uploads.
+patches to phrasing systems (or even to dictionaries more generally)
+have often been distributed as file uploads that lack provenance.
 It should be easier to share modifications (and documentations of conflicts)
 in the form of a separate “userspace” config file or even file footer,
 rather than wholesale file replacements that are difficult to audit and interoperate,
