@@ -652,6 +652,8 @@ then adding the second stroke <kbd>+</kbd> is available as a fallback.
 For example, <kbd>SKP-LD</kbd> is defined as <samp>and would</samp> in `main.json`,
 so <kbd>SKP-LD</kbd> would not available for phrasing <samp>and looked</samp>,
 but <kbd>SKP-LD/+</kbd> is available as a fallback for <samp>and looked</samp>.
+Similarly, <kbd>KPWRES</kbd> is defined as <samp>impress</samp>,
+so <kbd>KPWRES/+</kbd> can be used to access the phrase <samp>you have seen</samp>.
 
 ### Summary of differences with other phrasing systems
 
