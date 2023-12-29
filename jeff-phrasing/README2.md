@@ -103,9 +103,8 @@ Despite the ease of making a GitHub repository,
 patches to phrasing systems (or even to dictionaries generally)
 have often been distributed as file uploads that lack provenance.
 It should be easier to share modifications (and documentations of conflicts)
-in the form of a separate “userspace” config file or even file footer,
-rather than wholesale file replacements that are difficult to audit and interoperate,
-if not just as forks.
+in the form of a separate “userspace” config file, a file footer, or a fork,
+rather than wholesale file replacements that are difficult to audit and interoperate.
 
 ---
 
