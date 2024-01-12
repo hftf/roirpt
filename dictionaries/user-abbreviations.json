@@ -93,10 +93,12 @@
 "APB/S*EU": "ANSI",
 "O*EUF": "UFO",
 "O*EP": "Op.",
+"O*EP/O*EP": "Opp.",
 "O*PLG": "OMG",
 "*ERP": "ER",
 "*UPB": "UN",
 "*UPS": "UPS",
+"*UBG/*UBG": "United Kingdom",
 "*US/*US/*US": "United States of America",
 "*US/*US/*US/*US": "USA",
 "*US/-F/A*": "United States of America"
