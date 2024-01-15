@@ -2,6 +2,8 @@
 
 (pronounced /ʁwaʁp/)
 
+Stuff for stoiners (pronounced /stwæ.ɲe/)
+
 I basically just git initted in my plover dir and started committing WIPs
 
 This README is better viewed [in full width](https://github.com/hftf/roirpt/blob/master/README.md) (> 1100 pixels)
@@ -422,6 +424,8 @@ The pattern for the prefix <samp>con-</samp> plus a consonant can be thought of 
 <kbd>K</kbd> alone when the consonant is a non-labial non-continuant, and
 <kbd>K</kbd> overlapped with the consonant otherwise.
 This is because in the former case, consonant chords already overlap with <kbd>K</kbd>.
+Alternatively, it can be thought of as dropping the consonant after <kbd>K</kbd>
+when it is a non-labial non-continuant.
 
 <table>
 <thead><tr><td colspan="2"></td>
