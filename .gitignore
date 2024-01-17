@@ -2,7 +2,7 @@
 .cache/
 plugins/
 svg-layouts/uni/
-plover.log
+plover.log*
 strokes.log*
 clippy.txt
 tapey_tape.txt
