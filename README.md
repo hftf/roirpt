@@ -718,6 +718,28 @@ The vowels follow the convention of
 </tbody>
 </table>
 
+### `user-diacritics.json`
+
+Contains words spelled with diacritics (e.g. <samp>café</samp>)
+as well as multi-stroke fingerspelling entries for letters with diacritics (e.g. <samp>ä</samp> = <kbd>A*/^-FL</kbd>)
+based on iconic right-hand shapes.
+See [another precedent](https://discord.com/channels/136953735426473984/136953735426473984/1030206305442463826) of this.
+
+
+Diacritic  | Symbol | Chord | Shape
+-|-|-|-
+Acute      | <samp>´</samp> | <kbd>^-RP</kbd>    | <ins>⠐⠁⠀</ins>
+Grave      | <samp>`</samp> | <kbd>^-PG</kbd>    | <ins>⠀⠑⠀</ins>
+Circumflex | <samp>ˆ</samp> | <kbd>^-RPG</kbd>   | <ins>⠐⠑⠀</ins>
+Háček      | <samp>ˇ</samp> | <kbd>^-FBL</kbd>   | <ins>⠈⠊⠀</ins>
+Macron     | <samp>¯</samp> | <kbd>^-FPL</kbd>   | <ins>⠈⠉⠀</ins>
+Breve      | <samp>˘</samp> | <kbd>^-FRBLG</kbd> | <ins>⠘⠚⠀</ins>
+Tilde      | <samp>˜</samp> | <kbd>^-RPBL</kbd>  | <ins>⠐⠋⠀</ins>
+Umlaut     | <samp>¨</samp> | <kbd>^-FL</kbd>    | <ins>⠈⠈⠀</ins>
+Ring       | <samp>˚</samp> | <kbd>^-P</kbd>     | <ins>⠀⠁⠀</ins>
+Slash      | <samp> ̷</samp> | <kbd>^-RL</kbd>    | <ins>⠐⠈⠀</ins>
+Cedilla    | <samp>¸</samp> | <kbd>^-RPB</kbd>   | <ins>⠐⠃⠀</ins>
+
 ### `user-*.json`
 
 I mean sure? but probably of little interest until [Chordial](https://chordial.app/) exists
