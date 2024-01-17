@@ -102,7 +102,10 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 | | <samp>enormous</samp>  | <kbd>^TPHORPLS</kbd> | `(^NORMS)`   | <kbd>TPHO*RPLS</kbd> or <kbd>TPHOERPLS</kbd>
 7 | <samp>involve</samp>   |  <kbd>SROFL</kbd>    |  `(VOFL)`    | <kbd>SROFL</kbd>
 | | <samp>evolve</samp>    | <kbd>^SROFL</kbd>    | `(^VOFL)`    | <kbd>SRO*FL</kbd> etc.
-8 | <samp>stipulate</samp> |  <kbd>STEUPLT</kbd>  |  `(STIPLT)`  | <kbd>STEUP/HRAEUT</kbd>
+8 | <samp>vice</samp>      |   <kbd>SRAOEUS</kbd> |   `(VIIS)`   | <kbd>SRAOEUS</kbd>
+| | <samp>device</samp>    |  <kbd>TKWAOEUS</kbd> |  `(DVIIS)`   | <kbd>TKWAOEUS</kbd> etc.
+| | <samp>advice</samp>    | <kbd>^TKWAOEUS</kbd> | `(^DVIIS)`   | <kbd>SREUS</kbd> etc.
+9 | <samp>stipulate</samp> |  <kbd>STEUPLT</kbd>  |  `(STIPLT)`  | <kbd>STEUP/HRAEUT</kbd>
 | | <samp>stimulate</samp> |  <kbd>STEUFRLT</kbd> |  `(STImLT)`  | <kbd>ST*EUPLT</kbd>
 | | <samp>estimate</samp>  | <kbd>^STEUPLT</kbd>  | `(^STIMT)`   | <kbd>STEUPLT</kbd>
 
