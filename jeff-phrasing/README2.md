@@ -253,8 +253,12 @@ would be most helpful for visual learners.
 Paradoxically, the ultimate end goal of this project
 is not for each user to customize and tweak their phrasing system or design their own,
 but, through it, once enough people have done so,
-to converge closer to a single optimal English phrasing system design.
+to converge closer to a single optimal English phrasing system design,
+in the same way that the Ireland layout is the standard in English stenography.
 People need to try diverse possibilities for us to collectively reach the best ideas.
+
+Therefore, you are encouraged to fork, pull request, etc.
+Any amount of contribution makes a difference.
 
 ## Phrasing system (default design)
 
