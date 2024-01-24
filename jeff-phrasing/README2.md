@@ -43,6 +43,19 @@ Important precursors of this project include the phrasing systems of
 and other inspirations, and it began as a fork and rewrite of Jeff’s.
 Further background and motivations are found in READMEs of precursor projects.
 
+To give a very brief history of the above phrasing systems:
+1. First-generation scripts define rudimentary sets of starters and enders
+and allow concatenating them together like strings.
+2. Redundant enders for inflected forms of the same verb
+(such as <samp>don’t</samp> and <samp>doesn’t</samp>) are eliminated,
+since they conjugate entirely predictably based on the subject.
+This also prevents some ungrammatical outputs (such as <samp>I doesn’t</samp>).
+3. Encode progressively more linguistic information;
+syntactic features become the primary unit of operation
+rather than mere words that admit combinatorial expansion as strings.
+Maximize limited key space by compressing more efficiently.
+Richer affordances for customization.
+
 ## Motivation
 
 This is an **engine** for designing and customizing a stenographic phrasing system.
