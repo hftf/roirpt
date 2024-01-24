@@ -2,7 +2,7 @@
 
 ## Background
 
-A stenographic phrasing system allows for systematically writing commonly-encountered phrases,
+A stenographic **phrasing system** allows for systematically writing commonly-encountered phrases,
 and especially ones that combine a starter (subject pronoun, optional relativizer),
 a medial (auxiliary, modal, negation, adverb, etc.),
 and an ender (verb and tense).
@@ -44,7 +44,7 @@ and other inspirations, and it began as a fork and rewrite of Jeff’s.
 Further background and motivations are found in READMEs of precursor projects.
 
 To give a very brief history of the above phrasing systems:
-1. First-generation scripts define rudimentary sets of starters and enders
+1. First-generation scripts define rudimentary sets of starters, medials, and enders
 and allow concatenating them together like strings.
 2. Redundant enders for inflected forms of the same verb
 (such as <samp>don’t</samp> and <samp>doesn’t</samp>) are eliminated,
@@ -52,7 +52,7 @@ since they conjugate entirely predictably based on the subject.
 This also prevents some ungrammatical outputs (such as <samp>I doesn’t</samp>).
 3. Encode progressively more linguistic information;
 syntactic features become the primary unit of operation
-rather than mere words that admit combinatorial expansion as strings.
+rather than mere words that undergo combinatorial expansion.
 Maximize limited key space by compressing more efficiently.
 Richer affordances for customization.
 
@@ -102,7 +102,9 @@ Test cases and harnesses are not included when judging total lines of code.
 ### Automatically handle conjugation, contraction, negation, and subject–auxiliary question inversion
 
 While Jeff phrasing already achieves this goal,
-it can still output ungrammatical forms, such as <kbd>TWRUPL</kbd> → `do we may` or <kbd>KPWRUPBLGS</kbd> → `do you must`.
+it can still output ungrammatical forms, such as
+(examples use Jeff phrasing key mappings)
+<kbd>TWRUPL</kbd> → `do we may` or <kbd>KPWRUPBLGS</kbd> → `do you must`.
 
 ### Follow Pythonic conventions
 
