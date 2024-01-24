@@ -102,7 +102,7 @@ Test cases and harnesses are not included when judging total lines of code.
 ### Automatically handle conjugation, contraction, negation, and subject–auxiliary question inversion
 
 While Jeff phrasing already achieves this goal,
-it can still output ungrammatical forms, such as <kbd>TWRUPL</kbd> → `do we may`.
+it can still output ungrammatical forms, such as <kbd>TWRUPL</kbd> → `do we may` or <kbd>KPWRUPBLGS</kbd> → `do you must`.
 
 ### Follow Pythonic conventions
 
@@ -685,9 +685,10 @@ so <kbd>KPWRES/+</kbd> can be used to access the phrase <samp>you have seen</sam
 <tr><td>Fallback for conflicts</td><td colspan="2">Not implemented</td><td>Second stroke <kbd>+</kbd></td></tr>
 <tr><td>Passive voice     </td><td colspan="2">Not implemented</td><td>Second stroke <kbd>+-P</kbd></td></tr>
 <tr><td>Adverbs (<samp>just</samp>, <samp>even</samp>, <samp>still</samp>, <samp>always</samp>, <samp>never</samp>)</td><td colspan="2">Overloaded <kbd>*EUF</kbd></td><td>Not implemented</td></tr>
-<tr><td>Reverse lookup    </td><td colspan="2">Ready</td><td>Partly implemented </td></tr>
+<tr><td>Reverse lookup    </td><td colspan="2">Ready</td><td>Mostly implemented </td></tr>
 <tr><td>Chord assignments</td><td colspan="3" align="center">May differ variously</td></tr>
 <tr><td>Chord assignments: verb enders</td><td colspan="2">Cannot use <kbd>F</kbd></td><td>Can use <kbd>F</kbd></td></tr>
+<tr><td>Chord assignments: <samp>can</samp>, <samp>will</samp>, <samp>shall</samp> enders</td><td colspan="2"><kbd>BGS</kbd>, <kbd>RBGS</kbd>, <kbd>RBL</kbd></td><td>Removed</td></tr>
 <tr><td>“Simple form” subject keys</td><td><kbd>*EU</kbd></td><td><kbd>^EU</kbd></td><td><kbd>*EU</kbd></td></tr>
 <tr><td>“Simple form” negation    </td><td>n/a    </td><td><kbd>*</kbd>  </td><td>n/a</td></tr>
 <tr><td>“Simple form” inversion   </td><td>n/a    </td><td>n/a   </td><td><kbd>^</kbd></td></tr>
@@ -785,6 +786,9 @@ then, for now, you can try to replace it with a hard-coded path:
 (<samp>can have</samp>, <samp>shall have</samp> are less common than
 <samp>could have</samp>, <samp>should have</samp>,
 so maybe we can avoid needing to press <kbd>-D</kbd> to make <samp>could</samp>, <samp>should</samp>)
+* Abstraction of user settings
+	* Duplicate tests for different settings
+	* Document how a user can change settings
 
 ## About
 
