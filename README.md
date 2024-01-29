@@ -924,5 +924,5 @@ to define e.g. `accustom` in terms of <kbd>^</kbd> + `{custom}`
 
 ## See also
 
-* [Declarative open phrasing engine](https://github.com/hftf/roirpt/blob/master/jeff-phrasing/README2.md),
+* [Declarative open phrasing engine](https://github.com/hftf/dope),
 my WIP rewrite of Jeff phrasing
