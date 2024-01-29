@@ -7,7 +7,7 @@ strokes.log*
 clippy.txt
 tapey_tape.txt
 *.pyc
-
+dope/
 research/
 svg-layouts/README.md
 third-party-dictionaries/fluke.json
