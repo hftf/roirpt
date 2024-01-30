@@ -92,8 +92,8 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 | | <samp>along</samp>     | <kbd>^HROPBG</kbd>   | `(^LONG)`    | <kbd>AOLG</kbd>
 2 | <samp>lesson</samp>    |  <kbd>HREFPB</kbd>   |  `(LEFN)`    | <kbd>HR*EFPB</kbd> or <kbd>HR-FPB</kbd>
 | | <samp>eleven</samp>    | <kbd>^HREFPB</kbd>   | `(^LEFN)`    | <kbd>HREFPB</kbd>
-3 | <samp>limit</samp>     |  <kbd>HREUPLT</kbd>  |  `(LIMT)`    | <kbd>HREUPL/TPHAEUT</kbd>
-| | <samp>eliminate</samp> | <kbd>^HREUPLT</kbd>  | `(^LIMT)`    | <kbd>HREUPLT</kbd>
+3 | <samp>limit</samp>     |  <kbd>HREUPLT</kbd>  |  `(LIMT)`    | <kbd>HREUPLT</kbd>
+| | <samp>eliminate</samp> | <kbd>^HREUPLT</kbd>  | `(^LIMT)`    | <kbd>HREUPL/TPHAEUT</kbd>
 4 | <samp>least</samp>     |  <kbd>HRAOEFT</kbd>  |  `(LEEFT)`   | <kbd>HRAOEFT</kbd>
 | | <samp>alleviate</samp> | <kbd>^HRAOEFT</kbd>  | `(^LEEFT)`   | <kbd>A/HRAOEFT</kbd> or <kbd>HRAOEF/KWRAEUT</kbd>
 5 | <samp>motion</samp>    |  <kbd>PHOEGS</kbd>   |  `(MOESHUN)` | <kbd>PHOEGS</kbd>
