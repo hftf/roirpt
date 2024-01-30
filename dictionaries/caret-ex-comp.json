@@ -305,6 +305,7 @@
 "^KPAOUFG": "excusing",
 "^KPAOUFS": "excuses",
 "^KPAOUFD": "excused",
+"^KPAOURBT": "exuberant",
 "^KPAOURGS": "executioner",
 "^KPAOURT": "executor",
 "^KPAOUPL": "exhume",
@@ -488,7 +489,7 @@
 "^KPULGTS": "exultation",
 "^KPULGS": "exultation",
 "^KPULT": "exult",
+"^KP-RTS": "expertise",
 "^KP-PL": "example",
-"^KP-PT": "expect",
-"^KP-RTS": "expertise"
+"^KP-PT": "expect"
 }
