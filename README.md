@@ -448,6 +448,12 @@ when it is a non-labial non-continuant.
 </tbody>
 </table>
 
+As usual, the asterisk is used for conflict resolution here,
+but <kbd>K\*</kbd> can also be thought of as representing a doubling or strengthening of `K`
+for words that would require two `K`s,
+such as <samp>concord</samp> <kbd>KO\*RD</kbd> (≠ <samp>cord</samp> <kbd>KORD</kbd>)
+or <samp>concave</samp> <kbd>KA\*EUF</kbd> (≠ <samp>cave</samp> <kbd>KAEUF</kbd>).
+
 #### More complex compound starters?
 
 Recently thinking about adding a few more starters, inspired by [wooningeire](https://github.com/wooningeire/plover-dicts.pub/tree/pub). Most seem rare though (not counting productive prefixes like <samp>in-</samp>). My dictionary contains some ad-hoc solutions, e.g. <samp>anthology</samp> <kbd>SPWO\*LG</kbd> `(INT*OLG)` that try to get away with dropping consonants, e.g. <samp>enthusiast</samp> <kbd>^THAOUFT</kbd> `(^THUUſT)`, which I mostly dislike.
