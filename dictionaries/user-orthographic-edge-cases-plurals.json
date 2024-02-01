@@ -51,6 +51,7 @@
 "SAOEUT/HRAOEUPBS": "sightlines",
 "SAOEUD/WAUBGS": "sidewalks",
 "SAOERBGS": "seekers",
+"SAPB/TKALS": "sandals",
 "SAPBD/-LS": "sandals",
 "SAB/TAOURS": "saboteurs",
 "SO*PL/PWEUS": "zombies",
@@ -146,6 +147,7 @@
 "TPOER/KHROES/AOURS": "foreclosures",
 "TPOEPB/AOEPLS": "phonemes",
 "TPEURB/REUS": "fisheries",
+"TPEUPBG/REUPBGS": "fingerings",
 "TPEUS/SEUFTS": "physicists",
 "TPUR/KWREUS": "furries",
 "TPUR/REUS": "furries",
@@ -459,6 +461,7 @@
 "EPL/RATS": "emirates",
 "EBG/OES": "echoes",
 "EBGS/TA/SEUS": "ecstasies",
+"EBGS/WAOEUFS": "ex-wives",
 "ELD/*ERS": "elders",
 "EG/PHRAPBTS": "eggplants",
 "ED/KWREUS": "eddies"
