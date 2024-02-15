@@ -205,6 +205,8 @@
 "^HREBGT/RAL": "electoral",
 "^HREGT": "elegant",
 "^HREGS": "elegance",
+"^HO": "uh-oh",
+"^HU": "uh-huh",
 "^RAO*ET/RA": "urethra",
 "^RA*EUGS": "oration",
 "^RA*EUT": "orate",
@@ -229,5 +231,6 @@
 "^REG/HRAERT": "irregularity",
 "^AOEPB": "e'en",
 "^AEUR": "e'er",
-"^OEL/KWRAPB": "Aeolian"
+"^OEL/KWRAPB": "Aeolian",
+"^U": "uh-uh"
 }
