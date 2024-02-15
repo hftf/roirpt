@@ -494,7 +494,7 @@ although I guess that conflicts with <samp>wam</samp> so it was cute while it la
 #### Stressed pre-initials
 
 Sometimes the conceit is stretched to include
-any pre-initial vowel if convenient, even if stressed,
+any pre-initial vowel, even stressed, if convenient,
 such as <samp>era</samp> <kbd>^RA</kbd>,
 or if it would be annoying to write out.
 But words like <samp>efficacy</samp> are probably not in scope.
