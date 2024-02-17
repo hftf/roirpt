@@ -497,7 +497,7 @@ Sometimes the conceit is stretched to include
 any pre-initial vowel, even stressed, if convenient,
 such as <samp>era</samp> <kbd>^RA</kbd>,
 or if it would be annoying to write out.
-But words like <samp>efficacy</samp> are probably not in scope.
+But words like <samp>efficacy</samp> are not really in scope.
 Without a lot of repetition, I’ll usually reach for briefs along the lines of
 <kbd>APLZ</kbd> rather than <kbd>^PHAFPB</kbd> for <samp>Amazon</samp>
 due to the stress mismatch.
