@@ -84,6 +84,8 @@
 "^TKEPBT/TPAOEU": "identify",
 "^TKEPBT/TPAEUBGS": "identification",
 "^TKEPBT/TEU": "identity",
+"^TKEPBT/KAL": "identical",
+"^TKEPBT/K-L": "identical",
 "^TPWHERS/REU": "anniversary",
 "^TPWHERS/AER": "anniversary",
 "^TPHRAOUL": "annually",
