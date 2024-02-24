@@ -8,6 +8,7 @@
 "SPWRAEBGS": "interjection",
 "SPWRAEBGD": "interjected",
 "SRAEFBGT": "surjective",
+"SAEFBLGT": "subjectively",
 "SAEFBGT": "subjective",
 "SAEBGT": "subject",
 "SAEBGS": "subjection",
@@ -40,6 +41,7 @@
 "PWAEBGT/OEURPBTD": "object-oriented",
 "PWAEBGS": "objection",
 "PWAEBGD": "objected",
+"PRAEFBLGT": "projectively",
 "PRAEFBGT": "projective",
 "PRAERBGT": "projector",
 "PRAEBLGT": "projectile",
@@ -49,6 +51,7 @@
 "RAEBGT": "reject",
 "RAEBGS": "rejection",
 "RAEBGD": "rejected",
+"AEFBGT": "ejective",
 "AEBGT": "eject",
 "AEBGS": "ejection",
 "AEBGD": "ejected"
