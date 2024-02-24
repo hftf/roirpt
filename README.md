@@ -413,6 +413,9 @@ see the table under [the <samp>ex-</samp>/<samp>comp-</samp> conflict](#the-ex-c
 <!-- constr- SKR vs. const- ST? -->
 <!-- See http://cheapandsleazy.net/filez/A_Stroke_in_Time_by_Paul_Simone.pdf -->
 
+Note that NK can optionally come before <kbd>W</kbd> to form a starter for NQ:
+<samp>inquire</samp> <kbd>^TKPWAOEUR</kbd> `(INKWIIR)`.
+
 Example mnemonics for a few starters:
 
 Starter | Steno | Explanation | Shape | Resembles
