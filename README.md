@@ -102,12 +102,15 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 | | <samp>enormous</samp>  | <kbd>^TPHORPLS</kbd> | `(^NORMS)`   | <kbd>TPHO*RPLS</kbd> or <kbd>TPHOERPLS</kbd>
 7 | <samp>involve</samp>   |  <kbd>SROFL</kbd>    |  `(VOFL)`    | <kbd>SROFL</kbd>
 | | <samp>evolve</samp>    | <kbd>^SROFL</kbd>    | `(^VOFL)`    | <kbd>SRO*FL</kbd> etc.
-8 | <samp>vice</samp>      |   <kbd>SRAOEUS</kbd> |   `(VIIS)`   | <kbd>SRAOEUS</kbd>
+8 | <samp>vice</samp>      |   <kbd>SRAOEUS</kbd> |   `(VIIS)`   | <kbd>SRAOEUS</kbd>¹
 | | <samp>device</samp>    |  <kbd>TKWAOEUS</kbd> |  `(DVIIS)`   | <kbd>TKWAOEUS</kbd> etc.
 | | <samp>advice</samp>    | <kbd>^TKWAOEUS</kbd> | `(^DVIIS)`   | <kbd>SREUS</kbd> etc.
 9 | <samp>stipulate</samp> |  <kbd>STEUPLT</kbd>  |  `(STIPLT)`  | <kbd>STEUP/HRAEUT</kbd>
 | | <samp>stimulate</samp> |  <kbd>STEUFRLT</kbd> |  `(STImLT)`  | <kbd>ST*EUPLT</kbd>
 | | <samp>estimate</samp>  | <kbd>^STEUPLT</kbd>  | `(^STIMT)`   | <kbd>STEUPLT</kbd>
+
+¹ I call these [Kipling-style](https://discord.com/channels/136953735426473984/1206996073202188368/1212480072238506045)
+briefs since they drop the entire first minor syllable
 
 #### Sample text (schwa manifesto)
 
