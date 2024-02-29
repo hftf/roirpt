@@ -5,6 +5,7 @@
 "^SAOET/KWRO": "{aceto^}",
 "^TKPWOPB": "{^agon}",
 "^TPHA": "{ana^}",
+"^TPHOEPL": "{^onomy}",
 "^TPRO": "{Afro-^}",
 "^TPROE": "{Afro-^}",
 "^THOPB": "{^athon}",
@@ -16,5 +17,7 @@
 "^KAL": "{^ical}",
 "^PHAO*EPB": "{^amine}",
 "^HRO": "{allo^}",
-"^HREUG/KWRO": "{oligo^}"
+"^HREUG/KWRO": "{oligo^}",
+"^R*EURT": "{erythro^}",
+"^R*EUT/RO": "{erythro^}"
 }

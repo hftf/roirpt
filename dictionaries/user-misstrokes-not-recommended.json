@@ -29,6 +29,7 @@
 "SKWRER/SEUS": "jerseys",
 "SKWRERPBLT": "generality",
 "SKWREPB/EUBG/HRAEUT": "geniculate",
+"SKWREPBLT/WO*PL": "gentlewoman",
 "SKWRUPBGT/AOUR": "juncture",
 "SKWRUBGT/POEFD": "juxtaposed",
 "SKRET/REU": "secretary",
@@ -203,6 +204,7 @@
 "KHRA/REUS/KWRA": "Clarissa",
 "KHRAFBG/AEUGS": "classification",
 "KHROUS/EUF": "conclusive",
+"KHREUBG/EURB": "cliquish",
 "KHREUG/TPEUBG": "calligraphic",
 "KHAOD": "childhood",
 "KHAEURT/AOER": "charioteer",
@@ -323,6 +325,7 @@
 "PUR/SRAE": "purvey",
 "PUBL/STEU": "publicity",
 "WHAOEUL/-FT": "whilst",
+"WHAFRD": "wharfed",
 "WAOEBG/EFT": "weakest",
 "WAOEBG/-LG": "weakling",
 "WAEUFT/APBLG": "wastage",
@@ -454,5 +457,6 @@
 "ELS/WHAEUR": "elsewhere",
 "URLT/SRAOEULT": "ultraviolet",
 "UPB/TKAOEUD": "undyed",
+"UPBD/SAOEURPB": "undersigner",
 "UPLT/KWRUPL": "ultimatum"
 }
