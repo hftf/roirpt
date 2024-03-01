@@ -60,6 +60,7 @@
 "TKEUT": "dit",
 "TPHA*F": "nav",
 "TPHEUD": "nid",
+"TPRAPL": "fram",
 "TPAOPB": "foon",
 "TPARB": "fash",
 "TPUT": "fut",
@@ -135,5 +136,6 @@
 "ROPBD": "rond",
 "R*ERB": "resh",
 "REUT": "rit",
-"RUFBG": "rusk"
+"RUFBG": "rusk",
+"A*RB": "arb"
 }
