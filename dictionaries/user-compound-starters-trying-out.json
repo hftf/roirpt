@@ -1,6 +1,7 @@
 {
 "^STKPWHRAEURT": "angularity",
 "^STKPWHRAR": "angular",
+"^STKPWHRARPBS": "angularness",
 "^STKPWHRARPBD": "Englander",
 "^STKPWHRARL": "angularly",
 "^STKPWHRART": "angularity",
@@ -691,6 +692,7 @@
 "TPWHAOEUPLT/HREU": "environmentally",
 "TPWHAOEUL/-BL": "inviolable",
 "TPWHAOEULGS": "in violation",
+"TPWHAOEULT": "inviolate",
 "TPWHAOEUT": "invite",
 "TPWHAOEF": "in vivo",
 "TPWHAOERT": "in vitro",
@@ -734,6 +736,7 @@
 "TPWHOEUFG": "invoicing",
 "TPWHOEUFD": "invoiced",
 "TPWHOEUS": "invoice",
+"TPWHOERBG": "invoker",
 "TPWHOEPL": "envelope",
 "TPWHOEBG": "invoke",
 "TPWHOEBG/AEUGS": "invocation",
