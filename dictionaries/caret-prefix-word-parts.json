@@ -43,6 +43,8 @@
 "^KOPB": "acon",
 "^PWHREUG": "oblig",
 "^PHORT": "amort",
+"^PO/PHREBG": "apoplec",
+"^PO/PHREBGT": "apoplect",
 "^PO*T": "apoth",
 "^POBG/HREUPT": "apocalypt",
 "^PEL": "appel",
