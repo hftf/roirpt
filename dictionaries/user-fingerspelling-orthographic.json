@@ -23,6 +23,8 @@
 "SHR*P": "{&Sl}",
 "TKPWHR*": "{&gl}",
 "TKPWHR*P": "{&Gl}",
+"TKPWH*": "{&gh}",
+"TKPWH*P": "{&Gh}",
 "TKPWR*": "{&gr}",
 "TKPWR*P": "{&Gr}",
 "TPHR*": "{&fl}",
