@@ -1,6 +1,7 @@
 {
 "^S": "is a",
 "^ST": "is it a",
+"^STK": "as did",
 "^STKPWRAELTS": "as greatly as",
 "^STKPWRAET": "as great",
 "^STKPWRAETS": "as great as",
@@ -299,6 +300,7 @@
 "^THEUPL": "at this time",
 "^THEUPLT": "at this moment",
 "^THEUPT": "at this point",
+"^THEUS": "at his",
 "^THEFPBTD": "at the end of the",
 "^THEFPBD": "at the end of",
 "^THEFPL": "at the same time",
