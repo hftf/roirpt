@@ -66,6 +66,9 @@
 "SROL/TA": "volta",
 "SREUB/RA/TOE": "vibrato",
 "SREUL/HRA/HROE/PWOES": "Villa-Lobos",
+"SRERD/KWRAPB": "Verdian",
+"SRERD/KWREU": "Verdi",
+"SRERD/KWREU/KWRAPB": "Verdian",
 "SA/TAOE": "Satie",
 "SAOU/SA": "Sousa",
 "SA*RZ/WAEU/HRA": "zarzuela",
@@ -505,6 +508,7 @@
 "*EP/-FLT": "E-flat",
 "EFRPBL": "E-natural",
 "EFLT": "E-flat",
+"ER/TPHA/TPHEU": "Ernani",
 "EL/TKPWAR": "Elgar",
 "ES/PRES/EUF/KWRO": "espressivo"
 }
