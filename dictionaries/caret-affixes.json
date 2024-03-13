@@ -23,6 +23,7 @@
 "^KAL": "{^ical}",
 "^PHAO*EPB": "{^amine}",
 "^PO": "{apo^}",
+"^WRO": "{Euro^}",
 "^HRO": "{allo^}",
 "^HREUG/KWRO": "{oligo^}",
 "^R*EURT": "{erythro^}",
