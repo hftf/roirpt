@@ -47,6 +47,7 @@
 "STPHEBGT/SAOEUD": "insecticide",
 "STPHES/APBT": "incessant",
 "STPHUFRBL": "insufferable",
+"STPHUFRBT": "insufficient",
 "STPHURPBLG/SEU": "insurgency",
 "STPHURPBLGT": "insurgent",
 "STHRAOEUFLG": "stiflingly",
@@ -327,6 +328,7 @@
 "HREUFRLGT": "historically",
 "HRUPLT": "ultimately",
 "HRULT": "ultimately",
+"RORG": "organizer",
 "AUFR/WHREPLG": "overwhelmingly",
 "ORPB/PHREPBLT": "ornamentally"
 }
