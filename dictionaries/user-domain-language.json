@@ -1,6 +1,8 @@
 {
 "^STPWRAOUPBT": "obstruent",
 "^SPWRAOUPBT": "obstruent",
+"^TKPWHRAOUPBGS": "agglutination",
+"^TKPWHRAOUPBT": "agglutinate",
 "^TKW-P": "AdvP",
 "STPHA*BGS": "syntax",
 "STPHABGT/KHREU": "syntactically",
