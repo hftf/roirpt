@@ -31,6 +31,8 @@
 "TKPWR*P": "{&Gr}",
 "TPHR*": "{&fl}",
 "TPHR*P": "{&Fl}",
+"TPR*": "{&fr}",
+"TPR*P": "{&Fr}",
 "TH*P": "{&Th}",
 "TR*": "{&tr}",
 "TR*P": "{&Tr}",
