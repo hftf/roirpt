@@ -1,4 +1,5 @@
 {
+"^HRAORL": "elementary schooler",
 "^HRAOL": "elementary school",
 "STKPWROUP": "subgroup",
 "STPHAEUPL": "surname",
@@ -33,10 +34,13 @@
 "PWRORPL": "brainstorm",
 "PWAORBG": "bookmark",
 "PHRAO*EUPB": "pipeline",
+"PHRAORL": "middle schooler",
 "PHAEUP": "makeup",
+"PRAORL": "preschooler",
 "PROFL": "problem solve",
 "PRURB": "perturb",
 "PRURBGS": "perturbation",
 "WHRAOEUBGS": "likewise",
+"HAORL": "high schooler",
 "HOEPBLG": "homepage"
 }
