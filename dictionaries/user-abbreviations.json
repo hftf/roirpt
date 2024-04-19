@@ -106,6 +106,7 @@
 "*UPB": "UN",
 "*UPS": "UPS",
 "*UBG/*UBG": "United Kingdom",
+"*US/A*FPLT": "U.S.A.",
 "*US/*US/*US": "United States of America",
 "*US/*US/*US/*US": "USA",
 "*US/-F/A*": "United States of America"
