@@ -1,4 +1,5 @@
 {
+"^SPRES/SROE": "espressivo",
 "^SAOEU": "assai",
 "^SOELD": "Isolde",
 "^HR*EFPBT/STPOPB": "Eleventh Symphony",
@@ -568,5 +569,6 @@
 "EFLT": "E-flat",
 "ER/TPHA/TPHEU": "Ernani",
 "EL/TKPWAR": "Elgar",
+"ES/PRES/SROE": "espressivo",
 "ES/PRES/EUF/KWRO": "espressivo"
 }
