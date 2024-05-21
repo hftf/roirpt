@@ -67,6 +67,8 @@
 "PEUPB/KWREUPB": "pinyin",
 "WH*/TPROPBT": "wh-front",
 "WH*/KHRAUS": "wh-clause",
+"W*UG": "wug",
+"WUGS": "wugs",
 "HRA/PWO*EF": "Labov",
 "HRAOU/KWRAPB": "Luwian",
 "HRAOPB/WORD": "loanword",
