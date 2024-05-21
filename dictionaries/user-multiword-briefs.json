@@ -39,6 +39,7 @@
 "TKRUFRP": "Donald Trump",
 "TKA*EUFRBT": "date of birth",
 "TKA*EPBLS": "data analysis",
+"TKAEULGS": "days long",
 "TKOUFP": "double-check",
 "TPHRAPBLG": "foreign language",
 "TPHAOULGD": "New England",
@@ -70,8 +71,10 @@
 "KPHRAOEFRPBT": "completely different",
 "KPHRAOEFRT": "completely different",
 "KPHOPBLS": "commonplace",
+"KWAERBLT": "conveyor belt",
 "KHRAOUFBG": "classical music",
 "KHRAOUFGS": "classical musician",
+"KRAOUFBG": "country music",
 "KREUFBL": "crystal ball",
 "KARPBG/HAUL": "Carnegie Hall",
 "KOEBG/KOEL": "Coca-Cola",
@@ -89,5 +92,6 @@
 "HAOEUPT": "high point",
 "HAOURT": "human right",
 "HAEURBGT": "haircut",
+"HOURLGS": "hours long",
 "HEGT": "hypertext"
 }
