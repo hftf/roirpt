@@ -619,6 +619,11 @@ such as <samp>akin to</samp> <kbd>^KEUPBT</kbd> `(^KINT)`
 or <samp>according to</samp> <kbd>^KORGT</kbd>,
 are in the non-phrasing dictionaries instead.
 
+### `*-product-names.json`, etc.
+
+Keeps words with stylized official spellings in the same place
+to make it easy to review, find patterns, etc.
+
 ### `caret-as-s.json`
 
 Shape-based outlines that relied on top <kbd>S</kbd>
