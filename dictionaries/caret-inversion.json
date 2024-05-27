@@ -128,5 +128,6 @@
 "^PREPBLG/KWRAEUT": "arpeggiate",
 "^PREPBLG/KWROE": "arpeggio",
 "^PREPBLGT": "arpeggiate",
-"^PREPBLGS": "arpeggiation"
+"^PREPBLGS": "arpeggiation",
+"^PREPBLGD": "arpeggiated"
 }

@@ -68,6 +68,7 @@
 "STKPOEFBL": "disposable",
 "STKPOEFD": "disposed",
 "STKPOEBL": "disposable",
+"STKPOPBT": "despondent",
 "STKPOPBD/SEU": "despondency",
 "STKPOPBD/EPBT": "despondent",
 "STKPOPBD/EPBS": "despondency",
@@ -254,5 +255,6 @@
 "STKUPBGT": "disjunct",
 "STKUPBGS": "disjunction",
 "STKULT/REU": "desultory",
-"STK-FRT": "discomfort"
+"STK-FRT": "discomfort",
+"STK-R": "disinterest"
 }
