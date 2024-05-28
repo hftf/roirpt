@@ -982,6 +982,7 @@
 "^TP*EBGT": "effect",
 "^TP*EBGT/-BL": "effectible",
 "^TP*EBGT/-BLT": "effectibility",
+"^TPEUFRPLT": "affirmative",
 "^TPEURPL": "affirm",
 "^TPEURPL/TEUFL": "affirmatively",
 "^TPEURPLGS": "affirmation",
