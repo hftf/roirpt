@@ -1,4 +1,6 @@
 {
+"^KHREUFPG": "eclipsing",
+"^KHREUFPD": "eclipsed",
 "^PHAOUFR": "amuser",
 "^PHAOUFS": "amuses",
 "STKPWREFG": "digressing",
@@ -138,6 +140,7 @@
 "AP/TAOEUFR": "appetizer",
 "OE/PREFR": "oppressor",
 "OP/PREFD": "oppressed",
+"EUPBD/SPOEFD": "indisposed",
 "EPB/KPAFG": "encompassing",
 "EPB/KPAFD": "encompassed"
 }
