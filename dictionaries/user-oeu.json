@@ -40,6 +40,7 @@
 "TPHROEUF": "fluffy",
 "TPHROEUP": "floppy",
 "TPHOEUT": "naughty",
+"TPRO*EUT": "frothy",
 "TPROEUFT": "frosty",
 "TPROEUBG": "freaky",
 "TPO*EUPBG": "funky",
@@ -114,5 +115,6 @@
 "ROEURT": "retro",
 "ROEUZ": "rosy",
 "AL/PHOEUT": "almighty",
+"OEUFP": "itchy",
 "UL/TOEUR": "ulterior"
 }
