@@ -413,6 +413,7 @@
 "^KPEU/AEUGS": "expiation",
 "^KPEU/AEUT": "expiate",
 "^KPEU/ABL": "expiable",
+"^KPEUFPBLT": "existential",
 "^KPEUFPBT": "existent",
 "^KPEUFPBS": "existence",
 "^KPEUFT": "exist",
@@ -500,5 +501,7 @@
 "^KPULT": "exult",
 "^KP-RTS": "expertise",
 "^KP-PL": "example",
-"^KP-PT": "expect"
+"^KP-PLTD": "expectedly",
+"^KP-PT": "expect",
+"^KP-PD": "expected"
 }
