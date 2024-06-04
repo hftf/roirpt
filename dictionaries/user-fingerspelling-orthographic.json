@@ -38,6 +38,8 @@
 "TPHR*P": "{&Fl}",
 "TPR*": "{&fr}",
 "TPR*P": "{&Fr}",
+"THR*": "{&thr}",
+"THR*P": "{&Thr}",
 "TH*P": "{&Th}",
 "TR*": "{&tr}",
 "TR*P": "{&Tr}",
