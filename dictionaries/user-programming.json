@@ -3,6 +3,7 @@
 "SEG/TPAULT": "segfault",
 "SUBL": "subl",
 "TARBL": "tarball",
+"TEL/TPHET": "telnet",
 "KR-FG": "cfg",
 "KO*PBS": "const",
 "PAOEU/PAOEU": "py",
