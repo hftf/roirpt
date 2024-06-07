@@ -16,6 +16,8 @@
 "STR*P": "{&Str}",
 "SKH*": "{&sch}",
 "SKH*P": "{&Sch}",
+"SKR*": "{&scr}",
+"SKR*P": "{&Scr}",
 "SK*": "{&sk}",
 "SK*P": "{&Sk}",
 "SPHR*": "{&spl}",
