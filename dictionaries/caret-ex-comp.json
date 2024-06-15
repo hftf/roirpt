@@ -491,6 +491,8 @@
 "^KPES/EUF": "excessive",
 "^KPES/EUFL": "excessively",
 "^KPURB": "exurb",
+"^KPURG": "expurg",
+"^KPURG/TEUF": "expurgative",
 "^KPURGT": "expurgate",
 "^KPURGS": "excursion",
 "^KPUPBG": "expunge",
