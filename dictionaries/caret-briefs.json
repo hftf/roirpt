@@ -30,6 +30,7 @@
 "^TPHAPLT": "enhancement",
 "^TPHOFRL": "anomaly",
 "^TPHOBGS": "innocuous",
+"^TPHERPBS": "inheritance",
 "^TPHERB": "inertia",
 "^TPHUPBGS": "enunciation",
 "^TPR*ERPB": "African-American",
