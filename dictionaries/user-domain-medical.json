@@ -48,7 +48,9 @@
 "PHAOED/KWRAFT/TPHUPL": "mediastinum",
 "PHE/TPHEUS/KUS": "meniscus",
 "PA/R*EPBG/PHA": "parenchyma",
+"PAR/THAOEURD": "parathyroid",
 "POEL/KWROE/PHAOEUL/AOEUTS": "poliomyelitis",
+"PER/KWROFT/KWRUPL": "periosteum",
 "PER/KARD/KWRAL": "pericardial",
 "HRA/KREU/PHAL": "lacrimal",
 "HRAEURPBLG/AOEUTS": "laryngitis",
@@ -66,5 +68,6 @@
 "AL/PWAOUPL/*EPB": "albumen",
 "EUS/KAOE/PHEUBG": "ischemic",
 "EPBD/KWRO/TKERPL": "endoderm",
-"EL/TPAPBT/AOEU/SEUS": "elephantiasis"
+"EL/TPAPBT/AOEU/SEUS": "elephantiasis",
+"UL/SER/TEUF": "ulcerative"
 }
