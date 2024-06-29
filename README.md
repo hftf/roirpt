@@ -38,7 +38,7 @@ Each dictionary’s filename labels its purpose.
 It is easier to manually inspect and manipulate entries, since similar entries tend to be closer to each other.
 Separate dictionaries can be reordered, enabled, or disabled at will.
 Entries demonstrating one concept are found in a single file easily shared with others
-(“here are all of, and only, the entries that follow the <kbd>AE</kbd> → <samp>ject</samp> pattern”)
+(“here are all of, and only, the entries that follow the <kbd>AEBGT</kbd> → <samp>ject</samp> pattern”)
 that can be borrowed without worrying about massive conflicts.
 
 Indeed, it is unwieldy to maintain a large number of dictionaries in Plover’s interface,
