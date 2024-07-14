@@ -46,6 +46,7 @@
 "PHAOEU/SAOEL/KWRUPL": "mycelium",
 "PHAOEU/KARD/KWRUPL": "myocardium",
 "PHAOED/KWRAFT/TPHUPL": "mediastinum",
+"PHAPL/EBGT/PHEU": "mammectomy",
 "PHE/TPHEUS/KUS": "meniscus",
 "PA/R*EPBG/PHA": "parenchyma",
 "PAR/THAOEURD": "parathyroid",
