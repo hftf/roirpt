@@ -2475,6 +2475,8 @@
 "^HREG/AEUGS": "allegation",
 "^HRUFRT": "illustrate",
 "^HRUFRT/TEUF": "illustrative",
+"^HRUFRT/KWROUS": "illustrious",
+"^HRUFRT/OUS": "illustrious",
 "^HRUFT/TEUF": "illustrative",
 "^HRUFT/RAEUGS": "illustration",
 "^HRUFT/RAEUT": "illustrate",
