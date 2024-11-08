@@ -1,6 +1,8 @@
 {
 "2340": "No.",
 "34*EU9": "MIT",
+"3-G": "3G",
+"4-G": "4G",
 "^SP*PB": "ESPN",
 "^TK-BG": "IDK",
 "STKPW*FRL": "SGML",
@@ -100,6 +102,7 @@
 "H-PT": "HTTP",
 "H-PTS": "HTTPS",
 "R*EUFBG": "RISC",
+"R*F": "RV",
 "R-FBG": "RFK",
 "AO*EURBG": "IIRC",
 "AO*EURS": "IRC",
