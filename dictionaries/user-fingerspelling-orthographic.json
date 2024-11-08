@@ -52,6 +52,8 @@
 "KHR*P": "{&Cl}",
 "PWHR*": "{&bl}",
 "PWHR*P": "{&Bl}",
+"PWR*": "{&br}",
+"PWR*P": "{&Br}",
 "PHR*": "{&pl}",
 "PHR*P": "{&Pl}",
 "PR*": "{&pr}",
