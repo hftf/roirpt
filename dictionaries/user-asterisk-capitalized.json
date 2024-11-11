@@ -24,6 +24,7 @@
 "S*UPB": "Sun",
 "TKPWHRA*EUBGS": "Galaxy",
 "TKPWRO*PB": "Organ",
+"TKPWA*URPB": "Guardian",
 "TKPWO*FRPBT": "Government",
 "TKPWO*FRPLT": "Government",
 "TKPWO*FPLT": "Government",
@@ -56,6 +57,7 @@
 "KP*L": "Example",
 "KWA*ERT": "Quartet",
 "KWA*EPBT": "Quintet",
+"KHRAO*EPBLGT": "Collegiate",
 "KHRA*L": "Classical",
 "KHRO*SZ": "Colossus",
 "KHA*EUFRB": "Chamber",
@@ -72,6 +74,7 @@
 "PW*EPBZ": "Benz",
 "PW*UBG": "Buck",
 "PHAO*UFBG": "Music",
+"PHAO*UFLG": "Musical",
 "PHAO*UPL": "Museum",
 "PHAO*PB": "Moon",
 "PHA*FRT": "Master",
@@ -88,6 +91,7 @@
 "PA*ERT": "Party",
 "PA*URPLT": "Parliament",
 "PO*URS": "Powers",
+"PO*P": "Pop",
 "WA*URBG": "Walker",
 "WO*RL": "World",
 "HA*FRLT": "Hamlet",
@@ -104,5 +108,6 @@
 "A*EURPT": "Airport",
 "A*EUPBLG": "Age",
 "A*RL": "Article",
-"AL/PAO*EUPB": "Alpine"
+"AL/PAO*EUPB": "Alpine",
+"O*RGS": "Organization"
 }
