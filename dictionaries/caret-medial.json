@@ -46,5 +46,7 @@
 "ROUFT/^PWOUT": "roustabout",
 "ROUPBD/^PWOUT": "roundabout",
 "AFRPB/^TPHEPL": "archenemy",
-"APB/^ROEB": "anaerobe"
+"APB/^ROEB": "anaerobe",
+"EUPB/^TPEBGT/WAEL": "ineffectually",
+"EUPB/^TPEBGT/WAL": "ineffectual"
 }
