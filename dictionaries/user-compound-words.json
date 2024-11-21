@@ -370,6 +370,7 @@
 "PWAOET/RAOT": "beetroot",
 "PWAOBG/SHOP": "bookshop",
 "PWAOBG/SERL": "bookseller",
+"PWAOBG/*EPBD": "bookend",
 "PWA*PBG/TPHOET": "banknote",
 "PWA*LT/SHEUP": "battleship",
 "PWA*LT/TKPWROUPBD": "battleground",
