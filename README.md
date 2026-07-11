@@ -38,11 +38,13 @@ Each dictionary’s filename labels its purpose.
 It is easier to manually inspect and manipulate entries, since similar entries tend to be closer to each other.
 Separate dictionaries can be reordered, enabled, or disabled at will.
 Entries demonstrating one concept are found in a single file easily shared with others
-(“here are all of, and only, the entries that follow the <kbd>AEBGT</kbd> → <samp>ject</samp> pattern”)
+(“[here are all of, and only, the entries that follow the
+<kbd>AEBGT</kbd> → <samp>ject</samp> pattern](./dictionaries/user-ae-ject.json)”)
 that can be borrowed without worrying about massive conflicts.
 
 Indeed, it is unwieldy to maintain a large number of dictionaries in Plover’s interface,
 and not all entries cleanly fit within a single dictionary (but choosing one is not a science).
+It is also sometimes annoying to find where entries are located.
 
 ### `caret-*.json`
 
@@ -109,8 +111,9 @@ Group | Word | Steno | Pseudosteno | Plover default entries
 | | <samp>stimulate</samp> |  <kbd>STEUFRLT</kbd> |  `(STImLT)`  | <kbd>ST*EUPLT</kbd>
 | | <samp>estimate</samp>  | <kbd>^STEUPLT</kbd>  | `(^STIMT)`   | <kbd>STEUPLT</kbd>
 
-¹ I call these [Kipling-style](https://discord.com/channels/136953735426473984/1206996073202188368/1212480072238506045)
-briefs since they drop the entire first minor syllable
+¹ I [call](https://discord.com/channels/136953735426473984/1206996073202188368/1212480072238506045)
+these [“Kipling-style”](http://masterrussian.net/f31/kiplings-word-shortening-18506/)
+briefs since they drop the entire first minor syllable (advantage → ’vantage)
 
 #### Sample text (schwa manifesto)
 
