@@ -2,6 +2,7 @@
 "STRAEUT/^WA*EU": "straightaway",
 "STAPBD/^HROEPB": "standalone",
 "SHRUG/^PWED": "slugabed",
+"SAOURP/^ROG/TOER": "supererogatory",
 "SUFL/^TPHEUL/^PHAOEUD": "sulfanilamide",
 "SUL/TPA/TPHEUL/^PHAOEUD": "sulfanilamide",
 "TKPWEUF/^WA*EU": "giveaway",
@@ -36,6 +37,7 @@
 "PH-BG/^TPAOE": "McAfee",
 "PROB/^TEUBG": "problematic",
 "PRE/TKEUBG/^TKEUF": "predicative",
+"PAOEUPB/^PHR": "pineapple",
 "PAOEUPB/^P-L": "pineapple",
 "PAEUR/^TKPWOPB": "paragon",
 "WORBG/^TKA*EU": "workaday",
@@ -47,6 +49,7 @@
 "ROUPBD/^PWOUT": "roundabout",
 "AFRPB/^TPHEPL": "archenemy",
 "APB/^ROEB": "anaerobe",
+"AB/^REUPBLG/TPHAOE": "Aborigine",
 "EUPB/^TPEBGT/WAEL": "ineffectually",
 "EUPB/^TPEBGT/WAL": "ineffectual"
 }
